@@ -1,0 +1,652 @@
+\relax 
+\providecommand\hyper@newdestlabel[2]{}
+\providecommand\HyperFirstAtBeginDocument{\AtBeginDocument}
+\HyperFirstAtBeginDocument{\ifx\hyper@anchor\@undefined
+\global\let\oldnewlabel\newlabel
+\gdef\newlabel#1#2{\newlabelxx{#1}#2}
+\gdef\newlabelxx#1#2#3#4#5#6{\oldnewlabel{#1}{{#2}{#3}}}
+\AtEndDocument{\ifx\hyper@anchor\@undefined
+\let\newlabel\oldnewlabel
+\fi}
+\fi}
+\global\let\hyper@last\relax 
+\gdef\HyperFirstAtBeginDocument#1{#1}
+\providecommand*\HyPL@Entry[1]{}
+\HyPL@Entry{0<</S/D>>}
+\@writefile{toc}{\@ifundefined {etoctocstyle}{\let \etoc@startlocaltoc \@gobble \let \etoc@settocdepth \@gobble \let \etoc@depthtag \@gobble \let \etoc@setlocaltop \@gobble }{}}
+\citation{griffiths2019doing,markman1989categorization}
+\citation{lu2019vilbert,wang2021ufo,zellers2022merlot}
+\citation{align,clip}
+\citation{wang2021simvlm,tsimpoukelli2021multimodal,cho2021unifying,wang2022unifying,xu2021vlm}
+\citation{gpt3,gopher,chinchilla,chowdhery2022palm}
+\@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{2}{section.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces \textbf  {Selected examples of inputs and outputs obtained from \emph  {Flamingo{}}-80B{}.} \emph  {Flamingo{}}{} can rapidly adapt to various image/video understanding tasks with few-shot prompting (top). Out of the box, \emph  {Flamingo{}}{} is also capable of multi-image visual dialogue (bottom). More examples in Appendix\nobreakspace  {}\ref {app:qual_res}. \relax }}{3}{figure.caption.2}\protected@file@percent }
+\providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
+\newlabel{fig:teaser}{{1}{3}{\textbf {Selected examples of inputs and outputs obtained from \largemfull {}.} \largem {} can rapidly adapt to various image/video understanding tasks with few-shot prompting (top). Out of the box, \largem {} is also capable of multi-image visual dialogue (bottom). More examples in Appendix~\maintoappref {app:qual_res}. \relax }{figure.caption.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces {} \textbf  {Flamingo{} results overview.} \textit  {Left}: Our largest model, dubbed \emph  {Flamingo{}}{}, outperforms state-of-the-art fine-tuned models on 6 of the 16 tasks we consider with no fine-tuning. For the 9 tasks with published few-shot results, \emph  {Flamingo{}}{} sets the new few-shot state of the art. \emph  {Note:} We omit RareAct, our 16th benchmark, as it is a zero-shot benchmark with no available fine-tuned results to compare to. \textit  {Right}: Flamingo{} performance improves with model size and number of shots. \vspace  *{-0.4cm} \relax }}{4}{figure.caption.3}\protected@file@percent }
+\newlabel{fig:results}{{2}{4}{\capfontsize {} \textbf {\method {} results overview.} \textit {Left}: Our largest model, dubbed \largem {}, outperforms state-of-the-art fine-tuned models on 6 of the 16 tasks we consider with no fine-tuning. For the 9 tasks with published few-shot results, \largem {} sets the new few-shot state of the art. \emph {Note:} We omit RareAct, our 16th benchmark, as it is a zero-shot benchmark with no available fine-tuned results to compare to. \textit {Right}: \method {} performance improves with model size and number of shots. \vspace *{-0.4cm} \relax }{figure.caption.3}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces {} \textbf  {Flamingo{} architecture overview.} Flamingo 是一个视觉语言模型（VLM）系列，它将视觉数据与文本交错作为输入，并将自由格式文本作为输出。 Flamingo is a family of visual language models (VLMs) that take as input visual data interleaved with text and produce free-form text as output. \relax }}{5}{figure.caption.4}\protected@file@percent }
+\newlabel{fig:overview}{{3}{5}{\capfontsize {} \textbf {\method {} architecture overview.} Flamingo 是一个视觉语言模型（VLM）系列，它将视觉数据与文本交错作为输入，并将自由格式文本作为输出。 Flamingo is a family of visual language models (VLMs) that take as input visual data interleaved with text and produce free-form text as output. \relax }{figure.caption.4}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {2}Approach}{5}{section.2}\protected@file@percent }
+\newlabel{sec:approach}{{2}{5}{Approach}{section.2}{}}
+\citation{clip}
+\citation{jaegle2021perceiver}
+\citation{carion2020end}
+\citation{bachlechner2021rezero}
+\citation{desai2021virtex,luo2022vc}
+\newlabel{eq:modeling}{{1}{6}{Approach}{equation.2.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.1}Visual processing and the Perceiver Resampler}{6}{subsection.2.1}\protected@file@percent }
+\newlabel{sec:transformer_resampler}{{2.1}{6}{Visual processing and the Perceiver Resampler}{subsection.2.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2}Conditioning frozen language models on visual representations}{6}{subsection.2.2}\protected@file@percent }
+\newlabel{sec:xattn_dense}{{2.2}{6}{Conditioning frozen language models on visual representations}{subsection.2.2}{}}
+\citation{chinchilla}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces {} \textbf  {\textsc  {gated xattn-dense} layers.} 为了使 LM 以视觉输入为条件，我们在现有的预训练和冻结 LM 层之间插入了新的交叉注意层。这些层中的键和值来自视觉特征，而查询则来自语言输入。 这些层之后是密集的前馈层。 这些层是\emph  {gated}的，因此 LM 在初始化时保持不变，以提高稳定性和性能。\relax }}{7}{figure.caption.5}\protected@file@percent }
+\newlabel{fig:xattn_dense}{{4}{7}{\capfontsize {} \textbf {\textsc {gated xattn-dense} layers.} 为了使 LM 以视觉输入为条件，我们在现有的预训练和冻结 LM 层之间插入了新的交叉注意层。这些层中的键和值来自视觉特征，而查询则来自语言输入。 这些层之后是密集的前馈层。 这些层是\emph {gated}的，因此 LM 在初始化时保持不变，以提高稳定性和性能。\relax }{figure.caption.5}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3}Multi-visual input support: per-image/video attention masking}{7}{subsection.2.3}\protected@file@percent }
+\newlabel{sec:multi_im_att}{{2.3}{7}{Multi-visual input support: per-image/video attention masking}{subsection.2.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.4}Training on a mixture of vision and language datasets}{7}{subsection.2.4}\protected@file@percent }
+\newlabel{sec:datasets}{{2.4}{7}{Training on a mixture of vision and language datasets}{subsection.2.4}{}}
+\newlabel{sec:training}{{2.4}{7}{Training on a mixture of vision and language datasets}{subsection.2.4}{}}
+\citation{align}
+\citation{cho2021unifying}
+\citation{gpt3}
+\newlabel{sec:interleaved_datasets}{{2.4}{8}{Training on a mixture of vision and language datasets}{subsection.2.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.5}Task adaptation with few-shot in-context learning}{8}{subsection.2.5}\protected@file@percent }
+\newlabel{sec:adapt-vlm}{{2.5}{8}{Task adaptation with few-shot in-context learning}{subsection.2.5}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {3}Experiments}{8}{section.3}\protected@file@percent }
+\newlabel{sec:experiments}{{3}{8}{Experiments}{section.3}{}}
+\citation{gui2021kat}
+\citation{tsimpoukelli2021multimodal}
+\citation{wang2021simvlm}
+\citation{li2022blip}
+\citation{li2022blip}
+\citation{yang2021just}
+\citation{zellers2022merlot}
+\citation{murahari2020large}
+\citation{clip}
+\citation{clip}
+\citation{gui2021kat}
+\citation{yuan2021florence}
+\citation{wang2021simvlm}
+\citation{fu2021violet}
+\citation{zhu2019vatex}
+\citation{liu2021vizwiz}
+\citation{zhou2020unified}
+\citation{wang2022allinone}
+\citation{yang2021just}
+\citation{xu2021vlm}
+\citation{wu2021star}
+\citation{murahari2020large}
+\citation{yang2021tap}
+\citation{xiao2021next}
+\citation{lippe2020multimodal}
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces  {}  \textbf  {Comparison to the state of the art.} A \emph  {single} Flamingo model reaches the state of the art on a wide array of image \textbf  {(I)} and video \textbf  {(V)} understanding tasks with few-shot learning, significantly outperforming previous best zero- and few-shot methods with as few as four examples. More importantly, using only $32$ examples and without adapting any model weights, Flamingo{} {\em  outperforms} the current best methods -- fine-tuned on thousands of annotated examples -- on seven tasks. Best few-shot numbers are in \textbf  {bold}, best numbers overall are {\ul underlined}. \relax }}{9}{table.caption.6}\protected@file@percent }
+\newlabel{tab:fewshot_all_tasks}{{1}{9}{\capfontsize {}  \textbf {Comparison to the state of the art.} A \emph {single} Flamingo model reaches the state of the art on a wide array of image \textbf {(I)} and video \textbf {(V)} understanding tasks with few-shot learning, significantly outperforming previous best zero- and few-shot methods with as few as four examples. More importantly, using only $32$ examples and without adapting any model weights, \method {} {\em outperforms} the current best methods -- fine-tuned on thousands of annotated examples -- on seven tasks. Best few-shot numbers are in \textbf {bold}, best numbers overall are {\ul underlined}. \relax }{table.caption.6}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Few-shot learning on vision-language tasks}{9}{subsection.3.1}\protected@file@percent }
+\newlabel{sec:fewshot_openended}{{3.1}{9}{Few-shot learning on vision-language tasks}{subsection.3.1}{}}
+\citation{gpt3}
+\citation{gpt3}
+\citation{yan2021achieving}
+\citation{yan2021achieving}
+\citation{wang2022unifying}
+\citation{zhu2019vatex}
+\citation{liu2021vizwiz}
+\citation{liu2021vizwiz}
+\citation{wang2022allinone}
+\citation{murahari2020large}
+\citation{wang2020vdbert}
+\citation{xu2021vlm}
+\citation{yang2021tap}
+\citation{qiao2021winner}
+\citation{zhu2020enhance}
+\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces  {}  \textbf  {Comparison to SotA when fine-tuning \emph  {Flamingo{}}{}.} We fine-tune\nobreakspace  {}\emph  {Flamingo{}}{} on all nine tasks where \emph  {Flamingo{}}{} does not achieve SotA with few-shot learning. \emph  {Flamingo{}}{} sets a new SotA on five of them, outperfoming methods (marked with $\dagger $) that use tricks such as model ensembling or domain-specific metric optimisation (e.g., CIDEr optimisation).\relax }}{10}{table.caption.7}\protected@file@percent }
+\newlabel{tab:ft-sota-table-compressed}{{2}{10}{\capfontsize {}  \textbf {Comparison to SotA when fine-tuning \largem {}.} We fine-tune~\largem {} on all nine tasks where \largem {} does not achieve SotA with few-shot learning. \largem {} sets a new SotA on five of them, outperfoming methods (marked with $\dagger $) that use tricks such as model ensembling or domain-specific metric optimisation (e.g., CIDEr optimisation).\relax }{table.caption.7}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Fine-tuning \emph  {Flamingo{}}{} as a pretrained vision-language model}{10}{subsection.3.2}\protected@file@percent }
+\newlabel{sec:ft_results}{{3.2}{10}{Fine-tuning \largem {} as a pretrained vision-language model}{subsection.3.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3}Ablation studies}{10}{subsection.3.3}\protected@file@percent }
+\newlabel{sec:ablations}{{3.3}{10}{Ablation studies}{subsection.3.3}{}}
+\citation{schuhmann2021laion}
+\citation{cho2021unifying}
+\citation{vaswani2017attention}
+\citation{luo2022vc}
+\@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces {} \textbf  {Ablation studies.} Each row should be compared to the baseline\nobreakspace  {}Flamingo{} run (top row). Step time measures the time spent to perform gradient updates on all training datasets. \relax }}{11}{table.caption.8}\protected@file@percent }
+\newlabel{tab:ablation-table-no-classif}{{3}{11}{\capfontsize {} \textbf {Ablation studies.} Each row should be compared to the baseline~\method {} run (top row). Step time measures the time spent to perform gradient updates on all training datasets. \relax }{table.caption.8}{}}
+\citation{clip}
+\citation{vaswani2017attention}
+\citation{mikolov2010recurrent,graves2013generating,jozefowicz2016exploring,howard2018universal,bert,t5,sutskever2011generating,gpt3}
+\citation{chinchilla}
+\citation{houlsby2019parameter}
+\citation{zaken_bitfit_2022}
+\citation{gpt3}
+\citation{li2021prefix,lester2021power}
+\citation{gpt3}
+\citation{doersch2020crosstransformers,vinyals2016matching,snell2017prototypical,tian2020rethinking}
+\citation{finn2017model,bertinetto2018meta,zintgraf2019fast,requeima2019fast,gordon2018meta,bertinetto2016learning}
+\citation{bert}
+\citation{lu2019vilbert,su2019vl,chen2020uniter,hendricks2021decoupling,wang2021vlmo,li2020oscar,tan2019lxmert,zhu2020actbert,wang2021ufo,li2020hero,gan2020large,fu2021violet,zellers2021merlot,zellers2022merlot,singh2021flava,sun2019videobert}
+\citation{alayrac2020self,clip,align,zhai2021lit,pham2021combined,miech2020end,bain2021frozen,yuan2021florence,li2021align,yao2021filip,jain2021mural}
+\citation{vinyals2015show,donahue2015long,luo2020univl,hu2021scaling,dai2022}
+\citation{wang2021simvlm,cho2021unifying,wang2022unifying,zhu2021uni,li2022blip}
+\citation{tsimpoukelli2021multimodal,eichenberg2021magma,mokady2021clipcap,luo2022vc,yang2021empirical,zeng2022socraticmodels}
+\citation{mccloskey1989catastrophic}
+\citation{chinchilla}
+\@writefile{toc}{\contentsline {section}{\numberline {4}Related work}{12}{section.4}\protected@file@percent }
+\citation{young2014image,chen2015microsoft,antol2015vqa,marino2019ok,wang2019vatex,xiao2021next}
+\citation{align,sharma2018conceptual,changpinyo2021conceptual,thomee2016yfcc100m}
+\citation{aghajanyan2022cm3}
+\citation{aghajanyan2022cm3}
+\citation{clip,pham2021combined}
+\citation{zhao2021calibrate,truefewshot}
+\@writefile{toc}{\contentsline {section}{\numberline {5}Discussion}{13}{section.5}\protected@file@percent }
+\newlabel{sec:discussion}{{5}{13}{Discussion}{section.5}{}}
+\citation{weidinger2021harms,chinchilla}
+\citation{hendricks2018women,zhao2021understanding,buolamwini2018gender,de2019does,schwemmer2020diagnosing}
+\citation{thoppilan2022lamda,perez2022red,menick2022teaching}
+\bibstyle{plainnat}
+\bibdata{template_refs}
+\bibcite{aghajanyan2022cm3}{{1}{2022}{{Aghajanyan et~al.}}{{Aghajanyan, Huang, Ross, Karpukhin, Xu, Goyal, Okhonko, Joshi, Ghosh, Lewis, and Zettlemoyer}}}
+\bibcite{alayrac2020self}{{2}{2020}{{Alayrac et~al.}}{{Alayrac, Recasens, Schneider, Arandjelovi{\'c}, Ramapuram, De~Fauw, Smaira, Dieleman, and Zisserman}}}
+\@writefile{toc}{\contentsline {paragraph}{Acknowledgments and Disclosure of Funding.}{14}{section*.9}\protected@file@percent }
+\bibcite{antol2015vqa}{{3}{2015}{{Antol et~al.}}{{Antol, Agrawal, Lu, Mitchell, Batra, Zitnick, and Parikh}}}
+\bibcite{bachlechner2021rezero}{{4}{2021}{{Bachlechner et~al.}}{{Bachlechner, Majumder, Mao, Cottrell, and McAuley}}}
+\bibcite{bain2021frozen}{{5}{2021}{{Bain et~al.}}{{Bain, Nagrani, Varol, and Zisserman}}}
+\bibcite{bertinetto2016learning}{{6}{2016}{{Bertinetto et~al.}}{{Bertinetto, Henriques, Valmadre, Torr, and Vedaldi}}}
+\bibcite{bertinetto2018meta}{{7}{2018}{{Bertinetto et~al.}}{{Bertinetto, Henriques, Torr, and Vedaldi}}}
+\bibcite{jax2018github}{{8}{2018}{{Bradbury et~al.}}{{Bradbury, Frostig, Hawkins, Johnson, Leary, Maclaurin, Necula, Paszke, Vander{P}las, Wanderman-{M}ilne, and Zhang}}}
+\bibcite{bridle1990probabilistic}{{9}{1990}{{Bridle}}{{}}}
+\bibcite{nfnets}{{10}{2021}{{Brock et~al.}}{{Brock, De, Smith, and Simonyan}}}
+\bibcite{gpt3}{{11}{2020}{{Brown et~al.}}{{Brown, Mann, Ryder, Subbiah, Kaplan, Dhariwal, Neelakantan, Shyam, Sastry, Askell, Agarwal, Herbert-Voss, Krueger, Henighan, Child, Ramesh, Ziegler, Wu, Winter, Hesse, Chen, Sigler, Litwin, Gray, Chess, Clark, Berner, McCandlish, Radford, Sutskever, and Amodei}}}
+\bibcite{buolamwini2018gender}{{12}{2018}{{Buolamwini and Gebru}}{{}}}
+\bibcite{carion2020end}{{13}{2020}{{Carion et~al.}}{{Carion, Massa, Synnaeve, Usunier, Kirillov, and Zagoruyko}}}
+\bibcite{changpinyo2021conceptual}{{14}{2021}{{Changpinyo et~al.}}{{Changpinyo, Sharma, Ding, and Soricut}}}
+\bibcite{chen2015microsoft}{{15}{2015}{{Chen et~al.}}{{Chen, Fang, Lin, Vedantam, Gupta, Doll{\'a}r, and Zitnick}}}
+\bibcite{chen2020uniter}{{16}{2020}{{Chen et~al.}}{{Chen, Li, Yu, El~Kholy, Ahmed, Gan, Cheng, and Liu}}}
+\bibcite{cho2021unifying}{{17}{2021}{{Cho et~al.}}{{Cho, Lei, Tan, and Bansal}}}
+\bibcite{chowdhery2022palm}{{18}{2022}{{Chowdhery et~al.}}{{Chowdhery, Narang, Devlin, Bosma, Mishra, Roberts, Barham, Chung, Sutton, Gehrmann, Schuh, Shi, Tsvyashchenko, Maynez, Rao, Barnes, Tay, Shazeer, Prabhakaran, Reif, Du, Hutchinson, Pope, Bradbury, Austin, Isard, Gur-Ari, Yin, Duke, Levskaya, Ghemawat, Dev, Michalewski, Garcia, Misra, Robinson, Fedus, Zhou, Ippolito, Luan, Lim, Zoph, Spiridonov, Sepassi, Dohan, Agrawal, Omernick, Dai, Pillai, Pellat, Lewkowycz, Moreira, Child, Polozov, Lee, Zhou, Wang, Saeta, Diaz, Firat, Catasta, Wei, Meier-Hellstern, Eck, Dean, Petrov, and Fiedel}}}
+\bibcite{dai2022}{{19}{2022}{{Dai et~al.}}{{Dai, Hou, Shang, Jiang, Liu, and Fung}}}
+\bibcite{das2017visual}{{20}{2017}{{Das et~al.}}{{Das, Kottur, Gupta, Singh, Yadav, Moura, Parikh, and Batra}}}
+\bibcite{de2019does}{{21}{2019}{{De~Vries et~al.}}{{De~Vries, Misra, Wang, and Van~der Maaten}}}
+\bibcite{desai2021virtex}{{22}{2021}{{Desai and Johnson}}{{}}}
+\bibcite{bert}{{23}{2018}{{Devlin et~al.}}{{Devlin, Chang, Lee, and Toutanova}}}
+\bibcite{doersch2020crosstransformers}{{24}{2020}{{Doersch et~al.}}{{Doersch, Gupta, and Zisserman}}}
+\bibcite{donahue2015long}{{25}{2015}{{Donahue et~al.}}{{Donahue, Anne~Hendricks, Guadarrama, Rohrbach, Venugopalan, Saenko, and Darrell}}}
+\bibcite{eichenberg2021magma}{{26}{2021}{{Eichenberg et~al.}}{{Eichenberg, Black, Weinbach, Parcalabescu, and Frank}}}
+\bibcite{finn2017model}{{27}{2017}{{Finn et~al.}}{{Finn, Abbeel, and Levine}}}
+\bibcite{fu2021violet}{{28}{2021}{{Fu et~al.}}{{Fu, Li, Gan, Lin, Wang, Wang, and Liu}}}
+\bibcite{gan2020large}{{29}{2020}{{Gan et~al.}}{{Gan, Chen, Li, Zhu, Cheng, and Liu}}}
+\bibcite{datasheet}{{30}{2021}{{Gebru et~al.}}{{Gebru, Morgenstern, Vecchione, Vaughan, Wallach, Daum{\'e}~{III}, and Crawford}}}
+\bibcite{gordon2018meta}{{31}{2018}{{Gordon et~al.}}{{Gordon, Bronskill, Bauer, Nowozin, and Turner}}}
+\bibcite{graves2013generating}{{32}{2013}{{Graves}}{{}}}
+\bibcite{griffiths2019doing}{{33}{2019}{{Griffiths et~al.}}{{Griffiths, Callaway, Chang, Grant, Krueger, and Lieder}}}
+\bibcite{gui2021kat}{{34}{2021}{{Gui et~al.}}{{Gui, Wang, Huang, Hauptmann, Bisk, and Gao}}}
+\bibcite{gurari2018vizwiz}{{35}{2018}{{Gurari et~al.}}{{Gurari, Li, Stangl, Guo, Lin, Grauman, Luo, and Bigham}}}
+\bibcite{haviv2022transformer}{{36}{2022}{{Haviv et~al.}}{{Haviv, Ram, Press, Izsak, and Levy}}}
+\bibcite{hendricks2018women}{{37}{2018}{{Hendricks et~al.}}{{Hendricks, Burns, Saenko, Darrell, and Rohrbach}}}
+\bibcite{hendricks2021decoupling}{{38}{2021}{{Hendricks et~al.}}{{Hendricks, Mellor, Schneider, Alayrac, and Nematzadeh}}}
+\bibcite{hendrycks2016gaussian}{{39}{2016}{{Hendrycks and Gimpel}}{{}}}
+\bibcite{haiku2020github}{{40}{2020}{{Hennigan et~al.}}{{Hennigan, Cai, Norman, and Babuschkin}}}
+\bibcite{hochreiter1997long}{{41}{1997}{{Hochreiter and Schmidhuber}}{{}}}
+\bibcite{chinchilla}{{42}{2022}{{Hoffmann et~al.}}{{Hoffmann, Borgeaud, Mensch, Buchatskaya, Cai, Rutherford, Casas, Hendricks, Welbl, Clark, Tom~Hennigan, Millican, van~den Driessche, Damoc, Guy, Osindero, Simonyan, Elsen, Rae, Vinyals, and Sifre}}}
+\bibcite{houlsby2019parameter}{{43}{2019}{{Houlsby et~al.}}{{Houlsby, Giurgiu, Jastrzebski, Morrone, De~Laroussilhe, Gesmundo, Attariyan, and Gelly}}}
+\bibcite{howard2018universal}{{44}{2018}{{Howard and Ruder}}{{}}}
+\bibcite{hu2021scaling}{{45}{2021}{{Hu et~al.}}{{Hu, Gan, Wang, Yang, Liu, Lu, and Wang}}}
+\bibcite{huang2019attention}{{46}{2019}{{Huang et~al.}}{{Huang, Wang, Chen, and Wei}}}
+\bibcite{islam2021global}{{47}{2021}{{Islam et~al.}}{{Islam, Kowal, Jia, Derpanis, and Bruce}}}
+\bibcite{jaegle2021perceiver}{{48}{2021}{{Jaegle et~al.}}{{Jaegle, Gimeno, Brock, Vinyals, Zisserman, and Carreira}}}
+\bibcite{jain2021mural}{{49}{2021}{{Jain et~al.}}{{Jain, Guo, Srinivasan, Chen, Kudugunta, Jia, Yang, and Baldridge}}}
+\bibcite{align}{{50}{2021}{{Jia et~al.}}{{Jia, Yang, Xia, Chen, Parekh, Pham, Le, Sung, Li, and Duerig}}}
+\bibcite{wang2022allinone}{{51}{2022}{{Jinpeng~Wang et~al.}}{{Jinpeng~Wang, Ge, Yan, Ge, Lin, Cai, Wu, Shan, Qie, and Zheng~Shou}}}
+\bibcite{jozefowicz2016exploring}{{52}{2016}{{Jozefowicz et~al.}}{{Jozefowicz, Vinyals, Schuster, Shazeer, and Wu}}}
+\bibcite{kaplan2020scaling}{{53}{2020}{{Kaplan et~al.}}{{Kaplan, McCandlish, Henighan, Brown, Chess, Child, Gray, Radford, Wu, and Amodei}}}
+\bibcite{kiela2020hateful}{{54}{2020}{{Kiela et~al.}}{{Kiela, Firooz, Mohan, Goswami, Singh, Ringshia, and Testuggine}}}
+\bibcite{larochelle-recycling}{{55}{2021}{{Larochelle}}{{}}}
+\bibcite{lester2021power}{{56}{2021}{{Lester et~al.}}{{Lester, Al-Rfou, and Constant}}}
+\bibcite{li2021align}{{57}{2021}{{Li et~al.}}{{Li, Selvaraju, Gotmare, Joty, Xiong, and Hoi}}}
+\bibcite{li2022blip}{{58}{2022}{{Li et~al.}}{{Li, Li, Xiong, and Hoi}}}
+\bibcite{li2020hero}{{59}{2020{}}{{Li et~al.}}{{Li, Chen, Cheng, Gan, Yu, and Liu}}}
+\bibcite{li2021prefix}{{60}{2021}{{Li and Liang}}{{}}}
+\bibcite{li2020oscar}{{61}{2020{}}{{Li et~al.}}{{Li, Yin, Li, Zhang, Hu, Zhang, Wang, Hu, Dong, Wei, Choi, and Gao}}}
+\bibcite{lippe2020multimodal}{{62}{2020}{{Lippe et~al.}}{{Lippe, Holla, Chandra, Rajamanickam, Antoniou, Shutova, and Yannakoudakis}}}
+\bibcite{liu2021makes}{{63}{2021{}}{{Liu et~al.}}{{Liu, Shen, Zhang, Dolan, Carin, and Chen}}}
+\bibcite{spider}{{64}{2017}{{Liu et~al.}}{{Liu, Zhu, Ye, Guadarrama, and Murphy}}}
+\bibcite{liu2021vizwiz}{{65}{2021{}}{{Liu et~al.}}{{Liu, Huang, Song, Wang, Zhang, and Pan}}}
+\bibcite{lu2019vilbert}{{66}{2019}{{Lu et~al.}}{{Lu, Batra, Parikh, and Lee}}}
+\bibcite{luo2020univl}{{67}{2020}{{Luo et~al.}}{{Luo, Ji, Shi, Huang, Duan, Li, Li, Bharti, and Zhou}}}
+\bibcite{luo2022vc}{{68}{2022}{{Luo et~al.}}{{Luo, Xi, Zhang, and Ma}}}
+\bibcite{marino2019ok}{{69}{2019}{{Marino et~al.}}{{Marino, Rastegari, Farhadi, and Mottaghi}}}
+\bibcite{markman1989categorization}{{70}{1989}{{Markman}}{{}}}
+\bibcite{mccloskey1989catastrophic}{{71}{1989}{{{McCloskey} and Cohen}}{{}}}
+\bibcite{menick2022teaching}{{72}{2022}{{Menick et~al.}}{{Menick, Trebacz, Mikulik, Aslanides, Song, Chadwick, Glaese, Young, Campbell-Gillingham, Irving, and McAleese}}}
+\bibcite{miech20rareact}{{73}{2020{}}{{Miech et~al.}}{{Miech, Alayrac, Laptev, Sivic, and Zisserman}}}
+\bibcite{miech2020end}{{74}{2020{}}{{Miech et~al.}}{{Miech, Alayrac, Smaira, Laptev, Sivic, and Zisserman}}}
+\bibcite{mikolov2010recurrent}{{75}{2010}{{Mikolov et~al.}}{{Mikolov, Karafi{\'a}t, Burget, Cernock{\`y}, and Khudanpur}}}
+\bibcite{min2022rethinking}{{76}{2022}{{Min et~al.}}{{Min, Lyu, Holtzman, Artetxe, Lewis, Hajishirzi, and Zettlemoyer}}}
+\bibcite{mitchell2019model}{{77}{2019}{{Mitchell et~al.}}{{Mitchell, Wu, Zaldivar, Barnes, Vasserman, Hutchinson, Spitzer, Raji, and Gebru}}}
+\bibcite{mokady2021clipcap}{{78}{2021}{{Mokady et~al.}}{{Mokady, Hertz, and Bermano}}}
+\bibcite{murahari2020large}{{79}{2020}{{Murahari et~al.}}{{Murahari, Batra, Parikh, and Das}}}
+\bibcite{truefewshot}{{80}{2021}{{Perez et~al.}}{{Perez, Kiela, and Cho}}}
+\bibcite{perez2022red}{{81}{2022}{{Perez et~al.}}{{Perez, Huang, Song, Cai, Ring, Aslanides, Glaese, McAleese, and Irving}}}
+\bibcite{pham2021combined}{{82}{2021}{{Pham et~al.}}{{Pham, Dai, Ghiasi, Liu, Yu, Luong, Tan, and Le}}}
+\bibcite{press2021train}{{83}{2022}{{Press et~al.}}{{Press, Smith, and Lewis}}}
+\bibcite{qiao2021winner}{{84}{2021}{{Qiao et~al.}}{{Qiao, Chen, Wang, Chen, Ye, Li, Qi, Gao, and Xie}}}
+\bibcite{clip}{{85}{2021}{{Radford et~al.}}{{Radford, Kim, Hallacy, Ramesh, Goh, Agarwal, Sastry, Askell, Mishkin, Clark, Krueger, and Sutskever}}}
+\bibcite{gopher}{{86}{2021}{{Rae et~al.}}{{Rae, Borgeaud, Cai, Millican, Hoffmann, Song, Aslanides, Henderson, Ring, Young, Rutherford, Hennigan, Menick, Cassirer, Powell, van~den Driessche, Hendricks, Rauh, Huang, Glaese, Welbl, Dathathri, Huang, Uesato, Mellor, Higgins, Creswell, McAleese, Wu, Elsen, Jayakumar, Buchatskaya, Budden, Sutherland, Simonyan, Paganini, Sifre, Martens, Li, Kuncoro, Nematzadeh, Gribovskaya, Donato, Lazaridou, Mensch, Lespiau, Tsimpoukelli, Grigorev, Fritz, Sottiaux, Pajarskas, Pohlen, Gong, Toyama, de~Masson~d'Autume, Li, Terzi, Mikulik, Babuschkin, Clark, de~Las~Casas, Guy, Jones, Bradbury, Johnson, Hechtman, Weidinger, Gabriel, Isaac, Lockhart, Osindero, Rimell, Dyer, Vinyals, Ayoub, Stanway, Bennett, Hassabis, Kavukcuoglu, and Irving}}}
+\bibcite{t5}{{87}{2019}{{Raffel et~al.}}{{Raffel, Shazeer, Roberts, Lee, Narang, Matena, Zhou, Li, and Liu}}}
+\bibcite{zero}{{88}{2020}{{Rajbhandari et~al.}}{{Rajbhandari, Rasley, Ruwase, and He}}}
+\bibcite{ramesh2022hierarchical}{{89}{2022}{{Ramesh et~al.}}{{Ramesh, Dhariwal, Nichol, Chu, and Chen}}}
+\bibcite{selfcritical}{{90}{2017}{{Rennie et~al.}}{{Rennie, Marcheret, Mroueh, Ross, and Goel}}}
+\bibcite{requeima2019fast}{{91}{2019}{{Requeima et~al.}}{{Requeima, Gordon, Bronskill, Nowozin, and Turner}}}
+\bibcite{reynolds2021prompt}{{92}{2021}{{Reynolds and McDonell}}{{}}}
+\bibcite{rudinger2018gender}{{93}{2018}{{Rudinger et~al.}}{{Rudinger, Naradowsky, Leonard, and Van~Durme}}}
+\bibcite{russakovsky2015imagenet}{{94}{2015}{{Russakovsky et~al.}}{{Russakovsky, Deng, Su, Krause, Satheesh, Ma, Huang, Karpathy, Khosla, Bernstein, Berg, and Fei-Fei}}}
+\bibcite{t0}{{95}{2022}{{Sanh et~al.}}{{Sanh, Webson, Raffel, Bach, Sutawika, Alyafeai, Chaffin, Stiegler, Scao, Raja, Dey, Bari, Xu, Thakker, Sharma, Szczechla, Kim, Chhablani, Nayak, Datta, Chang, Jiang, Wang, Manica, Shen, Yong, Pandey, Bawden, Wang, Neeraj, Rozen, Sharma, Santilli, Fevry, Fries, Teehan, Biderman, Gao, Bers, Wolf, and Rush}}}
+\bibcite{schuhmann2021laion}{{96}{2021}{{Schuhmann et~al.}}{{Schuhmann, Vencu, Beaumont, Kaczmarczyk, Mullis, Katta, Coombes, Jitsev, and Komatsuzaki}}}
+\bibcite{schwemmer2020diagnosing}{{97}{2020}{{Schwemmer et~al.}}{{Schwemmer, Knight, Bello-Pardo, Oklobdzija, Schoonvelde, and Lockhart}}}
+\bibcite{sharma2018conceptual}{{98}{2018}{{Sharma et~al.}}{{Sharma, Ding, Goodman, and Soricut}}}
+\bibcite{megatron}{{99}{2019}{{Shoeybi et~al.}}{{Shoeybi, Patwary, Puri, LeGresley, Casper, and Catanzaro}}}
+\bibcite{singh2019towards}{{100}{2019}{{Singh et~al.}}{{Singh, Natarajan, Shah, Jiang, Chen, Batra, Parikh, and Rohrbach}}}
+\bibcite{singh2021flava}{{101}{2021}{{Singh et~al.}}{{Singh, Hu, Goswami, Couairon, Galuba, Rohrbach, and Kiela}}}
+\bibcite{smaira2020short}{{102}{2020}{{Smaira et~al.}}{{Smaira, Carreira, Noland, Clancy, Wu, and Zisserman}}}
+\bibcite{snell2017prototypical}{{103}{2017}{{Snell et~al.}}{{Snell, Swersky, and Zemel}}}
+\bibcite{so2021primer}{{104}{2021}{{So et~al.}}{{So, Ma{\'n}ke, Liu, Dai, Shazeer, and Le}}}
+\bibcite{energynlp}{{105}{2019}{{Strubell et~al.}}{{Strubell, Ganesh, and McCallum}}}
+\bibcite{su2019vl}{{106}{2019}{{Su et~al.}}{{Su, Zhu, Cao, Li, Lu, Wei, and Dai}}}
+\bibcite{sun2019videobert}{{107}{2019}{{Sun et~al.}}{{Sun, Myers, Vondrick, Murphy, and Schmid}}}
+\bibcite{sutskever2011generating}{{108}{2011}{{Sutskever et~al.}}{{Sutskever, Martens, and Hinton}}}
+\bibcite{tan2019lxmert}{{109}{2019}{{Tan and Bansal}}{{}}}
+\bibcite{thomee2016yfcc100m}{{110}{2016}{{Thomee et~al.}}{{Thomee, Shamma, Friedland, Elizalde, Ni, Poland, Borth, and Li}}}
+\bibcite{thoppilan2022lamda}{{111}{2022}{{Thoppilan et~al.}}{{Thoppilan, Freitas, Hall, Shazeer, Kulshreshtha, Cheng, Jin, Bos, Baker, Du, Li, Lee, Zheng, Ghafouri, Menegali, Huang, Krikun, Lepikhin, Qin, Chen, Xu, Chen, Roberts, Bosma, Zhao, Zhou, Chang, Krivokon, Rusch, Pickett, Srinivasan, Man, Meier-Hellstern, Morris, Doshi, Santos, Duke, Soraker, Zevenbergen, Prabhakaran, Diaz, Hutchinson, Olson, Molina, Hoffman-John, Lee, Aroyo, Rajakumar, Butryna, Lamm, Kuzmina, Fenton, Cohen, Bernstein, Kurzweil, Aguera-Arcas, Cui, Croak, Chi, and Le}}}
+\bibcite{tian2020rethinking}{{112}{2020}{{Tian et~al.}}{{Tian, Wang, Krishnan, Tenenbaum, and Isola}}}
+\bibcite{touvron2019fixing}{{113}{2019}{{Touvron et~al.}}{{Touvron, Vedaldi, Douze, and J{\'e}gou}}}
+\bibcite{tsimpoukelli2021multimodal}{{114}{2021}{{Tsimpoukelli et~al.}}{{Tsimpoukelli, Menick, Cabi, Eslami, Vinyals, and Hill}}}
+\bibcite{vaswani2017attention}{{115}{2017}{{Vaswani et~al.}}{{Vaswani, Shazeer, Parmar, Uszkoreit, Jones, Gomez, Kaiser, and Polosukhin}}}
+\bibcite{vinyals2015show}{{116}{2015}{{Vinyals et~al.}}{{Vinyals, Toshev, Bengio, and Erhan}}}
+\bibcite{vinyals2016matching}{{117}{2016}{{Vinyals et~al.}}{{Vinyals, Blundell, Lillicrap, Kavukcuoglu, and Wierstra}}}
+\bibcite{wang2021ufo}{{118}{2021{}}{{Wang et~al.}}{{Wang, Hu, Gan, Yang, Dai, Liu, Lu, and Wang}}}
+\bibcite{wang2022unifying}{{119}{2022{}}{{Wang et~al.}}{{Wang, Yang, Men, Lin, Bai, Li, Ma, Zhou, Zhou, and Yang}}}
+\bibcite{wang2022noncausaladaptation}{{120}{2022{}}{{Wang et~al.}}{{Wang, Roberts, Hesslow, Le~Scao, Chung, Beltagy, Launay, and Raffel}}}
+\bibcite{wang2021vlmo}{{121}{2021{}}{{Wang et~al.}}{{Wang, Bao, Dong, and Wei}}}
+\bibcite{wang2019vatex}{{122}{2019}{{Wang et~al.}}{{Wang, Wu, Chen, Li, Wang, and Wang}}}
+\bibcite{wang2020vdbert}{{123}{2020}{{Wang et~al.}}{{Wang, Joty, Lyu, King, Xiong, and Hoi}}}
+\bibcite{wang2021simvlm}{{124}{2021{}}{{Wang et~al.}}{{Wang, Yu, Yu, Dai, Tsvetkov, and Cao}}}
+\bibcite{wei2021finetuned}{{125}{2021}{{Wei et~al.}}{{Wei, Bosma, Zhao, Guu, Yu, Lester, Du, Dai, and Le}}}
+\bibcite{weidinger2021harms}{{126}{2021}{{Weidinger et~al.}}{{Weidinger, Mellor, Rauh, Griffin, Uesato, Huang, Cheng, Glaese, Balle, Kasirzadeh, Kenton, Brown, Hawkins, Stepleton, Biles, Birhane, Haas, Rimell, Hendricks, Isaac, Legassick, Irving, and Gabriel}}}
+\bibcite{wortsman2022model}{{127}{2022}{{Wortsman et~al.}}{{Wortsman, Ilharco, Gadre, Roelofs, Gontijo-Lopes, Morcos, Namkoong, Farhadi, Carmon, Kornblith, and Schmidt}}}
+\bibcite{wu2021star}{{128}{2021}{{Wu et~al.}}{{Wu, Yu, Chen, Tenenbaum, and Gan}}}
+\bibcite{xiao2021next}{{129}{2021}{{Xiao et~al.}}{{Xiao, Shang, Yao, and Chua}}}
+\bibcite{xu2017video}{{130}{2017}{{Xu et~al.}}{{Xu, Zhao, Xiao, Wu, Zhang, He, and Zhuang}}}
+\bibcite{xu2022zeroprompt}{{131}{2022}{{Xu et~al.}}{{Xu, Chen, Du, Shao, Wang, Li, and Yang}}}
+\bibcite{xu2021vlm}{{132}{2021}{{Xu et~al.}}{{Xu, Ghosh, Huang, Arora, Aminzadeh, Feichtenhofer, Metze, and Zettlemoyer}}}
+\bibcite{yan2021achieving}{{133}{2021}{{Yan et~al.}}{{Yan, Xu, Li, Tian, Bi, Wang, Chen, Xu, Wang, Cao, Zhang, Zhang, Zhang, Huang, Huang, Si, and Jin}}}
+\bibcite{yan2022multiview}{{134}{2022}{{Yan et~al.}}{{Yan, Xiong, Arnab, Lu, Zhang, Sun, and Schmid}}}
+\bibcite{yang2021just}{{135}{2021{}}{{Yang et~al.}}{{Yang, Miech, Sivic, Laptev, and Schmid}}}
+\bibcite{yang2021empirical}{{136}{2021{}}{{Yang et~al.}}{{Yang, Gan, Wang, Hu, Lu, Liu, and Wang}}}
+\bibcite{yang2021tap}{{137}{2021{}}{{Yang et~al.}}{{Yang, Lu, Wang, Yin, Florencio, Wang, Zhang, Zhang, and Luo}}}
+\bibcite{yao2021filip}{{138}{2021}{{Yao et~al.}}{{Yao, Huang, Hou, Lu, Niu, Xu, Liang, Li, Jiang, and Xu}}}
+\bibcite{young2014image}{{139}{2014}{{Young et~al.}}{{Young, Lai, Hodosh, and Hockenmaier}}}
+\bibcite{yuan2021florence}{{140}{2021}{{Yuan et~al.}}{{Yuan, Chen, Chen, Codella, Dai, Gao, Hu, Huang, Li, Li, Liu, Liu, Liu, Lu, Shi, Wang, Wang, Xiao, Xiao, Yang, Zeng, Zhou, and Zhang}}}
+\bibcite{zaken_bitfit_2022}{{141}{2021}{{Zaken et~al.}}{{Zaken, Ravfogel, and Goldberg}}}
+\bibcite{zellers2021merlot}{{142}{2021}{{Zellers et~al.}}{{Zellers, Lu, Hessel, Yu, Park, Cao, Farhadi, and Choi}}}
+\bibcite{zellers2022merlot}{{143}{2022}{{Zellers et~al.}}{{Zellers, Lu, Lu, Yu, Zhao, Salehi, Kusupati, Hessel, Farhadi, and Choi}}}
+\bibcite{zeng2022socraticmodels}{{144}{2022}{{Zeng et~al.}}{{Zeng, Wong, Welker, Choromanski, Tombari, Purohit, Ryoo, Sindhwani, Lee, Vanhoucke, and Florence}}}
+\bibcite{jft3b}{{145}{2021{}}{{Zhai et~al.}}{{Zhai, Kolesnikov, Houlsby, and Beyer}}}
+\bibcite{zhai2021lit}{{146}{2021{}}{{Zhai et~al.}}{{Zhai, Wang, Mustafa, Steiner, Keysers, Kolesnikov, and Beyer}}}
+\bibcite{zhao2021understanding}{{147}{2021{}}{{Zhao et~al.}}{{Zhao, Wang, and Russakovsky}}}
+\bibcite{zhao2021calibrate}{{148}{2021{}}{{Zhao et~al.}}{{Zhao, Wallace, Feng, Klein, and Singh}}}
+\bibcite{zhou2018towards}{{149}{2018}{{Zhou et~al.}}{{Zhou, Xu, and Corso}}}
+\bibcite{zhou2020unified}{{150}{2020}{{Zhou et~al.}}{{Zhou, Palangi, Zhang, Hu, Corso, and Gao}}}
+\bibcite{zhu2020actbert}{{151}{2020}{{Zhu and Yang}}{{}}}
+\bibcite{zhu2020enhance}{{152}{2020}{{Zhu}}{{}}}
+\bibcite{zhu2019vatex}{{153}{2019}{{Zhu et~al.}}{{Zhu, Guo, Yao, Lu, Liu, and Liu}}}
+\bibcite{zhu2021uni}{{154}{2021}{{Zhu et~al.}}{{Zhu, Zhu, Li, Wu, Wang, Li, Wang, and Dai}}}
+\bibcite{zintgraf2019fast}{{155}{2019}{{Zintgraf et~al.}}{{Zintgraf, Shiarli, Kurin, Hofmann, and Whiteson}}}
+\citation{datasheet}
+\citation{datasheet}
+\citation{jaegle2021perceiver}
+\citation{islam2021global}
+\@writefile{toc}{\contentsline {section}{\numberline {A}Method}{34}{appendix.A}\protected@file@percent }
+\newlabel{app:all_method_details}{{A}{34}{Method}{appendix.A}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.1}Model details}{34}{subsection.A.1}\protected@file@percent }
+\newlabel{app:experiment_and_model_details}{{A.1}{34}{Model details}{subsection.A.1}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {A.1.1}Perceiver Resampler}{34}{subsubsection.A.1.1}\protected@file@percent }
+\newlabel{app:transformer_resampler}{{A.1.1}{34}{Perceiver Resampler}{subsubsection.A.1.1}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces {} \textbf  {The Perceiver Resampler} module maps a \emph  {variable} size grid of spatio-temporal visual features output by the Vision Encoder to a \emph  {fixed} number of output tokens (five in the figure), independently from the input image resolution or the number of input video frames. This transformer has a set of learned latent vectors as queries, and the keys and values are a concatenation of the spatio-temporal visual features with the learned latent vectors.\relax }}{35}{figure.caption.13}\protected@file@percent }
+\newlabel{fig:transformer_resampler}{{5}{35}{\capfontsize {} \textbf {The Perceiver Resampler} module maps a \emph {variable} size grid of spatio-temporal visual features output by the Vision Encoder to a \emph {fixed} number of output tokens (five in the figure), independently from the input image resolution or the number of input video frames. This transformer has a set of learned latent vectors as queries, and the keys and values are a concatenation of the spatio-temporal visual features with the learned latent vectors.\relax }{figure.caption.13}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces {} Evolution of the absolute value of the tanh gating at different layers of \emph  {Flamingo{}}-3B{}. \relax }}{35}{figure.caption.14}\protected@file@percent }
+\newlabel{fig:tanh_gating_evolution}{{6}{35}{\capfontsize {} Evolution of the absolute value of the tanh gating at different layers of \base {}. \relax }{figure.caption.14}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {A.1.2}\textsc  {gated xattn-dense} details}{35}{subsubsection.A.1.2}\protected@file@percent }
+\newlabel{app:xattn_dense}{{A.1.2}{35}{\textsc {gated xattn-dense} details}{subsubsection.A.1.2}{}}
+\citation{so2021primer}
+\citation{so2021primer}
+\citation{hendrycks2016gaussian}
+\citation{so2021primer}
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces {} \textbf  {Interleaved visual data and text support.} Given text interleaved with images/videos, e.g. coming from a webpage, we first process the text by inserting \texttt  {<image>} tags at the locations of the visual data in the text as well as special tokens (\texttt  {<BOS>} for ``beginning of sequence'' or \texttt  {<EOC>} for ``end of chunk''). Images are processed independently by the Vision Encoder and Perceiver Resampler to extract visual tokens. At a given text token, the model only cross-attends to the visual tokens corresponding to the last preceding image/video. $\phi $ indicates which image/video a text token can attend or $0$ when no image/video is preceding. In practice, this selective cross-attention is achieved through masking -- illustrated here with the dark blue entries (unmasked/visible) and light blue entries (masked). \relax }}{36}{figure.caption.15}\protected@file@percent }
+\newlabel{fig:xattn_multi_im}{{7}{36}{\capfontsize {} \textbf {Interleaved visual data and text support.} Given text interleaved with images/videos, e.g. coming from a webpage, we first process the text by inserting \texttt {<image>} tags at the locations of the visual data in the text as well as special tokens (\texttt {<BOS>} for ``beginning of sequence'' or \texttt {<EOC>} for ``end of chunk''). Images are processed independently by the Vision Encoder and Perceiver Resampler to extract visual tokens. At a given text token, the model only cross-attends to the visual tokens corresponding to the last preceding image/video. $\phi $ indicates which image/video a text token can attend or $0$ when no image/video is preceding. In practice, this selective cross-attention is achieved through masking -- illustrated here with the dark blue entries (unmasked/visible) and light blue entries (masked). \relax }{figure.caption.15}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {A.1.3}Multi-visual input support}{36}{subsubsection.A.1.3}\protected@file@percent }
+\newlabel{app:multi-visual-details}{{A.1.3}{36}{Multi-visual input support}{subsubsection.A.1.3}{}}
+\citation{gpt3}
+\@writefile{lot}{\contentsline {table}{\numberline {4}{\ignorespaces Hyper-parameters for the Flamingo models{}' transformers. The hidden size of each feed-forward MLP is $4D$. \textbf  {L}: number of layers, \textbf  {D}: transformer hidden size, \textbf  {H}: number of heads, \textbf  {Act.}: FFW activation, \textbf  {Sq. ReLU}: Squared ReLU\nobreakspace  {}\citep  {so2021primer}. \relax }}{37}{table.caption.16}\protected@file@percent }
+\newlabel{tab:model-architecture-hyperparam}{{4}{37}{Hyper-parameters for the \methodfamily {}' transformers. The hidden size of each feed-forward MLP is $4D$. \textbf {L}: number of layers, \textbf {D}: transformer hidden size, \textbf {H}: number of heads, \textbf {Act.}: FFW activation, \textbf {Sq. ReLU}: Squared ReLU~\citep {so2021primer}. \relax }{table.caption.16}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces {} \textbf  {Few-shot interleaved prompt generation.} Given some task-specific few-shot examples (a.k.a. support examples) and a query for which\nobreakspace  {}Flamingo{} should make a prediction, we build the prompt by interleaving images with their corresponding texts. We introduce some formatting to do this, prepending ``\texttt  {\color  {greencode}Output:}'' to the expected response for all vision-to-text tasks or prompting in the format ``\texttt  {\color  {greencode}Question:\nobreakspace  {}\{question\}\color  {greencode}\nobreakspace  {}Answer:\nobreakspace  {}\{answer\}}'' for visual question-answering tasks. \relax }}{37}{figure.caption.17}\protected@file@percent }
+\newlabel{fig:fewshot_prompt}{{8}{37}{\capfontsize {} \textbf {Few-shot interleaved prompt generation.} Given some task-specific few-shot examples (a.k.a. support examples) and a query for which~\method {} should make a prediction, we build the prompt by interleaving images with their corresponding texts. We introduce some formatting to do this, prepending ``\texttt {\color {greencode}Output:}'' to the expected response for all vision-to-text tasks or prompting in the format ``\texttt {\color {greencode}Question:~\{question\}\color {greencode}~Answer:~\{answer\}}'' for visual question-answering tasks. \relax }{figure.caption.17}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {A.1.4}Transformer architecture}{37}{subsubsection.A.1.4}\protected@file@percent }
+\newlabel{app:transformer_details}{{A.1.4}{37}{Transformer architecture}{subsubsection.A.1.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.2}In-context few-shot evaluation details}{37}{subsection.A.2}\protected@file@percent }
+\newlabel{app:in_context_eval_details}{{A.2}{37}{In-context few-shot evaluation details}{subsection.A.2}{}}
+\@writefile{toc}{\contentsline {paragraph}{In-context learning with Flamingo{} models.}{37}{section*.18}\protected@file@percent }
+\citation{clip}
+\citation{truefewshot}
+\citation{min2022rethinking}
+\citation{yang2021empirical}
+\citation{press2021train}
+\citation{liu2021makes}
+\citation{yang2021empirical}
+\citation{zhao2021calibrate}
+\@writefile{toc}{\contentsline {paragraph}{Open-ended and close-ended evaluations.}{38}{section*.19}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Zero-shot generalization.}{38}{section*.20}\protected@file@percent }
+\newlabel{app:rices}{{A.2}{38}{Retrieval-based In-Context Example Selection~\citep {yang2021empirical}}{section*.21}{}}
+\@writefile{toc}{\contentsline {paragraph}{Retrieval-based In-Context Example Selection\nobreakspace  {}\citep  {yang2021empirical}.}{38}{section*.21}\protected@file@percent }
+\citation{gopher}
+\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces \small \textbf  {Training datasets.} Mixture of training datasets of different formats. $N$ corresponds to the number of visual inputs for a single example. For paired image (or video) and text datasets, $N = 1$. $T$ is the number of video frames ($T = 1$ for images). $H$, $W$, and $C$ are height, width and color channels.\relax }}{39}{figure.caption.23}\protected@file@percent }
+\newlabel{fig:training_data}{{9}{39}{\small \textbf {Training datasets.} Mixture of training datasets of different formats. $N$ corresponds to the number of visual inputs for a single example. For paired image (or video) and text datasets, $N = 1$. $T$ is the number of video frames ($T = 1$ for images). $H$, $W$, and $C$ are height, width and color channels.\relax }{figure.caption.23}{}}
+\@writefile{toc}{\contentsline {paragraph}{Prompt ensembling.}{39}{section*.22}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.3}Training dataset details}{39}{subsection.A.3}\protected@file@percent }
+\newlabel{app:datasets}{{A.3}{39}{Training dataset details}{figure.caption.23}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {A.3.1}\emph  {M3W}{} collection}{39}{subsubsection.A.3.1}\protected@file@percent }
+\newlabel{app:collection-m3w}{{A.3.1}{39}{\mmmw {} collection}{subsubsection.A.3.1}{}}
+\citation{align}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {A.3.2}\emph  {M3W}{} image-placement augmentation}{40}{subsubsection.A.3.2}\protected@file@percent }
+\newlabel{app:m3w_processing}{{A.3.2}{40}{\mmmw {} image-placement augmentation}{subsubsection.A.3.2}{}}
+\newlabel{app:interleaved_indices}{{A.3.2}{40}{\mmmw {} image-placement augmentation}{subsubsection.A.3.2}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {A.3.3}LTIP{} and VTP{}: Visual data paired with text}{41}{subsubsection.A.3.3}\protected@file@percent }
+\newlabel{app:vtp_and_itp}{{A.3.3}{41}{\shortimagetextpairs {} and \shortvideotextpairs {}: Visual data paired with text}{subsubsection.A.3.3}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {A.3.4}Dataset deduplication against evaluation tasks}{41}{subsubsection.A.3.4}\protected@file@percent }
+\newlabel{app:dataset_dedup}{{A.3.4}{41}{Dataset deduplication against evaluation tasks}{subsubsection.A.3.4}{}}
+\citation{chinchilla}
+\@writefile{lot}{\contentsline {table}{\numberline {5}{\ignorespaces {} \textbf  {Parameter counts for Flamingo models{}.} We focus on increasing the parameter count of the frozen LM and the trainable vision-text \textsc  {gated xattn-dense} modules while maintaining the frozen vision encoder and trainable Resampler to a fixed and small size across the different models. The frequency of the \textsc  {gated xattn-dense} with respect to the original language model blocks is given in parentheses. \relax }}{42}{table.caption.24}\protected@file@percent }
+\newlabel{tab:param-count}{{5}{42}{\capfontsize {} \textbf {Parameter counts for \methodfamily {}.} We focus on increasing the parameter count of the frozen LM and the trainable vision-text \textsc {gated xattn-dense} modules while maintaining the frozen vision encoder and trainable Resampler to a fixed and small size across the different models. The frequency of the \textsc {gated xattn-dense} with respect to the original language model blocks is given in parentheses. \relax }{table.caption.24}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {B}Experiments}{42}{appendix.B}\protected@file@percent }
+\newlabel{app:extra_experiments_results}{{B}{42}{Experiments}{appendix.B}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {B.1}Training and evaluation details}{42}{subsection.B.1}\protected@file@percent }
+\newlabel{sec:exp_setting}{{B.1}{42}{Training and evaluation details}{subsection.B.1}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {B.1.1}Models}{42}{subsubsection.B.1.1}\protected@file@percent }
+\newlabel{sec:models_details}{{B.1.1}{42}{Models}{subsubsection.B.1.1}{}}
+\citation{chinchilla}
+\citation{chinchilla}
+\citation{mitchell2019model}
+\citation{touvron2019fixing}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {B.1.2}Training details for the Flamingo{} models}{43}{subsubsection.B.1.2}\protected@file@percent }
+\newlabel{app:large_scale_training}{{B.1.2}{43}{Training details for the \method {} models}{subsubsection.B.1.2}{}}
+\@writefile{toc}{\contentsline {paragraph}{Data augmentation and preprocessing.}{43}{section*.25}\protected@file@percent }
+\citation{jax2018github}
+\citation{haiku2020github}
+\citation{megatron}
+\citation{zero}
+\citation{clip}
+\citation{bridle1990probabilistic}
+\@writefile{toc}{\contentsline {paragraph}{Loss and optimisation.}{44}{section*.26}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Infrastructure and implementation.}{44}{section*.27}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {B.1.3}Contrastive model details}{44}{subsubsection.B.1.3}\protected@file@percent }
+\newlabel{app:contrastive_details}{{B.1.3}{44}{Contrastive model details}{subsubsection.B.1.3}{}}
+\citation{bert}
+\citation{align}
+\citation{nfnets}
+\citation{clip}
+\citation{russakovsky2015imagenet}
+\citation{chen2015microsoft}
+\citation{antol2015vqa}
+\citation{antol2015vqa}
+\citation{marino2019ok}
+\citation{antol2015vqa}
+\citation{young2014image}
+\citation{gurari2018vizwiz}
+\citation{antol2015vqa}
+\citation{singh2019towards}
+\citation{antol2015vqa}
+\citation{das2017visual}
+\citation{kiela2020hateful}
+\citation{smaira2020short}
+\citation{wang2019vatex}
+\citation{xu2017video}
+\citation{zhou2018towards}
+\citation{xu2017video}
+\citation{yang2021just}
+\citation{yang2021just}
+\citation{miech20rareact}
+\citation{xiao2021next}
+\citation{wu2021star}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {B.1.4}Evaluation benchmarks}{45}{subsubsection.B.1.4}\protected@file@percent }
+\newlabel{sec:eval_benchmarks}{{B.1.4}{45}{Evaluation benchmarks}{subsubsection.B.1.4}{}}
+\@writefile{toc}{\contentsline {paragraph}{\textsc  {dev}{} benchmarks.}{45}{section*.29}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {6}{\ignorespaces {} \textbf  {Summary of the evaluation benchmarks.} \textsc  {dev}{} benchmarks were used to validate general design decision of the\nobreakspace  {}Flamingo{} models. Gen. stands for generative task where we sample text from the VLM. If a task is non-generative it means that we use the VLM to score answers among a given finite set. For most of our tasks we use a common default prompt, hence minimizing task-specific tuning (see Appendix\nobreakspace  {}\ref {app:fewshot-eval-hyper}). \relax }}{46}{table.caption.28}\protected@file@percent }
+\newlabel{tab:multi-benchmarks}{{6}{46}{\capfontsize {} \textbf {Summary of the evaluation benchmarks.} \dev {} benchmarks were used to validate general design decision of the~\method {} models. Gen. stands for generative task where we sample text from the VLM. If a task is non-generative it means that we use the VLM to score answers among a given finite set. For most of our tasks we use a common default prompt, hence minimizing task-specific tuning (see Appendix~\ref {app:fewshot-eval-hyper}). \relax }{table.caption.28}{}}
+\@writefile{toc}{\contentsline {paragraph}{Dataset splits for the \textsc  {dev}\nobreakspace  {}benchmarks.}{46}{section*.30}\protected@file@percent }
+\citation{singh2019towards}
+\citation{das2017visual}
+\citation{kiela2020hateful}
+\citation{xiao2021next}
+\citation{wu2021star}
+\citation{miech20rareact}
+\citation{truefewshot}
+\citation{truefewshot}
+\@writefile{toc}{\contentsline {paragraph}{Unbiased few-shot performance estimation.}{47}{section*.31}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {B.1.5}Few-shot learning evaluation hyperparameters}{47}{subsubsection.B.1.5}\protected@file@percent }
+\newlabel{app:fewshot-eval-hyper}{{B.1.5}{47}{Few-shot learning evaluation hyperparameters}{subsubsection.B.1.5}{}}
+\citation{das2017visual}
+\citation{kiela2020hateful}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {B.1.6}Dialogue prompt}{48}{subsubsection.B.1.6}\protected@file@percent }
+\newlabel{app:dialogue_prompt}{{B.1.6}{48}{Dialogue prompt}{subsubsection.B.1.6}{}}
+\citation{wortsman2022model}
+\citation{yan2022multiview}
+\citation{pham2021combined}
+\citation{clip}
+\citation{yang2021empirical}
+\citation{yang2021empirical}
+\citation{yang2021empirical}
+\citation{pham2021combined}
+\citation{zhai2021lit}
+\citation{jft3b}
+\@writefile{lot}{\contentsline {table}{\numberline {7}{\ignorespaces  {} \textbf  {Few-shot results on classification tasks.} The\nobreakspace  {}Flamingo{} models can also be used for standard classification tasks. In particular, we explore having access to support sets bigger than what our current prompt can accommodate (using up to $5000$ support examples). In that regime, large gains are obtained by using the RICES method\nobreakspace  {}\citep  {yang2021empirical} as well as prompt ensembling. We also observe the same trend as with the vision-language benchmarks: bigger models do better and more shots help.\relax }}{49}{table.caption.32}\protected@file@percent }
+\newlabel{tab:fewshot_classif}{{7}{49}{\capfontsize {} \textbf {Few-shot results on classification tasks.} The~\method {} models can also be used for standard classification tasks. In particular, we explore having access to support sets bigger than what our current prompt can accommodate (using up to $5000$ support examples). In that regime, large gains are obtained by using the RICES method~\citep {yang2021empirical} as well as prompt ensembling. We also observe the same trend as with the vision-language benchmarks: bigger models do better and more shots help.\relax }{table.caption.32}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {B.2}Additional performance results}{49}{subsection.B.2}\protected@file@percent }
+\newlabel{app:more_performance}{{B.2}{49}{Additional performance results}{subsection.B.2}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {B.2.1}Few-shot learning on classification tasks}{49}{subsubsection.B.2.1}\protected@file@percent }
+\newlabel{app:classif_tasks}{{B.2.1}{49}{Few-shot learning on classification tasks}{subsubsection.B.2.1}{}}
+\citation{yan2021achieving}
+\citation{selfcritical,spider}
+\citation{murahari2020large}
+\citation{murahari2020large}
+\citation{wang2021simvlm}
+\citation{wang2022unifying}
+\citation{yuan2021florence}
+\citation{yuan2021florence}
+\citation{yuan2021florence}
+\citation{wang2021simvlm}
+\citation{zhu2019vatex}
+\citation{wang2022allinone}
+\citation{murahari2020large}
+\citation{murahari2020large}
+\citation{xu2021vlm}
+\citation{yang2021tap}
+\citation{qiao2021winner}
+\citation{lippe2020multimodal}
+\citation{yan2021achieving}
+\citation{yan2021achieving}
+\citation{wang2022unifying}
+\citation{zhu2019vatex}
+\citation{liu2021vizwiz}
+\citation{liu2021vizwiz}
+\citation{wang2020vdbert}
+\citation{zhu2020enhance}
+\citation{yuan2021florence}
+\citation{align}
+\citation{clip}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {B.2.2}Fine-tuning \emph  {Flamingo{}}{} as a pretrained vision-language model}{50}{subsubsection.B.2.2}\protected@file@percent }
+\newlabel{app:finetuning}{{B.2.2}{50}{Fine-tuning \largem {} as a pretrained vision-language model}{subsubsection.B.2.2}{}}
+\@writefile{toc}{\contentsline {paragraph}{Freezing and hyperparameters.}{50}{section*.33}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Results.}{50}{section*.34}\protected@file@percent }
+\citation{clip}
+\citation{align}
+\citation{yuan2021florence}
+\citation{pham2021combined}
+\citation{jft3b}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {B.2.3}Zero-shot performance of the pretrained contrastive model}{51}{subsubsection.B.2.3}\protected@file@percent }
+\newlabel{app:exp-contrastive}{{B.2.3}{51}{Zero-shot performance of the pretrained contrastive model}{subsubsection.B.2.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {B.3}Extended ablation studies}{51}{subsection.B.3}\protected@file@percent }
+\newlabel{app:all_ablation_studies}{{B.3}{51}{Extended ablation studies}{subsection.B.3}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {B.3.1}Flamingo}{51}{subsubsection.B.3.1}\protected@file@percent }
+\newlabel{app:full_ablations}{{B.3.1}{51}{Flamingo}{subsubsection.B.3.1}{}}
+\@writefile{toc}{\contentsline {paragraph}{Ablation study experimental setup.}{51}{section*.38}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {8}{\ignorespaces {}  \textbf  {Comparison to SotA when fine-tuning \emph  {Flamingo{}}{}.} We fine-tune\nobreakspace  {}\emph  {Flamingo{}}{} on all nine tasks where \emph  {Flamingo{}}{} was not SotA with few-shot learning. \emph  {Flamingo{}}{} sets a new SotA on five of these tasks sometimes even beating methods that resorts to known performance optimization tricks such as model ensembling (on VQAv2, VATEX, VizWiz and HatefulMemes). Best numbers among the restricted SotA are in \textbf  {bold}. Best numbers overall are \underline  {underlined}. Restricted SotA$^\dagger $ only includes methods that use a single model (not ensembles) and do not directly optimise the test metric (no CIDEr optimisation). \relax }}{51}{table.caption.35}\protected@file@percent }
+\newlabel{tab:ft-sota-table}{{8}{51}{\capfontsize {}  \textbf {Comparison to SotA when fine-tuning \largem {}.} We fine-tune~\largem {} on all nine tasks where \largem {} was not SotA with few-shot learning. \largem {} sets a new SotA on five of these tasks sometimes even beating methods that resorts to known performance optimization tricks such as model ensembling (on VQAv2, VATEX, VizWiz and HatefulMemes). Best numbers among the restricted SotA are in \textbf {bold}. Best numbers overall are \underline {underlined}. Restricted SotA$^\dagger $ only includes methods that use a single model (not ensembles) and do not directly optimise the test metric (no CIDEr optimisation). \relax }{table.caption.35}{}}
+\citation{haviv2022transformer}
+\@writefile{lot}{\contentsline {table}{\numberline {9}{\ignorespaces {}  \textbf  {Zero-shot contrastive pretraining evaluation.} Zero-shot image-text retrieval evaluation of our pretrained contrastive model compared to the state-of-the-art dual encoder contrastive models.\relax }}{52}{table.caption.36}\protected@file@percent }
+\newlabel{table:contrastive_eval_retrieval}{{9}{52}{\capfontsize {}  \textbf {Zero-shot contrastive pretraining evaluation.} Zero-shot image-text retrieval evaluation of our pretrained contrastive model compared to the state-of-the-art dual encoder contrastive models.\relax }{table.caption.36}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {10}{\ignorespaces {} \textbf  {Additional ablation studies.} Each row in this ablation study table should be compared to the baseline\nobreakspace  {}Flamingo{} run reported at the top of the table. The step time measures the time spent to perform gradient updates on all training datasets. (*): Due to higher memory usage, these models were trained using four times more TPU chips. The obtained accumulation step time was therefore multiplied by four. \relax }}{52}{table.caption.37}\protected@file@percent }
+\newlabel{tab:ablation-table-appendix}{{10}{52}{\capfontsize {} \textbf {Additional ablation studies.} Each row in this ablation study table should be compared to the baseline~\method {} run reported at the top of the table. The step time measures the time spent to perform gradient updates on all training datasets. (*): Due to higher memory usage, these models were trained using four times more TPU chips. The obtained accumulation step time was therefore multiplied by four. \relax }{table.caption.37}{}}
+\@writefile{toc}{\contentsline {paragraph}{Resampler size.}{52}{section*.39}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Effect of how many images are cross-attended to.}{52}{section*.40}\protected@file@percent }
+\citation{t5}
+\@writefile{toc}{\contentsline {paragraph}{\emph  {M3W}{} image placement data augmentation.}{53}{section*.41}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Language model pretraining.}{53}{section*.42}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Freezing the vision encoder.}{53}{section*.43}\protected@file@percent }
+\citation{gopher}
+\citation{chinchilla}
+\citation{clip}
+\citation{schuhmann2021laion}
+\@writefile{toc}{\contentsline {paragraph}{Alternative to freezing the LM by co-training on MassiveText.}{54}{section*.44}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Additional experiments using the LAION400M dataset.}{54}{section*.45}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {B.3.2}Dataset mixing strategies for the contrastive pretraining}{54}{subsubsection.B.3.2}\protected@file@percent }
+\newlabel{app:contrastive_ablation}{{B.3.2}{54}{Dataset mixing strategies for the contrastive pretraining}{subsubsection.B.3.2}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {11}{\ignorespaces {}  \textbf  {Effect of contrastive pretraining datasets and combination strategies.} The first two rows show the effect of training a small model on LTIP{} and ALIGN only; the final three show the results of a small model trained on combinations of these datasets, comparing different combination strategies. \relax }}{54}{table.caption.46}\protected@file@percent }
+\newlabel{tab:contrastive_dataset_ablation}{{11}{54}{\capfontsize {}  \textbf {Effect of contrastive pretraining datasets and combination strategies.} The first two rows show the effect of training a small model on \shortimagetextpairs {} and ALIGN only; the final three show the results of a small model trained on combinations of these datasets, comparing different combination strategies. \relax }{table.caption.46}{}}
+\citation{clip}
+\@writefile{toc}{\contentsline {section}{\numberline {C}Qualitative results}{55}{appendix.C}\protected@file@percent }
+\newlabel{app:qual_res}{{C}{55}{Qualitative results}{appendix.C}{}}
+\citation{clip}
+\citation{zhao2021calibrate}
+\citation{wang2022noncausaladaptation}
+\citation{t0,wei2021finetuned,xu2022zeroprompt}
+\citation{press2021train}
+\citation{das2017visual}
+\citation{chinchilla}
+\citation{gpt3}
+\citation{gpt3,gopher}
+\@writefile{toc}{\contentsline {section}{\numberline {D}Discussion}{56}{appendix.D}\protected@file@percent }
+\newlabel{app:full_discussion}{{D}{56}{Discussion}{appendix.D}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {D.1}Limitations, failure cases and opportunities}{56}{subsection.D.1}\protected@file@percent }
+\newlabel{sec:limitations}{{D.1}{56}{Limitations, failure cases and opportunities}{subsection.D.1}{}}
+\@writefile{toc}{\contentsline {paragraph}{Classification performance.}{56}{section*.51}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces  {} \textbf  {Selected single image samples.} Gray boxes are user input and the pink boxes are \emph  {Flamingo{}}{} output. \relax }}{57}{figure.caption.47}\protected@file@percent }
+\newlabel{fig:single_samples}{{10}{57}{\capfontsize {} \textbf {Selected single image samples.} Gray boxes are user input and the pink boxes are \largem {} output. \relax }{figure.caption.47}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces {} \textbf  {Selected dialogue samples.} Gray boxes are user input and the pink boxes are \emph  {Flamingo{}}{} output. For dialogue, \emph  {Flamingo{}}{} is provided with a custom prompt (hidden from the visualization but shown in Appendix\nobreakspace  {}\ref {app:dialogue_prompt}) containing a dialogue with 3 corresponding images, but it is not fine-tuned for dialogue in any other way.\relax }}{58}{figure.caption.48}\protected@file@percent }
+\newlabel{fig:dialogue_samples}{{11}{58}{\capfontsize {} \textbf {Selected dialogue samples.} Gray boxes are user input and the pink boxes are \largem {} output. For dialogue, \largem {} is provided with a custom prompt (hidden from the visualization but shown in Appendix~\ref {app:dialogue_prompt}) containing a dialogue with 3 corresponding images, but it is not fine-tuned for dialogue in any other way.\relax }{figure.caption.48}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {12}{\ignorespaces \small \textbf  {Selected video samples.} These are all of the frames the model sees. (Best viewed with zoom.)\relax }}{59}{figure.caption.49}\protected@file@percent }
+\newlabel{fig:videoexamples}{{12}{59}{\small \textbf {Selected video samples.} These are all of the frames the model sees. (Best viewed with zoom.)\relax }{figure.caption.49}{}}
+\@writefile{toc}{\contentsline {paragraph}{Legacies of language models.}{59}{section*.52}\protected@file@percent }
+\citation{houlsby2019parameter}
+\citation{houlsby2019parameter}
+\@writefile{lof}{\contentsline {figure}{\numberline {13}{\ignorespaces  {} \textbf  {Hallucinations and ungrounded guesses in open-ended visual question answering.} \textit  {Left:} The model occasionally hallucinates by producing answers that seem likely given the text only, but are wrong given the image as additional input. \textit  {Middle:} Similar hallucinations can be provoked by adversarially prompting the model with an irrelevant question. \textit  {Right:} A more common pitfall arises when the model makes ungrounded guesses when the answer cannot be determined based on the inputs. Few-shot examples and more sophisticated prompt design may be used to mitigate these issues. More broadly, addressing these issues is an important research direction towards improving our models' applications in open-ended visual dialogue settings. \relax }}{60}{figure.caption.50}\protected@file@percent }
+\newlabel{fig:failure_examples}{{13}{60}{\capfontsize {} \textbf {Hallucinations and ungrounded guesses in open-ended visual question answering.} \textit {Left:} The model occasionally hallucinates by producing answers that seem likely given the text only, but are wrong given the image as additional input. \textit {Middle:} Similar hallucinations can be provoked by adversarially prompting the model with an irrelevant question. \textit {Right:} A more common pitfall arises when the model makes ungrounded guesses when the answer cannot be determined based on the inputs. Few-shot examples and more sophisticated prompt design may be used to mitigate these issues. More broadly, addressing these issues is an important research direction towards improving our models' applications in open-ended visual dialogue settings. \relax }{figure.caption.50}{}}
+\@writefile{toc}{\contentsline {paragraph}{Trade-offs of few-shot learning methods.}{60}{section*.53}\protected@file@percent }
+\citation{zhao2021calibrate}
+\citation{yang2021empirical}
+\citation{reynolds2021prompt,min2022rethinking}
+\citation{gpt3}
+\citation{reynolds2021prompt}
+\citation{min2022rethinking}
+\@writefile{toc}{\contentsline {paragraph}{Extending the visual and text interface.}{61}{section*.54}\protected@file@percent }
+\citation{kaplan2020scaling,chinchilla}
+\citation{jft3b}
+\@writefile{toc}{\contentsline {paragraph}{Scaling laws for vision-language models.}{62}{section*.55}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {D.2}Benefits, risks and mitigation strategies}{62}{subsection.D.2}\protected@file@percent }
+\newlabel{sec:broader_impact}{{D.2}{62}{Benefits, risks and mitigation strategies}{subsection.D.2}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {D.2.1}Benefits}{62}{subsubsection.D.2.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Accessibility.}{62}{section*.56}\protected@file@percent }
+\citation{larochelle-recycling}
+\citation{energynlp}
+\citation{mitchell2019model}
+\citation{chinchilla}
+\citation{weidinger2021harms}
+\citation{chinchilla}
+\citation{rudinger2018gender}
+\citation{gopher}
+\citation{chinchilla}
+\citation{weidinger2021harms}
+\citation{gopher}
+\citation{huang2019attention}
+\citation{li2020oscar}
+\citation{zhao2021understanding}
+\citation{zhao2021understanding}
+\@writefile{toc}{\contentsline {paragraph}{Model recycling.}{63}{section*.57}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {D.2.2}Risks and mitigation strategies}{63}{subsubsection.D.2.2}\protected@file@percent }
+\newlabel{sec:risks}{{D.2.2}{63}{Risks and mitigation strategies}{subsubsection.D.2.2}{}}
+\@writefile{toc}{\contentsline {paragraph}{By construction, \emph  {Flamingo{}}{} inherits the risks of Large LMs.}{63}{section*.58}\protected@file@percent }
+\citation{hendricks2018women,zhao2021understanding}
+\citation{buolamwini2018gender,de2019does,schwemmer2020diagnosing}
+\citation{zhao2021understanding}
+\citation{zhao2021understanding}
+\citation{zhao2021understanding}
+\@writefile{lot}{\contentsline {table}{\numberline {12}{\ignorespaces {} \textbf  {Bias evaluation of \emph  {Flamingo{}}{} for COCO captioning.} We report results on the COCO dataset splits over gender and skin tone provided by\nobreakspace  {}\citet  {zhao2021understanding}.\relax }}{64}{table.caption.59}\protected@file@percent }
+\newlabel{tab:biases}{{12}{64}{\capfontsize {} \textbf {Bias evaluation of \largem {} for COCO captioning.} We report results on the COCO dataset splits over gender and skin tone provided by~\citet {zhao2021understanding}.\relax }{table.caption.59}{}}
+\@writefile{toc}{\contentsline {paragraph}{Gender and racial biases when prompted with images.}{64}{section*.60}\protected@file@percent }
+\citation{thoppilan2022lamda}
+\citation{perez2022red}
+\citation{menick2022teaching,thoppilan2022lamda}
+\citation{mitchell2019model}
+\citation{chinchilla,gopher}
+\citation{align}
+\citation{gopher}
+\citation{weidinger2021harms}
+\citation{weidinger2021harms}
+\citation{weidinger2021harms}
+\citation{mitchell2019model}
+\citation{mitchell2019model}
+\gdef \LT@i {\LT@entry 
+    {1}{151.52216pt}\LT@entry 
+    {1}{250.49341pt}}
+\@writefile{toc}{\contentsline {paragraph}{Toxicity when prompted with images.}{65}{section*.61}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Applying Flamingo for mitigation strategies.}{65}{section*.62}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {E}\emph  {Flamingo{}}{} Model Card}{65}{appendix.E}\protected@file@percent }
+\newlabel{app:flamingo_model_card}{{E}{65}{\largem {} Model Card}{appendix.E}{}}
+\newlabel{appendix:flamingo-model-card}{{E}{65}{\largem {} Model Card}{appendix.E}{}}
+\citation{datasheet}
+\citation{datasheet}
+\citation{datasheet}
+\gdef \LT@ii {\LT@entry 
+    {1}{151.52216pt}\LT@entry 
+    {1}{250.49341pt}}
+\@writefile{lot}{\contentsline {table}{\numberline {13}{\ignorespaces {} \textbf  {Flamingo Model Card.} We follow the framework presented in \citet  {mitchell2019model}.\relax }}{69}{table.13}\protected@file@percent }
+\newlabel{tab:model-card}{{13}{69}{\largem {} Model Card}{table.13}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {F}Datasheets}{69}{appendix.F}\protected@file@percent }
+\newlabel{datasheets}{{F}{69}{Datasheets}{appendix.F}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {F.1}M3W dataset}{69}{subsection.F.1}\protected@file@percent }
+\newlabel{datasheet-m3w-break}{{F.1}{69}{M3W dataset}{subsection.F.1}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {14}{\ignorespaces {} \textbf  {\emph  {M3W}\nobreakspace  {}Datasheet}. We follow the framework as presented by \citet  {datasheet}.\relax }}{72}{table.14}\protected@file@percent }
+\newlabel{tab:m3w-datasheet}{{14}{72}{M3W dataset}{table.14}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {F.2}Image and video text pair datasets}{72}{subsection.F.2}\protected@file@percent }
+\citation{datasheet}
+\citation{datasheet}
+\gdef \LT@iii {\LT@entry 
+    {1}{151.52216pt}\LT@entry 
+    {1}{250.49341pt}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {F.2.1}Datasheet for LTIP}{73}{subsubsection.F.2.1}\protected@file@percent }
+\newlabel{app:itp_datasheet}{{F.2.1}{73}{Datasheet for \shortimagetextpairs }{subsubsection.F.2.1}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {15}{\ignorespaces {} \textbf  {LTIP{} Datasheet}. We follow the framework as presented by \citet  {datasheet}.\relax }}{76}{table.15}\protected@file@percent }
+\newlabel{tab:itp-datasheet}{{15}{76}{Datasheet for \shortimagetextpairs }{table.15}{}}
+\citation{datasheet}
+\citation{datasheet}
+\gdef \LT@iv {\LT@entry 
+    {1}{151.52216pt}\LT@entry 
+    {1}{250.49341pt}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {F.2.2}Datasheet for VTP}{77}{subsubsection.F.2.2}\protected@file@percent }
+\newlabel{app:vtp_datasheet}{{F.2.2}{77}{Datasheet for \shortvideotextpairs }{subsubsection.F.2.2}{}}
+\citation{ramesh2022hierarchical}
+\citation{ramesh2022hierarchical}
+\citation{clip}
+\citation{ramesh2022hierarchical}
+\@writefile{lot}{\contentsline {table}{\numberline {16}{\ignorespaces {} \textbf  {VTP Datasheet}. We follow the framework as presented by \citet  {datasheet}.\relax }}{80}{table.16}\protected@file@percent }
+\newlabel{tab:vtp-datasheet}{{16}{80}{Datasheet for \shortvideotextpairs }{table.16}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {G}Credit for visual content}{80}{appendix.G}\protected@file@percent }
+\newlabel{app:visual_content_credit}{{G}{80}{Credit for visual content}{appendix.G}{}}
+\gdef \@abspage@last{80}

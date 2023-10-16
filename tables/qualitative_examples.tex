@@ -1,0 +1,653 @@
+
+
+\newtcolorbox{singlepromptbox}{
+    enhanced,
+    boxsep=2pt,left=0pt,right=0pt,top=0pt,bottom=0pt,
+    width=0.28\textwidth,
+    colback={llgray},
+    baseline=3.5mm,
+    box align=center,
+    boxrule=0.5pt,
+    nobeforeafter
+}
+\newtcolorbox{singlepromptboxtitle}{
+    enhanced,
+    boxsep=4pt,left=0pt,right=0pt,top=0pt,bottom=0pt,
+    width=0.05\textwidth,
+    colback={llgray},
+    baseline=3.5mm,
+    box align=center,
+    boxrule=0.5pt,
+    nobeforeafter
+}
+\newtcolorbox{singleoutputbox}{
+    enhanced,
+    boxsep=4pt,left=0pt,right=0pt,top=0pt,bottom=0pt,
+    width=0.28\textwidth,
+    colback={llpink},
+    baseline=3.5mm,
+    box align=center,
+    boxrule=0.5pt,
+    nobeforeafter
+}
+\newtcolorbox{singleoutputboxtitle}{
+    enhanced,
+    boxsep=4pt,left=0pt,right=0pt,top=0pt,bottom=0pt,
+    width=0.05\textwidth,
+    colback={llpink},
+    baseline=3.5mm,
+    box align=center,
+    boxrule=0.5pt,
+    nobeforeafter
+}
+\newtcolorbox{singlearrowbox}{
+    enhanced,
+    boxsep=4pt,left=0pt,right=0pt,top=0pt,bottom=0pt,
+    width=0.04\textwidth,
+    colback={white},
+    colbacklower=white,
+    colframe=white,
+    baseline=3.5mm,
+    box align=center,
+    boxrule=0pt,
+    frame hidden,
+    nobeforeafter
+}
+
+\newcommand{\singleimheight}{2.5cm}
+\newcommand{\singleiminputtextwidth}{2.15cm}
+\newcommand{\singleimoutputtextwidth}{2.15cm}
+\newcommand{\singleiminputtext}[1]{
+    \begin{minipage}[b][1.5cm][c]{\textwidth}
+    \footnotesize
+    \centering
+    #1
+    \end{minipage}
+}
+\newcommand{\singleimoutputtext}[1]{
+    \begin{minipage}[b][\singleimheight][c]{\textwidth}
+    \footnotesize
+    \centering
+    #1
+    \end{minipage}
+}
+
+\begin{figure}
+\centering
+
+\begin{singlepromptboxtitle} \centering
+\rotatebox{90}{Input Prompt}
+\end{singlepromptboxtitle}
+\begin{singlepromptbox} \centering
+    \fbox{\includegraphics[height=\singleimheight]{images/cd_and_floppy.png}} \\
+    \singleiminputtext{Question: What do you think the capacities of these are? Answer:}
+\end{singlepromptbox}
+\begin{singlepromptbox} \centering
+    \fbox{\includegraphics[height=\singleimheight]{images/coco_elephant.png}} \\
+    \singleiminputtext{Question: What is odd about this image? Explain why it is unusual. Answer:}
+\end{singlepromptbox}
+\begin{singlepromptbox} \centering
+    \fbox{\includegraphics[height=\singleimheight]{images/coco_canada.png}} \\
+    \singleiminputtext{Question: What country is this? Why do you think so? Answer:}
+\end{singlepromptbox}
+\\
+\begin{singleoutputboxtitle} \centering
+\rotatebox{90}{\flamingoemojiavatar{} Completion}
+\end{singleoutputboxtitle}
+\begin{singleoutputbox} \centering \bf
+    \singleimoutputtext{The floppy disk is 1.44MB and the CD is 700MB.}
+\end{singleoutputbox}
+\begin{singleoutputbox} \centering \bf
+    \singleimoutputtext{The image is odd because the elephant is in the back of the truck. It is unusual because elephants are not usually transported in the back of a truck.}
+\end{singleoutputbox}
+\begin{singleoutputbox} \centering \bf
+    \singleimoutputtext{It is Canada. I think so because the flag is the Canadian flag.}
+\end{singleoutputbox}
+
+\vspace{0.5cm}
+
+\begin{singlepromptboxtitle} \centering
+\rotatebox{90}{Input Prompt}
+\end{singlepromptboxtitle}
+\begin{singlepromptbox} \centering
+    \fbox{\includegraphics[height=\singleimheight]{images/coco_banana_shop.png}} \\
+    \singleiminputtext{Question: What nutrients is the fruit in the image rich in? Answer:}
+\end{singlepromptbox}
+\begin{singlepromptbox} \centering
+    \fbox{\includegraphics[height=\singleimheight]{images/coco_bednet.png}} \\
+    \singleiminputtext{Question: What is the purpose of this? Answer:}
+\end{singlepromptbox}
+\begin{singlepromptbox} \centering
+    \fbox{\includegraphics[height=\singleimheight]{images/coco_christmas.png}} \\
+    \singleiminputtext{Question: What season is this? Explain why. Answer:}
+\end{singlepromptbox}
+\\
+\begin{singleoutputboxtitle} \centering
+\rotatebox{90}{\flamingoemojiavatar{} Completion}
+\end{singleoutputboxtitle}
+\begin{singleoutputbox} \centering \bf
+    \singleimoutputtext{Vitamin C, potassium, and fiber.}
+\end{singleoutputbox}
+\begin{singleoutputbox} \centering \bf
+    \singleimoutputtext{To keep the mosquitoes out of the bed.}
+\end{singleoutputbox}
+\begin{singleoutputbox} \centering \bf
+    \singleimoutputtext{This is winter season. The Christmas tree and the presents are the main reasons why it is winter.}
+\end{singleoutputbox}
+
+\vspace{0.5cm}
+
+\begin{singlepromptboxtitle} \centering
+\rotatebox{90}{Input Prompt}
+\end{singlepromptboxtitle}
+\begin{singlepromptbox} \centering
+    \fbox{\includegraphics[height=\singleimheight]{images/coco_house_book.png}} \\
+    \singleiminputtext{Question: What is the title of the book? Answer:}
+\end{singlepromptbox}
+\begin{singlepromptbox} \centering
+    \fbox{\includegraphics[height=\singleimheight]{images/coco_steak.png}} \\
+    \singleiminputtext{The ingredients of this dish are}
+\end{singlepromptbox}
+\begin{singlepromptbox} \centering
+    \fbox{\includegraphics[height=\singleimheight]{images/frozen_movie.png}} \\
+    \singleiminputtext{The soundtrack includes}
+\end{singlepromptbox}
+\\
+\begin{singleoutputboxtitle} \centering
+\rotatebox{90}{\flamingoemojiavatar{} Completion}
+\end{singleoutputboxtitle}
+\begin{singleoutputbox} \centering \bf
+    \singleimoutputtext{The House Book.}
+\end{singleoutputbox}
+\begin{singleoutputbox} \centering \bf
+    \singleimoutputtext{: beef, potatoes, carrots, broccoli, and lemon.}
+\end{singleoutputbox}
+\begin{singleoutputbox} \centering \bf
+    \singleimoutputtext{the songs "Let It Go" and "For the First Time in Forever" by Tony Award® winner Idina Menzel, who plays Elsa [...]}
+\end{singleoutputbox}
+
+
+
+\caption{
+\capfontsize{} \textbf{Selected single image samples.} Gray boxes are user input and the pink boxes are \largem{} output.
+}
+\label{fig:single_samples}
+\end{figure}
+
+
+\newcommand{\qualuseravatar}{\includegraphics[height=0.45cm]{figures/PersonPaperColor.pdf}}
+\newcommand{\qualflamingoavatar}{\includegraphics[height=0.45cm]{figures/FlamingoPaperColor.pdf}}
+
+\newcommand{\qualuserchat}[1]{%
+    \begin{flushright}
+    \begin{teaserdialogueuserbox} #1 \end{teaserdialogueuserbox}%
+    \dialogueavatarsep{}%
+    \qualuseravatar{}
+    \end{flushright}%
+}
+
+\newcommand{\qualuserchatw}[1]{%
+    \begin{flushright}
+    \begin{teaserdialogueuserboxwrap} #1 \end{teaserdialogueuserboxwrap}%
+    \dialogueavatarsep{}%
+    \qualuseravatar{}
+    \end{flushright}%
+}
+
+\newcommand{\qualflamingochatw}[1]{%
+    \begin{flushleft}
+    \qualflamingoavatar{}%
+    \dialogueavatarsep{}%
+    \begin{teaserdialogueflamingoboxwrap} #1 \end{teaserdialogueflamingoboxwrap}
+    \end{flushleft}
+}
+
+\newcommand{\qualflamingochat}[1]{%
+    \begin{flushleft}
+    \qualflamingoavatar{}%
+    \dialogueavatarsep{}%
+    \begin{teaserdialogueflamingobox} #1 \end{teaserdialogueflamingobox}
+    \end{flushleft}
+}
+
+
+\def \dialogueSize {0.24\textwidth}
+\begin{figure}
+\centering
+\begin{tabular}{@{\hspace{-0.3cm}}m{\dialogueSize}m{\dialogueSize}m{\dialogueSize}m{\dialogueSize}}
+\centering
+\begin{minipage}[b]{\dialogueSize}
+\begin{teaserdialogueenvelope}
+\tiny
+\qualuserchat{\fbox{\includegraphics[height=2cm]{figures/samoyed.jpeg}}}
+\chatsep{}
+\qualflamingochatw{This is a dog. It's a white fluffy dog.}
+\chatsep{}
+\qualuserchat{What season is this?}
+\chatsep{}
+\qualflamingochatw{It looks like a summer day.}
+\chatsep{}
+\qualuserchat{Why do you think so?}
+\chatsep{}
+\qualflamingochatw{The grass is green and the dog is not wearing a sweater.}
+\chatsep{}
+\qualuserchat{What breed is the dog?}
+\chatsep{}
+\qualflamingochat{It's a Samoyed.}
+\chatsep{}
+\qualuserchat{Is the dog running?}
+\chatsep{}
+\qualflamingochat{No, it's sitting.}
+\chatsep{}
+\qualuserchatw{Can you describe the pose of its back legs?}
+\chatsep{}
+\qualflamingochatw{The back legs are bent and the dog is sitting on its haunches.}
+\end{teaserdialogueenvelope}
+\end{minipage}
+
+&
+
+\begin{minipage}[b]{\dialogueSize}
+\begin{teaserdialogueenvelope}
+\tiny
+\qualuserchat{\fbox{\includegraphics[height=2.2cm]{figures/coco_ny.jpeg}}}
+\chatsep{}
+\qualuserchat{Which city is this?}
+\chatsep{}
+\qualflamingochatw{This is a street sign in New York City.}
+\chatsep{}
+\qualuserchat{Which street corner is it?}
+\chatsep{}
+\qualflamingochatw{It is the intersection of Madison Avenue and East 42nd Street.}
+\chatsep{}
+\qualuserchatw{Which subway station is nearby?}
+\chatsep{}
+\qualflamingochatw{The closest subway station is Grand Central Station.}
+\chatsep{}
+\qualuserchatw{How about the nearest park?}
+\chatsep{}
+\qualflamingochatw{The nearest park is Bryant Park.}
+\chatsep{}
+\qualuserchatw{There is another sign. What does it say?}
+\chatsep{}
+\qualflamingochatw{It says "One way".}
+\end{teaserdialogueenvelope}
+\end{minipage}
+
+& 
+
+\scalebox{0.85}{
+\begin{minipage}[b]{\dialogueSize}
+\begin{teaserdialogueenvelope}
+\tiny
+\qualuserchatw{I would like you to read the color and then say the color it is written in. For example:}
+\chatsep{}
+\qualuserchat{\fbox{\includegraphics[height=0.3cm]{figures/purple_hd.png}}}
+\chatsep{}
+\qualuserchatw{Color is "Purple" and it is written in red.}
+\chatsep{}
+\qualuserchat{\fbox{\includegraphics[height=0.3cm]{figures/green_hd.png}}}
+\chatsep{}
+\qualuserchatw{Color is "Green" and it is written in blue.}
+\chatsep{}
+\qualuserchat{\fbox{\includegraphics[height=0.3cm]{figures/yellow_hd.png}}}
+\chatsep{}
+\qualflamingochatw{Color is "Yellow" and it is written in green.}
+\chatsep{}
+\qualuserchat{\fbox{\includegraphics[height=0.3cm]{figures/black_hd.png}}}
+\chatsep{}
+\qualflamingochatw{Color is "Black" and it is written in yellow.}
+\chatsep{}
+\qualuserchatw{Well done! Do you know the name of the test these images come from?}
+\chatsep{}
+\qualflamingochatw{I think it is called the Stroop test.}
+\chatsep{}
+\qualuserchatw{Can you explain how humans \mbox{perform} in this test?}
+\chatsep{}
+\qualflamingochatw{Humans are slower when the color of the word and the color of the word are different.}
+\chatsep{}
+\qualuserchat{How about you?}
+\chatsep{}
+\qualflamingochatw{I am not affected by this difference.}
+\end{teaserdialogueenvelope}
+\end{minipage}
+}
+
+&
+
+
+\begin{minipage}[b]{\dialogueSize}
+\begin{teaserdialogueenvelope}
+\tiny
+\qualuserchat{\fbox{\includegraphics[height=2.2cm]{figures/triangle.png}}}
+\chatsep{}
+\qualuserchat{\fbox{\includegraphics[height=2.2cm]{figures/hexagon.png}}}
+\chatsep{}
+\qualuserchatw{What is the difference between these two images?}
+\chatsep{}
+\qualflamingochatw{The first one is a triangle and the second one is a hexagon.}
+\chatsep{}
+\qualuserchatw{Which one has larger internal angles?}
+\chatsep{}
+\qualflamingochatw{The hexagon has larger internal angles.}
+\chatsep{}
+\qualuserchat{What color are they?}
+\chatsep{}
+\qualflamingochat{They are both red.}
+\end{teaserdialogueenvelope}
+\end{minipage}
+
+\\
+
+\begin{minipage}[b]{\dialogueSize}
+\begin{teaserdialogueenvelope}
+\tiny
+\qualuserchat{\fbox{\includegraphics[height=2.2cm]{figures/soupmonster.jpeg}}}
+\chatsep{}
+\qualuserchat{What is in this picture?}
+\chatsep{}
+\qualflamingochatw{It's a bowl of soup with a \mbox{monster} face on it.}
+\chatsep{}
+\qualuserchatw{What is the monster made out of?}
+\chatsep{}
+\qualflamingochatw{It's made out of vegetables.}
+\chatsep{}
+\qualuserchatw{No, it's made out of a kind of fabric. Can you see what kind?}
+\chatsep{}
+\qualflamingochatw{It's made out of a woolen fabric.}
+\end{teaserdialogueenvelope}
+\end{minipage}
+
+&
+
+\begin{minipage}[b]{\dialogueSize}
+\begin{teaserdialogueenvelope}
+\tiny
+\qualuserchat{\fbox{\includegraphics[height=1.6cm]{figures/naughtydog.jpeg}}}
+\chatsep{}
+\qualflamingochatw{This is a picture of a dog. It looks like it is a little bit naughty.}
+\chatsep{}
+\qualuserchat{What happened here?}
+\chatsep{}
+\qualflamingochatw{It looks like the dog is destroying the sofa.}
+\chatsep{}
+\qualuserchatw{How does the person thinking about it?}
+\chatsep{}
+\qualflamingochat{The person is angry.}
+\chatsep{}
+\qualuserchatw{What is the person holding?}
+\chatsep{}
+\qualflamingochatw{It looks like a cup of coffee.}
+\chatsep{}
+\qualuserchatw{How is the weather outside?}
+\chatsep{}
+\qualflamingochatw{It looks like a sunny day.}
+\end{teaserdialogueenvelope}
+\end{minipage}
+
+&
+
+\begin{minipage}[b]{\dialogueSize}
+\begin{teaserdialogueenvelope}
+\tiny
+\qualuserchat{\fbox{\includegraphics[height=2.2cm]{figures/homebase.png}}}
+\chatsep{}
+\qualuserchatw{What is the name of the company on this card?}
+\chatsep{}
+\qualflamingochat{It's Homebase.}
+\chatsep{}
+\qualuserchat{What is its web url?}
+\chatsep{}
+\qualflamingochat{It's homebase.co.uk.}
+\chatsep{}
+\qualuserchat{What are they doing?}
+\chatsep{}
+\qualflamingochatw{They are a home improvement \mbox{retailer}.}
+\end{teaserdialogueenvelope}
+\end{minipage}
+
+&
+
+\begin{minipage}[b]{\dialogueSize}
+\begin{teaserdialogueenvelope}
+\tiny
+\qualuserchat{\fbox{\includegraphics[height=1.6cm]{figures/robot_ball_cloth.jpeg}}}
+\chatsep{}
+\qualuserchatw{What do you think the robot is doing here?}
+\chatsep{}
+\qualflamingochatw{The robot is picking up a ball.}
+\chatsep{}
+\qualuserchat{What color is the ball?}
+\chatsep{}
+\qualflamingochat{It's red.}
+\chatsep{}
+\qualuserchatw{I want the ball to be hidden. Is there something the robot can use for that?}
+\chatsep{}
+\qualflamingochatw{The robot can use a cloth to hide the ball.}
+\chatsep{}
+\qualuserchatw{What color is the cloth?}
+\chatsep{}
+\qualflamingochat{The cloth is blue.}
+\end{teaserdialogueenvelope}
+\end{minipage}
+
+\end{tabular}
+\caption{\capfontsize{} \textbf{Selected dialogue samples.} Gray boxes are user input and the pink boxes are \largem{} output. For dialogue, \largem{} is provided with a custom prompt (hidden from the visualization but shown in Appendix~\ref{app:dialogue_prompt}) containing a dialogue with 3 corresponding images, but it is not fine-tuned for dialogue in any other way.}
+\label{fig:dialogue_samples}
+\end{figure}
+
+
+
+
+
+
+\newtcolorbox{videopromptbox}{
+    enhanced,
+    boxsep=2pt,left=0pt,right=0pt,top=0pt,bottom=0pt,
+    width=0.77\textwidth,
+    colback={llgray},
+    box align=center,
+    boxrule=0.5pt,
+    nobeforeafter
+}
+\newtcolorbox{videooutputbox}{
+    enhanced,
+    boxsep=2pt,left=0pt,right=0pt,top=0pt,bottom=0pt,
+    width=0.17\textwidth,
+    colback={llpink},
+    baseline=3.5mm,
+    box align=center,
+    boxrule=0.5pt,
+    nobeforeafter
+}
+\newtcolorbox{videoarrowbox}{
+    enhanced,
+    boxsep=2pt,left=0pt,right=0pt,top=0pt,bottom=0pt,
+    width=0.04\textwidth,
+    colback={white},
+    colbacklower=white,
+    colframe=white,
+    baseline=3.5mm,
+    box align=center,
+    boxrule=0pt,
+    frame hidden,
+    nobeforeafter
+}
+
+\newcommand{\videofigheight}{1.2cm}
+
+\newcommand{\videotext}[1]{
+    \begin{minipage}[b][0.3cm][c]{5.5cm}
+    \tiny
+    \centering
+    #1
+    \end{minipage}
+}
+
+\newcommand{\videotextcompletion}[1]{
+    \begin{minipage}[b][1.5cm][c]{2.2cm}
+    \tiny
+    \centering
+    #1
+    \end{minipage}
+}
+
+\begin{figure}[!t]
+\centering
+
+\begin{videopromptbox} \centering Input Prompt \end{videopromptbox}
+\begin{videoarrowbox} {$\phantom{\longrightarrow}$} \end{videoarrowbox}
+\begin{videooutputbox} \centering \small \flamingoemojiavatar{} Completion \end{videooutputbox}
+\\
+
+\begin{videopromptbox} \centering
+    \fbox{\includegraphics[height=\videofigheight]{figures/videoframes/imvid_puppy.png.0.png}}
+    \hspace{-0.20cm}
+    \fbox{\includegraphics[height=\videofigheight]{figures/videoframes/imvid_puppy.png.1.png}}
+    \hspace{-0.20cm}
+    \fbox{\includegraphics[height=\videofigheight]{figures/videoframes/imvid_puppy.png.2.png}}
+    \hspace{-0.20cm}
+    \fbox{\includegraphics[height=\videofigheight]{figures/videoframes/imvid_puppy.png.3.png}}
+    \hspace{-0.20cm}
+    \fbox{\includegraphics[height=\videofigheight]{figures/videoframes/imvid_puppy.png.4.png}}
+    \hspace{-0.20cm}
+    \fbox{\includegraphics[height=\videofigheight]{figures/videoframes/imvid_puppy.png.5.png}}
+    \hspace{-0.20cm}
+    \fbox{\includegraphics[height=\videofigheight]{figures/videoframes/imvid_puppy.png.6.png}}
+    \hspace{-0.20cm}
+    \fbox{\includegraphics[height=\videofigheight]{figures/videoframes/imvid_puppy.png.7.png}}
+    \videotext{Question: What is happening here? Answer:}
+\end{videopromptbox}
+\teaserarrow{}
+\begin{videooutputbox} \centering \bf
+    \videotextcompletion{The dachschund puppy is being weighed on a scale.}
+\end{videooutputbox}
+\\
+
+\begin{videopromptbox} \centering
+    \fbox{\includegraphics[height=\videofigheight]{figures/videoframes/imvid_atari.png.0.png}}
+    \hspace{-0.20cm}
+    \fbox{\includegraphics[height=\videofigheight]{figures/videoframes/imvid_atari.png.1.png}}
+    \hspace{-0.20cm}
+    \fbox{\includegraphics[height=\videofigheight]{figures/videoframes/imvid_atari.png.2.png}}
+    \hspace{-0.20cm}
+    \fbox{\includegraphics[height=\videofigheight]{figures/videoframes/imvid_atari.png.3.png}}
+    \hspace{-0.20cm}
+    \fbox{\includegraphics[height=\videofigheight]{figures/videoframes/imvid_atari.png.4.png}}
+    \hspace{-0.20cm}
+    \fbox{\includegraphics[height=\videofigheight]{figures/videoframes/imvid_atari.png.5.png}}
+    \hspace{-0.20cm}
+    \fbox{\includegraphics[height=\videofigheight]{figures/videoframes/imvid_atari.png.6.png}}
+    \hspace{-0.20cm}
+    \fbox{\includegraphics[height=\videofigheight]{figures/videoframes/imvid_atari.png.7.png}}
+    \videotext{Question: What object is the avatar picking up? Answer:}
+\end{videopromptbox}
+\teaserarrow{}
+\begin{videooutputbox} \centering \bf
+    \videotextcompletion{A sword.}
+\end{videooutputbox}
+\\
+
+\begin{videopromptbox} \centering
+    \fbox{\includegraphics[height=\videofigheight]{figures/videoframes/imvid_objects.png.0.png}}
+    \hspace{-0.20cm}
+    \fbox{\includegraphics[height=\videofigheight]{figures/videoframes/imvid_objects.png.1.png}}
+    \hspace{-0.20cm}
+    \fbox{\includegraphics[height=\videofigheight]{figures/videoframes/imvid_objects.png.2.png}}
+    \hspace{-0.20cm}
+    \fbox{\includegraphics[height=\videofigheight]{figures/videoframes/imvid_objects.png.3.png}}
+    \hspace{-0.20cm}
+    \fbox{\includegraphics[height=\videofigheight]{figures/videoframes/imvid_objects.png.4.png}}
+    \hspace{-0.20cm}
+    \fbox{\includegraphics[height=\videofigheight]{figures/videoframes/imvid_objects.png.5.png}}
+    \hspace{-0.20cm}
+    \fbox{\includegraphics[height=\videofigheight]{figures/videoframes/imvid_objects.png.6.png}}
+    \hspace{-0.20cm}
+    \fbox{\includegraphics[height=\videofigheight]{figures/videoframes/imvid_objects.png.7.png}}
+    \videotext{Question: What is the object being lifted? Answer:}
+\end{videopromptbox}
+\teaserarrow{}
+\begin{videooutputbox} \centering \bf
+    \videotextcompletion{The object is a small plastic bowl.}
+\end{videooutputbox}
+\\
+
+\begin{videopromptbox} \centering
+    \fbox{\includegraphics[height=\videofigheight]{figures/videoframes/imvid_scissors.png.0.png}}
+    \hspace{-0.20cm}
+    \fbox{\includegraphics[height=\videofigheight]{figures/videoframes/imvid_scissors.png.1.png}}
+    \hspace{-0.20cm}
+    \fbox{\includegraphics[height=\videofigheight]{figures/videoframes/imvid_scissors.png.2.png}}
+    \hspace{-0.20cm}
+    \fbox{\includegraphics[height=\videofigheight]{figures/videoframes/imvid_scissors.png.3.png}}
+    \hspace{-0.20cm}
+    \fbox{\includegraphics[height=\videofigheight]{figures/videoframes/imvid_scissors.png.4.png}}
+    \hspace{-0.20cm}
+    \fbox{\includegraphics[height=\videofigheight]{figures/videoframes/imvid_scissors.png.5.png}}
+    \hspace{-0.20cm}
+    \fbox{\includegraphics[height=\videofigheight]{figures/videoframes/imvid_scissors.png.6.png}}
+    \hspace{-0.20cm}
+    \fbox{\includegraphics[height=\videofigheight]{figures/videoframes/imvid_scissors.png.7.png}}
+    \videotext{Question: What are the three objects in this video? Answer:}
+\end{videopromptbox}
+\teaserarrow{}
+\begin{videooutputbox} \centering \bf
+    \videotextcompletion{A scissors, a pen, and a rubber band.}
+\end{videooutputbox}
+\\
+
+\begin{videopromptbox} \centering
+    \fbox{\includegraphics[height=\videofigheight]{figures/videoframes/imvid_flamingo.png.0.png}}
+    \hspace{-0.20cm}
+    \fbox{\includegraphics[height=\videofigheight]{figures/videoframes/imvid_flamingo.png.1.png}}
+    \hspace{-0.20cm}
+    \fbox{\includegraphics[height=\videofigheight]{figures/videoframes/imvid_flamingo.png.2.png}}
+    \hspace{-0.20cm}
+    \fbox{\includegraphics[height=\videofigheight]{figures/videoframes/imvid_flamingo.png.3.png}}
+    \hspace{-0.20cm}
+    \fbox{\includegraphics[height=\videofigheight]{figures/videoframes/imvid_flamingo.png.4.png}}
+    \hspace{-0.20cm}
+    \fbox{\includegraphics[height=\videofigheight]{figures/videoframes/imvid_flamingo.png.5.png}}
+    \hspace{-0.20cm}
+    \fbox{\includegraphics[height=\videofigheight]{figures/videoframes/imvid_flamingo.png.6.png}}
+    \hspace{-0.20cm}
+    \fbox{\includegraphics[height=\videofigheight]{figures/videoframes/imvid_flamingo.png.7.png}}
+    \videotext{Question: What is written here? Answer:}
+\end{videopromptbox}
+\teaserarrow{}
+\begin{videooutputbox} \centering \bf
+    \videotextcompletion{Flamingo.}
+\end{videooutputbox}
+\\
+
+
+\begin{videopromptbox} \centering
+    \fbox{\includegraphics[height=\videofigheight]{figures/videoframes/imvid_shot_0000.png}}
+    \hspace{-0.20cm}
+    \fbox{\includegraphics[height=\videofigheight]{figures/videoframes/imvid_shot_0001.png}}
+    \hspace{-0.20cm}
+    \fbox{\includegraphics[height=\videofigheight]{figures/videoframes/imvid_shot_0002.png}}
+    \hspace{-0.20cm}
+    \fbox{\includegraphics[height=\videofigheight]{figures/videoframes/imvid_shot_0003.png}}
+    \hspace{-0.20cm}
+    \fbox{\includegraphics[height=\videofigheight]{figures/videoframes/imvid_shot_0004.png}}
+    \hspace{-0.20cm}
+    \fbox{\includegraphics[height=\videofigheight]{figures/videoframes/imvid_shot_0005.png}}
+    \hspace{-0.20cm}
+    \fbox{\includegraphics[height=\videofigheight]{figures/videoframes/imvid_shot_0006.png}}
+    \hspace{-0.20cm}
+    \fbox{\includegraphics[height=\videofigheight]{figures/videoframes/imvid_shot_0007.png}}
+    \videotext{What happens to the man after hitting the ball? Answer:}
+\end{videopromptbox}
+\teaserarrow{}
+\begin{videooutputbox} \centering \bf
+    \videotextcompletion{he falls down.}
+\end{videooutputbox}
+\\
+
+\centering
+\caption{\small \textbf{Selected video samples.}
+These are all of the frames the model sees.
+(Best viewed with zoom.)}
+\label{fig:videoexamples}
+\end{figure}

@@ -1,0 +1,35 @@
+
+\begin{table}[t]
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{@{}rlll|cc|ccccc|cc@{}}
+\toprule
+&Ablated  & \base{} & Changed & \small{Param.}  &            \small{Step}     & COCO & OKVQA & VQAv2  & MSVDQA & VATEX & Overall \\
+&setting & original value & value  & \small{count $\downarrow$}  &   \small{time $\downarrow$}               & CIDEr$\uparrow$  & top1$\uparrow$ & top1$\uparrow$     & top1$\uparrow$   & CIDEr$\uparrow$  &   score$\uparrow$   \\ \midrule
+&\multicolumn{3}{c|}{\textbf{\base{} model}}    & 3.2B & 1.74s &   86.5  &   42.1    &  55.8        &     36.3     &  53.4     &  \textbf{70.7}     \\ \midrule
+\multirow{4}{*}{\textbf{(i)}}&\multirow{4}{*}{Training data} & \multirow{4}{*}{All data} & w/o Video-Text pairs &  3.2B & 1.42s &  84.2 &   43.0  &  53.9  &  34.5  &  46.0  & 67.3    \\
+& &  & w/o Image-Text pairs    &  3.2B &  0.95s &  66.3 &   39.2  &  51.6    &  32.0  &  41.6  &  60.9   \\
+& &  & Image-Text pairs$\rightarrow$ LAION    &  3.2B &  1.74s &  79.5 &   41.4  &  53.5    &  33.9  &  47.6  &  66.4   \\
+& &  & w/o M3W & 3.2B &  1.02s                  &  54.1  &  36.5  &  52.7&  31.4  &  23.5  &  53.4  \\  \midrule
+\textbf{(ii)}& Optimisation & Accumulation  & Round Robin & 3.2B & 1.68s &   76.1 & 39.8   &  52.1   &   33.2    & 40.8  &  62.9 \\  \midrule
+\textbf{(iii)} & Tanh gating & \ding{51}  &  \ding{55} & 3.2B & 1.74s &  78.4 & 40.5   &  52.9      &    35.9    &  47.5     &     66.5    \\  \midrule
+\multirow{2}{*}{\textbf{(iv)}}& Cross-attention  & \multirow{2}{*}{\shortstack[c]{\textsc{gated}\\\textsc{xattn-dense}}} & \small{\textsc{Vanilla xattn}}  & 2.4B & 1.16s &   80.6 & 41.5    &   53.4     &    32.9    &   50.7    &   66.9    \\ 	
+&architecture  & & \small{\textsc{Grafting}}   & 3.3B & 1.74s &   79.2  & 36.1   &  50.8     &   32.2    &    47.8   &   63.1      \\ \midrule
+\multirow{3}{*}{\textbf{(v)}}&\multirow{3}{*}{\shortstack[l]{Cross-attention\\ frequency}} & \multirow{3}{*}{Every}  & Single in middle & 2.0B & 0.87s &  71.5  & 38.1 &   50.2       &    29.1    &  42.3  &   59.8    \\  					
+& & & Every 4th &  2.3B & 1.02s  &   82.3  & 42.7    &    55.1       &    34.6    &   50.8    &   68.8    \\ 						
+& & & Every 2nd &  2.6B & 1.24s  &   83.7  & 41.0    &   55.8      &  34.5      &   49.7    &   	    68.2   \\  \midrule 		
+\multirow{2}{*}{\textbf{(vi)}}& \multirow{2}{*}{Resampler}  & \multirow{2}{*}{Perceiver}  & MLP &  3.2B & 1.85s &   78.6 &  42.2     &   54.7     &    35.2    &  44.7     &  66.6      \\				
+& & &  Transformer &  3.2B & 1.81s  &  83.2 &  41.7     &   55.6       &   31.5     &  48.3     &   66.7     \\  \midrule
+\multirow{2}{*}{\textbf{(vii)}}&\multirow{2}{*}{Vision encoder} & \multirow{2}{*}{NFNet-F6}  &  CLIP ViT-L/14 & 3.1B & 1.58s   &  76.5 & 41.6    &   53.4      &   33.2     &   44.5    &    64.9    \\  	
+& & &  NFNet-F0 & 2.9B & 1.45s  &    73.8 & 40.5     &  52.8       &    31.1    &  42.9     &    62.7  \\ \midrule
+\multirow{2}{*}{\textbf{(viii)}}& \multirow{2}{*}{Freezing LM} & \multirow{2}{*}{\ding{51}}  & \ding{55} (random init)   &  3.2B & 2.42s &  74.8 & 31.5   &  45.6    &  26.9   &  50.1 &  57.8  \\
+& &  & \ding{55}  (pretrained)   &  3.2B & 2.42s &   81.2  & 33.7   &  47.4 &   31.0    &    53.9  &   62.7      \\  \midrule
+\end{tabular}%
+}
+\caption{\capfontsize{} \textbf{Ablation studies.} 
+Each row should be compared to the baseline~\method{} run (top row).
+Step time measures the time spent to perform gradient updates on all training datasets.
+}
+\vspace{-0.4cm}
+\label{tab:ablation-table-no-classif}
+\end{table}
+

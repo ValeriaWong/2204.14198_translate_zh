@@ -1,0 +1,33 @@
+
+\begin{table}[t]
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{@{}rlll|cc|ccccc|cc@{}}
+\toprule
+&Ablated  & \method{} 3B & Changed & \small{Param.}  &            \small{Step}     & COCO & OKVQA & VQAv2  & MSVDQA & VATEX & Overall \\
+&setting & value & value  & \small{count $\downarrow$}  &   \small{time $\downarrow$}               & CIDEr$\uparrow$  & top1$\uparrow$  & top1$\uparrow$     & top1$\uparrow$   & CIDEr$\uparrow$ &    score$\uparrow$   \\ \midrule
+&\multicolumn{3}{c|}{\textbf{\method{} 3B model (short training)}}    & 3.2B & 1.74s &   86.5  &   42.1    &  55.8         &   36.3     &  53.4     &  \textbf{70.7}     \\ \midrule
+\multirow{2}{*}{\textbf{(i)}} & Resampler & \multirow{2}{*}{Medium} & Small & 3.1B & 1.58s  &  81.1  &  40.4     &   54.1       &   36.0     &   50.2     & 67.9    \\
+& size & & Large & 3.4B & 1.87s  &  84.4   &  42.2     &   54.4     &    35.1    &    51.4   &    69.0   \\  \midrule 
+\textbf{(ii)}& Multi-Img att. & Only last  & All previous & 3.2B & 1.74s  &   70.0 & 40.9    &   52.0       &   32.1     &    46.8     &    63.5   \\  \midrule
+\multirow{2}{*}{\textbf{(iii)}}& \multirow{2}{*}{$p_{next}$} & \multirow{2}{*}{0.5}  & 0.0   &  3.2B & 1.74s & 85.0 &    41.6  &  55.2  &  36.7 & 50.6  & 69.6  \\
+& &  & 1.0  &  3.2B & 1.74s &      81.3 & 43.3   &  55.6  &  36.8   &  52.7  &  70.4  \\  \midrule 
+\textbf{(iv)}& LM pretraining & MassiveText  & C4 & 3.2B & 1.74s &   81.3 & 34.4    &   47.1      &    60.6   &    53.9     &   62.8   \\  \midrule
+\multirow{2}{*}{\textbf{(v)}}& \multirow{2}{*}{Freezing Vision} & \multirow{2}{*}{\ding{51}}  & \ding{55} (random init)   &  3.2B & 4.70s*  &   74.5 & 41.6   &  52.7     &  31.4  & 35.8    &   61.4  \\  
+& &  & \ding{55}  (pretrained)   &  3.2B & 4.70s*  &   83.5 & 40.6   &  55.1   &   34.6    &   50.7     &   68.1      \\  \midrule
+\multirow{2}{*}{\textbf{(vi)}}& Co-train LM & \multirow{2}{*}{\ding{55}}  & \ding{51} (random init)   &  3.2B & 5.34s*  &  69.3  & 29.9   &  46.1    &  28.1   &  45.5 & 55.9 \\
+& on MassiveText &  & \ding{51}  (pretrained)   &  3.2B & 5.34s*  &   83.0 & 42.5   &  53.3     &   35.1    &    51.1    &   68.6      \\ \midrule
+\multirow{2}{*}{\textbf{(vii)}}& Dataset & M3W+ITP+VTP  & LAION400M and CLIP   &  3.1B & 0.86s   &  61.4  & 37.9  & 50.9  & 27.9 &  29.7 &  54.7  \\
+& and Vision encoder & and NFNetF6 & M3W+LAION400M+VTP and CLIP                    &  3.1B & 1.58s   &  76.3  & 41.5  & 53.4  & 32.5 &  46.1  & 64.9 \\ \bottomrule
+\end{tabular}%
+}
+\vspace{.5em}
+\caption{\capfontsize{} \textbf{Additional ablation studies.} 
+Each row in this ablation study table should be compared to the baseline~\method{} run reported at the top of the table.
+The step time measures the time spent to perform gradient updates on all training datasets.
+(*): Due to higher memory usage, these models were trained using four times more TPU chips. The obtained accumulation step time was therefore multiplied by four.
+}
+\label{tab:ablation-table-appendix}
+\end{table}
+
+
+

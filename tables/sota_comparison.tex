@@ -1,0 +1,37 @@
+\newcommand{\rsota}{Restricted SotA$^\dagger$}
+\newcommand{\usota}{Unrestricted SotA}
+
+
+\begin{table*}[b]
+\caption{\capfontsize{} \label{tab:ft-sota-table} \textbf{Comparison to SotA when fine-tuning \largem{}.}
+We fine-tune~\largem{} on all nine tasks where \largem{} was not SotA with few-shot learning.
+\largem{} sets a new SotA on five of these tasks sometimes even beating methods that resorts to known performance optimization tricks such as model ensembling (on VQAv2, VATEX, VizWiz and HatefulMemes).
+Best numbers among the restricted SotA are in \textbf{bold}.
+Best numbers overall are \underline{underlined}.
+Restricted SotA$^\dagger$ only includes methods that use a single model (not ensembles) and do not directly optimise the test metric (no CIDEr optimisation).
+}
+
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{rccccccccccccc}
+\hline
+Method            & \multicolumn{2}{c|}{\rotatebox[origin=c]{90}{VQAV2}} & \multicolumn{1}{c|}{\rotatebox[origin=c]{90}{COCO}} & \multicolumn{1}{c|}{\rotatebox[origin=c]{90}{VATEX}} & \multicolumn{2}{c|}{\rotatebox[origin=c]{90}{VizWiz}} & \multicolumn{1}{c|}{\rotatebox[origin=c]{90}{MSRVTTQA}} & \multicolumn{2}{c|}{\rotatebox[origin=c]{90}{VisDial}} & \multicolumn{1}{c|}{\rotatebox[origin=c]{90}{YouCook2}} & \multicolumn{2}{c|}{\rotatebox[origin=c]{90}{TextVQA}} & \multicolumn1{c}{\rotatebox[origin=c]{90}{~HatefulMemes~}} \\
+                  & test-dev       & \multicolumn{1}{c|}{test-std}       & \multicolumn{1}{c|}{test}                           & \multicolumn{1}{c|}{test}                            & test-dev        & \multicolumn{1}{c|}{test-std}       & \multicolumn{1}{c|}{test}                               & \multicolumn{1}{c|}{valid}                              & \multicolumn{1}{c|}{test-std}                              & \multicolumn{1}{c|}{valid}        & \multicolumn{1}{c|}{valid}        & \multicolumn{1}{c|}{test-std}         & \multicolumn{1}{c}{test seen}                                   \\ \hline
+\flamingoemoji{} \largem{} - 32 shots&67.6     &  -      & 113.8    & 65.1    & 49.8     & -       &   31.0  & 56.8  &  -  & 86.8    & 36.0     &  -  & 70.0   \\
+\hline
+SimVLM~[\citenum{wang2021simvlm}]    &  80.0   &  80.3   &\bf{143.3}&    -    &    -     &    -    &   -    &   -   &   -   &    -     &     -    &    -    &   -  \\
+OFA~[\citenum{wang2022unifying}]     &  79.9   &  80.0   &\uln{149.6}&   -    &    -     &    -    &   -    &    -   &  -   &    -     &     -    &   -     &   -   \\
+Florence~[\citenum{yuan2021florence}]&  80.2   &  80.4   &   -      &    -    &    -     &    -    &   -    &    -   &       -  &  -     &     -    &   -     &   -   \\
+\flamingoemoji{} \largem{} Fine-tuned &\bo{82.0}&\bo{82.1}&  138.1   &\bo{84.2}&\bo{65.7}&\bo{65.4}&\bo{47.4}& 61.8 & 59.7 &  118.6  &\bo{57.1}&54.1      &\bo{86.6}\\
+\hline %
+                                     &   80.2  &   80.4  &\bf{143.3}&  76.3   &    -    &   -    &  46.8  &  \bo{75.2}  &  \bf{74.5} &\bo{138.7}&  54.7   &\bo{73.7} &79.1\\
+\multirow{-2}{*}{\rsota}              &\florence&\florence&\simvlm   & \vatex  &    -    &   -    &\allinon& \visdial& \visdial & \youcook  &\tap     &\teammia  & \hateful \\
+\hline
+\rowcolor[HTML]{ECECEC}
+                                     &   81.3  & 81.3    &\uln{149.6}&  81.4  &     57.2    &   60.6  &   -     & -   &   \uln{75.4}    &  -      &   -   &   -      & 84.6\\
+\rowcolor[HTML]{ECECEC}
+\multirow{-2}{*}{\usota}             &\alice   &\alice   &   \ofa   & \vatex  &     \vizwiz     & \vizwiz&   -   &   -  & \vdbert &   -   &   -   &  -      & \zhu \\
+\hline
+\end{tabular}%
+}
+
+\end{table*}

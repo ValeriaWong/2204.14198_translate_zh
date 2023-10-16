@@ -1,0 +1,122 @@
+\label{appendix:flamingo-model-card}
+We present a model card for Flamingo in Table~\ref{tab:model-card}, following the framework presented by \citet{mitchell2019model}.
+
+\begin{center}
+\begin{longtable}{p{0.35\linewidth} | p{0.6\linewidth}}
+    
+    \toprule
+    \noalign{\vskip 2mm}
+    \multicolumn{2}{c}{\textbf{Model Details}} 
+    \vspace{2mm}\\
+    \toprule
+    Model Date & March 2022 \\
+    \midrule
+    Model Type & Transformer-based autoregressive language model, conditioned on visual features from a convnet-based encoder. Additional transformer-based cross-attention layers incorporate vision features into the language model's text predictions.
+    (See Section \maintoappref{sec:approach} for details.)  \\
+    \vspace{1mm} \\
+    
+    \toprule
+    \noalign{\vskip 2mm}
+    \multicolumn{2}{c}{\textbf{Intended Uses}} 
+    \vspace{2mm} \\
+    \toprule
+    Primary Intended Uses &
+    The primary use is research on visual language models (VLM), including: research on VLM applications like classification, captioning or visual question answering, understanding how strong VLMs can contribute to AGI, advancing fairness and safety research in the area of multimodal research, and understanding limitations of current large VLMs.
+    \\
+    \midrule
+    Out-of-Scope Uses &
+    Uses of the model for visually conditioned language generation in harmful or deceitful settings. Broadly speaking, the model should not be used for downstream applications without further safety and fairness mitigations specific to each application. 
+    \\
+    
+    \toprule
+    \noalign{\vskip 2mm}
+    \multicolumn{2}{c}{\textbf{Factors}} 
+    \vspace{2mm} \\
+    \toprule
+    Card Prompts -- Relevant Factor &
+    Relevant factors include which language is used.  Our model is trained on English data.
+    Our model is designed for research. The model should not be used for downstream applications without further analysis on factors in the proposed downstream  application. \\
+    \midrule
+    Card Prompts -- Evaluation Factors &
+    \largem{} is based on Chinchilla (a large proportion of the weights of Chinchilla are used as this) and we refer to the analysis provided in~\citep{chinchilla,gopher} for the language only component of this work.
+    We refer to our study presented in Appendix~\ref{sec:risks} for a toxicity analysis when the model is conditioned on an image.
+    \vspace{1mm} \\
+    
+    \toprule
+    \noalign{\vskip 2mm}
+    \multicolumn{2}{c}{\textbf{Metrics}} 
+    \vspace{2mm} \\
+    \toprule
+    Model Performance Measures &
+We principally focus on the model's ability to predict relevant language when given an image. For that we used a total of 18 different benchmarks described in Appendix~\maintoappref{sec:eval_benchmarks} spanning various vision and language tasks such as classification (ImageNet, Kinetics700, HatefulMemes), image and video captioning (COCO, VATEX, Flickr30K, YouCook2, RareAct), visual question answering (OKVQA, VizWiz, TextVQA, VQAv2, MSRVTTQA, MSVDQA, iVQA, STAR, NextQA) and visual dialog (VisDiag). This was tested either in an open ended setting where~\largem{} generate language and we compare the outputs with the ground truth or in a close ended setting where we directly score various outcomes using the likelihood of the model.\\
+    \midrule
+    Decision thresholds & N/A \\
+    \midrule
+    Approaches to Uncertainty and Variability &
+    Due to the costs of training \largem{}, we cannot train it multiple times. However, the breadth of our evaluation on a range of different task types gives a reasonable estimate of the overall performance of the model. 
+    \vspace{1mm} \\
+    
+    \toprule
+    \noalign{\vskip 2mm}
+    \multicolumn{2}{c}{\textbf{Evaluation Data}} 
+    \vspace{2mm} \\
+    \toprule
+    Datasets & See Table~\ref{tab:multi-benchmarks} for a detailed list. \\
+    \midrule
+    Motivation &
+    We chose our evaluation datasets to span an important range of vision and language tasks to correctly assess the ability of~\largem{} to produce relevant text given an image.\\
+    \midrule
+    Preprocessing &
+    Input text is tokenized using a SentencePiece tokenizer with a vocabulary size of 32,000. 
+    Images are processed so that their mean and variance are 0 and 1 respectively. 
+    \vspace{1mm} \\
+
+    \toprule
+    \noalign{\vskip 2mm}
+    \multicolumn{2}{c}{\textbf{Training Data}} 
+    \vspace{2mm} \\
+    \toprule
+    \multicolumn{2}{c}{See~\citep{align}, the Datasheet in Appendix~\ref{datasheet-m3w-break}, Appendix~\ref{app:itp_datasheet}, Appendix~\ref{app:vtp_datasheet}} 
+    \vspace{1mm} \\
+
+    \toprule
+    \noalign{\vskip 2mm}
+    \multicolumn{2}{c}{\textbf{Quantitative Analyses}}
+    \vspace{2mm}\\
+    \toprule
+    Unitary Results &
+    \largem{} sets a new state of the art in few-shot learning on a wide range of open-ended vision and language tasks. On the 16 tasks we consider, Flamingo also surpasses the fine-tuned state-of-art in 6 of the cases despite using orders of magnitude less task-specific training data. We refer to Section~\maintoappref{sec:experiments} for the full details of our quantitative study.
+    \\ 
+    \midrule
+    Intersectional Results & We did not investigate intersectional biases. 
+    \vspace{1mm} \\
+
+    \toprule
+    \noalign{\vskip 2mm}
+    \multicolumn{2}{c}{\textbf{Ethical Considerations}} 
+    \vspace{2mm}\\
+    \toprule
+    Data & 
+    The data is sourced from a variety of sources, some of it from web content. Sexually explicit content is filtered out, but the dataset does include racist, sexist or otherwise harmful content. \\
+    \midrule
+    Human Life &
+    The model is not intended to inform decisions about matters central to human life or flourishing. \\
+    \midrule
+    Mitigations &
+    Apart from removing sexual explicit content we did not filter out toxic content, following the rationale of~\citet{gopher}. More work is needed on mitigation approaches to toxic content and other types of risks associated with language models, such as those discussed in \citet{weidinger2021harms}.
+    \\
+    \midrule
+    Risks and Harms & 
+    The data is collected from the internet, and thus undoubtedly toxic and biased content is included in our training dataset.
+    Furthermore, it is likely that personal information is also in the dataset that has been used to train our models.
+    We defer to the more detailed discussion in \citet{weidinger2021harms}. \\
+    \midrule
+    Use Cases &
+    Especially fraught use cases include the generation of factually incorrect information with the intent of distributing it or using the model to generate racist, sexist or otherwise toxic text with harmful intent. Many more use cases that could cause harm exist. Such applications to malicious use are discussed in detail in \citet{weidinger2021harms}.\\
+    
+    \bottomrule
+    
+    \caption{\capfontsize{} \textbf{Flamingo Model Card.} We follow the framework presented in \citet{mitchell2019model}.}
+    \label{tab:model-card}
+\end{longtable}
+\end{center}

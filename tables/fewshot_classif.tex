@@ -1,0 +1,42 @@
+
+\begin{table}[t]
+\centering
+\small
+\resizebox{0.8\textwidth}{!}{%
+\begin{tabular}{llccll}
+\toprule
+Model & Method & Prompt size & shots/class & \multicolumn{1}{l}{\begin{tabular}[l]{@{}l@{}}ImageNet\\ \footnotesize{top 1}\end{tabular}} & \begin{tabular}[l]{@{}l@{}}Kinetics700\\ \footnotesize{avg top1/5}\end{tabular} \\
+\midrule
+\vlpft{SotA}  & \vlpft{Fine-tuned}   & \vlpft{-} & \vlpft{full} & \vlpft{90.9~\footnotesize{[\citenum{wortsman2022model}]}} & \vlpft{89.0~\footnotesize{[\citenum{yan2022multiview}]}} \\
+\midrule
+SotA & Contrastive & - & 0 & \bf{85.7}~\footnotesize{[\citenum{pham2021combined}]}& \bf{69.6}~\footnotesize{[\citenum{clip}]}  \\
+\midrule
+NFNetF6 & Our contrastive & - & 0 & 77.9 & 62.9 \\
+\midrule
+ &  & 8 & 1 & 70.9 & 55.9 \\
+\base & RICES & 16 & 1 & 71.0 & 56.9 \\
+& & 16 & 5 & 72.7 & 58.3 \\
+\midrule
+ &  & 8 & 1 & 71.2 & 58.0 \\
+\medium & RICES & 16 & 1 & 71.7 & 59.4 \\
+& & 16 & 5 & 75.2 & 60.9 \\
+\midrule
+& Random & 16 & $\leq0.02$ & 66.4 & 51.2 \\
+\cmidrule{2-6}
+ &  & 8 & 1 & 71.9 & 60.4 \\
+\largemfull{} & RICES & 16 & 1 & 71.7 & 62.7 \\
+& & 16 & 5 & 76.0 & 63.5 \\
+\cmidrule{2-6}
+& RICES+ensembling & 16 & 5 & 77.3 & 64.2 \\
+\bottomrule
+\end{tabular}
+}
+\vspace{1em}
+\caption{
+\capfontsize{} \textbf{Few-shot results on classification tasks.} 
+The~\method{} models can also be used for standard classification tasks.
+In particular, we explore having access to support sets bigger than what our current prompt can accommodate (using up to $5000$ support examples).
+In that regime, large gains are obtained by using the RICES method~\citep{yang2021empirical} as well as prompt ensembling.
+We also observe the same trend as with the vision-language benchmarks: bigger models do better and more shots help.}
+\label{tab:fewshot_classif}
+\end{table}

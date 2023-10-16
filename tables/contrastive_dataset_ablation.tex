@@ -1,0 +1,22 @@
+
+\begin{table}[h]
+\small
+\centering
+\begin{tabular}{@{}ll|c|llllll@{}}
+\toprule
+Dataset    & Combination              &  ImageNet    & \multicolumn{6}{c}{COCO}                                                      \\
+        & strategy        & \multicolumn{1}{c|}{accuracy}          & \multicolumn{3}{c}{image-to-text}             & \multicolumn{3}{c}{text-to-image}             \\ 
+        &          &   top-1      & R@1           & R@5           & R@10          & R@1           & R@5           & R@10          \\
+                        \midrule
+\shortimagetextpairs{} &  None  & 40.8       &   38.6         &    66.4       &         76.4  &    31.1       &        57.4   & 68.4  \\ 
+ALIGN &  None  & 35.2       &   32.2        &   58.9        &  70.6         & 23.7          &   47.7        & 59.4 \\  
+\shortimagetextpairs{} + ALIGN &  Accumulation  & \textbf{45.6}       &     \textbf{42.3}      &     \textbf{68.3}      &     \textbf{78.4}      &    \textbf{31.5}       &    \textbf{58.3}       & \textbf{69.0} \\ 
+\shortimagetextpairs{} + ALIGN &  Data merged  & 38.6       &     36.9      & 65.8          &     76.5      &      15.2     &     40.8      & 55.7 \\ 
+\shortimagetextpairs{} + ALIGN &  Round-robin  & 41.2       &     40.1     &         66.7  & 77.6          &     29.2      &     55.1      & 66.6  \\ \bottomrule 
+\end{tabular}
+
+\vspace{1em}
+
+\caption{\capfontsize{}  \label{tab:contrastive_dataset_ablation} \textbf{Effect of contrastive pretraining datasets and combination strategies.} The first two rows show the effect of training a small model on \shortimagetextpairs{} and ALIGN only; the final three show the results of a small model trained on combinations of these datasets, comparing different combination strategies.
+}
+\end{table}

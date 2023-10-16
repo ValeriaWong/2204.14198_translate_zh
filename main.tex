@@ -1,0 +1,224 @@
+\documentclass{article} 
+
+    \PassOptionsToPackage{numbers, compress, sort}{natbib}
+
+
+\usepackage[final]{neurips_2022}
+\usepackage{fontspec}
+\listfiles
+
+
+
+
+
+
+\usepackage{ctex}
+\usepackage[utf8]{inputenc} %
+\usepackage[T1]{fontenc}    %
+\usepackage{hyperref}       %
+\usepackage{url}            %
+\usepackage{booktabs}       %
+\usepackage{amsfonts}       %
+\usepackage{nicefrac}       %
+\usepackage{microtype}      %
+\usepackage[dvipsnames,table,xcdraw]{xcolor}         %
+
+
+\usepackage{amsthm, amsmath, amssymb}
+\usepackage{cmap}
+\usepackage{pifont}
+\usepackage{graphicx}
+\usepackage{bibentry}
+
+\newcommand\vlpft[1]{\textcolor{gray}{#1}}
+\usepackage[normalem]{ulem}
+\useunder{\uline}{\ul}{}
+\usepackage{subcaption}
+\usepackage{multirow}
+\usepackage{longtable}
+\usepackage{listings}
+\usepackage[skins]{tcolorbox}
+\usepackage{array}
+\usepackage{algpseudocode}
+\usepackage{tocloft}
+\usepackage{etoc}
+\usepackage{setspace}
+\usepackage{multicol}
+\usepackage{kantlipsum, lipsum}
+\usepackage{dsfont}
+\usepackage{comment}
+
+\usepackage{fontawesome}
+
+\usepackage{selectp}
+
+\newcommand{\todo}[1]{{\color{red}[TODO: #1]}}
+\newcommand{\pleasereview}[1]{{\color{orange}[Please review: #1]}}
+
+\newcommand{\newtext}[1]{{\color{red}#1}}
+
+
+\newcommand{\method}{Flamingo}
+\newcommand{\methodfamily}{Flamingo models}
+\newcommand{\flamingoemoji}{\includegraphics[height=1.3\fontcharht\font`\B]{figures/flamingoemoji.pdf}}
+
+\newcommand{\flamingoemojiavatar}{\includegraphics[height=1.4\fontcharht\font`\B]{figures/FlamingoPaperColor.pdf}}
+
+\newcommand{\mmmw}{\emph{M3W}}
+
+\newcommand{\base}{\emph{\method{}}-3B}
+\newcommand{\medium}{\emph{\method{}}-9B}
+\newcommand{\largemfull}{\emph{\method{}}-80B}
+\newcommand{\largem}{\emph{\method{}}}
+\newcommand{\largemodelsize}{80B}
+
+\newcommand{\capfontsize}{}
+
+\graphicspath{{figures/}}
+
+\title{\centering \flamingoemoji{} Flamingo: a Visual Language Model \\ for Few-Shot Learning
+\vspace*{-0.3cm}
+}
+\newcommand{\titleheader}{Flamingo: a Visual Language Model for Few-Shot Learning}
+
+\newif\ifwithappendix
+\withappendixtrue  %
+
+
+\hypersetup{
+        plainpages=false,
+        colorlinks=true,              %
+        linkcolor=blue,               %
+        anchorcolor=blue,             %
+        citecolor=blue,               %
+        filecolor=blue,               %
+        urlcolor=blue,                %
+        pdfview=FitH,                 %
+        pdfstartview=FitH,            %
+        pdfpagelayout=SinglePage      %
+}
+
+
+
+
+\author{
+    Jean-Baptiste~Alayrac$^{*,\ddag}$ \And
+    \And
+    Jeff~Donahue$^{*}$ \And
+    \And
+    Pauline~Luc$^{*}$ \And
+    \And
+    Antoine~Miech$^{*}$ \And
+    Iain~Barr$^{\dagger}$ \And
+    Yana~Hasson$^{\dagger}$ \And
+    Karel~Lenc$^{\dagger}$ \And
+    Arthur~Mensch$^{\dagger}$ \And
+    Katie~Millican$^{\dagger}$ \And
+    Malcolm~Reynolds$^{\dagger}$ \And
+    Roman~Ring$^{\dagger}$ \And
+    Eliza~Rutherford$^{\dagger}$ \And
+    Serkan~Cabi \And
+    Tengda~Han \And
+    Zhitao~Gong \And
+    Sina~Samangooei \And
+    Marianne~Monteiro \And
+    Jacob~Menick \And
+    Sebastian~Borgeaud \And
+    Andrew~Brock \And
+    Aida~Nematzadeh \And
+    Sahand~Sharifzadeh \And
+    Mikolaj~Binkowski \And
+    Ricardo~Barreira \And
+    Oriol~Vinyals \And
+    Andrew~Zisserman \And
+    Karen~Simonyan$^{*,\ddag}$ \And
+    $^{*}$ \small{Equal contributions, ordered alphabetically, $^{\dagger}$ Equal contributions, ordered alphabetically,} \\
+    \small{\textbf{$^{\ddag}$ Equal senior contributions}} \AND
+    DeepMind
+        }
+
+
+
+\ifwithappendix\else
+\fi
+
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+构建能够快速适应新任务的模型，仅使用少量注释示例，是多模态机器学习研究中的一个开放挑战。我们引入了\method{}，一种具备此能力的视觉语言模型（VLM）系列。我们提出了关键的架构创新，来： （i）连接强大的预训练的仅视觉模型和仅语言模型， （ii）处理任意交错的视觉和文本数据序列， (iii) 无缝地将图像或视频作为输入。 由于其灵活性，\method{}模型可以在包含任意交错文本和图像的大规模多模态网络语料库上进行训练，这对于赋予它们上下文中的少样本学习能力至关重要。我们对我们的模型进行了全面评估，探究和测量其快速适应各种图像和视频任务的能力。这些任务包括开放性任务，如视觉问答，其中模型需要回答一个问题；字幕任务，用于评估描述场景或事件的能力；以及闭合性任务，如多项选择的视觉问答。对于此类任务，仅一个\method{}模型凭借任务特定示例的提示，就能够以少样本学习达到新的技术水平。在众多基准测试中，\largem{}明显优于经过数千倍任务特定数据微调的模型。
+Building models that can be rapidly adapted to novel tasks
+using only a handful of annotated examples is an open challenge for multimodal machine learning research.
+We introduce \method{}, a family of Visual Language Models (VLM) with this ability.
+We propose key architectural innovations to:
+(i) bridge powerful pretrained vision-only and language-only models,
+(ii) handle sequences of arbitrarily interleaved visual and textual data,
+and (iii) seamlessly ingest images or videos as inputs.
+Thanks to their flexibility, \method{} models can be trained on large-scale multimodal web corpora containing arbitrarily interleaved text and images, which is key to endow them with in-context few-shot learning capabilities.
+We perform a thorough evaluation of our models, exploring and measuring their ability to rapidly adapt to a variety of image and video tasks.
+These include open-ended tasks such as visual question-answering, where the model is prompted with a question which it has to answer; captioning tasks, which evaluate the ability to describe a scene or an event;
+and close-ended tasks such as multiple-choice visual question-answering.
+For tasks lying anywhere on this spectrum, a \emph{single} \method{} model can achieve a new state of the art with few-shot learning, simply by prompting the model with task-specific examples.
+On numerous benchmarks, \largem{} outperforms models fine-tuned on thousands of times more task-specific data.%
+\end{abstract}
+
+
+\input{content}
+
+
+\paragraph{Acknowledgments and Disclosure of Funding.}
+This research was funded by DeepMind.
+We would like to thank many colleagues for useful discussions, suggestions, feedback, and advice, including:
+Samuel~Albanie,
+Relja~Arandjelović,
+Kareem~Ayoub,
+Lorrayne~Bennett,
+Adria~Recasens~Continente,
+Tom~Eccles,
+Nando~de~Freitas,
+Sander~Dieleman,
+Conor~Durkan,
+Aleksa~Gordić,
+Raia~Hadsell,
+Will~Hawkins,
+Lisa~Anne~Hendricks,
+Felix~Hill,
+Jordan~Hoffmann,
+Geoffrey~Irving,
+Drew~Jaegle,
+Koray~Kavukcuoglu,
+Agustin~Dal~Lago,
+Mateusz~Malinowski,
+Soňa~Mokrá,
+Gaby~Pearl,
+Toby~Pohlen,
+Jack~Rae,
+Laurent~Sifre,
+Francis~Song,
+Maria~Tsimpoukelli,
+Gregory~Wayne,
+and Boxi~Wu.
+
+
+\bibliographystyle{plainnat}
+\bibliography{template_refs}
+
+\input{checklist}
+
+
+\newpage
+\ifwithappendix
+\section*{Appendix}
+\else
+\section*{\flamingoemoji{} Flamingo: a Visual Language Model for Few-Shot Learning: Appendix}
+\fi
+\appendix
+\input{appendix.tex}
+
+
+
+\setcitestyle{square,numbers,comma}
+
+\end{document}

@@ -1,0 +1,393 @@
+\section{Datasheets}
+\label{datasheets}
+
+
+\subsection{M3W dataset}
+\label{datasheet-m3w-break}
+
+
+
+We follow the framework defined by \citet{datasheet} and provide the datasheet for \mmmw~in Table~\ref{tab:m3w-datasheet}.
+
+\begin{center}
+\begin{longtable}{p{0.35\linewidth} | p{0.6\linewidth}}
+    \toprule
+    \noalign{\vskip 2mm}
+    \multicolumn{2}{c}{\textbf{Motivation}} 
+    \vspace{2mm}\\
+    \toprule
+    For what purpose was the dataset created? Who created the dataset? Who funded the creation of the dataset? &
+    The dataset was created for pre-training vision-language models and was created by researchers and engineers. \\ %
+    \midrule
+    Any other comments? & 
+    None. 
+    \vspace{1mm} \\
+    
+    \toprule
+    \noalign{\vskip 2mm}
+    \multicolumn{2}{c}{\textbf{Composition}}
+    \vspace{2mm}\\
+    \toprule
+    What do the instances that comprise the dataset represent (e.g., documents, photos, people, countries)? &
+    All instances of the dataset are documents from the web containing interleaved text and images. \\
+    \midrule
+    How many instances are there in total (of each type, if appropriate)? &
+    There are 43.3M instances (documents) in total, with a total of 185M images and 182 GB of text. \\
+    \midrule
+    Does the dataset contain all possible instances or is it a sample (not necessarily random) of instances from a larger set? &
+    The dataset is a sample from a larger set.\\
+    \midrule
+    What data does each instance consist of? &
+    Each instance is made up of a sequence of UTF-8 bytes encoding the document’s text, as well as a sequence of integers indicating the positions of images in the text, and the images themselves in compressed format (see Section \maintoappref{sec:interleaved_datasets}). \\
+    \midrule
+    Is there a label or target associated with each instance? &
+    No, there are no labels associated with each instance. \\
+    \midrule
+    Is any information missing from individual instances?  &
+    No. \\
+    \midrule
+    Are relationships between individual instances made explicit? &
+    There are no relationships between the different instances in the dataset. \\
+    \midrule
+    Are there recommended data splits? &
+    We use random splits for the training and development sets.\\
+    \midrule
+    Are there any errors, sources of noise, or redundancies in the dataset? &
+    There is significant redundancy at the sub-document level.\\
+    \midrule
+    Is the dataset self-contained, or does it link to or otherwise rely on external resources? &
+    The dataset is self-contained. \\
+    \midrule
+    Does the dataset contain data that might be considered confidential? &
+    No. \\
+    \midrule
+    Does the dataset contain data that, if viewed directly, might be offensive, insulting, threatening, or might otherwise cause anxiety? &
+    The dataset likely contains some data that might be considered offensive, insulting or threatening, as such data is prevalent on the web. We do not try to filter out such content, with the exception of explicit content, which we identify using dedicated filter.
+    \vspace{1mm} \\
+
+    \toprule
+    \noalign{\vskip 2mm}
+    \multicolumn{2}{c}{\textbf{Collection Process}}
+    \vspace{2mm}\\
+    \toprule
+    How was the data associated with each instance acquired? &
+    The data is available publicly on the web. \\
+    \midrule
+    What mechanisms or procedures were used to collect the data? &
+    The data was collected using a variety of software programs to extract and clean the raw text and images. \\
+    \midrule
+    If the dataset is a sample from a larger set, what was the sampling strategy? &
+    We randomly subsample documents. \\
+    \midrule
+    Over what timeframe was the data collected? &
+    The dataset was collected over a period of several months in 2021. We do not filter the sources based on creation date. \\
+    \midrule
+    Were any ethical review processes conducted? &
+    No. 
+    \vspace{1mm} \\
+    
+    \toprule
+    \noalign{\vskip 2mm}
+    \multicolumn{2}{c}{\textbf{Preprocessing/cleaning/labeling}}
+    \vspace{2mm}\\
+    \toprule
+    Was any preprocessing/Cleaning/Labeling of the data done (e.g., discretization or bucketing, tokenization, part-of-speech tagging, SIFT feature extraction, removal of instances, processing of missing values)? &
+    Yes — the pre-processing details are discussed in Appendix~\ref{app:collection-m3w}.  \\
+    \midrule
+    Is the software used to preprocess/clean/label the instances available? &
+    No. 
+    \vspace{1mm} \\
+    
+    \toprule
+    \noalign{\vskip 2mm}
+    \multicolumn{2}{c}{\textbf{Uses}}
+    \vspace{2mm}\\
+    \toprule
+    Has the dataset been used for any tasks already? &
+    Yes, we use the dataset for pre-training multimodal language and vision models. \\
+    \midrule
+    Is there a repository that links to any or all papers or systems that use the dataset? &
+    No, the dataset has only been used to train the models in this paper. \\
+    \midrule
+    What (other) tasks could the dataset be used for? &
+    We do not foresee other usages of the dataset at this stage. \\
+    \midrule
+    Is there anything about the composition of the dataset or the way it was collected and preprocessed/cleaned/labeled that might impact future uses? &
+    The dataset is static and thus will become progressively more ``stale’’. For example, it will not reflect new language and norms that evolve over time. However, due to the nature of the dataset it is relatively cheap to collect an up-to-date version. \\
+    \midrule
+    Are there tasks for which the dataset should not be used? &
+    The dataset described in this paper contains English language text almost exclusively and therefore should not be used for training models intended to have multilingual capabilities. \\
+
+    \toprule
+    \noalign{\vskip 2mm}
+    \multicolumn{2}{c}{\textbf{Distribution}}
+    \vspace{2mm}\\
+    \toprule
+    Will the dataset be distributed to third parties outside of the entity (e.g., company, institution, organization) on behalf of which the dataset was created? &
+    No. 
+    \vspace{1mm} \\ 
+    \bottomrule
+    \caption{\capfontsize{} \textbf{\mmmw~Datasheet}. We follow the framework as presented by \citet{datasheet}.}
+    \label{tab:m3w-datasheet}
+\end{longtable}
+\end{center}
+
+\subsection{Image and video text pair datasets}
+
+\newpage 
+
+
+\subsubsection{Datasheet for \shortimagetextpairs}
+\label{app:itp_datasheet}
+
+\begin{center}
+\begin{longtable}{p{0.35\linewidth} | p{0.6\linewidth}}
+    \toprule
+    \noalign{\vskip 2mm}
+    \multicolumn{2}{c}{\textbf{Motivation}} 
+    \vspace{2mm}\\
+    \toprule
+    For what purpose was the dataset created? Who created the dataset? Who funded the creation of the dataset? &
+    The dataset was created for pre-training vision-language models and was created by researchers and engineers. \\ %
+    \midrule
+    Any other comments? & 
+    None. 
+    \vspace{1mm} \\
+    
+    \toprule
+    \noalign{\vskip 2mm}
+    \multicolumn{2}{c}{\textbf{Composition}}
+    \vspace{2mm}\\
+    \toprule
+    What do the instances that comprise the dataset represent (e.g., documents, photos, people, countries)? &
+    All instances of the dataset are image-text pairs. \\
+    \midrule
+    How many instances are there in total (of each type, if appropriate)? &
+    The dataset contains 312M image-text pairs.\\
+    \midrule
+    Does the dataset contain all possible instances or is it a sample (not necessarily random) of instances from a larger set? &
+    The dataset is a sample from a larger set. \\
+    \midrule
+    What data does each instance consist of? &
+    Each instance is made up of a sequence of UTF-8 bytes encoding the document’s text, and an image in compressed format (see Appendix~\ref{app:vtp_and_itp}). \\
+    \midrule
+    Is there a label or target associated with each instance? &
+    No, there are no labels associated with each instance. \\
+    \midrule
+    Is any information missing from individual instances?  &
+    No. \\
+    \midrule
+    Are relationships between individual instances made explicit? &
+    There are no relationships between the different instances in the dataset. \\
+    \midrule
+    Are there recommended data splits? &
+    We use random splits for the training and development sets.\\
+    \midrule
+    Are there any errors, sources of noise, or redundancies in the dataset? &
+    The data is relatively high quality but there is a chance that some instances are repeated multiple times. \\
+    \midrule
+    Is the dataset self-contained, or does it link to or otherwise rely on external resources? &
+    The dataset is self-contained. \\
+    \midrule
+    Does the dataset contain data that might be considered confidential? &
+    No. \\
+    \midrule
+    Does the dataset contain data that, if viewed directly, might be offensive, insulting, threatening, or might otherwise cause anxiety? &
+    The websites that were used for this dataset were carefully selected to avoid such content. However given the scale of the data it is possible that some data could be considered offensive or insulting.  %
+    \vspace{1mm} \\
+
+    \toprule
+    \noalign{\vskip 2mm}
+    \multicolumn{2}{c}{\textbf{Collection Process}}
+    \vspace{2mm}\\
+    \toprule
+    How was the data associated with each instance acquired? &
+    The data is available publicly on the web. \\
+    \midrule
+    What mechanisms or procedures were used to collect the data? &
+    The data was collected using a variety of software programs to extract and clean the raw text and images. \\
+    \midrule
+    If the dataset is a sample from a larger set, what was the sampling strategy? &
+    N.A. \\
+    \midrule
+    Over what timeframe was the data collected? &
+    The dataset was collected over a period of several months in 2021. We do not filter the sources based on creation date. \\
+    \midrule
+    Were any ethical review processes conducted? &
+    No. 
+    \vspace{1mm} \\
+    
+    \toprule
+    \noalign{\vskip 2mm}
+    \multicolumn{2}{c}{\textbf{Preprocessing/cleaning/labeling}}
+    \vspace{2mm}\\
+    \toprule
+    Was any preprocessing/Cleaning/Labeling of the data done (e.g., discretization or bucketing, tokenization, part-of-speech tagging, SIFT feature extraction, removal of instances, processing of missing values)? &
+    Some automatic text formatting was applied to remove from the captions dates and locations that were not relevant to the training objective. \\ %
+    \midrule
+    Is the software used to preprocess/clean/label the instances available? &
+    No. 
+    \vspace{1mm} \\
+    
+    \toprule
+    \noalign{\vskip 2mm}
+    \multicolumn{2}{c}{\textbf{Uses}}
+    \vspace{2mm}\\
+    \toprule
+    Has the dataset been used for any tasks already? &
+    Yes, we use the dataset for pre-training multimodal language and vision models. \\
+    \midrule
+    Is there a repository that links to any or all papers or systems that use the dataset? &
+    No, the dataset has only been used to train the models in this paper. \\
+    \midrule
+    What (other) tasks could the dataset be used for? &
+    We do not foresee other usages of the dataset at this stage. \\
+    \midrule
+    Is there anything about the composition of the dataset or the way it was collected and preprocessed/cleaned/labeled that might impact future uses? &
+    The dataset is static and thus will become progressively more ``stale’’. For example, it will not reflect new language and norms that evolve over time. However, due to the nature of the dataset it is relatively cheap to collect an up-to-date version. \\
+    \midrule
+    Are there tasks for which the dataset should not be used? &
+    The dataset described in this paper contains English language text almost exclusively and therefore should not be used for training models intended to have multilingual capabilities. \\
+
+    \toprule
+    \noalign{\vskip 2mm}
+    \multicolumn{2}{c}{\textbf{Distribution}}
+    \vspace{2mm}\\
+    \toprule
+    Will the dataset be distributed to third parties outside of the entity (e.g., company, institution, organization) on behalf of which the dataset was created? &
+    No. 
+    \vspace{1mm} \\ 
+    \bottomrule
+    \caption{\capfontsize{} \textbf{\shortimagetextpairs{} Datasheet}. We follow the framework as presented by \citet{datasheet}.}
+    \label{tab:itp-datasheet}
+\end{longtable}
+\end{center}
+
+\newpage 
+
+\subsubsection{Datasheet for \shortvideotextpairs}
+\label{app:vtp_datasheet}
+
+\begin{center}
+\begin{longtable}{p{0.35\linewidth} | p{0.6\linewidth}}
+    \toprule
+    \noalign{\vskip 2mm}
+    \multicolumn{2}{c}{\textbf{Motivation}} 
+    \vspace{2mm}\\
+    \toprule
+    For what purpose was the dataset created? Who created the dataset? Who funded the creation of the dataset? &
+    The dataset was created for pre-training vision-language models and was created by researchers and engineers. \\ %
+    \midrule
+    Any other comments? & 
+    None. 
+    \vspace{1mm} \\
+    
+    \toprule
+    \noalign{\vskip 2mm}
+    \multicolumn{2}{c}{\textbf{Composition}}
+    \vspace{2mm}\\
+    \toprule
+    What do the instances that comprise the dataset represent (e.g., documents, photos, people, countries)? &
+    All instances of the dataset are video-text pairs. \\
+    \midrule
+    How many instances are there in total (of each type, if appropriate)? &
+    The dataset contains 27M video-text pairs.\\
+    \midrule
+    Does the dataset contain all possible instances or is it a sample (not necessarily random) of instances from a larger set? &
+    The dataset is a sample from a larger set. \\
+    \midrule
+    What data does each instance consist of? &
+    Each instance is made up of a sequence of UTF-8 bytes encoding the document’s text, and a video in compressed format (see Appendix~\ref{app:vtp_and_itp}). \\
+    \midrule
+    Is there a label or target associated with each instance? &
+    No, there are no labels associated with each instance. \\
+    \midrule
+    Is any information missing from individual instances?  &
+    No. \\
+    \midrule
+    Are relationships between individual instances made explicit? &
+    There are no relationships between the different instances in the dataset. \\
+    \midrule
+    Are there recommended data splits? &
+    We use random splits for the training and development sets.\\
+    \midrule
+    Are there any errors, sources of noise, or redundancies in the dataset? &
+    The data is relatively high quality but there is a chance that some instances are repeated multiple times. \\
+    \midrule
+    Is the dataset self-contained, or does it link to or otherwise rely on external resources? &
+    The dataset is self-contained. \\
+    \midrule
+    Does the dataset contain data that might be considered confidential? &
+    No. \\
+    \midrule
+    Does the dataset contain data that, if viewed directly, might be offensive, insulting, threatening, or might otherwise cause anxiety? &
+    The websites that were used for this dataset were carefully selected to avoid such content. However given the scale of the data it is possible that some data could be considered offensive or insulting.  %
+    \vspace{1mm} \\
+
+    \toprule
+    \noalign{\vskip 2mm}
+    \multicolumn{2}{c}{\textbf{Collection Process}}
+    \vspace{2mm}\\
+    \toprule
+    How was the data associated with each instance acquired? &
+    The data is available publicly on the web. \\
+    \midrule
+    What mechanisms or procedures were used to collect the data? &
+    The data was collected using a variety of software programs to extract and clean the raw text and videos. \\
+    \midrule
+    If the dataset is a sample from a larger set, what was the sampling strategy? &
+    N.A. \\
+    \midrule
+    Over what timeframe was the data collected? &
+    The dataset was collected over a period of several months in 2021. We do not filter the sources based on creation date. \\
+    \midrule
+    Were any ethical review processes conducted? &
+    No. 
+    \vspace{1mm} \\
+    
+    \toprule
+    \noalign{\vskip 2mm}
+    \multicolumn{2}{c}{\textbf{Preprocessing/cleaning/labeling}}
+    \vspace{2mm}\\
+    \toprule
+    Was any preprocessing/Cleaning/Labeling of the data done (e.g., discretization or bucketing, tokenization, part-of-speech tagging, SIFT feature extraction, removal of instances, processing of missing values)? &
+    Some automatic text formatting was applied to remove from the captions dates and locations that were not relevant to the training objective. \\ %
+    \midrule
+    Is the software used to preprocess/clean/label the instances available? &
+    No. 
+    \vspace{1mm} \\
+    
+    \toprule
+    \noalign{\vskip 2mm}
+    \multicolumn{2}{c}{\textbf{Uses}}
+    \vspace{2mm}\\
+    \toprule
+    Has the dataset been used for any tasks already? &
+    Yes, we use the dataset for pre-training multimodal language and vision models. \\
+    \midrule
+    Is there a repository that links to any or all papers or systems that use the dataset? &
+    No, the dataset has only been used to train the models in this paper. \\
+    \midrule
+    What (other) tasks could the dataset be used for? &
+    We do not foresee other usages of the dataset at this stage. \\
+    \midrule
+    Is there anything about the composition of the dataset or the way it was collected and preprocessed/cleaned/labeled that might impact future uses? &
+    The dataset is static and thus will become progressively more ``stale’’. For example, it will not reflect new language and norms that evolve over time. However, due to the nature of the dataset it is relatively cheap to collect an up-to-date version. \\
+    \midrule
+    Are there tasks for which the dataset should not be used? &
+    The dataset described in this paper contains English language text almost exclusively and therefore should not be used for training models intended to have multilingual capabilities. \\
+
+    \toprule
+    \noalign{\vskip 2mm}
+    \multicolumn{2}{c}{\textbf{Distribution}}
+    \vspace{2mm}\\
+    \toprule
+    Will the dataset be distributed to third parties outside of the entity (e.g., company, institution, organization) on behalf of which the dataset was created? &
+    No. 
+    \vspace{1mm} \\ 
+    \bottomrule
+    \caption{\capfontsize{} \textbf{VTP Datasheet}. We follow the framework as presented by \citet{datasheet}.}
+    \label{tab:vtp-datasheet}
+\end{longtable}
+\end{center}
+

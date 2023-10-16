@@ -1,0 +1,19 @@
+
+\begin{table}[t]
+\footnotesize
+\resizebox{\textwidth}{!}{
+\begin{tabular}{@{}l|llllll|llllll@{}}
+\toprule
+                     & \multicolumn{6}{c|}{Flickr30K}                                                  & \multicolumn{6}{c}{COCO}                                                      \\
+                      & \multicolumn{3}{c}{image-to-text}             & \multicolumn{3}{c|}{text-to-image}            & \multicolumn{3}{c}{image-to-text}             & \multicolumn{3}{c}{text-to-image}             \\ \cmidrule(l){2-13} 
+                  & R@1           & R@5           & R@10          & R@1           & R@5           & R@10          & R@1           & R@5           & R@10          & R@1           & R@5           & R@10          \\
+                        \cmidrule(l){2-13}
+Florence [\citenum{yuan2021florence}]  & \textbf{90.9}          & \textbf{99.1}          & \multicolumn{1}{c}{-}   & 76.7          & 93.6          &     \multicolumn{1}{c|}{-}       & 64.7   & 85.9          &    \multicolumn{1}{c}{-}      & 47.2         & 71.4          &  \multicolumn{1}{c}{-}          \\
+ALIGN [\citenum{align}]  & 88.6          & 98.7          & \textbf{99.7} & 75.7          & 93.8          & 96.8          & 58.6          & 83.0          & 89.7          & 45.6          & 69.8          & 78.6          \\
+CLIP [\citenum{clip}]       & 88.0          & 98.7          & 99.4          & 68.7          & 90.6          & 95.2          & 58.4          & 81.5          & 88.1          & 37.7          & 62.4          & 72.2          \\ \midrule
+\textbf{Ours}   & 89.3 & 98.8 & \textbf{99.7} & \textbf{79.5} & \textbf{95.3} & \textbf{97.9} & \textbf{65.9} & \textbf{87.3} & \textbf{92.9} & \textbf{48.0} & \textbf{73.3} & \textbf{82.1} \\ \bottomrule
+\end{tabular}
+}
+\vspace{1em}
+\caption{\capfontsize{} \label{table:contrastive_eval_retrieval} \textbf{Zero-shot contrastive pretraining evaluation.} Zero-shot image-text retrieval evaluation of our pretrained contrastive model compared to the state-of-the-art dual encoder contrastive models.}
+\end{table}

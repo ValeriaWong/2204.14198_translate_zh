@@ -1,0 +1,4731 @@
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.10.2)  12 OCT 2023 18:31
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**/Users/macos/Downloads/2204.14198/main
+(/Users/macos/Downloads/2204.14198/main.tex
+LaTeX2e <2022-11-01> patch level 1
+L3 programming layer <2023-02-22> (/usr/local/texlive/2023/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2022/07/02 v1.4n Standard LaTeX document class
+(/usr/local/texlive/2023/texmf-dist/tex/latex/base/size10.clo
+File: size10.clo 2022/07/02 v1.4n Standard LaTeX file (size option)
+)
+\c@part=\count181
+\c@section=\count182
+\c@subsection=\count183
+\c@subsubsection=\count184
+\c@paragraph=\count185
+\c@subparagraph=\count186
+\c@figure=\count187
+\c@table=\count188
+\abovecaptionskip=\skip48
+\belowcaptionskip=\skip49
+\bibindent=\dimen140
+) (./neurips_2022.sty
+Package: neurips_2022 2022/03/31 NeurIPS 2022 submission/camera-ready style file
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/environ/environ.sty
+Package: environ 2014/05/04 v0.3 A new way to define environments
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/trimspaces/trimspaces.sty
+Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
+)
+\@envbody=\toks16
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/natbib/natbib.sty
+Package: natbib 2010/09/13 8.31b (PWD, AO)
+\bibhang=\skip50
+\bibsep=\skip51
+LaTeX Info: Redefining \cite on input line 694.
+\c@NAT@ctr=\count189
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
+\KV@toks@=\toks17
+) (/usr/local/texlive/2023/texmf-dist/tex/generic/iftex/ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+ (/usr/local/texlive/2023/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2022/02/03 v1.0f TeX engine tests
+))
+\Gm@cnth=\count190
+\Gm@cntv=\count191
+\c@Gm@tempcnt=\count192
+\Gm@bindingoffset=\dimen141
+\Gm@wd@mp=\dimen142
+\Gm@odd@mp=\dimen143
+\Gm@even@mp=\dimen144
+\Gm@layoutwidth=\dimen145
+\Gm@layoutheight=\dimen146
+\Gm@layouthoffset=\dimen147
+\Gm@layoutvoffset=\dimen148
+\Gm@dimlist=\toks18
+)
+\@neuripsabovecaptionskip=\skip52
+\@neuripsbelowcaptionskip=\skip53
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/fontspec/fontspec.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/l3packages/xparse/xparse.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/l3kernel/expl3.sty
+Package: expl3 2023-02-22 L3 programming layer (loader) 
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/l3backend/l3backend-xetex.def
+File: l3backend-xetex.def 2023-01-16 L3 backend support: XeTeX
+\g__graphics_track_int=\count193
+\l__pdf_internal_box=\box51
+\g__pdf_backend_object_int=\count194
+\g__pdf_backend_annotation_int=\count195
+\g__pdf_backend_link_int=\count196
+))
+Package: xparse 2023-02-02 L3 Experimental document command parser
+)
+Package: fontspec 2022/01/15 v2.8a Font selection for XeLaTeX and LuaLaTeX
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/fontspec/fontspec-xetex.sty
+Package: fontspec-xetex 2022/01/15 v2.8a Font selection for XeLaTeX and LuaLaTeX
+\l__fontspec_script_int=\count197
+\l__fontspec_language_int=\count198
+\l__fontspec_strnum_int=\count199
+\l__fontspec_tmp_int=\count266
+\l__fontspec_tmpa_int=\count267
+\l__fontspec_tmpb_int=\count268
+\l__fontspec_tmpc_int=\count269
+\l__fontspec_em_int=\count270
+\l__fontspec_emdef_int=\count271
+\l__fontspec_strong_int=\count272
+\l__fontspec_strongdef_int=\count273
+\l__fontspec_tmpa_dim=\dimen149
+\l__fontspec_tmpb_dim=\dimen150
+\l__fontspec_tmpc_dim=\dimen151
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/fontspec/fontspec.cfg))) (/usr/local/texlive/2023/texmf-dist/tex/latex/ctex/ctex.sty
+Package: ctex 2022/07/14 v2.5.10 Chinese adapter in LaTeX (CTEX)
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/ctex/ctexhook.sty
+Package: ctexhook 2022/07/14 v2.5.10 Document and package hooks (CTEX)
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/ctex/ctexpatch.sty
+Package: ctexpatch 2022/07/14 v2.5.10 Patching commands (CTEX)
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/base/fix-cm.sty
+Package: fix-cm 2020/11/24 v1.1t fixes to LaTeX
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/base/ts1enc.def
+File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
+LaTeX Font Info:    Redeclaring font encoding TS1 on input line 47.
+))
+\l__ctex_tmp_int=\count274
+\l__ctex_tmp_box=\box52
+\l__ctex_tmp_dim=\dimen152
+\g__ctex_section_depth_int=\count275
+\g__ctex_font_size_int=\count276
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/ctex/config/ctexopts.cfg
+File: ctexopts.cfg 2022/07/14 v2.5.10 Option configuration file (CTEX)
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/ctex/engine/ctex-engine-xetex.def
+File: ctex-engine-xetex.def 2022/07/14 v2.5.10 XeLaTeX adapter (CTEX)
+ (/usr/local/texlive/2023/texmf-dist/tex/xelatex/xecjk/xeCJK.sty
+Package: xeCJK 2022/08/05 v3.9.1 Typesetting CJK scripts with XeLaTeX
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/l3packages/xtemplate/xtemplate.sty
+Package: xtemplate 2023-02-02 L3 Experimental prototype document functions
+\l__xtemplate_tmp_dim=\dimen153
+\l__xtemplate_tmp_int=\count277
+\l__xtemplate_tmp_muskip=\muskip16
+\l__xtemplate_tmp_skip=\skip54
+)
+\l__xeCJK_tmp_int=\count278
+\l__xeCJK_tmp_box=\box53
+\l__xeCJK_tmp_dim=\dimen154
+\l__xeCJK_tmp_skip=\skip55
+\g__xeCJK_space_factor_int=\count279
+\l__xeCJK_begin_int=\count280
+\l__xeCJK_end_int=\count281
+\c__xeCJK_CJK_class_int=\XeTeXcharclass1
+\c__xeCJK_FullLeft_class_int=\XeTeXcharclass2
+\c__xeCJK_FullRight_class_int=\XeTeXcharclass3
+\c__xeCJK_HalfLeft_class_int=\XeTeXcharclass4
+\c__xeCJK_HalfRight_class_int=\XeTeXcharclass5
+\c__xeCJK_NormalSpace_class_int=\XeTeXcharclass6
+\c__xeCJK_CM_class_int=\XeTeXcharclass7
+\c__xeCJK_HangulJamo_class_int=\XeTeXcharclass8
+\l__xeCJK_last_skip=\skip56
+\c__xeCJK_none_node=\count282
+\g__xeCJK_node_int=\count283
+\c__xeCJK_CJK_node_dim=\dimen155
+\c__xeCJK_CJK-space_node_dim=\dimen156
+\c__xeCJK_default_node_dim=\dimen157
+\c__xeCJK_CJK-widow_node_dim=\dimen158
+\c__xeCJK_normalspace_node_dim=\dimen159
+\c__xeCJK_default-space_node_skip=\skip57
+\l__xeCJK_ccglue_skip=\skip58
+\l__xeCJK_ecglue_skip=\skip59
+\l__xeCJK_punct_kern_skip=\skip60
+\l__xeCJK_indent_box=\box54
+\l__xeCJK_last_penalty_int=\count284
+\l__xeCJK_last_bound_dim=\dimen160
+\l__xeCJK_last_kern_dim=\dimen161
+\l__xeCJK_widow_penalty_int=\count285
+
+Package xtemplate Info: Declaring object type 'xeCJK/punctuation' taking 0
+(xtemplate)             argument(s) on line 2396.
+
+\l__xeCJK_fixed_punct_width_dim=\dimen162
+\l__xeCJK_mixed_punct_width_dim=\dimen163
+\l__xeCJK_middle_punct_width_dim=\dimen164
+\l__xeCJK_fixed_margin_width_dim=\dimen165
+\l__xeCJK_mixed_margin_width_dim=\dimen166
+\l__xeCJK_middle_margin_width_dim=\dimen167
+\l__xeCJK_bound_punct_width_dim=\dimen168
+\l__xeCJK_bound_margin_width_dim=\dimen169
+\l__xeCJK_margin_minimum_dim=\dimen170
+\l__xeCJK_kerning_total_width_dim=\dimen171
+\l__xeCJK_same_align_margin_dim=\dimen172
+\l__xeCJK_different_align_margin_dim=\dimen173
+\l__xeCJK_kerning_margin_width_dim=\dimen174
+\l__xeCJK_kerning_margin_minimum_dim=\dimen175
+\l__xeCJK_bound_dim=\dimen176
+\l__xeCJK_reverse_bound_dim=\dimen177
+\l__xeCJK_margin_dim=\dimen178
+\l__xeCJK_minimum_bound_dim=\dimen179
+\l__xeCJK_kerning_margin_dim=\dimen180
+\g__xeCJK_family_int=\count286
+\l__xeCJK_fam_int=\count287
+\g__xeCJK_fam_allocation_int=\count288
+\l__xeCJK_verb_case_int=\count289
+\l__xeCJK_verb_exspace_skip=\skip61
+ (/usr/local/texlive/2023/texmf-dist/tex/xelatex/xecjk/xeCJK.cfg
+File: xeCJK.cfg 2022/08/05 v3.9.1 Configuration file for xeCJK package
+))
+\ccwd=\dimen181
+\l__ctex_ccglue_skip=\skip62
+)
+\l__ctex_ziju_dim=\dimen182
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/zhnumber/zhnumber.sty
+Package: zhnumber 2022/07/14 v3.0 Typesetting numbers with Chinese glyphs
+\l__zhnum_scale_int=\count290
+\l__zhnum_tmp_int=\count291
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/zhnumber/zhnumber-utf8.cfg
+File: zhnumber-utf8.cfg 2022/07/14 v3.0 Chinese numerals with UTF8 encoding
+)) (/usr/local/texlive/2023/texmf-dist/tex/latex/ctex/scheme/ctex-scheme-chinese.def
+File: ctex-scheme-chinese.def 2022/07/14 v2.5.10 Chinese scheme for generic (CTEX)
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/ctex/config/ctex-name-utf8.cfg
+File: ctex-name-utf8.cfg 2022/07/14 v2.5.10 Caption with encoding UTF-8 (CTEX)
+)) (/usr/local/texlive/2023/texmf-dist/tex/latex/tools/indentfirst.sty
+Package: indentfirst 1995/11/23 v1.03 Indent first paragraph (DPC)
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/ctex/ctex-c5size.clo
+File: ctex-c5size.clo 2022/07/14 v2.5.10 c5size option (CTEX)
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/ctex/fontset/ctex-fontset-mac.def
+File: ctex-fontset-mac.def 2022/07/14 v2.5.10 macOS fonts definition (CTEX)
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/ctex/fontset/ctex-fontset-macnew.def
+File: ctex-fontset-macnew.def 2022/07/14 v2.5.10 macOS fonts definition for El Capitan or later version (CTEX)
+
+
+Package fontspec Warning: Font "Songti SC Light" does not contain requested
+(fontspec)                Script "CJK".
+
+
+Package fontspec Info: Font family 'SongtiSCLight(0)' created for font 'Songti
+(fontspec)             SC Light' with options
+(fontspec)             [Script={CJK},BoldItalicFont={Kaiti SC
+(fontspec)             Bold},BoldFont={Songti SC Bold},ItalicFont={Kaiti SC}].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.: <->"Songti SC
+(fontspec)             Light/OT:language=dflt;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
+(fontspec)             - 'bold' (b/n) with NFSS spec.: <->"Songti SC
+(fontspec)             Bold/OT:language=dflt;"
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
+(fontspec)             - 'italic' (m/it) with NFSS spec.: <->"Kaiti
+(fontspec)             SC/OT:language=dflt;"
+(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.: 
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.: <->"Kaiti SC
+(fontspec)             Bold/OT:language=dflt;"
+(fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.: 
+
+))) (/usr/local/texlive/2023/texmf-dist/tex/latex/ctex/config/ctex.cfg
+File: ctex.cfg 2022/07/14 v2.5.10 Configuration file (CTEX)
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2021/02/14 v1.3d Input encoding file
+\inpenc@prehook=\toks19
+\inpenc@posthook=\toks20
+
+
+Package inputenc Warning: inputenc package ignored with utf8 based engines.
+
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
+LaTeX Font Info:    Trying to load font information for T1+lmr on input line 112.
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/lm/t1lmr.fd
+File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)) (/usr/local/texlive/2023/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2023-02-07 v7.00v Hypertext links for LaTeX
+ (/usr/local/texlive/2023/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
+) (/usr/local/texlive/2023/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO)
+ (/usr/local/texlive/2023/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode not found.
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty
+Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
+) (/usr/local/texlive/2023/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+) (/usr/local/texlive/2023/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/hycolor/hycolor.sty
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/letltxmacro/letltxmacro.sty
+Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/auxhook/auxhook.sty
+Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2022-05-17 v2.50 Cross-referencing by name of section
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/refcount/refcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+) (/usr/local/texlive/2023/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
+))
+\c@section@level=\count292
+)
+\@linkdim=\dimen183
+\Hy@linkcounter=\count293
+\Hy@pagecounter=\count294
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2023-02-07 v7.00v Hyperref: PDFDocEncoding definition (HO)
+) (/usr/local/texlive/2023/texmf-dist/tex/generic/intcalc/intcalc.sty
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+) (/usr/local/texlive/2023/texmf-dist/tex/generic/etexcmds/etexcmds.sty
+Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
+)
+\Hy@SavedSpaceFactor=\count295
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/hyperref/puenc.def
+File: puenc.def 2023-02-07 v7.00v Hyperref: PDF Unicode definition (HO)
+)
+Package hyperref Info: Option `unicode' set `true' on input line 4060.
+Package hyperref Info: Hyper figures OFF on input line 4177.
+Package hyperref Info: Link nesting OFF on input line 4182.
+Package hyperref Info: Hyper index ON on input line 4185.
+Package hyperref Info: Plain pages OFF on input line 4192.
+Package hyperref Info: Backreferencing OFF on input line 4197.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4425.
+\c@Hy@tempcnt=\count296
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip17
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 4763.
+\XeTeXLinkMargin=\dimen184
+ (/usr/local/texlive/2023/texmf-dist/tex/generic/bitset/bitset.sty
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+ (/usr/local/texlive/2023/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO)
+))
+\Fld@menulength=\count297
+\Field@Width=\dimen185
+\Fld@charsize=\dimen186
+Package hyperref Info: Hyper figures OFF on input line 6042.
+Package hyperref Info: Link nesting OFF on input line 6047.
+Package hyperref Info: Hyper index ON on input line 6050.
+Package hyperref Info: backreferencing OFF on input line 6057.
+Package hyperref Info: Link coloring OFF on input line 6062.
+Package hyperref Info: Link coloring with OCG OFF on input line 6067.
+Package hyperref Info: PDF/A mode OFF on input line 6072.
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/base/atbegshi-ltx.sty
+Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
+package with kernel methods
+)
+\Hy@abspage=\count298
+\c@Item=\count299
+\c@Hfootnote=\count300
+)
+Package hyperref Info: Driver (autodetected): hxetex.
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/hyperref/hxetex.def
+File: hxetex.def 2023-02-07 v7.00v Hyperref driver for XeTeX
+ (/usr/local/texlive/2023/texmf-dist/tex/generic/stringenc/stringenc.sty
+Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO)
+)
+\pdfm@box=\box55
+\c@Hy@AnnotLevel=\count301
+\HyField@AnnotCount=\count302
+\Fld@listcount=\count303
+\c@bookmark@seq@number=\count304
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+Package: rerunfilecheck 2022-07-10 v1.10 Rerun checks for auxiliary files (HO)
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/base/atveryend-ltx.sty
+Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend package
+with kernel methods
+) (/usr/local/texlive/2023/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
+)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 285.
+)
+\Hy@SectionHShift=\skip63
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/booktabs/booktabs.sty
+Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
+\heavyrulewidth=\dimen187
+\lightrulewidth=\dimen188
+\cmidrulewidth=\dimen189
+\belowrulesep=\dimen190
+\belowbottomsep=\dimen191
+\aboverulesep=\dimen192
+\abovetopsep=\dimen193
+\cmidrulesep=\dimen194
+\cmidrulekern=\dimen195
+\defaultaddspace=\dimen196
+\@cmidla=\count305
+\@cmidlb=\count306
+\@aboverulesep=\dimen197
+\@belowrulesep=\dimen198
+\@thisruleclass=\count307
+\@lastruleclass=\count308
+\@thisrulewidth=\dimen199
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\@emptytoks=\toks21
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/units/nicefrac.sty
+Package: nicefrac 1998/08/04 v0.9b Nice fractions
+\L@UnitsRaiseDisplaystyle=\skip64
+\L@UnitsRaiseTextstyle=\skip65
+\L@UnitsRaiseScriptstyle=\skip66
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2022/04/13 v1.1d Standard LaTeX ifthen package (DPC)
+)) (/usr/local/texlive/2023/texmf-dist/tex/latex/microtype/microtype.sty
+Package: microtype 2023/03/13 v3.1a Micro-typographical refinements (RS)
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count309
+)
+\MT@toks=\toks22
+\MT@tempbox=\box56
+\MT@count=\count310
+LaTeX Info: Redefining \noprotrusionifhmode on input line 1059.
+LaTeX Info: Redefining \leftprotrusion on input line 1060.
+\MT@prot@toks=\toks23
+LaTeX Info: Redefining \rightprotrusion on input line 1078.
+LaTeX Info: Redefining \textls on input line 1368.
+\MT@outer@kern=\dimen256
+LaTeX Info: Redefining \textmicrotypecontext on input line 1988.
+\MT@listname@count=\count311
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/microtype/microtype-xetex.def
+File: microtype-xetex.def 2023/03/13 v3.1a Definitions specific to xetex (RS)
+LaTeX Info: Redefining \lsstyle on input line 238.
+)
+Package microtype Info: Loading configuration file microtype.cfg.
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/microtype/microtype.cfg
+File: microtype.cfg 2023/03/13 v3.1a microtype main configuration file (RS)
+)) (/usr/local/texlive/2023/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2022/06/12 v2.14 LaTeX color extensions (UK)
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: xetex.def on input line 227.
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/graphics-def/xetex.def
+File: xetex.def 2022/09/22 v5.0n Graphics/color driver for xetex
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/colortbl/colortbl.sty
+Package: colortbl 2022/06/20 v1.0f Color table columns (DPC)
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/tools/array.sty
+Package: array 2022/09/04 v2.5g Tabular extension package (FMi)
+\col@sep=\dimen257
+\ar@mcellbox=\box57
+\extrarowheight=\dimen258
+\NC@list=\toks24
+\extratabsurround=\skip67
+\backup@length=\skip68
+\ar@cellbox=\box58
+)
+\everycr=\toks25
+\minrowclearance=\skip69
+\rownum=\count312
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/graphics/mathcolor.ltx)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1353.
+Package xcolor Info: Model `RGB' extended on input line 1369.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1371.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1372.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1373.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1374.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1375.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1376.
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/graphics/dvipsnam.def
+File: dvipsnam.def 2016/06/17 v3.0m Driver-dependent file (DPC,SPQR)
+)) (/usr/local/texlive/2023/texmf-dist/tex/latex/amscls/amsthm.sty
+Package: amsthm 2020/05/29 v2.20.6
+\thm@style=\toks26
+\thm@bodyfont=\toks27
+\thm@headfont=\toks28
+\thm@notefont=\toks29
+\thm@headpunct=\toks30
+\thm@preskip=\skip70
+\thm@postskip=\skip71
+\thm@headsep=\skip72
+\dth@everypar=\toks31
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2022/04/08 v2.17n AMS math features
+\@mathmargin=\skip73
+
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2023/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2021/08/26 v2.01 AMS text
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks32
+\ex@=\dimen259
+)) (/usr/local/texlive/2023/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen260
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2022/04/08 v2.04 operator names
+)
+\inf@bad=\count313
+LaTeX Info: Redefining \frac on input line 234.
+\uproot@=\count314
+\leftroot@=\count315
+LaTeX Info: Redefining \overline on input line 399.
+LaTeX Info: Redefining \colon on input line 410.
+\classnum@=\count316
+\DOTSCASE@=\count317
+LaTeX Info: Redefining \ldots on input line 496.
+LaTeX Info: Redefining \dots on input line 499.
+LaTeX Info: Redefining \cdots on input line 620.
+\Mathstrutbox@=\box59
+\strutbox@=\box60
+LaTeX Info: Redefining \big on input line 722.
+LaTeX Info: Redefining \Big on input line 723.
+LaTeX Info: Redefining \bigg on input line 724.
+LaTeX Info: Redefining \Bigg on input line 725.
+\big@size=\dimen261
+LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
+\macc@depth=\count318
+LaTeX Info: Redefining \bmod on input line 905.
+LaTeX Info: Redefining \pmod on input line 910.
+LaTeX Info: Redefining \smash on input line 940.
+LaTeX Info: Redefining \relbar on input line 970.
+LaTeX Info: Redefining \Relbar on input line 971.
+\c@MaxMatrixCols=\count319
+\dotsspace@=\muskip18
+\c@parentequation=\count320
+\dspbrk@lvl=\count321
+\tag@help=\toks33
+\row@=\count322
+\column@=\count323
+\maxfields@=\count324
+\andhelp@=\toks34
+\eqnshift@=\dimen262
+\alignsep@=\dimen263
+\tagshift@=\dimen264
+\tagwidth@=\dimen265
+\totwidth@=\dimen266
+\lineht@=\dimen267
+\@envbody=\toks35
+\multlinegap=\skip74
+\multlinetaggap=\skip75
+\mathdisplay@stack=\toks36
+LaTeX Info: Redefining \[ on input line 2953.
+LaTeX Info: Redefining \] on input line 2954.
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/cmap/cmap.sty
+Package: cmap 2021/02/06 v1.0j CMap support: searchable PDF
+
+
+Package cmap Warning: pdftex not detected - exiting.
+
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/psnfss/pifont.sty
+Package: pifont 2020/03/25 PSNFSS-v9.3 Pi font support (SPQR) 
+LaTeX Font Info:    Trying to load font information for U+pzd on input line 63.
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/psnfss/upzd.fd
+File: upzd.fd 2001/06/04 font definitions for U/pzd.
+)
+LaTeX Font Info:    Trying to load font information for U+psy on input line 64.
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/psnfss/upsy.fd
+File: upsy.fd 2001/06/04 font definitions for U/psy.
+)) (/usr/local/texlive/2023/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2022/03/10 v1.4e Standard LaTeX Graphics (DPC,SPQR)
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: xetex.def on input line 107.
+)
+\Gin@req@height=\dimen268
+\Gin@req@width=\dimen269
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/natbib/bibentry.sty
+Package: bibentry 2007/10/30 1.5 (PWD)
+) (/usr/local/texlive/2023/texmf-dist/tex/generic/ulem/ulem.sty
+\UL@box=\box61
+\UL@hyphenbox=\box62
+\UL@skip=\skip76
+\UL@hook=\toks37
+\UL@height=\dimen270
+\UL@pe=\count325
+\UL@pixel=\dimen271
+\ULC@box=\box63
+Package: ulem 2019/11/18
+\ULdepth=\dimen272
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/caption/subcaption.sty
+Package: subcaption 2023/02/19 v1.6 Sub-captions (AR)
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2023/03/12 v3.6j Customizing captions (AR)
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2023/03/12 v2.4 caption3 kernel (AR)
+\caption@tempdima=\dimen273
+\captionmargin=\dimen274
+\caption@leftmargin=\dimen275
+\caption@rightmargin=\dimen276
+\caption@width=\dimen277
+\caption@indent=\dimen278
+\caption@parindent=\dimen279
+\caption@hangindent=\dimen280
+Package caption Info: Standard document class detected.
+)
+\c@caption@flags=\count326
+\c@continuedfloat=\count327
+Package caption Info: hyperref package is loaded.
+)
+Package caption Info: New subtype `subfigure' on input line 239.
+\c@subfigure=\count328
+Package caption Info: New subtype `subtable' on input line 239.
+\c@subtable=\count329
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/multirow/multirow.sty
+Package: multirow 2021/03/15 v2.8 Span multiple rows of a table
+\multirow@colwidth=\skip77
+\multirow@cntb=\count330
+\multirow@dima=\skip78
+\bigstrutjot=\dimen281
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/tools/longtable.sty
+Package: longtable 2021-09-01 v4.17 Multi-page Table package (DPC)
+\LTleft=\skip79
+\LTright=\skip80
+\LTpre=\skip81
+\LTpost=\skip82
+\LTchunksize=\count331
+\LTcapwidth=\dimen282
+\LT@head=\box64
+\LT@firsthead=\box65
+\LT@foot=\box66
+\LT@lastfoot=\box67
+\LT@gbox=\box68
+\LT@cols=\count332
+\LT@rows=\count333
+\c@LT@tables=\count334
+\c@LT@chunks=\count335
+\LT@p@ftn=\toks38
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count336
+\lst@gtempboxa=\box69
+\lst@token=\toks39
+\lst@length=\count337
+\lst@currlwidth=\dimen283
+\lst@column=\count338
+\lst@pos=\count339
+\lst@lostspace=\dimen284
+\lst@width=\dimen285
+\lst@newlines=\count340
+\lst@lineno=\count341
+\lst@maxwidth=\dimen286
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2023/02/27 1.9 (Carsten Heinz)
+\c@lstnumber=\count342
+\lst@skipnumbers=\count343
+\lst@framebox=\box70
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2023/02/27 1.9 listings configuration
+))
+Package: listings 2023/02/27 1.9 (Carsten Heinz)
+ (/usr/local/texlive/2023/texmf-dist/tex/xelatex/xecjk/xeCJK-listings.sty
+Package: xeCJK-listings 2022/08/05 v3.9.1 xeCJK patch file for listings
+\l__xeCJK_listings_max_char_int=\count344
+\l__xeCJK_listings_flag_int=\count345
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/tcolorbox/tcolorbox.sty
+Package: tcolorbox 2023/02/12 version 6.0.1 text color boxes
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty (/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
+\pgfutil@everybye=\toks40
+\pgfutil@tempdima=\dimen287
+\pgfutil@tempdimb=\dimen288
+) (/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
+\pgfutil@abb=\box71
+) (/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex (/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/pgf.revision.tex)
+Package: pgfrcs 2023-01-15 v3.1.10 (3.1.10)
+))
+Package: pgf 2023-01-15 v3.1.10 (3.1.10)
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty (/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
+Package: pgfsys 2023-01-15 v3.1.10 (3.1.10)
+ (/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+\pgfkeys@pathtoks=\toks41
+\pgfkeys@temptoks=\toks42
+ (/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/utilities/pgfkeyslibraryfiltered.code.tex
+\pgfkeys@tmptoks=\toks43
+))
+\pgf@x=\dimen289
+\pgf@y=\dimen290
+\pgf@xa=\dimen291
+\pgf@ya=\dimen292
+\pgf@xb=\dimen293
+\pgf@yb=\dimen294
+\pgf@xc=\dimen295
+\pgf@yc=\dimen296
+\pgf@xd=\dimen297
+\pgf@yd=\dimen298
+\w@pgf@writea=\write3
+\r@pgf@reada=\read2
+\c@pgf@counta=\count346
+\c@pgf@countb=\count347
+\c@pgf@countc=\count348
+\c@pgf@countd=\count349
+\t@pgf@toka=\toks44
+\t@pgf@tokb=\toks45
+\t@pgf@tokc=\toks46
+\pgf@sys@id@count=\count350
+ (/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
+File: pgf.cfg 2023-01-15 v3.1.10 (3.1.10)
+)
+Driver file for pgf: pgfsys-xetex.def
+ (/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-xetex.def
+File: pgfsys-xetex.def 2023-01-15 v3.1.10 (3.1.10)
+ (/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-dvipdfmx.def
+File: pgfsys-dvipdfmx.def 2023-01-15 v3.1.10 (3.1.10)
+ (/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-pdf.def
+File: pgfsys-common-pdf.def 2023-01-15 v3.1.10 (3.1.10)
+)
+\pgfsys@objnum=\count351
+))) (/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.tex
+File: pgfsyssoftpath.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfsyssoftpath@smallbuffer@items=\count352
+\pgfsyssoftpath@bigbuffer@items=\count353
+) (/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.tex
+File: pgfsysprotocol.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)) (/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
+Package: pgfcore 2023-01-15 v3.1.10 (3.1.10)
+ (/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex (/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex) (/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
+\pgfmath@dimen=\dimen299
+\pgfmath@count=\count354
+\pgfmath@box=\box72
+\pgfmath@toks=\toks47
+\pgfmath@stack@operand=\toks48
+\pgfmath@stack@operation=\toks49
+) (/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex) (/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code.tex) (/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigonometric.code.tex) (/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.random.code.tex) (/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.comparison.code.tex) (/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.code.tex) (/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round.code.tex) (/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.code.tex) (/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerarithmetics.code.tex) (/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex) (/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
+\c@pgfmathroundto@lastzeros=\count355
+)) (/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/math/pgfint.code.tex) (/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.tex
+File: pgfcorepoints.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@picminx=\dimen300
+\pgf@picmaxx=\dimen301
+\pgf@picminy=\dimen302
+\pgf@picmaxy=\dimen303
+\pgf@pathminx=\dimen304
+\pgf@pathmaxx=\dimen305
+\pgf@pathminy=\dimen306
+\pgf@pathmaxy=\dimen307
+\pgf@xx=\dimen308
+\pgf@xy=\dimen309
+\pgf@yx=\dimen310
+\pgf@yy=\dimen311
+\pgf@zx=\dimen312
+\pgf@zy=\dimen313
+) (/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconstruct.code.tex
+File: pgfcorepathconstruct.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@path@lastx=\dimen314
+\pgf@path@lasty=\dimen315
+) (/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage.code.tex
+File: pgfcorepathusage.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@shorten@end@additional=\dimen316
+\pgf@shorten@start@additional=\dimen317
+) (/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.code.tex
+File: pgfcorescopes.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfpic=\box73
+\pgf@hbox=\box74
+\pgf@layerbox@main=\box75
+\pgf@picture@serial@count=\count356
+) (/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.code.tex
+File: pgfcoregraphicstate.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgflinewidth=\dimen318
+) (/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransformations.code.tex
+File: pgfcoretransformations.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@pt@x=\dimen319
+\pgf@pt@y=\dimen320
+\pgf@pt@temp=\dimen321
+) (/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
+File: pgfcorequick.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.code.tex
+File: pgfcoreobjects.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathprocessing.code.tex
+File: pgfcorepathprocessing.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.code.tex
+File: pgfcorearrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfarrowsep=\dimen322
+) (/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
+File: pgfcoreshade.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@max=\dimen323
+\pgf@sys@shading@range@num=\count357
+\pgf@shadingcount=\count358
+) (/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
+File: pgfcoreimage.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.code.tex
+File: pgfcoreexternal.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfexternal@startupbox=\box76
+) (/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.code.tex
+File: pgfcorelayers.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransparency.code.tex
+File: pgfcoretransparency.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.code.tex
+File: pgfcorepatterns.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/basiclayer/pgfcorerdf.code.tex
+File: pgfcorerdf.code.tex 2023-01-15 v3.1.10 (3.1.10)
+))) (/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
+File: pgfmoduleshapes.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfnodeparttextbox=\box77
+) (/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.tex
+File: pgfmoduleplot.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65.sty
+Package: pgfcomp-version-0-65 2023-01-15 v3.1.10 (3.1.10)
+\pgf@nodesepstart=\dimen324
+\pgf@nodesepend=\dimen325
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18.sty
+Package: pgfcomp-version-1-18 2023-01-15 v3.1.10 (3.1.10)
+)) (/usr/local/texlive/2023/texmf-dist/tex/latex/tools/verbatim.sty
+Package: verbatim 2022-07-02 v1.5u LaTeX2e package for verbatim enhancements
+\every@verbatim=\toks50
+\verbatim@line=\toks51
+\verbatim@in@stream=\read3
+)
+\tcb@titlebox=\box78
+\tcb@upperbox=\box79
+\tcb@lowerbox=\box80
+\tcb@phantombox=\box81
+\c@tcbbreakpart=\count359
+\c@tcblayer=\count360
+\c@tcolorbox@number=\count361
+\tcb@temp=\box82
+\tcb@temp=\box83
+\tcb@temp=\box84
+\tcb@temp=\box85
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/tcolorbox/tcbskins.code.tex
+Library (tcolorbox): 'tcbskins.code.tex' version '6.0.1'
+(/usr/local/texlive/2023/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/pgf/utilities/pgffor.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty (/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex)) (/usr/local/texlive/2023/texmf-dist/tex/latex/pgf/math/pgfmath.sty (/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)) (/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
+Package: pgffor 2023-01-15 v3.1.10 (3.1.10)
+\pgffor@iter=\dimen326
+\pgffor@skip=\dimen327
+\pgffor@stack=\toks52
+\pgffor@toks=\toks53
+)) (/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
+Package: tikz 2023-01-15 v3.1.10 (3.1.10)
+ (/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers.code.tex
+File: pgflibraryplothandlers.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@plot@mark@count=\count362
+\pgfplotmarksize=\dimen328
+)
+\tikz@lastx=\dimen329
+\tikz@lasty=\dimen330
+\tikz@lastxsaved=\dimen331
+\tikz@lastysaved=\dimen332
+\tikz@lastmovetox=\dimen333
+\tikz@lastmovetoy=\dimen334
+\tikzleveldistance=\dimen335
+\tikzsiblingdistance=\dimen336
+\tikz@figbox=\box86
+\tikz@figbox@bg=\box87
+\tikz@tempbox=\box88
+\tikz@tempbox@bg=\box89
+\tikztreelevel=\count363
+\tikznumberofchildren=\count364
+\tikznumberofcurrentchild=\count365
+\tikz@fig@count=\count366
+ (/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
+File: pgfmodulematrix.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfmatrixcurrentrow=\count367
+\pgfmatrixcurrentcolumn=\count368
+\pgf@matrix@numberofcolumns=\count369
+)
+\tikz@expandcount=\count370
+ (/usr/local/texlive/2023/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarytopaths.code.tex
+File: tikzlibrarytopaths.code.tex 2023-01-15 v3.1.10 (3.1.10)
+))) (/usr/local/texlive/2023/texmf-dist/tex/latex/tikzfill/tikzfill.image.sty
+Package: tikzfill.image 2022/07/20 v1.0.0 Image filling library for TikZ
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/tikzfill/tikzfill-common.sty
+Package: tikzfill-common 2022/07/20 v1.0.0 Auxiliary code for tikzfill
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/tikzfill/tikzlibraryfill.image.code.tex
+File: tikzlibraryfill.image.code.tex 2022/07/20 v1.0.0 Image filling library
+\l__tikzfill_img_box=\box90
+)) (/usr/local/texlive/2023/texmf-dist/tex/latex/tcolorbox/tcbskinsjigsaw.code.tex
+Library (tcolorbox): 'tcbskinsjigsaw.code.tex' version '6.0.1'
+))) (/usr/local/texlive/2023/texmf-dist/tex/latex/algorithmicx/algpseudocode.sty
+Package: algpseudocode 
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/algorithmicx/algorithmicx.sty
+Package: algorithmicx 2005/04/27 v1.2 Algorithmicx
+
+Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
+\c@ALG@line=\count371
+\c@ALG@rem=\count372
+\c@ALG@nested=\count373
+\ALG@tlm=\skip83
+\ALG@thistlm=\skip84
+\c@ALG@Lnr=\count374
+\c@ALG@blocknr=\count375
+\c@ALG@storecount=\count376
+\c@ALG@tmpcounter=\count377
+\ALG@tmplength=\skip85
+)
+Document Style - pseudocode environments for use with the `algorithmicx' style
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/tocloft/tocloft.sty
+Package: tocloft 2017/08/31 v2.3i parameterised ToC, etc., typesetting
+Package tocloft Info: The document has section divisions on input line 51.
+\cftparskip=\skip86
+\cftbeforetoctitleskip=\skip87
+\cftaftertoctitleskip=\skip88
+\cftbeforepartskip=\skip89
+\cftpartnumwidth=\skip90
+\cftpartindent=\skip91
+\cftbeforesecskip=\skip92
+\cftsecindent=\skip93
+\cftsecnumwidth=\skip94
+\cftbeforesubsecskip=\skip95
+\cftsubsecindent=\skip96
+\cftsubsecnumwidth=\skip97
+\cftbeforesubsubsecskip=\skip98
+\cftsubsubsecindent=\skip99
+\cftsubsubsecnumwidth=\skip100
+\cftbeforeparaskip=\skip101
+\cftparaindent=\skip102
+\cftparanumwidth=\skip103
+\cftbeforesubparaskip=\skip104
+\cftsubparaindent=\skip105
+\cftsubparanumwidth=\skip106
+\cftbeforeloftitleskip=\skip107
+\cftafterloftitleskip=\skip108
+\cftbeforefigskip=\skip109
+\cftfigindent=\skip110
+\cftfignumwidth=\skip111
+\c@lofdepth=\count378
+\c@lotdepth=\count379
+\cftbeforelottitleskip=\skip112
+\cftafterlottitleskip=\skip113
+\cftbeforetabskip=\skip114
+\cfttabindent=\skip115
+\cfttabnumwidth=\skip116
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/etoc/etoc.sty
+Package: etoc 2023/03/01 v1.2 Completely customisable TOCs (JFB)
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/tools/multicol.sty
+Package: multicol 2021/11/30 v1.9d multicolumn formatting (FMi)
+\c@tracingmulticols=\count380
+\mult@box=\box91
+\multicol@leftmargin=\dimen337
+\c@unbalance=\count381
+\c@collectmore=\count382
+\doublecol@number=\count383
+\multicoltolerance=\count384
+\multicolpretolerance=\count385
+\full@width=\dimen338
+\page@free=\dimen339
+\premulticols=\dimen340
+\postmulticols=\dimen341
+\multicolsep=\skip117
+\multicolbaselineskip=\skip118
+\partial@page=\box92
+\last@line=\box93
+\maxbalancingoverflow=\dimen342
+\mult@rightbox=\box94
+\mult@grightbox=\box95
+\mult@firstbox=\box96
+\mult@gfirstbox=\box97
+\@tempa=\box98
+\@tempa=\box99
+\@tempa=\box100
+\@tempa=\box101
+\@tempa=\box102
+\@tempa=\box103
+\@tempa=\box104
+\@tempa=\box105
+\@tempa=\box106
+\@tempa=\box107
+\@tempa=\box108
+\@tempa=\box109
+\@tempa=\box110
+\@tempa=\box111
+\@tempa=\box112
+\@tempa=\box113
+\@tempa=\box114
+\@tempa=\box115
+\@tempa=\box116
+\@tempa=\box117
+\@tempa=\box118
+\@tempa=\box119
+\@tempa=\box120
+\@tempa=\box121
+\@tempa=\box122
+\@tempa=\box123
+\@tempa=\box124
+\@tempa=\box125
+\@tempa=\box126
+\@tempa=\box127
+\@tempa=\box128
+\@tempa=\box129
+\@tempa=\box130
+\@tempa=\box131
+\@tempa=\box132
+\@tempa=\box133
+\c@minrows=\count386
+\c@columnbadness=\count387
+\c@finalcolumnbadness=\count388
+\last@try=\dimen343
+\multicolovershoot=\dimen344
+\multicolundershoot=\dimen345
+\mult@nat@firstbox=\box134
+\colbreak@box=\box135
+\mc@col@check@num=\count389
+)
+\Etoc@toctoks=\toks54
+\c@etoc@tocid=\count390
+\etoc@framed@titlebox=\box136
+\etoc@framed@contentsbox=\box137
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/setspace/setspace.sty
+Package: setspace 2022/12/04 v6.7b set line spacing
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/kantlipsum/kantlipsum.sty
+Package: kantlipsum 2019/07/23 v0.8 Generate text in Kantian style
+\l__kgl_start_int=\count391
+\l__kgl_end_int=\count392
+
+Package kantlipsum Info: The package provides paragraphs 1 to 164. Values
+(kantlipsum)             outside this range will be ignored.
+
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/lipsum/lipsum.sty (/usr/local/texlive/2023/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty
+Package: l3keys2e 2023-02-02 LaTeX2e option processing using LaTeX3 keys
+)
+Package: lipsum 2021-09-20 v2.7 150 paragraphs of Lorem Ipsum dummy text
+\g__lipsum_par_int=\count393
+\l__lipsum_a_int=\count394
+\l__lipsum_b_int=\count395
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/lipsum/lipsum.ltd.tex)) (/usr/local/texlive/2023/texmf-dist/tex/latex/doublestroke/dsfont.sty
+Package: dsfont 1995/08/01 v0.1 Double stroke roman fonts
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/comment/comment.sty
+\CommentStream=\write4
+ Excluding comment 'comment') (/usr/local/texlive/2023/texmf-dist/tex/latex/fontawesome/fontawesome.sty
+Package: fontawesome 2016/05/15 v4.6.3.1 font awesome icons
+ (/usr/local/texlive/2023/texmf-dist/tex/generic/iftex/ifxetex.sty
+Package: ifxetex 2019/10/25 v0.7 ifxetex legacy package. Use iftex instead.
+) (/usr/local/texlive/2023/texmf-dist/tex/generic/iftex/ifluatex.sty
+Package: ifluatex 2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/fontawesome/fontawesomesymbols-generic.tex)
+
+/usr/local/texlive/2023/texmf-dist/tex/latex/fontawesome/fontawesome.sty:46: Package fontspec Error: The font "FontAwesome" cannot be found.
+
+For immediate help type H <return>.
+ ...                                              
+                                                  
+l.46 
+     
+
+A font might not be found for many reasons.
+ Check the spelling, where the font is installed etc. etc.
+
+ When in doubt, ask someone for help!
+
+
+
+Package fontspec Info: Could not resolve font "FontAwesome/BI" (it probably
+(fontspec)             doesn't exist).
+
+
+Package fontspec Info: Could not resolve font "FontAwesome/B" (it probably
+(fontspec)             doesn't exist).
+
+
+Package fontspec Info: Could not resolve font "FontAwesome/I" (it probably
+(fontspec)             doesn't exist).
+
+
+/usr/local/texlive/2023/texmf-dist/tex/latex/fontawesome/fontawesome.sty:46: Package fontspec Error: The font "FontAwesome" cannot be found.
+
+For immediate help type H <return>.
+ ...                                              
+                                                  
+l.46 
+     
+
+A font might not be found for many reasons.
+ Check the spelling, where the font is installed etc. etc.
+
+ When in doubt, ask someone for help!
+
+
+
+/usr/local/texlive/2023/texmf-dist/tex/latex/fontawesome/fontawesome.sty:46: Package fontspec Error: The font "FontAwesome" cannot be found.
+
+For immediate help type H <return>.
+ ...                                              
+                                                  
+l.46 
+     
+
+A font might not be found for many reasons.
+ Check the spelling, where the font is installed etc. etc.
+
+ When in doubt, ask someone for help!
+
+
+
+Package fontspec Info: Font family 'FontAwesome(0)' created for font
+(fontspec)             'FontAwesome' with options [].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.: <->"FontAwesome"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.:
+(fontspec)             <->"FontAwesome"
+
+(/usr/local/texlive/2023/texmf-dist/tex/latex/fontawesome/fontawesomesymbols-xeluatex.tex)) (/usr/local/texlive/2023/texmf-dist/tex/latex/selectp/selectp.sty
+\SP@nextpage=\count396
+\SP@expectpage=\count397
+\SP@garbage=\box138
+)
+Package hyperref Info: Option `plainpages' set `false' on input line 99.
+Package hyperref Info: Option `colorlinks' set `true' on input line 99.
+
+No file main.aux.
+\openout1 = `main.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 146.
+LaTeX Font Info:    ... okay on input line 146.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 146.
+LaTeX Font Info:    ... okay on input line 146.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 146.
+LaTeX Font Info:    ... okay on input line 146.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 146.
+LaTeX Font Info:    ... okay on input line 146.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 146.
+LaTeX Font Info:    ... okay on input line 146.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 146.
+LaTeX Font Info:    ... okay on input line 146.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 146.
+LaTeX Font Info:    ... okay on input line 146.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 146.
+LaTeX Font Info:    ... okay on input line 146.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 146.
+LaTeX Font Info:    ... okay on input line 146.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 146.
+LaTeX Font Info:    ... okay on input line 146.
+*geometry* driver: auto-detecting
+*geometry* detected driver: xetex
+*geometry* verbose mode - [ preamble ] result:
+* driver: xetex
+* paper: letterpaper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(92.14519pt, 430.00462pt, 92.14519pt)
+* v-part:(T,H,B)=(95.39737pt, 556.47656pt, 143.09605pt)
+* \paperwidth=614.295pt
+* \paperheight=794.96999pt
+* \textwidth=430.00462pt
+* \textheight=556.47656pt
+* \oddsidemargin=19.8752pt
+* \evensidemargin=19.8752pt
+* \topmargin=-13.87262pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=10.0pt
+* \footskip=30.0pt
+* \marginparwidth=65.0pt
+* \marginparsep=11.0pt
+* \columnsep=10.0pt
+* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+*geometry* verbose mode - [ newgeometry ] result:
+* driver: xetex
+* paper: letterpaper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(108.405pt, 397.48499pt, 108.40501pt)
+* v-part:(T,H,B)=(72.26999pt, 650.43pt, 72.27pt)
+* \paperwidth=614.295pt
+* \paperheight=794.96999pt
+* \textwidth=397.48499pt
+* \textheight=650.43pt
+* \oddsidemargin=36.13501pt
+* \evensidemargin=36.13501pt
+* \topmargin=-37.0pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=10.0pt
+* \footskip=30.0pt
+* \marginparwidth=65.0pt
+* \marginparsep=11.0pt
+* \columnsep=10.0pt
+* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+
+Package fontspec Info: Adjusting the maths setup (use [no-math] to avoid
+(fontspec)             this).
+
+\symlegacymaths=\mathgroup6
+LaTeX Font Info:    Overwriting symbol font `legacymaths' in version `bold'
+(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 146.
+LaTeX Font Info:    Redeclaring math accent \acute on input line 146.
+LaTeX Font Info:    Redeclaring math accent \grave on input line 146.
+LaTeX Font Info:    Redeclaring math accent \ddot on input line 146.
+LaTeX Font Info:    Redeclaring math accent \tilde on input line 146.
+LaTeX Font Info:    Redeclaring math accent \bar on input line 146.
+LaTeX Font Info:    Redeclaring math accent \breve on input line 146.
+LaTeX Font Info:    Redeclaring math accent \check on input line 146.
+LaTeX Font Info:    Redeclaring math accent \hat on input line 146.
+LaTeX Font Info:    Redeclaring math accent \dot on input line 146.
+LaTeX Font Info:    Redeclaring math accent \mathring on input line 146.
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 146.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 146.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 146.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 146.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 146.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 146.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 146.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 146.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 146.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 146.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 146.
+LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 146.
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 146.
+LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
+(Font)              `operators' in the math version `normal' on input line 146.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/cmr/m/n --> TU/lmr/m/n on input line 146.
+LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
+(Font)              `operators' in the math version `bold' on input line 146.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/cmr/bx/n --> TU/lmr/m/n on input line 146.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  TU/lmr/m/n --> TU/lmr/m/n on input line 146.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/cmr/m/it --> TU/lmr/m/it on input line 146.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/cmr/bx/n --> TU/lmr/b/n on input line 146.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
+(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 146.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 146.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  TU/lmr/m/n --> TU/lmr/b/n on input line 146.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/cmr/bx/it --> TU/lmr/b/it on input line 146.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  OT1/cmss/bx/n --> TU/lmss/b/n on input line 146.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/b/n on input line 146.
+Package hyperref Info: Link coloring ON on input line 146.
+\@outlinefile=\write5
+\openout5 = `main.out'.
+
+
+Package hyperref Warning: Rerun to get /PageLabels entry.
+
+LaTeX Info: Redefining \microtypecontext on input line 146.
+Package microtype Info: Applying patch `item' on input line 146.
+Package microtype Info: Applying patch `toc' on input line 146.
+Package microtype Info: Applying patch `eqnum' on input line 146.
+
+Package microtype Warning: Unable to apply patch `footnote' on input line 146.
+
+Package microtype Info: Applying patch `verbatim' on input line 146.
+Package microtype Info: Character protrusion enabled (level 2).
+Package microtype Info: Using default protrusion set `alltext'.
+Package microtype Info: No adjustment of tracking.
+Package microtype Info: No adjustment of spacing.
+Package microtype Info: No adjustment of kerning.
+(/usr/local/texlive/2023/texmf-dist/tex/latex/microtype/mt-LatinModernRoman.cfg
+File: mt-LatinModernRoman.cfg 2021/02/21 v1.1 microtype config. file: Latin Modern Roman (RS)
+)
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `lmr' (encoding: T1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: listings package is loaded.
+Package caption Info: longtable package is loaded.
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/caption/ltcaption.sty
+Package: ltcaption 2021/01/08 v1.4c longtable captions (AR)
+)
+Package caption Info: End \AtBeginDocument code.
+\c@lstlisting=\count398
+
+No file main.toc.
+File: figures/flamingoemoji.pdf Graphic file (type pdf)
+<use figures/flamingoemoji.pdf>
+LaTeX Font Info:    Trying to load font information for U+msa on input line 149.
+(/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/microtype/mt-msa.cfg
+File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 149.
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/microtype/mt-msb.cfg
+File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/microtype/mt-cmr.cfg
+File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman (RS)
+)
+Overfull \hbox (44.55225pt too wide) in paragraph at lines 149--149
+ [] 
+ []
+
+[1
+
+
+] (./content.tex (./figures/teaser.tex
+Overfull \hbox (5.08344pt too wide) in paragraph at lines 155--155
+[]$[]$ 
+ []
+
+File: figures/FlamingoPaperColor.pdf Graphic file (type pdf)
+<use figures/FlamingoPaperColor.pdf>
+File: figures/teaserpics/teaser1a.png Graphic file (type bmp)
+<figures/teaserpics/teaser1a.png>
+File: figures/teaserpics/teaser1b.png Graphic file (type bmp)
+<figures/teaserpics/teaser1b.png>
+File: figures/teaserpics/teaser1c.png Graphic file (type bmp)
+<figures/teaserpics/teaser1c.png>
+
+Overfull \hbox (5.08344pt too wide) in paragraph at lines 169--169
+ []$[][]\OMS/cmsy/m/n/10.53937 !$ 
+ []
+
+File: figures/teaserpics/teaser2a.png Graphic file (type bmp)
+<figures/teaserpics/teaser2a.png>
+File: figures/teaserpics/teaser2b.png Graphic file (type bmp)
+<figures/teaserpics/teaser2b.png>
+File: figures/teaserpics/teaser2c.png Graphic file (type bmp)
+<figures/teaserpics/teaser2c.png>
+
+Overfull \hbox (5.08344pt too wide) in paragraph at lines 185--185
+ []$[][]\OMS/cmsy/m/n/10.53937 !$ 
+ []
+
+File: figures/teaserpics/teaser3a.png Graphic file (type bmp)
+<figures/teaserpics/teaser3a.png>
+File: figures/teaserpics/teaser3b.png Graphic file (type bmp)
+<figures/teaserpics/teaser3b.png>
+File: figures/teaserpics/teaser3c.png Graphic file (type bmp)
+<figures/teaserpics/teaser3c.png>
+
+Overfull \hbox (5.08344pt too wide) in paragraph at lines 201--201
+ []$[][]\OMS/cmsy/m/n/10.53937 !$ 
+ []
+
+File: figures/teaserpics/teaser4a.png Graphic file (type bmp)
+<figures/teaserpics/teaser4a.png>
+File: figures/teaserpics/teaser4b.png Graphic file (type bmp)
+<figures/teaserpics/teaser4b.png>
+File: figures/teaserpics/teaser4c.png Graphic file (type bmp)
+<figures/teaserpics/teaser4c.png>
+
+Overfull \hbox (5.08344pt too wide) in paragraph at lines 217--217
+ []$[][]\OMS/cmsy/m/n/10.53937 !$ 
+ []
+
+File: figures/teaserpics/teaser5a.png Graphic file (type bmp)
+<figures/teaserpics/teaser5a.png>
+File: figures/teaserpics/teaser5b.png Graphic file (type bmp)
+<figures/teaserpics/teaser5b.png>
+File: figures/teaserpics/teaser5c.png Graphic file (type bmp)
+<figures/teaserpics/teaser5c.png>
+
+Overfull \hbox (5.08344pt too wide) in paragraph at lines 233--233
+ []$[][]\OMS/cmsy/m/n/10.53937 !$ 
+ []
+
+File: figures/teaserpics/teaser6a.png Graphic file (type bmp)
+<figures/teaserpics/teaser6a.png>
+File: figures/teaserpics/teaser6b.png Graphic file (type bmp)
+<figures/teaserpics/teaser6b.png>
+File: figures/teaserpics/teaser6c.png Graphic file (type bmp)
+<figures/teaserpics/teaser6c.png>
+
+Overfull \hbox (5.08344pt too wide) in paragraph at lines 249--249
+ []$[][]\OMS/cmsy/m/n/10.53937 !$ 
+ []
+
+Missing character: There is no œ ("153) in font ec-lmbx6!
+File: figures/teaserpics/teaser7a.png Graphic file (type bmp)
+<figures/teaserpics/teaser7a.png>
+File: figures/teaserpics/teaser7b.png Graphic file (type bmp)
+<figures/teaserpics/teaser7b.png>
+File: figures/teaserpics/teaser7c.png Graphic file (type bmp)
+<figures/teaserpics/teaser7c.png>
+
+Overfull \hbox (5.08344pt too wide) in paragraph at lines 265--265
+ []$[][]\OMS/cmsy/m/n/10.53937 !$ 
+ []
+
+File: figures/teaserpics/placeholder.png Graphic file (type bmp)
+<figures/teaserpics/placeholder.png>
+File: figures/teaserpics/shakespeare.png Graphic file (type bmp)
+<figures/teaserpics/shakespeare.png>
+File: figures/teaserpics/obama.png Graphic file (type bmp)
+<figures/teaserpics/obama.png>
+
+Overfull \hbox (5.08344pt too wide) in paragraph at lines 281--281
+ []$[][]\OMS/cmsy/m/n/10.53937 !$ 
+ []
+
+File: figures/videoframes/imvid_shot_0002.png Graphic file (type bmp)
+<figures/videoframes/imvid_shot_0002.png>
+File: figures/videoframes/imvid_shot_0003.png Graphic file (type bmp)
+<figures/videoframes/imvid_shot_0003.png>
+File: figures/videoframes/imvid_shot_0004.png Graphic file (type bmp)
+<figures/videoframes/imvid_shot_0004.png>
+File: figures/videoframes/imvid_shot_0005.png Graphic file (type bmp)
+<figures/videoframes/imvid_shot_0005.png>
+File: figures/videoframes/imvid_shot_0006.png Graphic file (type bmp)
+<figures/videoframes/imvid_shot_0006.png>
+
+Overfull \hbox (5.08344pt too wide) in paragraph at lines 313--313
+ []$[][]\OMS/cmsy/m/n/10.53937 !$ 
+ []
+
+File: figures/moonbears.jpeg Graphic file (type bmp)
+<figures/moonbears.jpeg>
+File: figures/PersonPaperColor.pdf Graphic file (type pdf)
+<use figures/PersonPaperColor.pdf>
+File: figures/FlamingoPaperColor.pdf Graphic file (type pdf)
+<use figures/FlamingoPaperColor.pdf>
+File: figures/PersonPaperColor.pdf Graphic file (type pdf)
+<use figures/PersonPaperColor.pdf>
+File: figures/FlamingoPaperColor.pdf Graphic file (type pdf)
+<use figures/FlamingoPaperColor.pdf>
+
+Underfull \hbox (badness 10000) in paragraph at lines 401--401
+[]\T1/lmr/m/n/10.53937 They are hav-ing a
+ []
+
+File: figures/PersonPaperColor.pdf Graphic file (type pdf)
+<use figures/PersonPaperColor.pdf>
+File: figures/FlamingoPaperColor.pdf Graphic file (type pdf)
+<use figures/FlamingoPaperColor.pdf>
+File: figures/PersonPaperColor.pdf Graphic file (type pdf)
+<use figures/PersonPaperColor.pdf>
+File: figures/FlamingoPaperColor.pdf Graphic file (type pdf)
+<use figures/FlamingoPaperColor.pdf>
+File: figures/PersonPaperColor.pdf Graphic file (type pdf)
+<use figures/PersonPaperColor.pdf>
+File: figures/FlamingoPaperColor.pdf Graphic file (type pdf)
+<use figures/FlamingoPaperColor.pdf>
+File: figures/teaserpics/flamingo_icon.png Graphic file (type bmp)
+<figures/teaserpics/flamingo_icon.png>
+File: figures/PersonPaperColor.pdf Graphic file (type pdf)
+<use figures/PersonPaperColor.pdf>
+File: figures/teaserpics/flamingo_picture.png Graphic file (type bmp)
+<figures/teaserpics/flamingo_picture.png>
+File: figures/PersonPaperColor.pdf Graphic file (type pdf)
+<use figures/PersonPaperColor.pdf>
+File: figures/teaserpics/flamingo_3d.png Graphic file (type bmp)
+<figures/teaserpics/flamingo_3d.png>
+File: figures/PersonPaperColor.pdf Graphic file (type pdf)
+<use figures/PersonPaperColor.pdf>
+
+Underfull \hbox (badness 10000) in paragraph at lines 401--401
+[]\T1/lmr/m/n/10.53937 What is the com-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 401--401
+\T1/lmr/m/n/10.53937 mon thing about
+ []
+
+File: figures/PersonPaperColor.pdf Graphic file (type pdf)
+<use figures/PersonPaperColor.pdf>
+File: figures/FlamingoPaperColor.pdf Graphic file (type pdf)
+<use figures/FlamingoPaperColor.pdf>
+
+Underfull \hbox (badness 10000) in paragraph at lines 401--401
+[]\T1/lmr/m/n/10.53937 What is the dif-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 401--401
+\T1/lmr/m/n/10.53937 fer-ence be-tween
+ []
+
+File: figures/PersonPaperColor.pdf Graphic file (type pdf)
+<use figures/PersonPaperColor.pdf>
+File: figures/FlamingoPaperColor.pdf Graphic file (type pdf)
+<use figures/FlamingoPaperColor.pdf>
+File: figures/appleipod.png Graphic file (type bmp)
+<figures/appleipod.png>
+File: figures/PersonPaperColor.pdf Graphic file (type pdf)
+<use figures/PersonPaperColor.pdf>
+File: figures/FlamingoPaperColor.pdf Graphic file (type pdf)
+<use figures/FlamingoPaperColor.pdf>
+File: figures/PersonPaperColor.pdf Graphic file (type pdf)
+<use figures/PersonPaperColor.pdf>
+File: figures/FlamingoPaperColor.pdf Graphic file (type pdf)
+<use figures/FlamingoPaperColor.pdf>
+File: figures/PersonPaperColor.pdf Graphic file (type pdf)
+<use figures/PersonPaperColor.pdf>
+File: figures/FlamingoPaperColor.pdf Graphic file (type pdf)
+<use figures/FlamingoPaperColor.pdf>
+File: figures/PersonPaperColor.pdf Graphic file (type pdf)
+<use figures/PersonPaperColor.pdf>
+File: figures/FlamingoPaperColor.pdf Graphic file (type pdf)
+<use figures/FlamingoPaperColor.pdf>
+File: figures/PersonPaperColor.pdf Graphic file (type pdf)
+<use figures/PersonPaperColor.pdf>
+File: figures/FlamingoPaperColor.pdf Graphic file (type pdf)
+<use figures/FlamingoPaperColor.pdf>
+File: figures/boston_skyline.png Graphic file (type bmp)
+<figures/boston_skyline.png>
+File: figures/PersonPaperColor.pdf Graphic file (type pdf)
+<use figures/PersonPaperColor.pdf>
+File: figures/FlamingoPaperColor.pdf Graphic file (type pdf)
+<use figures/FlamingoPaperColor.pdf>
+File: figures/PersonPaperColor.pdf Graphic file (type pdf)
+<use figures/PersonPaperColor.pdf>
+File: figures/FlamingoPaperColor.pdf Graphic file (type pdf)
+<use figures/FlamingoPaperColor.pdf>
+File: figures/tokyo_skyline.png Graphic file (type bmp)
+<figures/tokyo_skyline.png>
+File: figures/PersonPaperColor.pdf Graphic file (type pdf)
+<use figures/PersonPaperColor.pdf>
+
+Underfull \hbox (badness 2717) in paragraph at lines 401--401
+[]\T1/lmr/m/n/10.53937 What about this one?
+ []
+
+
+Underfull \hbox (badness 2635) in paragraph at lines 401--401
+\T1/lmr/m/n/10.53937 what fa-mous land-mark
+ []
+
+File: figures/PersonPaperColor.pdf Graphic file (type pdf)
+<use figures/PersonPaperColor.pdf>
+File: figures/FlamingoPaperColor.pdf Graphic file (type pdf)
+<use figures/FlamingoPaperColor.pdf>
+
+Overfull \hbox (2.01698pt too wide) in paragraph at lines 401--402
+ [][] 
+ []
+
+
+LaTeX Warning: Reference `app:qual_res' on page 2 undefined on input line 408.
+
+
+LaTeX Warning: Reference `app:qual_res' on page 2 undefined on input line 408.
+
+
+LaTeX Warning: Float too large for page by 405.30089pt on input line 410.
+
+)
+File: figures//scaling_vlm_neurips.pdf Graphic file (type pdf)
+<use figures//scaling_vlm_neurips.pdf>
+
+
+Package natbib Warning: Citation `griffiths2019doing' on page 2 undefined on input line 62.
+
+
+Package natbib Warning: Citation `markman1989categorization' on page 2 undefined on input line 62.
+
+
+Package natbib Warning: Citation `lu2019vilbert' on page 2 undefined on input line 64.
+
+
+Package natbib Warning: Citation `wang2021ufo' on page 2 undefined on input line 64.
+
+
+Package natbib Warning: Citation `zellers2022merlot' on page 2 undefined on input line 64.
+
+
+Package natbib Warning: Citation `align' on page 2 undefined on input line 67.
+
+
+Package natbib Warning: Citation `clip' on page 2 undefined on input line 67.
+
+
+Package natbib Warning: Citation `wang2021simvlm' on page 2 undefined on input line 70.
+
+
+Package natbib Warning: Citation `tsimpoukelli2021multimodal' on page 2 undefined on input line 70.
+
+
+Package natbib Warning: Citation `cho2021unifying' on page 2 undefined on input line 70.
+
+
+Package natbib Warning: Citation `wang2022unifying' on page 2 undefined on input line 70.
+
+
+Package natbib Warning: Citation `xu2021vlm' on page 2 undefined on input line 70.
+
+
+LaTeX Warning: Reference `fig:teaser' on page 2 undefined on input line 72.
+
+
+LaTeX Warning: Reference `fig:results' on page 2 undefined on input line 73.
+
+
+Package natbib Warning: Citation `gpt3' on page 2 undefined on input line 74.
+
+
+Package natbib Warning: Citation `gopher' on page 2 undefined on input line 74.
+
+
+Package natbib Warning: Citation `chinchilla' on page 2 undefined on input line 74.
+
+
+Package natbib Warning: Citation `chowdhery2022palm' on page 2 undefined on input line 74.
+
+[2] [3]
+Underfull \hbox (badness 10000) in paragraph at lines 91--91
+[]\TU/SongtiSCLight(0)/m/n/10.53937 大 型 \T1/lmr/m/n/10.53937 LMs \TU/SongtiSCLight(0)/m/n/10.53937 性 能 的 一 个 重 要 方 面 是，|  它 们 需 要 在 大 量 文 本 数 据 上 接 受 训
+ []
+
+
+Underfull \hbox (badness 7869) in paragraph at lines 91--91
+\TU/SongtiSCLight(0)/m/n/10.53937 练。|  这 种 训 练 提 供 了 通 用 的 生 成 能 力，|  使 这 些 \T1/lmr/m/n/10.53937 LM \TU/SongtiSCLight(0)/m/n/10.53937 在 任 务 示 例 的 提 示 下
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 91--91
+\TU/SongtiSCLight(0)/m/n/10.53937 表 现 出 色。|  同 样，|  我 们 证 明 了 我 们 训 练 \T1/lmr/m/n/10.53937 Flamingo \TU/SongtiSCLight(0)/m/n/10.53937 模 型 的 最 终 性 能 至 关
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 91--91
+\TU/SongtiSCLight(0)/m/n/10.53937 重 要。|  这 些 模 型 是 在 精 心 选 择 的 互 补 性 大 规 模 数 据 新 页 面 上 训 练 出 来 的。|
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [4]
+File: figures/fig2_overview_interleaved_v2.pdf Graphic file (type pdf)
+<use figures/fig2_overview_interleaved_v2.pdf>
+
+
+LaTeX Warning: Reference `fig:overview' on page 5 undefined on input line 130.
+
+
+LaTeX Warning: Reference `sec:transformer_resampler' on page 5 undefined on input line 132.
+
+
+LaTeX Warning: Reference `sec:xattn_dense' on page 5 undefined on input line 133.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [5]
+
+LaTeX Warning: Reference `sec:multi_im_att' on page 6 undefined on input line 144.
+
+
+LaTeX Warning: Reference `sec:datasets' on page 6 undefined on input line 145.
+
+
+Package natbib Warning: Citation `clip' on page 6 undefined on input line 156.
+
+
+LaTeX Warning: Reference `app:contrastive_details' on page 6 undefined on input line 160.
+
+
+LaTeX Warning: Reference `app:contrastive_ablation' on page 6 undefined on input line 160.
+
+
+LaTeX Warning: Reference `fig:overview' on page 6 undefined on input line 164.
+
+
+Package natbib Warning: Citation `jaegle2021perceiver' on page 6 undefined on input line 167.
+
+
+Package natbib Warning: Citation `carion2020end' on page 6 undefined on input line 167.
+
+
+LaTeX Warning: Reference `app:transformer_resampler' on page 6 undefined on input line 170.
+
+File: figures/fig4_xattn_dense.pdf Graphic file (type pdf)
+<use figures/fig4_xattn_dense.pdf>
+
+LaTeX Font Warning: Font shape `T1/lmr/bx/sc' undefined
+(Font)              using `T1/lmr/bx/n' instead on input line 186.
+
+
+LaTeX Font Warning: Font shape `TU/SongtiSCLight(0)/b/sc' undefined
+(Font)              using `TU/SongtiSCLight(0)/b/n' instead on input line 190.
+
+
+LaTeX Warning: Reference `fig:xattn_dense' on page 6 undefined on input line 191.
+
+
+Package natbib Warning: Citation `bachlechner2021rezero' on page 6 undefined on input line 193.
+
+
+LaTeX Warning: Reference `sec:ablations' on page 6 undefined on input line 195.
+
+
+Package natbib Warning: Citation `desai2021virtex' on page 6 undefined on input line 195.
+
+
+Package natbib Warning: Citation `luo2022vc' on page 6 undefined on input line 195.
+
+
+LaTeX Warning: Reference `app:xattn_dense' on page 6 undefined on input line 196.
+
+
+Underfull \vbox (badness 1708) has occurred while \output is active []
+
+ [6]
+
+Package natbib Warning: Citation `chinchilla' on page 7 undefined on input line 200.
+
+
+LaTeX Warning: Reference `sec:models_details' on page 7 undefined on input line 203.
+
+
+LaTeX Warning: Reference `eq:modeling' on page 7 undefined on input line 210.
+
+
+LaTeX Warning: Reference `app:multi-visual-details' on page 7 undefined on input line 212.
+
+
+LaTeX Warning: Reference `sec:ablations' on page 7 undefined on input line 216.
+
+
+Package fontspec Warning: Font "STFangsong" does not contain requested Script
+(fontspec)                "CJK".
+
+
+Package fontspec Info: Could not resolve font "STFangsong/BI" (it probably
+(fontspec)             doesn't exist).
+
+
+Package fontspec Info: Could not resolve font "STFangsong/B" (it probably
+(fontspec)             doesn't exist).
+
+
+Package fontspec Info: Could not resolve font "STFangsong/I" (it probably
+(fontspec)             doesn't exist).
+
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 232.
+(/usr/local/texlive/2023/texmf-dist/tex/latex/lm/t1lmtt.fd
+File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `lmtt' (encoding: T1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+
+Package fontspec Info: Font family 'STFangsong(0)' created for font
+(fontspec)             'STFangsong' with options [Script={CJK}].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->"STFangsong/OT:language=dflt;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
+
+
+
+LaTeX Warning: Reference `app:datasets' on page 7 undefined on input line 235.
+
+
+Underfull \vbox (badness 2653) has occurred while \output is active []
+
+ [7]
+
+Package natbib Warning: Citation `align' on page 8 undefined on input line 238.
+
+
+LaTeX Warning: Reference `app:vtp_and_itp' on page 8 undefined on input line 241.
+
+
+Package natbib Warning: Citation `cho2021unifying' on page 8 undefined on input line 250.
+
+
+LaTeX Warning: Reference `app:large_scale_training' on page 8 undefined on input line 251.
+
+
+Package natbib Warning: Citation `gpt3' on page 8 undefined on input line 257.
+
+
+LaTeX Warning: Reference `app:in_context_eval_details' on page 8 undefined on input line 257.
+
+
+LaTeX Warning: Reference `app:fewshot-eval-hyper' on page 8 undefined on input line 260.
+
+
+LaTeX Warning: Reference `sec:eval_benchmarks' on page 8 undefined on input line 273.
+
+
+LaTeX Warning: Reference `app:fewshot-eval-hyper' on page 8 undefined on input line 276.
+
+[8]
+
+LaTeX Warning: Reference `sec:eval_benchmarks' on page 9 undefined on input line 284.
+
+
+LaTeX Warning: Reference `sec:fewshot_openended' on page 9 undefined on input line 286.
+
+
+LaTeX Warning: Reference `sec:ft_results' on page 9 undefined on input line 287.
+
+
+LaTeX Warning: Reference `sec:ablations' on page 9 undefined on input line 288.
+
+
+LaTeX Warning: Reference `app:more_performance' on page 9 undefined on input line 289.
+
+
+LaTeX Warning: Reference `app:qual_res' on page 9 undefined on input line 290.
+
+(./tables/openended.tex
+
+Package natbib Warning: Citation `gui2021kat' on page 9 undefined on input line 19.
+
+
+Package natbib Warning: Citation `tsimpoukelli2021multimodal' on page 9 undefined on input line 19.
+
+
+Package natbib Warning: Citation `wang2021simvlm' on page 9 undefined on input line 19.
+
+
+Package natbib Warning: Citation `li2022blip' on page 9 undefined on input line 19.
+
+
+Package natbib Warning: Citation `li2022blip' on page 9 undefined on input line 19.
+
+
+Package natbib Warning: Citation `yang2021just' on page 9 undefined on input line 19.
+
+
+Package natbib Warning: Citation `zellers2022merlot' on page 9 undefined on input line 19.
+
+
+Package natbib Warning: Citation `murahari2020large' on page 9 undefined on input line 19.
+
+
+Package natbib Warning: Citation `clip' on page 9 undefined on input line 19.
+
+
+Package natbib Warning: Citation `clip' on page 9 undefined on input line 19.
+
+
+Package natbib Warning: Citation `gui2021kat' on page 9 undefined on input line 19.
+
+
+Package natbib Warning: Citation `yuan2021florence' on page 9 undefined on input line 19.
+
+
+Package natbib Warning: Citation `wang2021simvlm' on page 9 undefined on input line 19.
+
+
+Package natbib Warning: Citation `fu2021violet' on page 9 undefined on input line 19.
+
+
+Package natbib Warning: Citation `zhu2019vatex' on page 9 undefined on input line 19.
+
+
+Package natbib Warning: Citation `liu2021vizwiz' on page 9 undefined on input line 19.
+
+
+Package natbib Warning: Citation `zhou2020unified' on page 9 undefined on input line 19.
+
+
+Package natbib Warning: Citation `wang2022allinone' on page 9 undefined on input line 19.
+
+
+Package natbib Warning: Citation `yang2021just' on page 9 undefined on input line 19.
+
+
+Package natbib Warning: Citation `xu2021vlm' on page 9 undefined on input line 19.
+
+
+Package natbib Warning: Citation `wu2021star' on page 9 undefined on input line 19.
+
+
+Package natbib Warning: Citation `murahari2020large' on page 9 undefined on input line 19.
+
+
+Package natbib Warning: Citation `yang2021tap' on page 9 undefined on input line 19.
+
+
+Package natbib Warning: Citation `xiao2021next' on page 9 undefined on input line 19.
+
+
+Package natbib Warning: Citation `lippe2020multimodal' on page 9 undefined on input line 19.
+
+)
+
+LaTeX Warning: Reference `tab:lewshot_all_tasks' on page 9 undefined on input line 303.
+
+[9]
+
+LaTeX Warning: Reference `fig:results' on page 10 undefined on input line 312.
+
+
+Package natbib Warning: Citation `gpt3' on page 10 undefined on input line 312.
+
+
+LaTeX Warning: Reference `fig:results' on page 10 undefined on input line 319.
+
+
+Package natbib Warning: Citation `gpt3' on page 10 undefined on input line 319.
+
+
+LaTeX Warning: Reference `tab:ft-sota-table-compressed' on page 10 undefined on input line 330.
+
+
+LaTeX Warning: Reference `app:finetuning' on page 10 undefined on input line 331.
+
+(./tables/sota_comparison_mini.tex
+File: figures/flamingoemoji.pdf Graphic file (type pdf)
+<use figures/flamingoemoji.pdf>
+File: figures/flamingoemoji.pdf Graphic file (type pdf)
+<use figures/flamingoemoji.pdf>
+
+
+Package natbib Warning: Citation `yan2021achieving' on page 10 undefined on input line 33.
+
+
+Package natbib Warning: Citation `yan2021achieving' on page 10 undefined on input line 33.
+
+
+Package natbib Warning: Citation `wang2022unifying' on page 10 undefined on input line 33.
+
+
+Package natbib Warning: Citation `zhu2019vatex' on page 10 undefined on input line 33.
+
+
+Package natbib Warning: Citation `liu2021vizwiz' on page 10 undefined on input line 33.
+
+
+Package natbib Warning: Citation `liu2021vizwiz' on page 10 undefined on input line 33.
+
+
+Package natbib Warning: Citation `wang2022allinone' on page 10 undefined on input line 33.
+
+
+Package natbib Warning: Citation `murahari2020large' on page 10 undefined on input line 33.
+
+
+Package natbib Warning: Citation `wang2020vdbert' on page 10 undefined on input line 33.
+
+
+Package natbib Warning: Citation `xu2021vlm' on page 10 undefined on input line 33.
+
+
+Package natbib Warning: Citation `yang2021tap' on page 10 undefined on input line 33.
+
+
+Package natbib Warning: Citation `qiao2021winner' on page 10 undefined on input line 33.
+
+
+Package natbib Warning: Citation `zhu2020enhance' on page 10 undefined on input line 33.
+
+) (./tables/ablations_no_classif.tex)
+
+LaTeX Warning: Reference `tab:ablation-table-no-classif' on page 10 undefined on input line 341.
+
+
+LaTeX Warning: Reference `tab:fewshot_all_tasks' on page 10 undefined on input line 343.
+
+
+LaTeX Warning: Reference `app:all_ablation_studies' on page 10 undefined on input line 344.
+
+
+LaTeX Warning: Reference `tab:ablation-table-appendix' on page 10 undefined on input line 344.
+
+[10]
+
+Package natbib Warning: Citation `schuhmann2021laion' on page 11 undefined on input line 351.
+
+
+Package natbib Warning: Citation `cho2021unifying' on page 11 undefined on input line 352.
+
+
+Package natbib Warning: Citation `vaswani2017attention' on page 11 undefined on input line 360.
+
+
+Package natbib Warning: Citation `luo2022vc' on page 11 undefined on input line 361.
+
+[11]
+
+LaTeX Warning: Reference `app:contrastive_details' on page 12 undefined on input line 376.
+
+
+Package natbib Warning: Citation `clip' on page 12 undefined on input line 376.
+
+
+Package natbib Warning: Citation `vaswani2017attention' on page 12 undefined on input line 390.
+
+
+Package natbib Warning: Citation `mikolov2010recurrent' on page 12 undefined on input line 391.
+
+
+Package natbib Warning: Citation `graves2013generating' on page 12 undefined on input line 391.
+
+
+Package natbib Warning: Citation `jozefowicz2016exploring' on page 12 undefined on input line 391.
+
+
+Package natbib Warning: Citation `howard2018universal' on page 12 undefined on input line 391.
+
+
+Package natbib Warning: Citation `bert' on page 12 undefined on input line 391.
+
+
+Package natbib Warning: Citation `t5' on page 12 undefined on input line 391.
+
+
+Package natbib Warning: Citation `sutskever2011generating' on page 12 undefined on input line 391.
+
+
+Package natbib Warning: Citation `gpt3' on page 12 undefined on input line 391.
+
+
+Package natbib Warning: Citation `chinchilla' on page 12 undefined on input line 392.
+
+
+Package natbib Warning: Citation `houlsby2019parameter' on page 12 undefined on input line 394.
+
+
+Package natbib Warning: Citation `zaken_bitfit_2022' on page 12 undefined on input line 394.
+
+
+Package natbib Warning: Citation `gpt3' on page 12 undefined on input line 394.
+
+
+Package natbib Warning: Citation `li2021prefix' on page 12 undefined on input line 394.
+
+
+Package natbib Warning: Citation `lester2021power' on page 12 undefined on input line 394.
+
+
+Package natbib Warning: Citation `gpt3' on page 12 undefined on input line 395.
+
+
+Package natbib Warning: Citation `doersch2020crosstransformers' on page 12 undefined on input line 395.
+
+
+Package natbib Warning: Citation `vinyals2016matching' on page 12 undefined on input line 395.
+
+
+Package natbib Warning: Citation `snell2017prototypical' on page 12 undefined on input line 395.
+
+
+Package natbib Warning: Citation `tian2020rethinking' on page 12 undefined on input line 395.
+
+
+Package natbib Warning: Citation `finn2017model' on page 12 undefined on input line 395.
+
+
+Package natbib Warning: Citation `bertinetto2018meta' on page 12 undefined on input line 395.
+
+
+Package natbib Warning: Citation `zintgraf2019fast' on page 12 undefined on input line 395.
+
+
+Package natbib Warning: Citation `requeima2019fast' on page 12 undefined on input line 395.
+
+
+Package natbib Warning: Citation `gordon2018meta' on page 12 undefined on input line 395.
+
+
+Package natbib Warning: Citation `bertinetto2016learning' on page 12 undefined on input line 395.
+
+
+Package natbib Warning: Citation `bert' on page 12 undefined on input line 399.
+
+
+Package natbib Warning: Citation `lu2019vilbert' on page 12 undefined on input line 399.
+
+
+Package natbib Warning: Citation `su2019vl' on page 12 undefined on input line 399.
+
+
+Package natbib Warning: Citation `chen2020uniter' on page 12 undefined on input line 399.
+
+
+Package natbib Warning: Citation `hendricks2021decoupling' on page 12 undefined on input line 399.
+
+
+Package natbib Warning: Citation `wang2021vlmo' on page 12 undefined on input line 399.
+
+
+Package natbib Warning: Citation `li2020oscar' on page 12 undefined on input line 399.
+
+
+Package natbib Warning: Citation `tan2019lxmert' on page 12 undefined on input line 399.
+
+
+Package natbib Warning: Citation `zhu2020actbert' on page 12 undefined on input line 399.
+
+
+Package natbib Warning: Citation `wang2021ufo' on page 12 undefined on input line 399.
+
+
+Package natbib Warning: Citation `li2020hero' on page 12 undefined on input line 399.
+
+
+Package natbib Warning: Citation `gan2020large' on page 12 undefined on input line 399.
+
+
+Package natbib Warning: Citation `fu2021violet' on page 12 undefined on input line 399.
+
+
+Package natbib Warning: Citation `zellers2021merlot' on page 12 undefined on input line 399.
+
+
+Package natbib Warning: Citation `zellers2022merlot' on page 12 undefined on input line 399.
+
+
+Package natbib Warning: Citation `singh2021flava' on page 12 undefined on input line 399.
+
+
+Package natbib Warning: Citation `sun2019videobert' on page 12 undefined on input line 399.
+
+
+Package natbib Warning: Citation `alayrac2020self' on page 12 undefined on input line 401.
+
+
+Package natbib Warning: Citation `clip' on page 12 undefined on input line 401.
+
+
+Package natbib Warning: Citation `align' on page 12 undefined on input line 401.
+
+
+Package natbib Warning: Citation `zhai2021lit' on page 12 undefined on input line 401.
+
+
+Package natbib Warning: Citation `pham2021combined' on page 12 undefined on input line 401.
+
+
+Package natbib Warning: Citation `miech2020end' on page 12 undefined on input line 401.
+
+
+Package natbib Warning: Citation `bain2021frozen' on page 12 undefined on input line 401.
+
+
+Package natbib Warning: Citation `yuan2021florence' on page 12 undefined on input line 401.
+
+
+Package natbib Warning: Citation `li2021align' on page 12 undefined on input line 401.
+
+
+Package natbib Warning: Citation `yao2021filip' on page 12 undefined on input line 401.
+
+
+Package natbib Warning: Citation `jain2021mural' on page 12 undefined on input line 401.
+
+
+Package natbib Warning: Citation `vinyals2015show' on page 12 undefined on input line 404.
+
+
+Package natbib Warning: Citation `donahue2015long' on page 12 undefined on input line 404.
+
+
+Package natbib Warning: Citation `luo2020univl' on page 12 undefined on input line 404.
+
+
+Package natbib Warning: Citation `hu2021scaling' on page 12 undefined on input line 404.
+
+
+Package natbib Warning: Citation `dai2022' on page 12 undefined on input line 404.
+
+
+Package natbib Warning: Citation `wang2021simvlm' on page 12 undefined on input line 405.
+
+
+Package natbib Warning: Citation `cho2021unifying' on page 12 undefined on input line 405.
+
+
+Package natbib Warning: Citation `wang2022unifying' on page 12 undefined on input line 405.
+
+
+Package natbib Warning: Citation `zhu2021uni' on page 12 undefined on input line 405.
+
+
+Package natbib Warning: Citation `li2022blip' on page 12 undefined on input line 405.
+
+
+Package natbib Warning: Citation `tsimpoukelli2021multimodal' on page 12 undefined on input line 407.
+
+
+Package natbib Warning: Citation `eichenberg2021magma' on page 12 undefined on input line 407.
+
+
+Package natbib Warning: Citation `mokady2021clipcap' on page 12 undefined on input line 407.
+
+
+Package natbib Warning: Citation `luo2022vc' on page 12 undefined on input line 407.
+
+
+Package natbib Warning: Citation `yang2021empirical' on page 12 undefined on input line 407.
+
+
+Package natbib Warning: Citation `zeng2022socraticmodels' on page 12 undefined on input line 407.
+
+
+Package natbib Warning: Citation `mccloskey1989catastrophic' on page 12 undefined on input line 407.
+
+
+Package natbib Warning: Citation `chinchilla' on page 12 undefined on input line 408.
+
+[12]
+
+Package natbib Warning: Citation `young2014image' on page 13 undefined on input line 412.
+
+
+Package natbib Warning: Citation `chen2015microsoft' on page 13 undefined on input line 412.
+
+
+Package natbib Warning: Citation `antol2015vqa' on page 13 undefined on input line 412.
+
+
+Package natbib Warning: Citation `marino2019ok' on page 13 undefined on input line 412.
+
+
+Package natbib Warning: Citation `wang2019vatex' on page 13 undefined on input line 412.
+
+
+Package natbib Warning: Citation `xiao2021next' on page 13 undefined on input line 412.
+
+
+Package natbib Warning: Citation `align' on page 13 undefined on input line 413.
+
+
+Package natbib Warning: Citation `sharma2018conceptual' on page 13 undefined on input line 413.
+
+
+Package natbib Warning: Citation `changpinyo2021conceptual' on page 13 undefined on input line 413.
+
+
+Package natbib Warning: Citation `thomee2016yfcc100m' on page 13 undefined on input line 413.
+
+
+Package natbib Warning: Citation `aghajanyan2022cm3' on page 13 undefined on input line 415.
+
+
+Package natbib Warning: Citation `aghajanyan2022cm3' on page 13 undefined on input line 416.
+
+
+Package natbib Warning: Citation `clip' on page 13 undefined on input line 430.
+
+
+Package natbib Warning: Citation `pham2021combined' on page 13 undefined on input line 430.
+
+
+Package natbib Warning: Citation `zhao2021calibrate' on page 13 undefined on input line 439.
+
+
+Package natbib Warning: Citation `truefewshot' on page 13 undefined on input line 439.
+
+
+LaTeX Warning: Reference `sec:limitations' on page 13 undefined on input line 442.
+
+[13]
+
+Package natbib Warning: Citation `weidinger2021harms' on page 14 undefined on input line 451.
+
+
+Package natbib Warning: Citation `chinchilla' on page 14 undefined on input line 451.
+
+
+Package natbib Warning: Citation `hendricks2018women' on page 14 undefined on input line 452.
+
+
+Package natbib Warning: Citation `zhao2021understanding' on page 14 undefined on input line 452.
+
+
+Package natbib Warning: Citation `buolamwini2018gender' on page 14 undefined on input line 452.
+
+
+Package natbib Warning: Citation `de2019does' on page 14 undefined on input line 452.
+
+
+Package natbib Warning: Citation `schwemmer2020diagnosing' on page 14 undefined on input line 452.
+
+
+LaTeX Warning: Reference `sec:broader_impact' on page 14 undefined on input line 453.
+
+
+Package natbib Warning: Citation `thoppilan2022lamda' on page 14 undefined on input line 455.
+
+
+Package natbib Warning: Citation `perez2022red' on page 14 undefined on input line 455.
+
+
+Package natbib Warning: Citation `menick2022teaching' on page 14 undefined on input line 455.
+
+)
+Missing character: There is no ć ("107) in font ec-lmr10!
+Missing character: There is no ć ("107) in font ec-lmr10!
+Missing character: There is no ň ("148) in font ec-lmr10!
+(./main.bbl [14]
+Underfull \hbox (badness 4872) in paragraph at lines 74--77
+[]\T1/lmr/m/n/10.53937 Andrew Brock, So-ham De, Samuel L. Smith, and Karen Si-monyan.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 74--77
+\T1/lmr/m/n/10.53937 High-performance large-scale im-age recog-ni-tion with-out nor-mal-iza-tion.
+ []
+
+[15] [16]
+Underfull \hbox (badness 1721) in paragraph at lines 229--233
+[]\T1/lmr/m/n/10.53937 Timnit Ge-bru, Jamie Mor-gen-stern, Bri-ana Vec-chione, Jen-nifer Wort-man
+ []
+
+
+Underfull \hbox (badness 2012) in paragraph at lines 236--240
+\T1/lmr/m/n/10.53937 Richard E. Turner.  Meta-learning prob-a-bilis-tic in-fer-ence for pre-dic-tion.
+ []
+
+[17]
+Underfull \hbox (badness 5878) in paragraph at lines 242--245
+[]\T1/lmr/m/n/10.53937 Alex Graves.  Gen-er-at-ing se-quences with re-cur-rent neu-ral net-works.
+ []
+
+[18]
+Underfull \hbox (badness 2027) in paragraph at lines 322--326
+\T1/lmr/m/n/10.53937 De Larous-silhe, An-drea Ges-mundo, Mona At-tariyan, and Syl-vain Gelly.
+ []
+
+[19]
+Underfull \hbox (badness 1337) in paragraph at lines 456--460
+[]\T1/lmr/m/n/10.53937 Jiachang Liu, Ding-han Shen, Yizhe Zhang, Bill Dolan, Lawrence Carin,
+ []
+
+
+Underfull \hbox (badness 1430) in paragraph at lines 456--460
+\T1/lmr/m/n/10.53937 and Weizhu Chen.  What makes good in-context ex-am-ples for GPT-3?
+ []
+
+[20] [21] [22] [23] [24] [25] [26] [27]
+Underfull \hbox (badness 1939) in paragraph at lines 995--1000
+[]\T1/lmr/m/n/10.53937 Hu Xu, Gargi Ghosh, Po-Yao Huang, Pra-hal Arora, Ma-soumeh Am-in-
+ []
+
+
+Underfull \hbox (badness 3158) in paragraph at lines 995--1000
+\T1/lmr/m/n/10.53937 Task-agnostic video-language model pre-training for video un-der-stand-ing.
+ []
+
+
+Underfull \hbox (badness 1062) in paragraph at lines 1065--1069
+[]\T1/lmr/m/n/10.53937 Elad Ben Za-ken, Shauli Rav-fo-gel, and Yoav Gold-berg.  Bit-Fit: Sim-ple
+ []
+
+[28] [29]) (./checklist.tex [30]
+
+LaTeX Warning: Reference `sec:discussion' on page 31 undefined on input line 15.
+
+
+LaTeX Warning: Reference `sec:discussion' on page 31 undefined on input line 17.
+
+
+LaTeX Warning: Reference `sec:broader_impact' on page 31 undefined on input line 17.
+
+
+LaTeX Warning: Reference `sec:experiments' on page 31 undefined on input line 37.
+
+
+LaTeX Warning: Reference `app:extra_experiments_results' on page 31 undefined on input line 37.
+
+
+LaTeX Warning: Reference `app:large_scale_training' on page 31 undefined on input line 41.
+
+
+LaTeX Warning: Reference `app:visual_content_credit' on page 31 undefined on input line 48.
+
+[31]
+
+Package natbib Warning: Citation `datasheet' on page 32 undefined on input line 52.
+
+
+LaTeX Warning: Reference `datasheets' on page 32 undefined on input line 52.
+
+
+Package natbib Warning: Citation `datasheet' on page 32 undefined on input line 54.
+
+
+LaTeX Warning: Reference `datasheets' on page 32 undefined on input line 54.
+
+) [32] (./appendix.tex
+
+LaTeX Warning: Reference `app:all_method_details' on page 33 undefined on input line 6.
+
+
+LaTeX Warning: Reference `app:experiment_and_model_details' on page 33 undefined on input line 7.
+
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `lmr' (encoding: TS1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+
+LaTeX Warning: Reference `sec:transformer_resampler' on page 33 undefined on input line 9.
+
+
+LaTeX Warning: Reference `app:transformer_resampler' on page 33 undefined on input line 9.
+
+
+LaTeX Warning: Reference `fig:transformer_resampler' on page 33 undefined on input line 9.
+
+
+LaTeX Warning: Reference `sec:xattn_dense' on page 33 undefined on input line 10.
+
+
+LaTeX Warning: Reference `app:xattn_dense' on page 33 undefined on input line 10.
+
+
+LaTeX Warning: Reference `fig:xattn_dense' on page 33 undefined on input line 10.
+
+
+LaTeX Warning: Reference `sec:multi_im_att' on page 33 undefined on input line 11.
+
+
+LaTeX Warning: Reference `app:multi-visual-details' on page 33 undefined on input line 11.
+
+
+LaTeX Warning: Reference `app:transformer_details' on page 33 undefined on input line 12.
+
+
+LaTeX Warning: Reference `app:in_context_eval_details' on page 33 undefined on input line 15.
+
+
+LaTeX Warning: Reference `app:datasets' on page 33 undefined on input line 17.
+
+
+LaTeX Warning: Reference `app:collection-m3w' on page 33 undefined on input line 19.
+
+
+LaTeX Warning: Reference `app:m3w_processing' on page 33 undefined on input line 20.
+
+
+LaTeX Warning: Reference `app:vtp_and_itp' on page 33 undefined on input line 21.
+
+
+LaTeX Warning: Reference `app:dataset_dedup' on page 33 undefined on input line 22.
+
+
+LaTeX Warning: Reference `app:extra_experiments_results' on page 33 undefined on input line 26.
+
+
+LaTeX Warning: Reference `sec:exp_setting' on page 33 undefined on input line 27.
+
+
+LaTeX Warning: Reference `sec:models_details' on page 33 undefined on input line 29.
+
+
+LaTeX Warning: Reference `app:large_scale_training' on page 33 undefined on input line 30.
+
+
+LaTeX Warning: Reference `app:contrastive_details' on page 33 undefined on input line 31.
+
+
+LaTeX Warning: Reference `sec:eval_benchmarks' on page 33 undefined on input line 32.
+
+
+LaTeX Warning: Reference `app:fewshot-eval-hyper' on page 33 undefined on input line 33.
+
+
+LaTeX Warning: Reference `fig:teaser' on page 33 undefined on input line 34.
+
+
+LaTeX Warning: Reference `fig:dialogue_samples' on page 33 undefined on input line 34.
+
+
+LaTeX Warning: Reference `app:dialogue_prompt' on page 33 undefined on input line 34.
+
+
+LaTeX Warning: Reference `app:more_performance' on page 33 undefined on input line 37.
+
+
+LaTeX Warning: Reference `app:classif_tasks' on page 33 undefined on input line 37.
+
+
+LaTeX Warning: Reference `app:finetuning' on page 33 undefined on input line 37.
+
+
+LaTeX Warning: Reference `app:exp-contrastive' on page 33 undefined on input line 37.
+
+[33]
+
+LaTeX Warning: Reference `app:all_ablation_studies' on page 34 undefined on input line 39.
+
+
+LaTeX Warning: Reference `app:full_ablations' on page 34 undefined on input line 39.
+
+
+LaTeX Warning: Reference `app:contrastive_ablation' on page 34 undefined on input line 39.
+
+
+LaTeX Warning: Reference `app:qual_res' on page 34 undefined on input line 42.
+
+
+LaTeX Warning: Reference `app:qual_res' on page 34 undefined on input line 42.
+
+
+LaTeX Warning: Reference `fig:single_samples' on page 34 undefined on input line 42.
+
+
+LaTeX Warning: Reference `fig:dialogue_samples' on page 34 undefined on input line 42.
+
+
+LaTeX Warning: Reference `fig:videoexamples' on page 34 undefined on input line 42.
+
+
+LaTeX Warning: Reference `app:full_discussion' on page 34 undefined on input line 45.
+
+
+LaTeX Warning: Reference `app:full_discussion' on page 34 undefined on input line 46.
+
+
+LaTeX Warning: Reference `app:flamingo_model_card' on page 34 undefined on input line 50.
+
+
+LaTeX Warning: Reference `app:flamingo_model_card' on page 34 undefined on input line 51.
+
+
+LaTeX Warning: Reference `datasheets' on page 34 undefined on input line 54.
+
+
+LaTeX Warning: Reference `datasheet-m3w-break' on page 34 undefined on input line 55.
+
+
+LaTeX Warning: Reference `app:itp_datasheet' on page 34 undefined on input line 55.
+
+
+LaTeX Warning: Reference `app:vtp_datasheet' on page 34 undefined on input line 55.
+
+
+LaTeX Warning: Reference `app:visual_content_credit' on page 34 undefined on input line 58.
+
+
+LaTeX Warning: Reference `app:visual_content_credit' on page 34 undefined on input line 59.
+
+(./appendix_sections/A_method.tex
+File: figures/fig3_resampler.pdf Graphic file (type pdf)
+<use figures/fig3_resampler.pdf>
+
+
+LaTeX Warning: Reference `sec:transformer_resampler' on page 34 undefined on input line 20.
+
+
+LaTeX Warning: Reference `fig:transformer_resampler' on page 34 undefined on input line 21.
+
+
+Package natbib Warning: Citation `jaegle2021perceiver' on page 34 undefined on input line 22.
+
+
+Package natbib Warning: Citation `islam2021global' on page 34 undefined on input line 27.
+
+
+LaTeX Warning: Reference `fig:transformer_resampler' on page 34 undefined on input line 28.
+
+[34]
+
+LaTeX Warning: Reference `fig:xattn_dense' on page 35 undefined on input line 35.
+
+File: figures/attn_gain.pdf Graphic file (type pdf)
+<use figures/attn_gain.pdf>
+File: figures/ffw_gain.pdf Graphic file (type pdf)
+<use figures/ffw_gain.pdf>
+
+LaTeX Warning: Reference `fig:tanh_gating_evolution' on page 35 undefined on input line 52.
+
+
+Underfull \vbox (badness 5607) has occurred while \output is active []
+
+ [35]
+
+LaTeX Warning: Reference `fig:xattn_multi_im' on page 36 undefined on input line 63.
+
+File: figures/fig5_multi_im_att.pdf Graphic file (type pdf)
+<use figures/fig5_multi_im_att.pdf>
+
+LaTeX Warning: Reference `eq:modeling' on page 36 undefined on input line 81.
+
+
+Package natbib Warning: Citation `so2021primer' on page 36 undefined on input line 100.
+
+
+Package natbib Warning: Citation `so2021primer' on page 36 undefined on input line 100.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: Reference `tab:model-architecture-hyperparam' on page 36 undefined on input line 104.
+
+
+Package natbib Warning: Citation `hendrycks2016gaussian' on page 36 undefined on input line 107.
+
+
+Package natbib Warning: Citation `so2021primer' on page 36 undefined on input line 107.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [36]
+File: figures/fig_fewshot_prompt.pdf Graphic file (type pdf)
+<use figures/fig_fewshot_prompt.pdf>
+
+
+Package natbib Warning: Citation `gpt3' on page 37 undefined on input line 128.
+
+
+LaTeX Warning: Reference `fig:fewshot_prompt' on page 37 undefined on input line 130.
+
+[37]
+
+Package natbib Warning: Citation `clip' on page 38 undefined on input line 142.
+
+
+Package natbib Warning: Citation `truefewshot' on page 38 undefined on input line 144.
+
+
+LaTeX Warning: Reference `fig:fewshot_prompt' on page 38 undefined on input line 147.
+
+
+Package natbib Warning: Citation `min2022rethinking' on page 38 undefined on input line 152.
+
+
+Package natbib Warning: Citation `yang2021empirical' on page 38 undefined on input line 157.
+
+
+Package natbib Warning: Citation `press2021train' on page 38 undefined on input line 158.
+
+
+Package natbib Warning: Citation `liu2021makes' on page 38 undefined on input line 159.
+
+
+Package natbib Warning: Citation `yang2021empirical' on page 38 undefined on input line 160.
+
+
+Package natbib Warning: Citation `zhao2021calibrate' on page 38 undefined on input line 163.
+
+
+LaTeX Warning: Reference `app:classif_tasks' on page 38 undefined on input line 164.
+
+[38]
+File: figures/fig0_data_mixture.pdf Graphic file (type pdf)
+<use figures/fig0_data_mixture.pdf>
+
+
+LaTeX Warning: Reference `fig:training_data' on page 39 undefined on input line 182.
+
+
+Package natbib Warning: Citation `gopher' on page 39 undefined on input line 189.
+
+
+LaTeX Warning: Reference `sec:interleaved_datasets' on page 39 undefined on input line 191.
+
+[39]
+
+LaTeX Warning: Reference `sec:interleaved_datasets' on page 40 undefined on input line 204.
+
+
+LaTeX Warning: Reference `sec:ablations' on page 40 undefined on input line 215.
+
+
+Package natbib Warning: Citation `align' on page 40 undefined on input line 224.
+
+
+LaTeX Warning: Reference `app:dataset_dedup' on page 40 undefined on input line 231.
+
+
+LaTeX Warning: Reference `app:itp_datasheet' on page 40 undefined on input line 232.
+
+
+LaTeX Warning: Reference `app:vtp_datasheet' on page 40 undefined on input line 232.
+
+[40]
+Underfull \vbox (badness 1331) has occurred while \output is active []
+
+ [41]) (./appendix_sections/B_experiments.tex
+
+LaTeX Warning: Reference `app:contrastive_details' on page 42 undefined on input line 35.
+
+
+Package natbib Warning: Citation `chinchilla' on page 42 undefined on input line 43.
+
+
+Underfull \vbox (badness 1603) has occurred while \output is active []
+
+ [42]
+
+Package natbib Warning: Citation `chinchilla' on page 43 undefined on input line 44.
+
+
+Package natbib Warning: Citation `chinchilla' on page 43 undefined on input line 46.
+
+
+LaTeX Warning: Reference `tab:param-count' on page 43 undefined on input line 50.
+
+
+LaTeX Warning: Reference `app:transformer_details' on page 43 undefined on input line 51.
+
+
+Package natbib Warning: Citation `mitchell2019model' on page 43 undefined on input line 52.
+
+
+LaTeX Warning: Reference `app:flamingo_model_card' on page 43 undefined on input line 52.
+
+
+LaTeX Warning: Reference `app:contrastive_details' on page 43 undefined on input line 64.
+
+
+Package natbib Warning: Citation `touvron2019fixing' on page 43 undefined on input line 65.
+
+
+LaTeX Warning: Reference `sec:interleaved_datasets' on page 43 undefined on input line 69.
+
+
+LaTeX Warning: Reference `app:interleaved_indices' on page 43 undefined on input line 70.
+
+
+LaTeX Warning: Reference `app:full_ablations' on page 43 undefined on input line 70.
+
+[43]
+
+Package natbib Warning: Citation `jax2018github' on page 44 undefined on input line 85.
+
+
+Package natbib Warning: Citation `haiku2020github' on page 44 undefined on input line 85.
+
+
+Package natbib Warning: Citation `megatron' on page 44 undefined on input line 86.
+
+
+Package natbib Warning: Citation `zero' on page 44 undefined on input line 86.
+
+
+Package natbib Warning: Citation `clip' on page 44 undefined on input line 93.
+
+
+Package natbib Warning: Citation `bridle1990probabilistic' on page 44 undefined on input line 93.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [44]
+
+Package natbib Warning: Citation `bert' on page 45 undefined on input line 105.
+
+
+Package natbib Warning: Citation `align' on page 45 undefined on input line 110.
+
+
+Package natbib Warning: Citation `nfnets' on page 45 undefined on input line 112.
+
+
+Package natbib Warning: Citation `clip' on page 45 undefined on input line 116.
+
+(./tables/multi_benchmark.tex
+
+Package natbib Warning: Citation `russakovsky2015imagenet' on page 45 undefined on input line 28.
+
+
+Package natbib Warning: Citation `chen2015microsoft' on page 45 undefined on input line 28.
+
+
+Package natbib Warning: Citation `antol2015vqa' on page 45 undefined on input line 28.
+
+
+Package natbib Warning: Citation `antol2015vqa' on page 45 undefined on input line 28.
+
+
+Package natbib Warning: Citation `marino2019ok' on page 45 undefined on input line 28.
+
+
+Package natbib Warning: Citation `antol2015vqa' on page 45 undefined on input line 28.
+
+
+Package natbib Warning: Citation `young2014image' on page 45 undefined on input line 28.
+
+
+Package natbib Warning: Citation `gurari2018vizwiz' on page 45 undefined on input line 28.
+
+
+Package natbib Warning: Citation `antol2015vqa' on page 45 undefined on input line 28.
+
+
+Package natbib Warning: Citation `singh2019towards' on page 45 undefined on input line 28.
+
+
+Package natbib Warning: Citation `antol2015vqa' on page 45 undefined on input line 28.
+
+
+Package natbib Warning: Citation `das2017visual' on page 45 undefined on input line 28.
+
+
+Package natbib Warning: Citation `kiela2020hateful' on page 45 undefined on input line 28.
+
+
+Package natbib Warning: Citation `smaira2020short' on page 45 undefined on input line 28.
+
+
+Package natbib Warning: Citation `wang2019vatex' on page 45 undefined on input line 28.
+
+
+Package natbib Warning: Citation `xu2017video' on page 45 undefined on input line 28.
+
+
+Package natbib Warning: Citation `zhou2018towards' on page 45 undefined on input line 28.
+
+
+Package natbib Warning: Citation `xu2017video' on page 45 undefined on input line 28.
+
+
+Package natbib Warning: Citation `yang2021just' on page 45 undefined on input line 28.
+
+
+Package natbib Warning: Citation `yang2021just' on page 45 undefined on input line 28.
+
+
+Package natbib Warning: Citation `miech20rareact' on page 45 undefined on input line 28.
+
+
+Package natbib Warning: Citation `xiao2021next' on page 45 undefined on input line 28.
+
+
+Package natbib Warning: Citation `wu2021star' on page 45 undefined on input line 28.
+
+
+LaTeX Warning: Reference `app:fewshot-eval-hyper' on page 45 undefined on input line 36.
+
+
+LaTeX Warning: Reference `app:fewshot-eval-hyper' on page 45 undefined on input line 36.
+
+)
+
+LaTeX Warning: Reference `tab:multi-benchmarks' on page 45 undefined on input line 124.
+
+[45] [46]
+
+Package natbib Warning: Citation `singh2019towards' on page 47 undefined on input line 163.
+
+
+Package natbib Warning: Citation `das2017visual' on page 47 undefined on input line 164.
+
+
+Package natbib Warning: Citation `kiela2020hateful' on page 47 undefined on input line 165.
+
+
+Package natbib Warning: Citation `xiao2021next' on page 47 undefined on input line 166.
+
+
+Package natbib Warning: Citation `wu2021star' on page 47 undefined on input line 167.
+
+
+Package natbib Warning: Citation `miech20rareact' on page 47 undefined on input line 168.
+
+
+Package natbib Warning: Citation `truefewshot' on page 47 undefined on input line 177.
+
+
+Package natbib Warning: Citation `truefewshot' on page 47 undefined on input line 180.
+
+[47]
+
+Package natbib Warning: Citation `das2017visual' on page 48 undefined on input line 184.
+
+
+Package natbib Warning: Citation `kiela2020hateful' on page 48 undefined on input line 185.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 183--189
+[]\T1/lmr/m/n/10.53937 Except for Hate-ful-Memes and RareAct, we al-ways use the prompt
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 183--189
+\T1/lmr/m/n/10.53937 ``[]\T1/lmtt/m/n/10.53937 ``Output: {output}[]\T1/lmr/m/n/10.53937 '' for all non-question-answering tasks, and
+ []
+
+
+Underfull \hbox (badness 1946) in paragraph at lines 183--189
+\T1/lmr/m/n/10.53937 ``[]\T1/lmtt/m/n/10.53937 Question: {question}[] Answer: {answer}[][]\T1/lmr/m/n/10.53937 '' for all question-answering / vi-sual
+ []
+
+
+LaTeX Warning: Reference `fig:teaser' on page 48 undefined on input line 196.
+
+
+LaTeX Warning: Reference `fig:dialogue_samples' on page 48 undefined on input line 196.
+
+LaTeX Font Info:    Trying to load font information for T1+qcr on input line 198.
+(/usr/local/texlive/2023/texmf-dist/tex/latex/tex-gyre/t1qcr.fd
+File: t1qcr.fd 2009/09/25 v1.2 font definition file for T1/qcr
+)
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `qcr' (encoding: T1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+
+Underfull \hbox (badness 10000) in paragraph at lines 199--200
+[]\T1/qcr/m/n/10.53937 This is a con-ver-sa-tion be-tween a hu-man, User, and an in-tel-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 199--200
+\T1/qcr/m/n/10.53937 li-gent vi-sual AI, Flamingo. User sends im-ages, and Flamingo
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 203--204
+[]\T1/qcr/m/n/10.53937 Flamingo: That is a cat. It's a tiny kit-ten with re-ally cute
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 207--208
+[]\T1/qcr/m/n/10.53937 Flamingo: This is a pic-ture of a group of peo-ple hav-ing din-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 211--212
+[]\T1/qcr/m/n/10.53937 Flamingo: They might be cel-e-brat-ing the end of a suc-cess-ful
+ []
+
+[48]
+Underfull \hbox (badness 10000) in paragraph at lines 215--216
+[]\T1/qcr/m/n/10.53937 Flamingo: This is a graph, it looks like a cu-mu-la-tive den-sity
+ []
+
+(./tables/fewshot_classif.tex
+
+Package natbib Warning: Citation `wortsman2022model' on page 49 undefined on input line 33.
+
+
+Package natbib Warning: Citation `yan2022multiview' on page 49 undefined on input line 33.
+
+
+Package natbib Warning: Citation `pham2021combined' on page 49 undefined on input line 33.
+
+
+Package natbib Warning: Citation `clip' on page 49 undefined on input line 33.
+
+
+Package natbib Warning: Citation `yang2021empirical' on page 49 undefined on input line 40.
+
+
+Package natbib Warning: Citation `yang2021empirical' on page 49 undefined on input line 40.
+
+)
+
+LaTeX Warning: Reference `tab:fewshot_classif' on page 49 undefined on input line 228.
+
+
+Package natbib Warning: Citation `yang2021empirical' on page 49 undefined on input line 233.
+
+
+LaTeX Warning: Reference `app:rices' on page 49 undefined on input line 233.
+
+
+LaTeX Warning: Reference `sec:limitations' on page 49 undefined on input line 237.
+
+
+Package natbib Warning: Citation `pham2021combined' on page 49 undefined on input line 238.
+
+
+Package natbib Warning: Citation `zhai2021lit' on page 49 undefined on input line 238.
+
+
+Package natbib Warning: Citation `jft3b' on page 49 undefined on input line 238.
+
+[49]
+
+LaTeX Warning: Reference `sec:datasets' on page 50 undefined on input line 245.
+
+
+LaTeX Warning: Reference `tab:ft-sota-table' on page 50 undefined on input line 264.
+
+
+Package natbib Warning: Citation `yan2021achieving' on page 50 undefined on input line 267.
+
+
+Package natbib Warning: Citation `selfcritical' on page 50 undefined on input line 272.
+
+
+Package natbib Warning: Citation `spider' on page 50 undefined on input line 272.
+
+
+Package natbib Warning: Citation `murahari2020large' on page 50 undefined on input line 273.
+
+
+Package natbib Warning: Citation `murahari2020large' on page 50 undefined on input line 274.
+
+(./tables/sota_comparison.tex
+File: figures/flamingoemoji.pdf Graphic file (type pdf)
+<use figures/flamingoemoji.pdf>
+
+
+Package natbib Warning: Citation `wang2021simvlm' on page 50 undefined on input line 35.
+
+
+Package natbib Warning: Citation `wang2022unifying' on page 50 undefined on input line 35.
+
+
+Package natbib Warning: Citation `yuan2021florence' on page 50 undefined on input line 35.
+
+File: figures/flamingoemoji.pdf Graphic file (type pdf)
+<use figures/flamingoemoji.pdf>
+
+Package natbib Warning: Citation `yuan2021florence' on page 50 undefined on input line 35.
+
+
+Package natbib Warning: Citation `yuan2021florence' on page 50 undefined on input line 35.
+
+
+Package natbib Warning: Citation `wang2021simvlm' on page 50 undefined on input line 35.
+
+
+Package natbib Warning: Citation `zhu2019vatex' on page 50 undefined on input line 35.
+
+
+Package natbib Warning: Citation `wang2022allinone' on page 50 undefined on input line 35.
+
+
+Package natbib Warning: Citation `murahari2020large' on page 50 undefined on input line 35.
+
+
+Package natbib Warning: Citation `murahari2020large' on page 50 undefined on input line 35.
+
+
+Package natbib Warning: Citation `xu2021vlm' on page 50 undefined on input line 35.
+
+
+Package natbib Warning: Citation `yang2021tap' on page 50 undefined on input line 35.
+
+
+Package natbib Warning: Citation `qiao2021winner' on page 50 undefined on input line 35.
+
+
+Package natbib Warning: Citation `lippe2020multimodal' on page 50 undefined on input line 35.
+
+
+Package natbib Warning: Citation `yan2021achieving' on page 50 undefined on input line 35.
+
+
+Package natbib Warning: Citation `yan2021achieving' on page 50 undefined on input line 35.
+
+
+Package natbib Warning: Citation `wang2022unifying' on page 50 undefined on input line 35.
+
+
+Package natbib Warning: Citation `zhu2019vatex' on page 50 undefined on input line 35.
+
+
+Package natbib Warning: Citation `liu2021vizwiz' on page 50 undefined on input line 35.
+
+
+Package natbib Warning: Citation `liu2021vizwiz' on page 50 undefined on input line 35.
+
+
+Package natbib Warning: Citation `wang2020vdbert' on page 50 undefined on input line 35.
+
+
+Package natbib Warning: Citation `zhu2020enhance' on page 50 undefined on input line 35.
+
+) (./tables/contrastive_eval_retrieval.tex
+
+Package natbib Warning: Citation `yuan2021florence' on page 50 undefined on input line 16.
+
+
+Package natbib Warning: Citation `align' on page 50 undefined on input line 16.
+
+
+Package natbib Warning: Citation `clip' on page 50 undefined on input line 16.
+
+
+Underfull \vbox (badness 1796) has occurred while \output is active []
+
+ [50])
+
+LaTeX Warning: Reference `tab:fewshot_classif' on page 51 undefined on input line 291.
+
+
+LaTeX Warning: Reference `table:contrastive_eval_retrieval' on page 51 undefined on input line 291.
+
+
+Package natbib Warning: Citation `clip' on page 51 undefined on input line 292.
+
+
+Package natbib Warning: Citation `align' on page 51 undefined on input line 292.
+
+
+Package natbib Warning: Citation `yuan2021florence' on page 51 undefined on input line 292.
+
+
+Package natbib Warning: Citation `pham2021combined' on page 51 undefined on input line 294.
+
+
+Package natbib Warning: Citation `jft3b' on page 51 undefined on input line 295.
+
+
+LaTeX Warning: Reference `app:contrastive_details' on page 51 undefined on input line 298.
+
+(./tables/ablations-appendix.tex
+Underfull \hbox (badness 10000) in paragraph at lines 3--28
+[][]
+ []
+
+)
+
+LaTeX Warning: Reference `tab:ablation-table-appendix' on page 51 undefined on input line 309.
+
+
+LaTeX Warning: Reference `sec:ablations' on page 51 undefined on input line 309.
+
+
+LaTeX Warning: Reference `tab:ablation-table-appendix' on page 51 undefined on input line 309.
+
+[51]
+
+LaTeX Warning: Reference `tab:ablation-table-appendix' on page 52 undefined on input line 315.
+
+
+LaTeX Warning: Reference `tab:ablation-table-appendix' on page 52 undefined on input line 322.
+
+
+Package natbib Warning: Citation `haviv2022transformer' on page 52 undefined on input line 325.
+
+[52]
+
+LaTeX Warning: Reference `app:m3w_processing' on page 53 undefined on input line 335.
+
+
+LaTeX Warning: Reference `tab:ablation-table-appendix' on page 53 undefined on input line 338.
+
+
+Package natbib Warning: Citation `t5' on page 53 undefined on input line 342.
+
+
+LaTeX Warning: Reference `tab:ablation-table-appendix' on page 53 undefined on input line 342.
+
+
+LaTeX Warning: Reference `tab:ablation-table-appendix' on page 53 undefined on input line 350.
+
+[53]
+
+Package natbib Warning: Citation `gopher' on page 54 undefined on input line 356.
+
+
+Package natbib Warning: Citation `chinchilla' on page 54 undefined on input line 357.
+
+
+LaTeX Warning: Reference `tab:ablation-table-appendix' on page 54 undefined on input line 359.
+
+
+Package natbib Warning: Citation `clip' on page 54 undefined on input line 366.
+
+
+Package natbib Warning: Citation `schuhmann2021laion' on page 54 undefined on input line 366.
+
+
+LaTeX Warning: Reference `tab:ablation-table-appendix' on page 54 undefined on input line 366.
+
+(./tables/contrastive_dataset_ablation.tex)
+Underfull \vbox (badness 2205) has occurred while \output is active []
+
+ [54]
+
+LaTeX Warning: Reference `tab:contrastive_dataset_ablation' on page 55 undefined on input line 375.
+
+
+LaTeX Warning: Reference `fig:teaser' on page 55 undefined on input line 394.
+
+
+LaTeX Warning: Reference `fig:single_samples' on page 55 undefined on input line 395.
+
+
+LaTeX Warning: Reference `fig:dialogue_samples' on page 55 undefined on input line 395.
+
+
+LaTeX Warning: Reference `fig:videoexamples' on page 55 undefined on input line 395.
+
+
+LaTeX Warning: Reference `fig:single_samples' on page 55 undefined on input line 397.
+
+
+Package natbib Warning: Citation `clip' on page 55 undefined on input line 400.
+
+[55]
+
+LaTeX Warning: Reference `fig:dialogue_samples' on page 56 undefined on input line 402.
+
+
+LaTeX Warning: Reference `app:dialogue_prompt' on page 56 undefined on input line 402.
+
+
+LaTeX Warning: Reference `fig:videoexamples' on page 56 undefined on input line 404.
+
+(./tables/qualitative_examples.tex
+File: images/cd_and_floppy.png Graphic file (type bmp)
+<images/cd_and_floppy.png>
+File: images/coco_elephant.png Graphic file (type bmp)
+<images/coco_elephant.png>
+File: images/coco_canada.png Graphic file (type bmp)
+<images/coco_canada.png>
+File: figures/FlamingoPaperColor.pdf Graphic file (type pdf)
+<use figures/FlamingoPaperColor.pdf>
+
+Overfull \hbox (1.33821pt too wide) in paragraph at lines 95--96
+ [][] 
+ []
+
+File: images/coco_banana_shop.png Graphic file (type bmp)
+<images/coco_banana_shop.png>
+File: images/coco_bednet.png Graphic file (type bmp)
+<images/coco_bednet.png>
+File: images/coco_christmas.png Graphic file (type bmp)
+<images/coco_christmas.png>
+File: figures/FlamingoPaperColor.pdf Graphic file (type pdf)
+<use figures/FlamingoPaperColor.pdf>
+
+Overfull \hbox (1.33821pt too wide) in paragraph at lines 126--127
+ [][] 
+ []
+
+File: images/coco_house_book.png Graphic file (type bmp)
+<images/coco_house_book.png>
+File: images/coco_steak.png Graphic file (type bmp)
+<images/coco_steak.png>
+File: images/frozen_movie.png Graphic file (type bmp)
+<images/frozen_movie.png>
+File: figures/FlamingoPaperColor.pdf Graphic file (type pdf)
+<use figures/FlamingoPaperColor.pdf>
+
+Overfull \hbox (1.33821pt too wide) in paragraph at lines 157--158
+ [][] 
+ []
+
+
+LaTeX Warning: Float too large for page by 18.14587pt on input line 175.
+
+File: figures/samoyed.jpeg Graphic file (type bmp)
+<figures/samoyed.jpeg>
+File: figures/PersonPaperColor.pdf Graphic file (type pdf)
+<use figures/PersonPaperColor.pdf>
+File: figures/FlamingoPaperColor.pdf Graphic file (type pdf)
+<use figures/FlamingoPaperColor.pdf>
+File: figures/PersonPaperColor.pdf Graphic file (type pdf)
+<use figures/PersonPaperColor.pdf>
+File: figures/FlamingoPaperColor.pdf Graphic file (type pdf)
+<use figures/FlamingoPaperColor.pdf>
+
+Underfull \hbox (badness 5847) in paragraph at lines 228--228
+[]\T1/lmr/m/n/5.52061 It looks like a
+ []
+
+File: figures/PersonPaperColor.pdf Graphic file (type pdf)
+<use figures/PersonPaperColor.pdf>
+File: figures/FlamingoPaperColor.pdf Graphic file (type pdf)
+<use figures/FlamingoPaperColor.pdf>
+File: figures/PersonPaperColor.pdf Graphic file (type pdf)
+<use figures/PersonPaperColor.pdf>
+File: figures/FlamingoPaperColor.pdf Graphic file (type pdf)
+<use figures/FlamingoPaperColor.pdf>
+File: figures/PersonPaperColor.pdf Graphic file (type pdf)
+<use figures/PersonPaperColor.pdf>
+File: figures/FlamingoPaperColor.pdf Graphic file (type pdf)
+<use figures/FlamingoPaperColor.pdf>
+
+Underfull \hbox (badness 4181) in paragraph at lines 242--242
+\T1/lmr/m/n/5.52061 the pose of its
+ []
+
+File: figures/PersonPaperColor.pdf Graphic file (type pdf)
+<use figures/PersonPaperColor.pdf>
+File: figures/FlamingoPaperColor.pdf Graphic file (type pdf)
+<use figures/FlamingoPaperColor.pdf>
+
+Underfull \hbox (badness 1728) in paragraph at lines 244--244
+\T1/lmr/m/n/5.52061 is sit-ting on its
+ []
+
+File: figures/coco_ny.jpeg Graphic file (type bmp)
+<figures/coco_ny.jpeg>
+File: figures/PersonPaperColor.pdf Graphic file (type pdf)
+<use figures/PersonPaperColor.pdf>
+File: figures/PersonPaperColor.pdf Graphic file (type pdf)
+<use figures/PersonPaperColor.pdf>
+File: figures/FlamingoPaperColor.pdf Graphic file (type pdf)
+<use figures/FlamingoPaperColor.pdf>
+
+Underfull \hbox (badness 2119) in paragraph at lines 257--257
+[]\T1/lmr/m/n/5.52061 This is a street
+ []
+
+File: figures/PersonPaperColor.pdf Graphic file (type pdf)
+<use figures/PersonPaperColor.pdf>
+
+Overfull \hbox (2.06598pt too wide) in paragraph at lines 259--259
+ []
+ []
+
+File: figures/FlamingoPaperColor.pdf Graphic file (type pdf)
+<use figures/FlamingoPaperColor.pdf>
+
+Underfull \hbox (badness 2903) in paragraph at lines 261--261
+\T1/lmr/m/n/5.52061 tion of Madi-son
+ []
+
+File: figures/PersonPaperColor.pdf Graphic file (type pdf)
+<use figures/PersonPaperColor.pdf>
+File: figures/FlamingoPaperColor.pdf Graphic file (type pdf)
+<use figures/FlamingoPaperColor.pdf>
+
+Underfull \hbox (badness 2980) in paragraph at lines 265--265
+[]\T1/lmr/m/n/5.52061 The clos-est sub-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 265--265
+\T1/lmr/m/n/5.52061 way sta-tion is
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 265--265
+\T1/lmr/m/n/5.52061 Grand Cen-tral
+ []
+
+
+Underfull \hbox (badness 8038) in paragraph at lines 267--267
+[]\T1/lmr/m/n/5.52061 How about the
+ []
+
+File: figures/PersonPaperColor.pdf Graphic file (type pdf)
+<use figures/PersonPaperColor.pdf>
+File: figures/FlamingoPaperColor.pdf Graphic file (type pdf)
+<use figures/FlamingoPaperColor.pdf>
+
+Underfull \hbox (badness 1009) in paragraph at lines 271--271
+[]\T1/lmr/m/n/5.52061 There is an-other
+ []
+
+File: figures/PersonPaperColor.pdf Graphic file (type pdf)
+<use figures/PersonPaperColor.pdf>
+File: figures/FlamingoPaperColor.pdf Graphic file (type pdf)
+<use figures/FlamingoPaperColor.pdf>
+File: figures/PersonPaperColor.pdf Graphic file (type pdf)
+<use figures/PersonPaperColor.pdf>
+File: figures/purple_hd.png Graphic file (type bmp)
+<figures/purple_hd.png>
+File: figures/PersonPaperColor.pdf Graphic file (type pdf)
+<use figures/PersonPaperColor.pdf>
+File: figures/PersonPaperColor.pdf Graphic file (type pdf)
+<use figures/PersonPaperColor.pdf>
+File: figures/green_hd.png Graphic file (type bmp)
+<figures/green_hd.png>
+File: figures/PersonPaperColor.pdf Graphic file (type pdf)
+<use figures/PersonPaperColor.pdf>
+
+Underfull \hbox (badness 1983) in paragraph at lines 314--314
+[]\T1/lmr/m/n/5.52061 Color is "Green"
+ []
+
+File: figures/PersonPaperColor.pdf Graphic file (type pdf)
+<use figures/PersonPaperColor.pdf>
+File: figures/yellow_hd.png Graphic file (type bmp)
+<figures/yellow_hd.png>
+File: figures/PersonPaperColor.pdf Graphic file (type pdf)
+<use figures/PersonPaperColor.pdf>
+File: figures/FlamingoPaperColor.pdf Graphic file (type pdf)
+<use figures/FlamingoPaperColor.pdf>
+File: figures/black_hd.png Graphic file (type bmp)
+<figures/black_hd.png>
+File: figures/PersonPaperColor.pdf Graphic file (type pdf)
+<use figures/PersonPaperColor.pdf>
+File: figures/FlamingoPaperColor.pdf Graphic file (type pdf)
+<use figures/FlamingoPaperColor.pdf>
+
+Underfull \hbox (badness 3503) in paragraph at lines 314--314
+[]\T1/lmr/m/n/5.52061 Color is "Black"
+ []
+
+
+Underfull \hbox (badness 1661) in paragraph at lines 314--314
+[]\T1/lmr/m/n/5.52061 Well done! Do
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 314--314
+\T1/lmr/m/n/5.52061 you know the
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 314--314
+\T1/lmr/m/n/5.52061 these im-ages
+ []
+
+File: figures/PersonPaperColor.pdf Graphic file (type pdf)
+<use figures/PersonPaperColor.pdf>
+File: figures/FlamingoPaperColor.pdf Graphic file (type pdf)
+<use figures/FlamingoPaperColor.pdf>
+
+Underfull \hbox (badness 1259) in paragraph at lines 314--314
+[]\T1/lmr/m/n/5.52061 Can you ex-plain
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 314--314
+\T1/lmr/m/n/5.52061 how hu-mans
+ []
+
+
+Underfull \hbox (badness 6675) in paragraph at lines 314--314
+[] \T1/lmr/m/n/5.52061 in this
+ []
+
+File: figures/PersonPaperColor.pdf Graphic file (type pdf)
+<use figures/PersonPaperColor.pdf>
+File: figures/FlamingoPaperColor.pdf Graphic file (type pdf)
+<use figures/FlamingoPaperColor.pdf>
+
+Underfull \hbox (badness 10000) in paragraph at lines 314--314
+[]\T1/lmr/m/n/5.52061 Humans are
+ []
+
+
+Underfull \hbox (badness 2020) in paragraph at lines 314--314
+\T1/lmr/m/n/5.52061 slower when the
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 314--314
+\T1/lmr/m/n/5.52061 and the color
+ []
+
+
+Underfull \hbox (badness 1552) in paragraph at lines 314--314
+\T1/lmr/m/n/5.52061 of the word are
+ []
+
+File: figures/PersonPaperColor.pdf Graphic file (type pdf)
+<use figures/PersonPaperColor.pdf>
+File: figures/FlamingoPaperColor.pdf Graphic file (type pdf)
+<use figures/FlamingoPaperColor.pdf>
+File: figures/triangle.png Graphic file (type bmp)
+<figures/triangle.png>
+File: figures/PersonPaperColor.pdf Graphic file (type pdf)
+<use figures/PersonPaperColor.pdf>
+File: figures/hexagon.png Graphic file (type bmp)
+<figures/hexagon.png>
+File: figures/PersonPaperColor.pdf Graphic file (type pdf)
+<use figures/PersonPaperColor.pdf>
+
+Underfull \hbox (badness 1122) in paragraph at lines 326--326
+[]\T1/lmr/m/n/5.52061 What is the dif-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 326--326
+\T1/lmr/m/n/5.52061 fer-ence be-tween
+ []
+
+File: figures/PersonPaperColor.pdf Graphic file (type pdf)
+<use figures/PersonPaperColor.pdf>
+File: figures/FlamingoPaperColor.pdf Graphic file (type pdf)
+<use figures/FlamingoPaperColor.pdf>
+
+Underfull \hbox (badness 1776) in paragraph at lines 328--328
+[]\T1/lmr/m/n/5.52061 The first one is
+ []
+
+
+Underfull \hbox (badness 1953) in paragraph at lines 328--328
+\T1/lmr/m/n/5.52061 sec-ond one is a
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 330--330
+[]\T1/lmr/m/n/5.52061 Which one has
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 330--330
+\T1/lmr/m/n/5.52061 larger in-ter-nal
+ []
+
+File: figures/PersonPaperColor.pdf Graphic file (type pdf)
+<use figures/PersonPaperColor.pdf>
+File: figures/FlamingoPaperColor.pdf Graphic file (type pdf)
+<use figures/FlamingoPaperColor.pdf>
+File: figures/PersonPaperColor.pdf Graphic file (type pdf)
+<use figures/PersonPaperColor.pdf>
+File: figures/FlamingoPaperColor.pdf Graphic file (type pdf)
+<use figures/FlamingoPaperColor.pdf>
+File: figures/soupmonster.jpeg Graphic file (type bmp)
+<figures/soupmonster.jpeg>
+File: figures/PersonPaperColor.pdf Graphic file (type pdf)
+<use figures/PersonPaperColor.pdf>
+File: figures/PersonPaperColor.pdf Graphic file (type pdf)
+<use figures/PersonPaperColor.pdf>
+File: figures/FlamingoPaperColor.pdf Graphic file (type pdf)
+<use figures/FlamingoPaperColor.pdf>
+
+Underfull \hbox (badness 6775) in paragraph at lines 349--349
+\T1/lmr/m/n/5.52061 with a []
+ []
+
+File: figures/PersonPaperColor.pdf Graphic file (type pdf)
+<use figures/PersonPaperColor.pdf>
+File: figures/FlamingoPaperColor.pdf Graphic file (type pdf)
+<use figures/FlamingoPaperColor.pdf>
+File: figures/PersonPaperColor.pdf Graphic file (type pdf)
+<use figures/PersonPaperColor.pdf>
+File: figures/FlamingoPaperColor.pdf Graphic file (type pdf)
+<use figures/FlamingoPaperColor.pdf>
+File: figures/naughtydog.jpeg Graphic file (type bmp)
+<figures/naughtydog.jpeg>
+File: figures/PersonPaperColor.pdf Graphic file (type pdf)
+<use figures/PersonPaperColor.pdf>
+File: figures/FlamingoPaperColor.pdf Graphic file (type pdf)
+<use figures/FlamingoPaperColor.pdf>
+File: figures/PersonPaperColor.pdf Graphic file (type pdf)
+<use figures/PersonPaperColor.pdf>
+File: figures/FlamingoPaperColor.pdf Graphic file (type pdf)
+<use figures/FlamingoPaperColor.pdf>
+
+Underfull \hbox (badness 10000) in paragraph at lines 374--374
+[]\T1/lmr/m/n/5.52061 How does the
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 374--374
+\T1/lmr/m/n/5.52061 per-son think-ing
+ []
+
+File: figures/PersonPaperColor.pdf Graphic file (type pdf)
+<use figures/PersonPaperColor.pdf>
+File: figures/FlamingoPaperColor.pdf Graphic file (type pdf)
+<use figures/FlamingoPaperColor.pdf>
+File: figures/PersonPaperColor.pdf Graphic file (type pdf)
+<use figures/PersonPaperColor.pdf>
+File: figures/FlamingoPaperColor.pdf Graphic file (type pdf)
+<use figures/FlamingoPaperColor.pdf>
+
+Underfull \hbox (badness 10000) in paragraph at lines 382--382
+[]\T1/lmr/m/n/5.52061 How is the
+ []
+
+File: figures/PersonPaperColor.pdf Graphic file (type pdf)
+<use figures/PersonPaperColor.pdf>
+File: figures/FlamingoPaperColor.pdf Graphic file (type pdf)
+<use figures/FlamingoPaperColor.pdf>
+
+Underfull \hbox (badness 5847) in paragraph at lines 384--384
+[]\T1/lmr/m/n/5.52061 It looks like a
+ []
+
+File: figures/homebase.png Graphic file (type bmp)
+<figures/homebase.png>
+File: figures/PersonPaperColor.pdf Graphic file (type pdf)
+<use figures/PersonPaperColor.pdf>
+File: figures/PersonPaperColor.pdf Graphic file (type pdf)
+<use figures/PersonPaperColor.pdf>
+File: figures/FlamingoPaperColor.pdf Graphic file (type pdf)
+<use figures/FlamingoPaperColor.pdf>
+File: figures/PersonPaperColor.pdf Graphic file (type pdf)
+<use figures/PersonPaperColor.pdf>
+File: figures/FlamingoPaperColor.pdf Graphic file (type pdf)
+<use figures/FlamingoPaperColor.pdf>
+File: figures/PersonPaperColor.pdf Graphic file (type pdf)
+<use figures/PersonPaperColor.pdf>
+File: figures/FlamingoPaperColor.pdf Graphic file (type pdf)
+<use figures/FlamingoPaperColor.pdf>
+
+Underfull \hbox (badness 10000) in paragraph at lines 405--405
+\T1/lmr/m/n/5.52061 im-prove-ment
+ []
+
+File: figures/robot_ball_cloth.jpeg Graphic file (type bmp)
+<figures/robot_ball_cloth.jpeg>
+File: figures/PersonPaperColor.pdf Graphic file (type pdf)
+<use figures/PersonPaperColor.pdf>
+
+Underfull \hbox (badness 10000) in paragraph at lines 416--416
+[]\T1/lmr/m/n/5.52061 What do you
+ []
+
+File: figures/PersonPaperColor.pdf Graphic file (type pdf)
+<use figures/PersonPaperColor.pdf>
+File: figures/FlamingoPaperColor.pdf Graphic file (type pdf)
+<use figures/FlamingoPaperColor.pdf>
+File: figures/PersonPaperColor.pdf Graphic file (type pdf)
+<use figures/PersonPaperColor.pdf>
+File: figures/FlamingoPaperColor.pdf Graphic file (type pdf)
+<use figures/FlamingoPaperColor.pdf>
+
+Underfull \hbox (badness 2426) in paragraph at lines 424--424
+[]\T1/lmr/m/n/5.52061 I want the ball
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 424--424
+\T1/lmr/m/n/5.52061 there some-thing
+ []
+
+File: figures/PersonPaperColor.pdf Graphic file (type pdf)
+<use figures/PersonPaperColor.pdf>
+File: figures/FlamingoPaperColor.pdf Graphic file (type pdf)
+<use figures/FlamingoPaperColor.pdf>
+File: figures/PersonPaperColor.pdf Graphic file (type pdf)
+<use figures/PersonPaperColor.pdf>
+File: figures/FlamingoPaperColor.pdf Graphic file (type pdf)
+<use figures/FlamingoPaperColor.pdf>
+
+Overfull \hbox (17.57341pt too wide) in paragraph at lines 217--435
+ [][] 
+ []
+
+
+LaTeX Warning: Reference `app:dialogue_prompt' on page 56 undefined on input line 435.
+
+
+LaTeX Warning: Reference `app:dialogue_prompt' on page 56 undefined on input line 435.
+
+
+LaTeX Warning: Float too large for page by 83.32133pt on input line 437.
+
+
+Overfull \hbox (5.08344pt too wide) in paragraph at lines 499--499
+[]$[]$ 
+ []
+
+File: figures/FlamingoPaperColor.pdf Graphic file (type pdf)
+<use figures/FlamingoPaperColor.pdf>
+File: figures/videoframes/imvid_puppy.png.0.png Graphic file (type bmp)
+<figures/videoframes/imvid_puppy.png.0.png>
+File: figures/videoframes/imvid_puppy.png.1.png Graphic file (type bmp)
+<figures/videoframes/imvid_puppy.png.1.png>
+File: figures/videoframes/imvid_puppy.png.2.png Graphic file (type bmp)
+<figures/videoframes/imvid_puppy.png.2.png>
+File: figures/videoframes/imvid_puppy.png.3.png Graphic file (type bmp)
+<figures/videoframes/imvid_puppy.png.3.png>
+File: figures/videoframes/imvid_puppy.png.4.png Graphic file (type bmp)
+<figures/videoframes/imvid_puppy.png.4.png>
+File: figures/videoframes/imvid_puppy.png.5.png Graphic file (type bmp)
+<figures/videoframes/imvid_puppy.png.5.png>
+File: figures/videoframes/imvid_puppy.png.6.png Graphic file (type bmp)
+<figures/videoframes/imvid_puppy.png.6.png>
+File: figures/videoframes/imvid_puppy.png.7.png Graphic file (type bmp)
+<figures/videoframes/imvid_puppy.png.7.png>
+
+Overfull \hbox (5.08344pt too wide) in paragraph at lines 521--521
+ []$[][]\OMS/cmsy/m/n/10.53937 !$ 
+ []
+
+File: figures/videoframes/imvid_atari.png.0.png Graphic file (type bmp)
+<figures/videoframes/imvid_atari.png.0.png>
+File: figures/videoframes/imvid_atari.png.1.png Graphic file (type bmp)
+<figures/videoframes/imvid_atari.png.1.png>
+File: figures/videoframes/imvid_atari.png.2.png Graphic file (type bmp)
+<figures/videoframes/imvid_atari.png.2.png>
+File: figures/videoframes/imvid_atari.png.3.png Graphic file (type bmp)
+<figures/videoframes/imvid_atari.png.3.png>
+File: figures/videoframes/imvid_atari.png.4.png Graphic file (type bmp)
+<figures/videoframes/imvid_atari.png.4.png>
+File: figures/videoframes/imvid_atari.png.5.png Graphic file (type bmp)
+<figures/videoframes/imvid_atari.png.5.png>
+File: figures/videoframes/imvid_atari.png.6.png Graphic file (type bmp)
+<figures/videoframes/imvid_atari.png.6.png>
+File: figures/videoframes/imvid_atari.png.7.png Graphic file (type bmp)
+<figures/videoframes/imvid_atari.png.7.png>
+
+Overfull \hbox (5.08344pt too wide) in paragraph at lines 545--545
+ []$[][]\OMS/cmsy/m/n/10.53937 !$ 
+ []
+
+File: figures/videoframes/imvid_objects.png.0.png Graphic file (type bmp)
+<figures/videoframes/imvid_objects.png.0.png>
+File: figures/videoframes/imvid_objects.png.1.png Graphic file (type bmp)
+<figures/videoframes/imvid_objects.png.1.png>
+File: figures/videoframes/imvid_objects.png.2.png Graphic file (type bmp)
+<figures/videoframes/imvid_objects.png.2.png>
+File: figures/videoframes/imvid_objects.png.3.png Graphic file (type bmp)
+<figures/videoframes/imvid_objects.png.3.png>
+File: figures/videoframes/imvid_objects.png.4.png Graphic file (type bmp)
+<figures/videoframes/imvid_objects.png.4.png>
+File: figures/videoframes/imvid_objects.png.5.png Graphic file (type bmp)
+<figures/videoframes/imvid_objects.png.5.png>
+File: figures/videoframes/imvid_objects.png.6.png Graphic file (type bmp)
+<figures/videoframes/imvid_objects.png.6.png>
+File: figures/videoframes/imvid_objects.png.7.png Graphic file (type bmp)
+<figures/videoframes/imvid_objects.png.7.png>
+
+Overfull \hbox (5.08344pt too wide) in paragraph at lines 569--569
+ []$[][]\OMS/cmsy/m/n/10.53937 !$ 
+ []
+
+File: figures/videoframes/imvid_scissors.png.0.png Graphic file (type bmp)
+<figures/videoframes/imvid_scissors.png.0.png>
+File: figures/videoframes/imvid_scissors.png.1.png Graphic file (type bmp)
+<figures/videoframes/imvid_scissors.png.1.png>
+File: figures/videoframes/imvid_scissors.png.2.png Graphic file (type bmp)
+<figures/videoframes/imvid_scissors.png.2.png>
+File: figures/videoframes/imvid_scissors.png.3.png Graphic file (type bmp)
+<figures/videoframes/imvid_scissors.png.3.png>
+File: figures/videoframes/imvid_scissors.png.4.png Graphic file (type bmp)
+<figures/videoframes/imvid_scissors.png.4.png>
+File: figures/videoframes/imvid_scissors.png.5.png Graphic file (type bmp)
+<figures/videoframes/imvid_scissors.png.5.png>
+File: figures/videoframes/imvid_scissors.png.6.png Graphic file (type bmp)
+<figures/videoframes/imvid_scissors.png.6.png>
+File: figures/videoframes/imvid_scissors.png.7.png Graphic file (type bmp)
+<figures/videoframes/imvid_scissors.png.7.png>
+
+Overfull \hbox (5.08344pt too wide) in paragraph at lines 593--593
+ []$[][]\OMS/cmsy/m/n/10.53937 !$ 
+ []
+
+File: figures/videoframes/imvid_flamingo.png.0.png Graphic file (type bmp)
+<figures/videoframes/imvid_flamingo.png.0.png>
+File: figures/videoframes/imvid_flamingo.png.1.png Graphic file (type bmp)
+<figures/videoframes/imvid_flamingo.png.1.png>
+File: figures/videoframes/imvid_flamingo.png.2.png Graphic file (type bmp)
+<figures/videoframes/imvid_flamingo.png.2.png>
+File: figures/videoframes/imvid_flamingo.png.3.png Graphic file (type bmp)
+<figures/videoframes/imvid_flamingo.png.3.png>
+File: figures/videoframes/imvid_flamingo.png.4.png Graphic file (type bmp)
+<figures/videoframes/imvid_flamingo.png.4.png>
+File: figures/videoframes/imvid_flamingo.png.5.png Graphic file (type bmp)
+<figures/videoframes/imvid_flamingo.png.5.png>
+File: figures/videoframes/imvid_flamingo.png.6.png Graphic file (type bmp)
+<figures/videoframes/imvid_flamingo.png.6.png>
+File: figures/videoframes/imvid_flamingo.png.7.png Graphic file (type bmp)
+<figures/videoframes/imvid_flamingo.png.7.png>
+
+Overfull \hbox (5.08344pt too wide) in paragraph at lines 617--617
+ []$[][]\OMS/cmsy/m/n/10.53937 !$ 
+ []
+
+File: figures/videoframes/imvid_shot_0000.png Graphic file (type bmp)
+<figures/videoframes/imvid_shot_0000.png>
+File: figures/videoframes/imvid_shot_0001.png Graphic file (type bmp)
+<figures/videoframes/imvid_shot_0001.png>
+File: figures/videoframes/imvid_shot_0002.png Graphic file (type bmp)
+<figures/videoframes/imvid_shot_0002.png>
+File: figures/videoframes/imvid_shot_0003.png Graphic file (type bmp)
+<figures/videoframes/imvid_shot_0003.png>
+File: figures/videoframes/imvid_shot_0004.png Graphic file (type bmp)
+<figures/videoframes/imvid_shot_0004.png>
+File: figures/videoframes/imvid_shot_0005.png Graphic file (type bmp)
+<figures/videoframes/imvid_shot_0005.png>
+File: figures/videoframes/imvid_shot_0006.png Graphic file (type bmp)
+<figures/videoframes/imvid_shot_0006.png>
+File: figures/videoframes/imvid_shot_0007.png Graphic file (type bmp)
+<figures/videoframes/imvid_shot_0007.png>
+
+Overfull \hbox (5.08344pt too wide) in paragraph at lines 642--642
+ []$[][]\OMS/cmsy/m/n/10.53937 !$ 
+ []
+
+)) (./appendix_sections/C_discussion.tex
+File: figures/failure_cases.pdf Graphic file (type pdf)
+<use figures/failure_cases.pdf>
+
+
+Package natbib Warning: Citation `clip' on page 56 undefined on input line 27.
+
+
+Package natbib Warning: Citation `zhao2021calibrate' on page 56 undefined on input line 30.
+
+
+Package natbib Warning: Citation `wang2022noncausaladaptation' on page 56 undefined on input line 38.
+
+
+Package natbib Warning: Citation `t0' on page 56 undefined on input line 38.
+
+
+Package natbib Warning: Citation `wei2021finetuned' on page 56 undefined on input line 38.
+
+
+Package natbib Warning: Citation `xu2022zeroprompt' on page 56 undefined on input line 38.
+
+
+Package natbib Warning: Citation `press2021train' on page 56 undefined on input line 39.
+
+
+Package natbib Warning: Citation `das2017visual' on page 56 undefined on input line 41.
+
+
+Package natbib Warning: Citation `chinchilla' on page 56 undefined on input line 43.
+
+
+LaTeX Warning: Reference `fig:failure_examples' on page 56 undefined on input line 45.
+
+
+Package natbib Warning: Citation `gpt3' on page 56 undefined on input line 46.
+
+
+Package natbib Warning: Citation `gpt3' on page 56 undefined on input line 49.
+
+
+Package natbib Warning: Citation `gopher' on page 56 undefined on input line 49.
+
+[56] [57] [58]
+Underfull \vbox (badness 8075) has occurred while \output is active []
+
+ [59]
+
+LaTeX Warning: Reference `sec:adapt-vlm' on page 60 undefined on input line 53.
+
+
+Package natbib Warning: Citation `houlsby2019parameter' on page 60 undefined on input line 56.
+
+
+Package natbib Warning: Citation `houlsby2019parameter' on page 60 undefined on input line 63.
+
+[60]
+
+Package natbib Warning: Citation `zhao2021calibrate' on page 61 undefined on input line 67.
+
+
+Package natbib Warning: Citation `yang2021empirical' on page 61 undefined on input line 73.
+
+
+LaTeX Warning: Reference `app:in_context_eval_details' on page 61 undefined on input line 73.
+
+
+LaTeX Warning: Reference `app:classif_tasks' on page 61 undefined on input line 73.
+
+
+Package natbib Warning: Citation `reynolds2021prompt' on page 61 undefined on input line 77.
+
+
+Package natbib Warning: Citation `min2022rethinking' on page 61 undefined on input line 77.
+
+
+Package natbib Warning: Citation `gpt3' on page 61 undefined on input line 78.
+
+
+Package natbib Warning: Citation `reynolds2021prompt' on page 61 undefined on input line 78.
+
+
+Package natbib Warning: Citation `min2022rethinking' on page 61 undefined on input line 79.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [61]
+
+LaTeX Warning: Reference `fig:results' on page 62 undefined on input line 101.
+
+
+Package natbib Warning: Citation `kaplan2020scaling' on page 62 undefined on input line 102.
+
+
+Package natbib Warning: Citation `chinchilla' on page 62 undefined on input line 102.
+
+
+Package natbib Warning: Citation `jft3b' on page 62 undefined on input line 103.
+
+
+LaTeX Warning: Reference `app:qual_res' on page 62 undefined on input line 119.
+
+[62]
+
+Package natbib Warning: Citation `larochelle-recycling' on page 63 undefined on input line 129.
+
+
+Package natbib Warning: Citation `energynlp' on page 63 undefined on input line 130.
+
+
+Package natbib Warning: Citation `mitchell2019model' on page 63 undefined on input line 139.
+
+
+LaTeX Warning: Reference `app:flamingo_model_card' on page 63 undefined on input line 139.
+
+
+Package natbib Warning: Citation `chinchilla' on page 63 undefined on input line 142.
+
+
+Package natbib Warning: Citation `weidinger2021harms' on page 63 undefined on input line 144.
+
+
+Package natbib Warning: Citation `chinchilla' on page 63 undefined on input line 145.
+
+
+Package natbib Warning: Citation `rudinger2018gender' on page 63 undefined on input line 145.
+
+
+Package natbib Warning: Citation `gopher' on page 63 undefined on input line 145.
+
+
+Package natbib Warning: Citation `chinchilla' on page 63 undefined on input line 146.
+
+
+Package natbib Warning: Citation `weidinger2021harms' on page 63 undefined on input line 147.
+
+
+Package natbib Warning: Citation `gopher' on page 63 undefined on input line 149.
+
+
+Package natbib Warning: Citation `huang2019attention' on page 63 undefined on input line 166.
+
+
+Package natbib Warning: Citation `li2020oscar' on page 63 undefined on input line 166.
+
+
+Package natbib Warning: Citation `zhao2021understanding' on page 63 undefined on input line 168.
+
+
+Package natbib Warning: Citation `zhao2021understanding' on page 63 undefined on input line 168.
+
+[63]
+
+Package natbib Warning: Citation `hendricks2018women' on page 64 undefined on input line 173.
+
+
+Package natbib Warning: Citation `zhao2021understanding' on page 64 undefined on input line 173.
+
+
+Package natbib Warning: Citation `buolamwini2018gender' on page 64 undefined on input line 176.
+
+
+Package natbib Warning: Citation `de2019does' on page 64 undefined on input line 176.
+
+
+Package natbib Warning: Citation `schwemmer2020diagnosing' on page 64 undefined on input line 176.
+
+
+Package natbib Warning: Citation `zhao2021understanding' on page 64 undefined on input line 177.
+
+
+Package natbib Warning: Citation `zhao2021understanding' on page 64 undefined on input line 178.
+
+
+Package natbib Warning: Citation `zhao2021understanding' on page 64 undefined on input line 179.
+
+
+LaTeX Warning: Reference `tab:biases' on page 64 undefined on input line 180.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [64]
+
+Package natbib Warning: Citation `thoppilan2022lamda' on page 65 undefined on input line 198.
+
+
+Package natbib Warning: Citation `perez2022red' on page 65 undefined on input line 202.
+
+
+Package natbib Warning: Citation `menick2022teaching' on page 65 undefined on input line 204.
+
+
+Package natbib Warning: Citation `thoppilan2022lamda' on page 65 undefined on input line 204.
+
+
+LaTeX Warning: Reference `fig:dialogue_samples' on page 65 undefined on input line 205.
+
+) (./appendix_sections/D_model_card.tex (./model_card.tex
+
+LaTeX Warning: Reference `tab:model-card' on page 65 undefined on input line 2.
+
+
+Package natbib Warning: Citation `mitchell2019model' on page 65 undefined on input line 2.
+
+
+LaTeX Warning: Reference `sec:approach' on page 65 undefined on input line 15.
+
+
+Underfull \hbox (badness 1509) in paragraph at lines 14--16
+\T1/lmr/m/n/10.53937 con-di-tioned on vi-sual fea-tures from a convnet-
+ []
+
+
+Package natbib Warning: Citation `chinchilla' on page 65 undefined on input line 41.
+
+
+Package natbib Warning: Citation `gopher' on page 65 undefined on input line 41.
+
+
+LaTeX Warning: Reference `sec:risks' on page 65 undefined on input line 42.
+
+
+LaTeX Warning: Reference `sec:eval_benchmarks' on page 65 undefined on input line 51.
+
+
+Underfull \hbox (badness 1122) in paragraph at lines 51--52
+[]|\T1/lmr/m/n/10.53937 We prin-ci-pally fo-cus on the model's abil-ity to
+ []
+
+
+Underfull \hbox (badness 1308) in paragraph at lines 51--52
+\T1/lmr/m/n/10.53937 YouCook2, RareAct), vi-sual ques-tion an-swer-ing
+ []
+
+
+Underfull \hbox (badness 1072) in paragraph at lines 51--52
+\T1/lmr/m/n/10.53937 (OKVQA, VizWiz, TextVQA, VQAv2, MSRVT-
+ []
+
+
+Underfull \hbox (badness 8000) in paragraph at lines 55--55
+[]|\T1/lmr/m/n/10.53937 Approaches to Un-cer-tainty
+ []
+
+
+LaTeX Warning: Reference `tab:multi-benchmarks' on page 65 undefined on input line 64.
+
+
+Package natbib Warning: Citation `align' on page 65 undefined on input line 79.
+
+
+LaTeX Warning: Reference `datasheet-m3w-break' on page 65 undefined on input line 79.
+
+
+LaTeX Warning: Reference `app:itp_datasheet' on page 65 undefined on input line 79.
+
+
+LaTeX Warning: Reference `app:vtp_datasheet' on page 65 undefined on input line 79.
+
+
+LaTeX Warning: Reference `sec:experiments' on page 65 undefined on input line 88.
+
+
+Package natbib Warning: Citation `gopher' on page 65 undefined on input line 106.
+
+
+Package natbib Warning: Citation `weidinger2021harms' on page 65 undefined on input line 106.
+
+
+Package natbib Warning: Citation `weidinger2021harms' on page 65 undefined on input line 112.
+
+
+Package natbib Warning: Citation `weidinger2021harms' on page 65 undefined on input line 115.
+
+
+Package natbib Warning: Citation `mitchell2019model' on page 65 undefined on input line 119.
+
+
+Package natbib Warning: Citation `mitchell2019model' on page 65 undefined on input line 119.
+
+
+Overfull \hbox (4.53058pt too wide) in alignment at lines 5--121
+ [] [] 
+ []
+
+[65] [66] [67] [68])) (./appendix_sections/E_datasheet.tex
+
+Package natbib Warning: Citation `datasheet' on page 69 undefined on input line 10.
+
+
+LaTeX Warning: Reference `tab:m3w-datasheet' on page 69 undefined on input line 10.
+
+
+Underfull \hbox (badness 2088) in paragraph at lines 19--19
+[]|\T1/lmr/m/n/10.53937 For what pur-pose was the
+ []
+
+
+Underfull \hbox (badness 1048) in paragraph at lines 37--37
+\T1/lmr/m/n/10.53937 sam-ple (not nec-es-sar-ily ran-
+ []
+
+
+LaTeX Warning: Reference `sec:interleaved_datasets' on page 69 undefined on input line 41.
+
+
+Underfull \hbox (badness 3088) in paragraph at lines 46--46
+[]|\T1/lmr/m/n/10.53937 Is any in-for-ma-tion miss-ing
+ []
+
+
+Underfull \hbox (badness 1540) in paragraph at lines 49--49
+\T1/lmr/m/n/10.53937 di-vid-ual in-stances made ex-
+ []
+
+
+Underfull \hbox (badness 5417) in paragraph at lines 64--64
+\T1/lmr/m/n/10.53937 en-ing, or might oth-er-wise
+ []
+
+
+Underfull \hbox (badness 1062) in paragraph at lines 76--76
+[]|\T1/lmr/m/n/10.53937 What mech-a-nisms or pro-ce-
+ []
+
+
+Underfull \hbox (badness 3291) in paragraph at lines 94--94
+\T1/lmr/m/n/10.53937 et-ing, to-k-eniza-tion, part-of-
+ []
+
+
+Underfull \hbox (badness 6284) in paragraph at lines 94--94
+\T1/lmr/m/n/10.53937 speech tag-ging, SIFT fea-
+ []
+
+
+LaTeX Warning: Reference `app:collection-m3w' on page 69 undefined on input line 95.
+
+
+Underfull \hbox (badness 3138) in paragraph at lines 115--115
+\T1/lmr/m/n/10.53937 com-po-si-tion of the dataset
+ []
+
+
+Underfull \hbox (badness 3492) in paragraph at lines 115--115
+\T1/lmr/m/n/10.53937 and pre-pro-cessed/-cleaned/la-
+ []
+
+
+Package natbib Warning: Citation `datasheet' on page 69 undefined on input line 130.
+
+
+Package natbib Warning: Citation `datasheet' on page 69 undefined on input line 130.
+
+
+Overfull \hbox (4.53058pt too wide) in alignment at lines 13--132
+ [] [] 
+ []
+
+[69] [70] [71] [72]
+Underfull \hbox (badness 2088) in paragraph at lines 150--150
+[]|\T1/lmr/m/n/10.53937 For what pur-pose was the
+ []
+
+
+Underfull \hbox (badness 1048) in paragraph at lines 168--168
+\T1/lmr/m/n/10.53937 sam-ple (not nec-es-sar-ily ran-
+ []
+
+
+LaTeX Warning: Reference `app:vtp_and_itp' on page 73 undefined on input line 172.
+
+
+Underfull \hbox (badness 3088) in paragraph at lines 177--177
+[]|\T1/lmr/m/n/10.53937 Is any in-for-ma-tion miss-ing
+ []
+
+
+Underfull \hbox (badness 1540) in paragraph at lines 180--180
+\T1/lmr/m/n/10.53937 di-vid-ual in-stances made ex-
+ []
+
+
+Underfull \hbox (badness 5417) in paragraph at lines 195--195
+\T1/lmr/m/n/10.53937 en-ing, or might oth-er-wise
+ []
+
+
+Underfull \hbox (badness 1062) in paragraph at lines 207--207
+[]|\T1/lmr/m/n/10.53937 What mech-a-nisms or pro-ce-
+ []
+
+
+Underfull \hbox (badness 3291) in paragraph at lines 225--225
+\T1/lmr/m/n/10.53937 et-ing, to-k-eniza-tion, part-of-
+ []
+
+
+Underfull \hbox (badness 6284) in paragraph at lines 225--225
+\T1/lmr/m/n/10.53937 speech tag-ging, SIFT fea-
+ []
+
+
+Underfull \hbox (badness 3138) in paragraph at lines 246--246
+\T1/lmr/m/n/10.53937 com-po-si-tion of the dataset
+ []
+
+
+Underfull \hbox (badness 3492) in paragraph at lines 246--246
+\T1/lmr/m/n/10.53937 and pre-pro-cessed/-cleaned/la-
+ []
+
+
+Package natbib Warning: Citation `datasheet' on page 73 undefined on input line 261.
+
+
+Package natbib Warning: Citation `datasheet' on page 73 undefined on input line 261.
+
+
+Overfull \hbox (4.53058pt too wide) in alignment at lines 144--263
+ [] [] 
+ []
+
+[73] [74] [75] [76]
+Underfull \hbox (badness 2088) in paragraph at lines 278--278
+[]|\T1/lmr/m/n/10.53937 For what pur-pose was the
+ []
+
+
+Underfull \hbox (badness 1048) in paragraph at lines 296--296
+\T1/lmr/m/n/10.53937 sam-ple (not nec-es-sar-ily ran-
+ []
+
+
+LaTeX Warning: Reference `app:vtp_and_itp' on page 77 undefined on input line 300.
+
+
+Underfull \hbox (badness 3088) in paragraph at lines 305--305
+[]|\T1/lmr/m/n/10.53937 Is any in-for-ma-tion miss-ing
+ []
+
+
+Underfull \hbox (badness 1540) in paragraph at lines 308--308
+\T1/lmr/m/n/10.53937 di-vid-ual in-stances made ex-
+ []
+
+
+Underfull \hbox (badness 5417) in paragraph at lines 323--323
+\T1/lmr/m/n/10.53937 en-ing, or might oth-er-wise
+ []
+
+
+Underfull \hbox (badness 1062) in paragraph at lines 335--335
+[]|\T1/lmr/m/n/10.53937 What mech-a-nisms or pro-ce-
+ []
+
+
+Underfull \hbox (badness 3291) in paragraph at lines 353--353
+\T1/lmr/m/n/10.53937 et-ing, to-k-eniza-tion, part-of-
+ []
+
+
+Underfull \hbox (badness 6284) in paragraph at lines 353--353
+\T1/lmr/m/n/10.53937 speech tag-ging, SIFT fea-
+ []
+
+
+Underfull \hbox (badness 3138) in paragraph at lines 374--374
+\T1/lmr/m/n/10.53937 com-po-si-tion of the dataset
+ []
+
+
+Underfull \hbox (badness 3492) in paragraph at lines 374--374
+\T1/lmr/m/n/10.53937 and pre-pro-cessed/-cleaned/la-
+ []
+
+
+Package natbib Warning: Citation `datasheet' on page 77 undefined on input line 389.
+
+
+Package natbib Warning: Citation `datasheet' on page 77 undefined on input line 389.
+
+
+Overfull \hbox (4.53058pt too wide) in alignment at lines 272--391
+ [] [] 
+ []
+
+[77] [78] [79]) (./appendix_sections/F_visual_content_credit.tex
+
+LaTeX Warning: Reference `fig:teaser' on page 80 undefined on input line 5.
+
+
+Package natbib Warning: Citation `ramesh2022hierarchical' on page 80 undefined on input line 10.
+
+
+Package natbib Warning: Citation `ramesh2022hierarchical' on page 80 undefined on input line 15.
+
+
+Package natbib Warning: Citation `clip' on page 80 undefined on input line 17.
+
+
+LaTeX Warning: Reference `fig:overview' on page 80 undefined on input line 20.
+
+
+LaTeX Warning: Reference `fig:xattn_multi_im' on page 80 undefined on input line 20.
+
+
+LaTeX Warning: Reference `fig:training_data' on page 80 undefined on input line 20.
+
+
+LaTeX Warning: Reference `fig:fewshot_prompt' on page 80 undefined on input line 20.
+
+
+LaTeX Warning: Reference `fig:single_samples' on page 80 undefined on input line 21.
+
+
+LaTeX Warning: Reference `fig:dialogue_samples' on page 80 undefined on input line 21.
+
+
+LaTeX Warning: Reference `fig:videoexamples' on page 80 undefined on input line 21.
+
+
+LaTeX Warning: Reference `fig:failure_examples' on page 80 undefined on input line 21.
+
+
+Package natbib Warning: Citation `ramesh2022hierarchical' on page 80 undefined on input line 21.
+
+))
+
+Package natbib Warning: There were undefined citations.
+
+[80] (./main.aux
+
+Package natbib Warning: Citation(s) may have changed.
+(natbib)                Rerun to get citations correct.
+
+)
+
+ *File List*
+ article.cls    2022/07/02 v1.4n Standard LaTeX document class
+  size10.clo    2022/07/02 v1.4n Standard LaTeX file (size option)
+neurips_2022.sty    2022/03/31 NeurIPS 2022 submission/camera-ready style file
+ environ.sty    2014/05/04 v0.3 A new way to define environments
+trimspaces.sty    2009/09/17 v1.1 Trim spaces around a token list
+  natbib.sty    2010/09/13 8.31b (PWD, AO)
+geometry.sty    2020/01/02 v5.9 Page Geometry
+  keyval.sty    2022/05/29 v1.15 key=value parser (DPC)
+  ifvtex.sty    2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+   iftex.sty    2022/02/03 v1.0f TeX engine tests
+fontspec.sty    2022/01/15 v2.8a Font selection for XeLaTeX and LuaLaTeX
+  xparse.sty    2023-02-02 L3 Experimental document command parser
+   expl3.sty    2023-02-22 L3 programming layer (loader) 
+l3backend-xetex.def    2023-01-16 L3 backend support: XeTeX
+fontspec-xetex.sty    2022/01/15 v2.8a Font selection for XeLaTeX and LuaLaTeX
+ fontenc.sty    2021/04/29 v2.0v Standard LaTeX package
+fontspec.cfg
+    ctex.sty    2022/07/14 v2.5.10 Chinese adapter in LaTeX (CTEX)
+ctexhook.sty    2022/07/14 v2.5.10 Document and package hooks (CTEX)
+ctexpatch.sty    2022/07/14 v2.5.10 Patching commands (CTEX)
+  fix-cm.sty    2020/11/24 v1.1t fixes to LaTeX
+  ts1enc.def    2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
+ctexopts.cfg    2022/07/14 v2.5.10 Option configuration file (CTEX)
+ctex-engine-xetex.def    2022/07/14 v2.5.10 XeLaTeX adapter (CTEX)
+   xeCJK.sty    2022/08/05 v3.9.1 Typesetting CJK scripts with XeLaTeX
+xtemplate.sty    2023-02-02 L3 Experimental prototype document functions
+   xeCJK.cfg    2022/08/05 v3.9.1 Configuration file for xeCJK package
+zhnumber.sty    2022/07/14 v3.0 Typesetting numbers with Chinese glyphs
+zhnumber-utf8.cfg    2022/07/14 v3.0 Chinese numerals with UTF8 encoding
+ctex-scheme-chinese.def    2022/07/14 v2.5.10 Chinese scheme for generic (CTEX)
+ctex-name-utf8.cfg    2022/07/14 v2.5.10 Caption with encoding UTF-8 (CTEX)
+indentfirst.sty    1995/11/23 v1.03 Indent first paragraph (DPC)
+ctex-c5size.clo    2022/07/14 v2.5.10 c5size option (CTEX)
+ctex-fontset-mac.def    2022/07/14 v2.5.10 macOS fonts definition (CTEX)
+ctex-fontset-macnew.def    2022/07/14 v2.5.10 macOS fonts definition for El Capitan or later version (CTEX)
+    ctex.cfg    2022/07/14 v2.5.10 Configuration file (CTEX)
+inputenc.sty    2021/02/14 v1.3d Input encoding file
+ fontenc.sty    2021/04/29 v2.0v Standard LaTeX package
+   t1lmr.fd    2015/05/01 v1.6.1 Font defs for Latin Modern
+hyperref.sty    2023-02-07 v7.00v Hypertext links for LaTeX
+ ltxcmds.sty    2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
+pdftexcmds.sty    2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO)
+infwarerr.sty    2019/12/03 v1.5 Providing info/warning/error messages (HO)
+kvsetkeys.sty    2022-10-05 v1.19 Key value parser (HO)
+kvdefinekeys.sty    2019-12-19 v1.6 Define keys (HO)
+pdfescape.sty    2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+ hycolor.sty    2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+letltxmacro.sty    2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
+ auxhook.sty    2019-12-17 v1.6 Hooks for auxiliary files (HO)
+ nameref.sty    2022-05-17 v2.50 Cross-referencing by name of section
+refcount.sty    2019/12/15 v3.6 Data extraction from label references (HO)
+gettitlestring.sty    2019/12/15 v1.6 Cleanup title references (HO)
+kvoptions.sty    2022-06-15 v3.15 Key value format for package options (HO)
+  pd1enc.def    2023-02-07 v7.00v Hyperref: PDFDocEncoding definition (HO)
+ intcalc.sty    2019/12/15 v1.3 Expandable calculations with integers (HO)
+etexcmds.sty    2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
+   puenc.def    2023-02-07 v7.00v Hyperref: PDF Unicode definition (HO)
+     url.sty    2013/09/16  ver 3.4  Verb mode for urls, etc.
+  bitset.sty    2019/12/09 v1.3 Handle bit-vector datatype (HO)
+bigintcalc.sty    2019/12/15 v1.5 Expandable calculations on big integers (HO)
+atbegshi-ltx.sty    2021/01/10 v1.0c Emulation of the original atbegshi
+package with kernel methods
+  hxetex.def    2023-02-07 v7.00v Hyperref driver for XeTeX
+stringenc.sty    2019/11/29 v1.12 Convert strings between diff. encodings (HO)
+rerunfilecheck.sty    2022-07-10 v1.10 Rerun checks for auxiliary files (HO)
+atveryend-ltx.sty    2020/08/19 v1.0a Emulation of the original atveryend package
+with kernel methods
+uniquecounter.sty    2019/12/15 v1.4 Provide unlimited unique counter (HO)
+booktabs.sty    2020/01/12 v1.61803398 Publication quality tables
+amsfonts.sty    2013/01/14 v3.01 Basic AMSFonts support
+nicefrac.sty    1998/08/04 v0.9b Nice fractions
+  ifthen.sty    2022/04/13 v1.1d Standard LaTeX ifthen package (DPC)
+microtype.sty    2023/03/13 v3.1a Micro-typographical refinements (RS)
+etoolbox.sty    2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
+microtype-xetex.def    2023/03/13 v3.1a Definitions specific to xetex (RS)
+microtype.cfg    2023/03/13 v3.1a microtype main configuration file (RS)
+  xcolor.sty    2022/06/12 v2.14 LaTeX color extensions (UK)
+   color.cfg    2016/01/02 v1.6 sample color configuration
+   xetex.def    2022/09/22 v5.0n Graphics/color driver for xetex
+colortbl.sty    2022/06/20 v1.0f Color table columns (DPC)
+   array.sty    2022/09/04 v2.5g Tabular extension package (FMi)
+mathcolor.ltx
+dvipsnam.def    2016/06/17 v3.0m Driver-dependent file (DPC,SPQR)
+  amsthm.sty    2020/05/29 v2.20.6
+ amsmath.sty    2022/04/08 v2.17n AMS math features
+ amstext.sty    2021/08/26 v2.01 AMS text
+  amsgen.sty    1999/11/30 v2.0 generic functions
+  amsbsy.sty    1999/11/29 v1.2d Bold Symbols
+  amsopn.sty    2022/04/08 v2.04 operator names
+ amssymb.sty    2013/01/14 v3.01 AMS font symbols
+    cmap.sty    2021/02/06 v1.0j CMap support: searchable PDF
+  pifont.sty    2020/03/25 PSNFSS-v9.3 Pi font support (SPQR) 
+    upzd.fd    2001/06/04 font definitions for U/pzd.
+    upsy.fd    2001/06/04 font definitions for U/psy.
+graphicx.sty    2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+graphics.sty    2022/03/10 v1.4e Standard LaTeX Graphics (DPC,SPQR)
+    trig.sty    2021/08/11 v1.11 sin cos tan (DPC)
+graphics.cfg    2016/06/04 v1.11 sample graphics configuration
+bibentry.sty    2007/10/30 1.5 (PWD)
+    ulem.sty    2019/11/18
+subcaption.sty    2023/02/19 v1.6 Sub-captions (AR)
+ caption.sty    2023/03/12 v3.6j Customizing captions (AR)
+caption3.sty    2023/03/12 v2.4 caption3 kernel (AR)
+multirow.sty    2021/03/15 v2.8 Span multiple rows of a table
+longtable.sty    2021-09-01 v4.17 Multi-page Table package (DPC)
+listings.sty    2023/02/27 1.9 (Carsten Heinz)
+ lstmisc.sty    2023/02/27 1.9 (Carsten Heinz)
+listings.cfg    2023/02/27 1.9 listings configuration
+xeCJK-listings.sty    2022/08/05 v3.9.1 xeCJK patch file for listings
+tcolorbox.sty    2023/02/12 version 6.0.1 text color boxes
+     pgf.sty    2023-01-15 v3.1.10 (3.1.10)
+  pgfrcs.sty    2023-01-15 v3.1.10 (3.1.10)
+pgfrcs.code.tex
+ pgfcore.sty    2023-01-15 v3.1.10 (3.1.10)
+  pgfsys.sty    2023-01-15 v3.1.10 (3.1.10)
+pgfsys.code.tex
+pgfsyssoftpath.code.tex    2023-01-15 v3.1.10 (3.1.10)
+pgfsysprotocol.code.tex    2023-01-15 v3.1.10 (3.1.10)
+pgfcore.code.tex
+pgfcomp-version-0-65.sty    2023-01-15 v3.1.10 (3.1.10)
+pgfcomp-version-1-18.sty    2023-01-15 v3.1.10 (3.1.10)
+verbatim.sty    2022-07-02 v1.5u LaTeX2e package for verbatim enhancements
+    tikz.sty    2023-01-15 v3.1.10 (3.1.10)
+  pgffor.sty    2023-01-15 v3.1.10 (3.1.10)
+ pgfkeys.sty    
+pgfkeys.code.tex
+ pgfmath.sty    
+pgfmath.code.tex
+pgffor.code.tex
+tikz.code.tex
+tikzfill.image.sty    2022/07/20 v1.0.0 Image filling library for TikZ
+tikzfill-common.sty    2022/07/20 v1.0.0 Auxiliary code for tikzfill
+algpseudocode.sty    
+algorithmicx.sty    2005/04/27 v1.2 Algorithmicx
+ tocloft.sty    2017/08/31 v2.3i parameterised ToC, etc., typesetting
+    etoc.sty    2023/03/01 v1.2 Completely customisable TOCs (JFB)
+multicol.sty    2021/11/30 v1.9d multicolumn formatting (FMi)
+setspace.sty    2022/12/04 v6.7b set line spacing
+kantlipsum.sty    2019/07/23 v0.8 Generate text in Kantian style
+  lipsum.sty    2021-09-20 v2.7 150 paragraphs of Lorem Ipsum dummy text
+l3keys2e.sty    2023-02-02 LaTeX2e option processing using LaTeX3 keys
+  lipsum.ltd
+  dsfont.sty    1995/08/01 v0.1 Double stroke roman fonts
+ comment.sty    
+fontawesome.sty    2016/05/15 v4.6.3.1 font awesome icons
+ ifxetex.sty    2019/10/25 v0.7 ifxetex legacy package. Use iftex instead.
+ifluatex.sty    2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
+fontawesomesymbols-generic.tex
+fontawesomesymbols-xeluatex.tex
+ selectp.sty    
+mt-LatinModernRoman.cfg    2021/02/21 v1.1 microtype config. file: Latin Modern Roman (RS)
+ltcaption.sty    2021/01/08 v1.4c longtable captions (AR)
+figures/flamingoemoji.pdf
+    umsa.fd    2013/01/14 v3.01 AMS symbols A
+  mt-msa.cfg    2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
+    umsb.fd    2013/01/14 v3.01 AMS symbols B
+  mt-msb.cfg    2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
+  mt-cmr.cfg    2013/05/19 v2.2 microtype config. file: Computer Modern Roman (RS)
+ content.tex
+figures/teaser.tex
+figures/FlamingoPaperColor.pdf
+figures/teaserpics/teaser1a.png
+figures/teaserpics/teaser1b.png
+figures/teaserpics/teaser1c.png
+figures/teaserpics/teaser2a.png
+figures/teaserpics/teaser2b.png
+figures/teaserpics/teaser2c.png
+figures/teaserpics/teaser3a.png
+figures/teaserpics/teaser3b.png
+figures/teaserpics/teaser3c.png
+figures/teaserpics/teaser4a.png
+figures/teaserpics/teaser4b.png
+figures/teaserpics/teaser4c.png
+figures/teaserpics/teaser5a.png
+figures/teaserpics/teaser5b.png
+figures/teaserpics/teaser5c.png
+figures/teaserpics/teaser6a.png
+figures/teaserpics/teaser6b.png
+figures/teaserpics/teaser6c.png
+figures/teaserpics/teaser7a.png
+figures/teaserpics/teaser7b.png
+figures/teaserpics/teaser7c.png
+figures/teaserpics/placeholder.png
+figures/teaserpics/shakespeare.png
+figures/teaserpics/obama.png
+figures/videoframes/imvid_shot_0002.png
+figures/videoframes/imvid_shot_0003.png
+figures/videoframes/imvid_shot_0004.png
+figures/videoframes/imvid_shot_0005.png
+figures/videoframes/imvid_shot_0006.png
+figures/moonbears.jpeg
+figures/PersonPaperColor.pdf
+figures/FlamingoPaperColor.pdf
+figures/PersonPaperColor.pdf
+figures/FlamingoPaperColor.pdf
+figures/PersonPaperColor.pdf
+figures/FlamingoPaperColor.pdf
+figures/PersonPaperColor.pdf
+figures/FlamingoPaperColor.pdf
+figures/PersonPaperColor.pdf
+figures/FlamingoPaperColor.pdf
+figures/teaserpics/flamingo_icon.png
+figures/PersonPaperColor.pdf
+figures/teaserpics/flamingo_picture.png
+figures/PersonPaperColor.pdf
+figures/teaserpics/flamingo_3d.png
+figures/PersonPaperColor.pdf
+figures/PersonPaperColor.pdf
+figures/FlamingoPaperColor.pdf
+figures/PersonPaperColor.pdf
+figures/FlamingoPaperColor.pdf
+figures/appleipod.png
+figures/PersonPaperColor.pdf
+figures/FlamingoPaperColor.pdf
+figures/PersonPaperColor.pdf
+figures/FlamingoPaperColor.pdf
+figures/PersonPaperColor.pdf
+figures/FlamingoPaperColor.pdf
+figures/PersonPaperColor.pdf
+figures/FlamingoPaperColor.pdf
+figures/PersonPaperColor.pdf
+figures/FlamingoPaperColor.pdf
+figures/boston_skyline.png
+figures/PersonPaperColor.pdf
+figures/FlamingoPaperColor.pdf
+figures/PersonPaperColor.pdf
+figures/FlamingoPaperColor.pdf
+figures/tokyo_skyline.png
+figures/PersonPaperColor.pdf
+figures/PersonPaperColor.pdf
+figures/FlamingoPaperColor.pdf
+figures//scaling_vlm_neurips.pdf
+figures/fig2_overview_interleaved_v2.pdf
+figures/fig4_xattn_dense.pdf
+  t1lmtt.fd    2015/05/01 v1.6.1 Font defs for Latin Modern
+tables/openended.tex
+tables/sota_comparison_mini.tex
+figures/flamingoemoji.pdf
+figures/flamingoemoji.pdf
+tables/ablations_no_classif.tex
+    main.bbl
+checklist.tex
+appendix.tex
+appendix_sections/A_method.tex
+figures/fig3_resampler.pdf
+figures/attn_gain.pdf
+figures/ffw_gain.pdf
+figures/fig5_multi_im_att.pdf
+figures/fig_fewshot_prompt.pdf
+figures/fig0_data_mixture.pdf
+appendix_sections/B_experiments.tex
+tables/multi_benchmark.tex
+   t1qcr.fd    2009/09/25 v1.2 font definition file for T1/qcr
+tables/fewshot_classif.tex
+tables/sota_comparison.tex
+figures/flamingoemoji.pdf
+figures/flamingoemoji.pdf
+tables/contrastive_eval_retrieval.tex
+tables/ablations-appendix.tex
+tables/contrastive_dataset_ablation.tex
+tables/qualitative_examples.tex
+images/cd_and_floppy.png
+images/coco_elephant.png
+images/coco_canada.png
+figures/FlamingoPaperColor.pdf
+images/coco_banana_shop.png
+images/coco_bednet.png
+images/coco_christmas.png
+figures/FlamingoPaperColor.pdf
+images/coco_house_book.png
+images/coco_steak.png
+images/frozen_movie.png
+figures/FlamingoPaperColor.pdf
+figures/samoyed.jpeg
+figures/PersonPaperColor.pdf
+figures/FlamingoPaperColor.pdf
+figures/PersonPaperColor.pdf
+figures/FlamingoPaperColor.pdf
+figures/PersonPaperColor.pdf
+figures/FlamingoPaperColor.pdf
+figures/PersonPaperColor.pdf
+figures/FlamingoPaperColor.pdf
+figures/PersonPaperColor.pdf
+figures/FlamingoPaperColor.pdf
+figures/PersonPaperColor.pdf
+figures/FlamingoPaperColor.pdf
+figures/coco_ny.jpeg
+figures/PersonPaperColor.pdf
+figures/PersonPaperColor.pdf
+figures/FlamingoPaperColor.pdf
+figures/PersonPaperColor.pdf
+figures/FlamingoPaperColor.pdf
+figures/PersonPaperColor.pdf
+figures/FlamingoPaperColor.pdf
+figures/PersonPaperColor.pdf
+figures/FlamingoPaperColor.pdf
+figures/PersonPaperColor.pdf
+figures/FlamingoPaperColor.pdf
+figures/PersonPaperColor.pdf
+figures/purple_hd.png
+figures/PersonPaperColor.pdf
+figures/PersonPaperColor.pdf
+figures/green_hd.png
+figures/PersonPaperColor.pdf
+figures/PersonPaperColor.pdf
+figures/yellow_hd.png
+figures/PersonPaperColor.pdf
+figures/FlamingoPaperColor.pdf
+figures/black_hd.png
+figures/PersonPaperColor.pdf
+figures/FlamingoPaperColor.pdf
+figures/PersonPaperColor.pdf
+figures/FlamingoPaperColor.pdf
+figures/PersonPaperColor.pdf
+figures/FlamingoPaperColor.pdf
+figures/PersonPaperColor.pdf
+figures/FlamingoPaperColor.pdf
+figures/triangle.png
+figures/PersonPaperColor.pdf
+figures/hexagon.png
+figures/PersonPaperColor.pdf
+figures/PersonPaperColor.pdf
+figures/FlamingoPaperColor.pdf
+figures/PersonPaperColor.pdf
+figures/FlamingoPaperColor.pdf
+figures/PersonPaperColor.pdf
+figures/FlamingoPaperColor.pdf
+figures/soupmonster.jpeg
+figures/PersonPaperColor.pdf
+figures/PersonPaperColor.pdf
+figures/FlamingoPaperColor.pdf
+figures/PersonPaperColor.pdf
+figures/FlamingoPaperColor.pdf
+figures/PersonPaperColor.pdf
+figures/FlamingoPaperColor.pdf
+figures/naughtydog.jpeg
+figures/PersonPaperColor.pdf
+figures/FlamingoPaperColor.pdf
+figures/PersonPaperColor.pdf
+figures/FlamingoPaperColor.pdf
+figures/PersonPaperColor.pdf
+figures/FlamingoPaperColor.pdf
+figures/PersonPaperColor.pdf
+figures/FlamingoPaperColor.pdf
+figures/PersonPaperColor.pdf
+figures/FlamingoPaperColor.pdf
+figures/homebase.png
+figures/PersonPaperColor.pdf
+figures/PersonPaperColor.pdf
+figures/FlamingoPaperColor.pdf
+figures/PersonPaperColor.pdf
+figures/FlamingoPaperColor.pdf
+figures/PersonPaperColor.pdf
+figures/FlamingoPaperColor.pdf
+figures/robot_ball_cloth.jpeg
+figures/PersonPaperColor.pdf
+figures/PersonPaperColor.pdf
+figures/FlamingoPaperColor.pdf
+figures/PersonPaperColor.pdf
+figures/FlamingoPaperColor.pdf
+figures/PersonPaperColor.pdf
+figures/FlamingoPaperColor.pdf
+figures/PersonPaperColor.pdf
+figures/FlamingoPaperColor.pdf
+figures/FlamingoPaperColor.pdf
+figures/videoframes/imvid_puppy.png.0.png
+figures/videoframes/imvid_puppy.png.1.png
+figures/videoframes/imvid_puppy.png.2.png
+figures/videoframes/imvid_puppy.png.3.png
+figures/videoframes/imvid_puppy.png.4.png
+figures/videoframes/imvid_puppy.png.5.png
+figures/videoframes/imvid_puppy.png.6.png
+figures/videoframes/imvid_puppy.png.7.png
+figures/videoframes/imvid_atari.png.0.png
+figures/videoframes/imvid_atari.png.1.png
+figures/videoframes/imvid_atari.png.2.png
+figures/videoframes/imvid_atari.png.3.png
+figures/videoframes/imvid_atari.png.4.png
+figures/videoframes/imvid_atari.png.5.png
+figures/videoframes/imvid_atari.png.6.png
+figures/videoframes/imvid_atari.png.7.png
+figures/videoframes/imvid_objects.png.0.png
+figures/videoframes/imvid_objects.png.1.png
+figures/videoframes/imvid_objects.png.2.png
+figures/videoframes/imvid_objects.png.3.png
+figures/videoframes/imvid_objects.png.4.png
+figures/videoframes/imvid_objects.png.5.png
+figures/videoframes/imvid_objects.png.6.png
+figures/videoframes/imvid_objects.png.7.png
+figures/videoframes/imvid_scissors.png.0.png
+figures/videoframes/imvid_scissors.png.1.png
+figures/videoframes/imvid_scissors.png.2.png
+figures/videoframes/imvid_scissors.png.3.png
+figures/videoframes/imvid_scissors.png.4.png
+figures/videoframes/imvid_scissors.png.5.png
+figures/videoframes/imvid_scissors.png.6.png
+figures/videoframes/imvid_scissors.png.7.png
+figures/videoframes/imvid_flamingo.png.0.png
+figures/videoframes/imvid_flamingo.png.1.png
+figures/videoframes/imvid_flamingo.png.2.png
+figures/videoframes/imvid_flamingo.png.3.png
+figures/videoframes/imvid_flamingo.png.4.png
+figures/videoframes/imvid_flamingo.png.5.png
+figures/videoframes/imvid_flamingo.png.6.png
+figures/videoframes/imvid_flamingo.png.7.png
+figures/videoframes/imvid_shot_0000.png
+figures/videoframes/imvid_shot_0001.png
+figures/videoframes/imvid_shot_0002.png
+figures/videoframes/imvid_shot_0003.png
+figures/videoframes/imvid_shot_0004.png
+figures/videoframes/imvid_shot_0005.png
+figures/videoframes/imvid_shot_0006.png
+figures/videoframes/imvid_shot_0007.png
+appendix_sections/C_discussion.tex
+figures/failure_cases.pdf
+appendix_sections/D_model_card.tex
+model_card.tex
+appendix_sections/E_datasheet.tex
+appendix_sections/F_visual_content_credit.tex
+ ***********
+
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
+Package rerunfilecheck Warning: File `main.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `main.out':
+(rerunfilecheck)             Before: <no file>
+(rerunfilecheck)             After:  E93DE099B4DF1FCB6ADEBA97FE58F51D;11064.
+ ) 
+Here is how much of TeX's memory you used:
+ 41241 strings out of 476683
+ 892905 string characters out of 5804047
+ 2009018 words of memory out of 5000000
+ 60601 multiletter control sequences out of 15000+600000
+ 596429 words of font info for 119 fonts, out of 8000000 for 9000
+ 1348 hyphenation exceptions out of 8191
+ 87i,22n,91p,2302b,1646s stack positions out of 10000i,1000n,20000p,200000b,200000s
+
+Output written on main.pdf (80 pages).

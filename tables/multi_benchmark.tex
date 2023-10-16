@@ -1,0 +1,38 @@
+\begin{table}[t]
+\centering
+\small
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{@{}llccclll@{}}
+\toprule
+& \multirow{2}{*}{Dataset}  & \multirow{2}{*}{\dev} & \multirow{2}{*}{Gen.} & \multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}Custom\\ prompt\end{tabular}} & \multirow{2}{*}{Task description} & \multirow{2}{*}{Eval set} & \multirow{2}{*}{Metric} \\
+\\ \cmidrule(l){2-8} 
+\multirow{9}{*}{\rotatebox[origin=c]{90}{Image}} & ImageNet-1k [\citenum{russakovsky2015imagenet}]        & \ding{51} &     &   &  Object classification    &  Val   &  Top-1 acc.      \\ 
+& MS-COCO [\citenum{chen2015microsoft}]        & \ding{51} &   \ding{51} & & Scene description  &  Test   &  CIDEr      \\
+& VQAv2 [\citenum{antol2015vqa}]         & \ding{51} & \ding{51}  &   & Scene understanding QA & Test-dev  &  VQA acc. [\citenum{antol2015vqa}]     \\
+& OKVQA [\citenum{marino2019ok}]        & \ding{51} &   \ding{51}&     & External knowledge QA &  Val  &  VQA acc. [\citenum{antol2015vqa}]     \\
+& Flickr30k [\citenum{young2014image}]        &   &   \ding{51} &   & Scene description   & Test (Karpathy)     &  CIDEr      \\
+& VizWiz [\citenum{gurari2018vizwiz}]        &   &   \ding{51} &   & Scene understanding QA &  Test-dev   &  VQA acc. [\citenum{antol2015vqa}]     \\
+& TextVQA [\citenum{singh2019towards}]        &   &   \ding{51} &     & Text reading QA &  Val   &  VQA acc. [\citenum{antol2015vqa}]     \\
+& VisDial [\citenum{das2017visual}]        &   &     &   & Visual Dialogue  &  Val  &  NDCG   \\
+& HatefulMemes [\citenum{kiela2020hateful}]        &   &     &  \ding{51} & Meme classification   &  Seen Test   &  ROC AUC    \\ \midrule 
+& Kinetics700 2020 [\citenum{smaira2020short}]        &  \ding{51} &      &   & Action classification   &  Val   &  Top-1/5 avg      \\
+ \multirow{9}{*}{\rotatebox[origin=c]{90}{Video}} & VATEX [\citenum{wang2019vatex}]        & \ding{51} &   \ding{51} &   & Event description  &  Test   &  CIDEr      \\
+& MSVDQA [\citenum{xu2017video}]        & \ding{51}  & \ding{51}  &   & Event understanding QA &  Test   &  Top-1 acc.     \\
+& YouCook2 [\citenum{zhou2018towards}]        &   & \ding{51}  &    &  Event description &  Val   &  CIDEr      \\
+& MSRVTTQA [\citenum{xu2017video}]        &   &   \ding{51} &    & Event understanding QA &  Test   &  Top-1 acc.     \\
+& iVQA [\citenum{yang2021just}]        &   & \ding{51}  &  & Event understanding QA &  Test   &  iVQA acc. [\citenum{yang2021just}]      \\
+& RareAct [\citenum{miech20rareact}]        &   &      &  \ding{51}   & Composite action retrieval  &  Test   &  mWAP      \\
+& NextQA [\citenum{xiao2021next}]        &   &   \ding{51} &  & Temporal/Causal QA &  Test   &  WUPS     \\
+& STAR [\citenum{wu2021star}]        &   &      &  & Multiple-choice QA &  Test   &  Top-1 acc.     \\ \bottomrule
+\end{tabular}
+}
+
+\vspace{1em}
+
+\caption{\capfontsize{} \textbf{Summary of the evaluation benchmarks.} 
+\dev{} benchmarks were used to validate general design decision of the~\method{} models.
+Gen. stands for generative task where we sample text from the VLM.
+If a task is non-generative it means that we use the VLM to score answers among a given finite set. For most of our tasks we use a common default prompt, hence minimizing task-specific tuning (see Appendix~\ref{app:fewshot-eval-hyper}).
+}
+\label{tab:multi-benchmarks}
+\end{table}

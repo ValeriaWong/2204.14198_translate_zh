@@ -1,0 +1,407 @@
+\section{Experiments}
+\label{app:extra_experiments_results}
+
+\subsection{Training and evaluation details}
+
+\label{sec:exp_setting}
+
+
+\subsubsection{Models}
+\label{sec:models_details}
+
+\begin{table}[t!]
+\centering
+\resizebox{0.9\textwidth}{!}{%
+\begin{tabular}{@{}lc|rr|rr|c@{}}
+\toprule
+                         &  Requires & \multicolumn{2}{c|}{Frozen} & \multicolumn{2}{c|}{Trainable}  & Total \\ 
+                         &  model sharding & Language & Vision & \small{\textsc{gated xattn-dense}} & Resampler & count \\ 
+                         \midrule
+\base{}             & \ding{55}  &   1.4B      &  435M   &  1.2B (every)\phantom{ 0th} &  194M   &  \textbf{3.2B}      \\
+\medium{}           & \ding{55}  &   7.1B      &  435M   &  \phantom{x}1.6B (every 4th) & 194M  &  \textbf{9.3B}       \\
+\largem{}            & \ding{51}  &   \phantom{.}70B      &   435M   &  \phantom{x.}10B   (every 7th) &  194M &   \phantom{.}\textbf{80B}     \\ \bottomrule
+\end{tabular}%
+}
+
+\vspace{1em}
+
+\caption{\capfontsize{} \textbf{Parameter counts for \methodfamily{}.} We focus on increasing the parameter count of the frozen LM and the trainable vision-text \textsc{gated xattn-dense} modules while maintaining the frozen vision encoder and trainable Resampler to a fixed and small size across the different models.
+The frequency of the \textsc{gated xattn-dense} with respect to the original language model blocks is given in parentheses.
+}
+\label{tab:param-count}
+\end{table}
+
+We perform experiments across three model sizes, where we scale the frozen language model from 1.4B to 7B and 70B; and adapt the parameter count of other components accordingly. 
+We keep the pretrained vision encoder frozen across all experiments and use a NFNet-F6 model trained contrastively (see Appendix~\ref{app:contrastive_details}), unless explicitly stated otherwise in the ablation study.
+We use a Perceiver Resampler with approximately 200M parameters across all three model sizes.
+
+The decision on how many \textsc{gated xattn-dense} layers to interleave is mainly driven by a trade-off between memory constraints and downstream performance. 
+We identified the optimal trade-off at small model scales, before transferring our findings to the large model architecture.
+
+We obtain three models, \base{}, \medium{}~and \largemfull{}, detailed below:
+\begin{itemize}
+    \item The \base{} model builds on top of a \textbf{1.4B frozen language model} from \cite{chinchilla}. Before each transformer block, we add a \textsc{gated xattn-dense} layer attending to the visual inputs; this accounts for 1.4B additional learned parameters.
+    \item The \medium{} model builds on top of a \textbf{7B frozen language model} from \cite{chinchilla}. 
+    Starting from the very first layer and before every fourth transformer blocks, we add a \textsc{gated xattn-dense} layer attending to the visual inputs; this accounts for 1.8B additional learned parameters.
+    \item The \largemfull{} model builds on top of \textbf{the frozen Chinchilla 70B} language model~\citep{chinchilla}. 
+    Starting from the very first layer and before every seventh transformer blocks, we add a \textsc{gated xattn-dense} layer attending to the visual inputs; this accounts for 10B additional learned parameters.
+    For simplicity, we refer to this model as simply \largem{} throughout the paper.
+\end{itemize}
+In Table~\ref{tab:param-count} we report the parameter count of each component of our models, as well as model sharding requirements.
+We provide more Transformer architecture details in Appendix~\ref{app:transformer_details}.
+The \largem{} model card~\citep{mitchell2019model} is also given in Appendix~\ref{app:flamingo_model_card}.
+
+
+\subsubsection{Training details for the \method{} models}
+\label{app:large_scale_training}
+
+\paragraph{Data augmentation and preprocessing.}
+Empirically we find that it is effective to stochastically prepend the paired dataset text samples with a single space character, with probability 0.5.
+We attribute this to the fact that our subword tokenizer maps the beginning of various words to a different token depending on whether it is preceded by a space.
+This allows us to enforce invariance to this tokenizer artifact, without degrading significantly correctness of the punctuation which is already lacking in many of these samples. We observe that this leads to substantial improvement across tasks.
+
+The visual inputs are resized to $320\times320$ while preserving their aspect ratios, padding the image with the mean value if required.
+Note that this is higher than the $288\times288$ resolution used for the contrastive pretraining of our Vision Encoder (see Appendix~\ref{app:contrastive_details}).
+The increase in resolution during the final stage training was motivated by \cite{touvron2019fixing}  showing one can obtain improved performance at a higher test-time resolution when using CNNs.
+This increase in resolution also comes with only a moderate computational and memory cost as no backpropagation is performed through the frozen Vision Encoder.
+We also employ random left/right flips and color augmentation.
+
+For interleaved datasets (Section~\maintoappref{sec:interleaved_datasets}) we also employ augmentation by lightly randomizing the selected image indices $\phi$ with a hyperparameter $p_{next}$ when sampling examples from the~\mmmw{} dataset.
+This augmentation is detailed in Appendix~\ref{app:interleaved_indices} and our choice of $p_{next}=\tfrac{1}{2}$ is ablated in Appendix~\ref{app:full_ablations}.
+For video training, we temporally sample a clip of 8 frames sampled at one frame per second (fps) from each training video.
+Although our model was trained with a fixed number of 8 frames, at inference time, we input 30 frames at 3 FPS.
+This is achieved by linearly interpolating the learnt temporal position embedding of the Perceiver Resampler at inference time.
+
+\paragraph{Loss and optimisation.}
+All our models are trained using the AdamW optimizer with global norm clipping of $1$, no weight decay for the Perceiver Resampler and weight decay of 0.1 for the other trainable parameters.
+The learning rate is increased linearly from $0$ to $10^{-4}$ up over the first 5000 steps then held constant for the duration of training (no improvements were observed from decaying the learning rate).
+Unless specified otherwise we train our models for $500k$ steps.
+Four datasets are used for training: \mmmw{}, ALIGN, \shortimagetextpairs{} and \shortvideotextpairs{}  with weights $\lambda_m$ of $1.0$, $0.2$, $0.2$ and $0.03$ respectively.
+These weights were obtained empirically at a small model scale and kept fixed afterwards.
+Batch sizes depend on the setting and are given in the next sections.
+
+
+\paragraph{Infrastructure and implementation.}
+Our model and associated infrastructure were implemented using JAX \citep{jax2018github} and Haiku \citep{haiku2020github}. All training and evaluation was performed on TPUv4 instances. The largest model containing 80 billion parameters is trained on $1536$ chips for 15 days and sharded across 16 devices.
+Megatron type sharding~\citep{megatron} is used to enable 16-way model parallelism for all Embedding / Self-Attention / Cross-Attention / FFW layers, while the NFNet vision layers were unsharded. ZeRO stage 1~\citep{zero} is used to shard the optimizer state. All trained parameters and optimizer accumulators are stored and updated in \texttt{float32}; all activations and gradients are computed in \texttt{bfloat16} after downcasting of parameters from \texttt{float32} to \texttt{bfloat16}. Frozen parameters are stored and applied in \texttt{bfloat16}.
+
+\subsubsection{Contrastive model details}
+\label{app:contrastive_details}
+
+The vision encoder is trained from scratch, together with a language encoder. Using these encoders, images and text pairs are separately encoded and projected to a shared embedding space and L2 normalized. 
+From these embeddings, we maximize the similarity of paired embeddings and minimize the similarity of unpaired embeddings, using a multi-class cross-entropy loss, where the paired image-texts are treated as positive examples and the rest of the batch as negative examples.
+We use the same loss as in CLIP~\citep{clip}, which consists of two contrastive losses, one from text to image and the other from image to text. We use a learnable temperature parameter in the final log-softmax layer~\citep{bridle1990probabilistic}.
+The text-to-image loss is as follows:
+\begin{equation}
+    L_{contrastive:txt2im} = -\frac{1}{N} \sum_{i}^{N} \log \left( \frac{\exp (L_{i}^{\intercal} V_{i} \beta)}{\sum_{j}^{N} \exp (L_{i}^{\intercal} V_{j} \beta)}  \right)
+\end{equation}
+And the image-to-text loss is defined analogously:
+\begin{equation}
+    L_{contrastive:im2txt} = -\frac{1}{N} \sum_{i}^{N} \log \left( \frac{\exp (V_{i}^{\intercal} L_{i} \beta)}{\sum_{j}^{N} \exp (V_{i}^{\intercal} L_{j} \beta)}  \right)
+\end{equation}
+The sum of the two losses is minimized.
+Here, $V_{i}$ and $L_{i}$ are, respectively, the normalized embedding of the vision and language component of the $i$-th element of a batch.
+$\beta$ is a trainable inverse temperature parameter and $N$ is the number of elements in the batch.
+We use the BERT~\citep{bert} architecture for the language encoder. The outputs of the language and vision encoders are mean-pooled (across tokens and spatial locations, respectively) before being projected to the shared embedding space. We only use the weights from the contrastive vision encoder in the main \method{} models. 
+
+
+The vision encoder is pretrained on the ALIGN and \shortimagetextpairs{} datasets.
+The training image resolution is $288\times288$, the joint embedding space is size $1376$ and the batch size is 16,384. 
+It is trained for $1.2$ million parameter update steps, each of which consist of two gradient calculation steps (more details below) on 512 TPUv4 chips. The learning rate is decayed linearly from $10^{-3}$ to zero over the course of training. Images have random color augmentation and horizontal flips applied during training. We use the tokenizer employed by \citet{align}. 
+The Adam optimizer is used to optimize the network, and we apply label smoothing of $0.1$. 
+We apply $10^{-2}$ adaptive gradient clipping (AGC)~\citep{nfnets} to the NFNet encoder and global norm gradient clipping of 10 for the BERT encoder. 
+
+To evaluate the pretrained model, we track zero-shot image classification and retrieval. 
+For zero-shot image classification, we use image-text retrieval between the images and the class names. 
+Following \citet{clip} we use ``prompt-ensembling'' in which we embed multiple texts using templates such as \texttt{\color{greencode}``A photo of a \{class\_name\}''} and average the resulting embedding.
+
+\subsubsection{Evaluation benchmarks}
+\label{sec:eval_benchmarks}
+
+\input{tables/multi_benchmark}
+
+Our goal is to develop models that can rapidly adapt to diverse and challenging tasks in the few-shot setting. 
+For this, we consider a wide array of popular image and video benchmarks summarized in Table~\ref{tab:multi-benchmarks}.
+In total we chose $16$ multimodal image/video and language benchmarks, spanning tasks that require some language understanding (visual question answering, captioning, visual dialogue) as well as two standard image and video classification benchmarks (ImageNet and Kinetics).
+Note that for the video datasets collected from YouTube (i.e., all video datasets except NextQA and STAR), we evaluated our model on all the publicly available video as of April 2022.
+
+\paragraph{\dev{} benchmarks.}
+In order to validate design decisions of our model over the course of the project, we selected five benchmarks from the $16$ multimodal image/video and language benchmarks as well as ImageNet and Kinetics for classification as our development set (referred as \dev{}).
+To maximise its relevance, we choose the most challenging and widely studied benchmarks for captioning, visual question-answering and classification tasks on both images and videos.
+
+\paragraph{Dataset splits for the \dev~benchmarks.} 
+Concretely, estimating few-shot learning performance of a model consists of adapting it on a set of \emph{support} samples and evaluating it on a set of \emph{query} samples. 
+As a result, any evaluation set should be composed of two disjoint subsets containing respectively the support and the query samples.
+For the \dev~benchmarks that are used both
+to validate design decisions and hyperparameters, 
+as well as to report final performance,
+we therefore use four subsets:
+
+\begin{itemize}
+\item \metadevsupportshort: contains support samples for validation;
+\item \metadevqueryshort: contains query samples for validation;
+\item \metatestsupportshort: contains support samples for final performance estimation;
+\item \metatestqueryshort: contains query samples for final performance estimation.
+\end{itemize}
+
+In practice, for the \metatestquery, we use the subset that prior works report results on, for apples-to-apples comparison. 
+While the validation set would be a natural choice for the \metadevquery, we note that this is not possible for all benchmarks, since some benchmarks do not have an official validation set (e.g. OKVQA) and for others, the validation is commonly used to report final performance in place of the test set (e.g. ImageNet or COCO).
+For simplicity, we use a subset of the original training set as the \metadevquery.
+Finally, we also use additional disjoint subsets of the training set as respectively the \metadevsupport~and the \metatestsupport. 
+
+We now describe in more detail how we form the latter three subsets. For captioning tasks, open-ended evaluation is efficient so we evaluate on a large number of samples. Specifically, for COCO, we use the same number of samples as used in the Karpathy splits for evaluation sets (5000). For VATEX, because the training set is of limited size, we only evaluate over 1024 samples, reserving the rest for support sets. For question-answering tasks, we evaluate over 1024 samples; chosen to make both open- and close-ended evaluation reasonably fast. 
+For image classification tasks, we evaluate over 10 images per class: 10,000 samples for ImageNet, and 7000 samples for Kinetics700.
+As for the support sets, for both validation and final performance estimation, we use 2048 samples across all tasks, except for classification tasks where we scale this to 32 samples per class, to better estimate expected performance for each class.
+
+\paragraph{Unbiased few-shot performance estimation.} 
+Few-shot learning performance estimates on the \dev{} benchmarks may be biased, in the sense that over the course of this project, design decisions were made based on the performance obtained on these benchmarks.
+We note that this is the case for prior work which also make use of these benchmarks to validate and ablate their own design decisions.
+To account for this bias and provide unbiased few-shot learning performance estimates, we report performance on a remaining set of 11 benchmarks.
+Among those, some span the same open-ended image and video tasks as our \dev{} benchmarks (captioning and visual question-answering).
+But we also look at more specific benchmarks in order to explore less explored capabilities. 
+These notably include:
+TextVQA~\citep{singh2019towards} which specifically assesses OCR capabilities through question-answering;
+VisDial~\citep{das2017visual}, a visual dialogue benchmark;
+HatefulMemes~\citep{kiela2020hateful} a vision and text classification benchmark;
+NextQA~\citep{xiao2021next} which specially focuses on causality and temporal relation;
+STAR~\citep{wu2021star}, a multiple-choice question answering task;
+and RareAct~\citep{miech20rareact}, a benchmark measuring compositionality in action recognition.
+We emphasize that \emph{we do not validate any design decisions} on these benchmarks and use them solely to estimate unbiased few-shot learning performance after Flamingo training is done.
+
+
+
+\subsubsection{Few-shot learning evaluation hyperparameters} 
+\label{app:fewshot-eval-hyper}
+
+In few-shot learning, hyperparameter selection implicitly increases the number of shots as it requires additional validation examples.
+If those are not taken into account, as is often the case in practice, few-shot performance can be overestimated~\citep{truefewshot}.
+Similarly, cross-validation of benchmark-specific hyperparameters such as the prompt should be considered as a particularly basic few-shot learning method, where one selects the task-specific prompt over the set of shots.
+But other learning approaches might be more effective in making use of these labelled examples.
+Given the negative results reported by \cite{truefewshot} in terms of the robustness of cross-validation and unless mentioned otherwise, all benchmarks are run using a single set of evaluation hyperparameters, including the prompts. 
+We optimize hyperparameters jointly across the \metadevsubsets~of the \dev{} benchmarks and do not perform any benchmark-specific cross-validation of hyperparameters, aside from a few exceptions, as we detail next.
+
+Except for HatefulMemes and RareAct, we always use the prompt ``\texttt{\color{greencode}``Output:~\{output\}}'' for all non-question-answering tasks, and ``\texttt{\color{greencode}Question:~\{question\}\color{greencode}~Answer:~\{answer\}}'' for all question-answering / visual dialogue tasks.
+In particular, for VisDial~\citep{das2017visual}, we use the previously described prompt to encode each questions/answers in the dialogue and the provided image caption is prepended to the dialogue history without any prompt.
+For HatefulMemes~\citep{kiela2020hateful}, we use a specific prompt to incorporate the OCR information provided as input which is: ``\texttt{\color{greencode}is an image with written:~"\{meme\_text\}" on it. Is it hateful?\color{greencode}~Answer:~\{answer\}}'', where the answer is either yes or no.
+Note that this is the only dataset where we explicitly provide OCR text ``\texttt{\color{greencode}meme\_text}'' as input to \method{} models.
+For TextVQA, we do not make use of the provided OCR transcripts and instead directly rely on the off-the-shelf OCR capabilities of the~\method{} models.
+For RareAct, a zero-shot benchmark, we change the verb names to the third person, add an article before each noun and use the prompt ``\texttt{\color{greencode}Caption: a person~\{verb + object\}}''.
+
+
+
+
+\subsubsection{Dialogue prompt}
+\label{app:dialogue_prompt}
+
+For the dialogue examples in Figures~\maintoappref{fig:teaser} and~\ref{fig:dialogue_samples}, the following prompt is used:
+
+{\fontfamily{qcr}\selectfont 
+This is a conversation between a human, User, and an intelligent visual AI, Flamingo. User sends images, and Flamingo describes them.
+
+User: <a cat image>
+
+Flamingo: That is a cat. It's a tiny kitten with really cute big ears.
+
+User: <a dinner image>
+
+Flamingo: This is a picture of a group of people having dinner. They are having a great time!
+
+User: Can you guess what are they celebrating?
+
+Flamingo: They might be celebrating the end of a successful project or maybe a birthday?
+
+User: <a graph image>
+
+Flamingo: This is a graph, it looks like a cumulative density function graph.}
+
+
+
+
+\subsection{Additional performance results}
+\label{app:more_performance}
+
+\subsubsection{Few-shot learning on classification tasks}
+\label{app:classif_tasks}
+
+\input{tables/fewshot_classif}
+
+We consider applying the \method{} models to well-studied classification benchmarks like ImageNet or Kinetics700. Results are given in Table~\ref{tab:fewshot_classif}.
+We observe a similar pattern as in
+other experiments:
+larger model tend to perform better.
+Second, given that few-shot classification tasks often come with more training examples (e.g., 1000 for ImageNet with 1 example per class), using methods to scale to larger support sets is beneficial. 
+RICES (Retrieval In-Context Example Selection~\citep{yang2021empirical} described in Appendix~\ref{app:rices}) performs substantially better than simply selecting examples randomly for inclusion in the prompt.
+Indeed, \largem{} achieves a $9.2\%$ improvement in ImageNet classification when selecting 16 support examples out of $5000$ using RICES, compared to choosing the same number of examples randomly. 
+Ensembling multiple prompts further boosts results.
+However, note that \method{} models underperform the current dominant contrastive paradigm for classification tasks;
+in particular, they underperform the very contrastive model used as their vision encoder (see Appendix~\ref{sec:limitations} on \method{}'s limitations for more details).
+Finally, state-of-the-art zero-shot models on ImageNet such as BASIC~\citep{pham2021combined} and LiT~\citep{zhai2021lit} are particularly optimized on classification tasks as they are trained on JFT-3B~\citep{jft3b}, a dataset with images and labels.
+Improving the performance of VLMs such as \method{} on classification tasks is an interesting direction for future work.
+
+
+\subsubsection{Fine-tuning \largem{} as a pretrained vision-language model}
+\label{app:finetuning}
+
+To fine-tune \methodfamily{} on a downstream task, we train them on data batches from the task of interest in the same format as the single-image/video datasets described in Section~\maintoappref{sec:datasets}.
+
+
+\paragraph{Freezing and hyperparameters.}
+When fine-tuning \largem{}, we keep the underlying LM layers frozen and train the same \method{} layers as during pretraining.
+We also increase the resolution of the input images from $320\times320$ to $480\times480$.
+Unlike in the pretraining phase, we also fine-tune the base visual encoder, finding that this typically improves results, likely due in part to the higher input resolution.
+
+We choose certain hyperparameters on a per-task basis by grid search on a validation subset of the training set (or on the official or standard validation set where available).
+These hyperparameters include
+the learning rate (ranging from $3\times10^{-8}$ to $1\times10^{-5}$)
+and decay schedule (exponential decay by factors of $10\times$),
+number of training steps,
+batch size (either $8$ or $16$),
+and
+whether visual data augmentation (color augmentation, random horizontal flips) is used.
+
+
+\paragraph{Results.}
+In Table~\ref{tab:ft-sota-table}, we present additional results for per-task \largem{} fine-tuning.
+When provided access to a large-scale task-specific dataset with many thousands of examples, we find that we can improve results over our previously presented in-context few-shot learning results,
+setting a new state of the art on five tasks: VQAv2, VATEX, VizWiz, MSRVTTQA, and HatefulMemes.
+For example, on VQAv2, we observe improved results at $82.0\%$, outperforming our results achieved with 32-shot in-context learning ($67.3\%$) as well as the previous state of the art ($81.3\%$,~\citet{yan2021achieving}).
+
+Although these fine-tuning results come at high computational cost relative to the previously presented in-context few-shot learning results -- among other challenges like hyperparameter tuning -- they further demonstrate the power of VLM pretraining for visual understanding even in the presence of large amounts of task-specific training data.
+
+In some cases our results likely trail the state of the art due in part to the fact that we simply optimise log-likelihood and do not make use of common task-specific metric optimisation tricks, such as
+CIDEr optimisation~\citep{selfcritical,spider} for COCO captioning, and
+fine-tuning on dense annotations for VisDial~\citep{murahari2020large}.
+For example,~\citet{murahari2020large} report a $10\%$ relative improvement in NDCG on VisDial from such dense annotation fine-tuning.
+
+\input{tables/sota_comparison}
+
+
+
+
+
+
+
+\subsubsection{Zero-shot performance of the pretrained contrastive model}
+\label{app:exp-contrastive}
+
+\input{tables/contrastive_eval_retrieval}
+
+A crucial part of our approach is the Vision Encoder, pretrained separately using contrastive learning and kept frozen when training \method{} models.
+We report zero-shot image classification results on ImageNet, Kinetics700 and retrieval results on Flick30K and COCO.
+The classification results are presented in Table~\ref{tab:fewshot_classif} while the retrieval results are given in Table~\maintoappref{table:contrastive_eval_retrieval}.
+For the retrieval tasks, our model outperforms the current state-of-the-art contrastive dual encoder approaches CLIP~\citep{clip}, ALIGN~\citep{align} and Florence~\citep{yuan2021florence}.
+However, we underperform the zero-shot state-of-the-art on Kinetics700 (CLIP) and the zero-shot state-of-the-art on ImageNet (BASIC).
+However, as noted earlier, BASIC~\citep{pham2021combined} is particularly optimized for classification:
+it is trained on the JFT-3B~\citep{jft3b} dataset which has images with labels rather than captions.
+We have noticed training on image and short text descriptions similar to labels significantly helps for ImageNet but is detrimental for retrieval benchmarks which require capturing rich scene descriptions instead.
+Since our goal is to use the Vision Encoder as a feature extractor for the~\method{} models in order to capture the whole scene and not just the main object, we favor retrieval metrics over classification ones.
+We provide more details about the contrastive pretraining in Appendix~\ref{app:contrastive_details}.
+
+\subsection{Extended ablation studies}
+\label{app:all_ablation_studies}
+
+\subsubsection{Flamingo}
+
+\label{app:full_ablations}
+
+\input{tables/ablations-appendix}
+
+\paragraph{Ablation study experimental setup.} As in Table~\ref{tab:ablation-table-appendix}, we report per-task results and the Overall score (see Section~\maintoappref{sec:ablations}) for \base{}~on the \metadevsubsets~of the 5 \dev{} multimodal benchmarks with 4 shots in Table~\ref{tab:ablation-table-appendix}.
+We perform the ablation using batch size of $256$ for \mmmw{}, $512$ for ALIGN, $512$ for \shortimagetextpairs{} and $64$ for \shortvideotextpairs.
+Models are trained for 1 million gradient steps (meaning 250,000 gradient updates, for the base model as we accumulate gradients over four datasets).
+
+
+\paragraph{Resampler size.}
+We further investigate the architectural design of the Resampler in row \textbf{(i)} of Table~\ref{tab:ablation-table-appendix}.
+We ablate the size of our Resampler with three options: Small, Medium (default value for all~\method{} models), and Large.
+We see that the best performance is achieved with a medium size Resampler.
+Moreover, when scaled together with the frozen LM, we observed that increasing the size of the Perceiver Resampler lead to unstable training.
+We thus made a conservative choice to keep the same medium Resampler size for all our \method{} models.
+
+\paragraph{Effect of how many images are cross-attended to.}
+In the interleaved image-text scenario, we ablate whether the model can only attend to the single most recent previous image, or to all the previous images (row \textbf{(ii)} of Table~\ref{tab:ablation-table-appendix}).
+We can see that the single image case leads to significantly better results ($7.2\%$ better in the overall score).
+One potential explanation is that when attending to all previous images, there is no explicit way of disambiguating between different images in the cross-attention inputs.
+Nonetheless, recent work has shown that such disambiguation is still possible implicitly through the causal attention mechanism~\citep{haviv2022transformer}.
+We also explored more explicit ways to enable this while attending to all previous images by modifying the image tags to include an index (\texttt{<image 1>}, \texttt{<image 2>}, etc.) and/or learning absolute index embeddings added to the cross-attention features for each image.
+These strategies were not as robust as our method when the number of images per sequence changes between training and test time.
+Such a property is desirable to reduce the number of images per sequence during training for better efficiency (we use $N=5$ at training time) while still generalizing to many images for few-shot evaluation (we go up to $N=32$ at test time).
+For these reasons, we keep the single image cross-attention strategy for the~\method{} models.
+Note that while the model cannot explicitly attend to all previous images due to this masking strategy, it can still implicitly attend to them from the language-only self-attention that propagates all previous images' features via the previous text tokens.
+
+
+\paragraph{\mmmw{} image placement data augmentation.}
+Given a webpage, we don't know in advance if the text of the page will mention the previous or the next image in the two-dimensional layout of the page DOM.
+For this reason, we explore a data augmentation on~\mmmw{} controlled by $p_{next}$ which indicates whether a given text token attends to the previous or the next image (see more details in Appendix~\ref{app:m3w_processing}).
+The default value $p_{next} = \tfrac{1}{2}$ means that for each webpage sampled, we decide uniformly at random whether the model attends to the previous or next image.
+$p_{next} = 0$ means the model always attends to the previous image while $p_{next} = 1$ means the model always attends to the following image.
+The results (row \textbf{(iii)} of Table~\ref{tab:ablation-table-appendix}) show that using this randomization is beneficial.
+
+
+\paragraph{Language model pretraining.}
+To measure the importance of text pretraining, we compare the performance of using a frozen decoder-only Transformer either pretrained on MassiveText (our main model) or pretrained on the C4 dataset~\citep{t5} (row \textbf{(iv)} of Table~\ref{tab:ablation-table-appendix}).
+Using the C4 dataset (which is smaller and less filtered than MassiveText) for training leads to a significant loss in performance ($-7.9\%$ overall).
+We note that the performance notably decreases for tasks that involve more language understanding such as visual question-answering tasks (OKVQA, VQAv2 and MSVDQA) while it remains on par for tasks that do not require as much language understanding (COCO, VATEX).
+This highlights the importance of pretraining the LM on a high-quality text-only dataset.
+
+
+\paragraph{Freezing the vision encoder.} %
+During \method{} training, we freeze the pretrained components (Vision Encoder and LM layers) while training newly added components from scratch.
+We ablate in \textbf{(v)} of Table~\ref{tab:ablation-table-appendix} this freezing decision by training the Vision Encoder weights either from scratch or initialized with the contrastive vision-language task.
+If trained from scratch, we observe that the performance decreases by a large margin of $-9.3\%$.
+Starting from pretrained weights still leads to a drop in performance of $-2.6\%$ while also increasing the compute cost of the training.
+
+
+\paragraph{Alternative to freezing the LM by co-training on MassiveText.}
+Another approach for preventing catastrophic forgetting is to co-train on MassiveText~\citep{gopher}, the dataset that was used to pretrain the language model.
+Specifically, we add MassiveText to the training mixture, with a weight $\lambda_m$ of $1.0$ (best performing after a small grid search), using a sequence length of $2048$ and the exact same setting as the pretraining of Chinchilla~\citep{chinchilla} for computing the text-only training loss.
+In order to co-train on MassiveText, we need to unfreeze the language model but we keep the vision encoder frozen. 
+We perform two ablations in row \textbf{(vi)} of Table~\ref{tab:ablation-table-appendix}: starting from a pretrained language model (with a learning rate multiplier of $0.1$ of the LM weights) versus initializing from scratch (with the same learning rate everywhere).
+In both cases, the overall scores are worse than our baseline which starts from the language model, pretrained on MassiveText, and is kept frozen throughout training.
+This indicates that the strategy of freezing the language model to avoid catastrophic forgetting is beneficial.
+Even more importantly, freezing the LM is computationally cheaper as no gradient updates of the LM weights are required and we do not need to train on an additional dataset.
+This computational argument is even more relevant for our largest model, \largemfull{}, where we freeze almost $90\%$ of the overall weights.
+
+\paragraph{Additional experiments using the LAION400M dataset.}
+In order to provide reference numbers that are more easily reproducible using publicly available datasets and network weights we also provide two additional ablations using the CLIP ViT L-14 weights~\cite{clip} and the LAION400M dataset~\cite{schuhmann2021laion} in rows \textbf{(vii)} of Table~\ref{tab:ablation-table-appendix}.
+
+\subsubsection{Dataset mixing strategies for the contrastive pretraining}
+\label{app:contrastive_ablation}
+
+\input{tables/contrastive_dataset_ablation}
+
+One key to achieving strong results was the inclusion of our new dataset \shortimagetextpairs{} alongside ALIGN for training. Despite being a smaller dataset ALIGN by a factor of 6, a contrastive model trained on only \shortimagetextpairs{} outperforms one trained only on ALIGN on our evaluation metrics, suggesting that dataset quality may be more important than scale in the regimes in which we operate. We also find that a model trained on both ALIGN and \shortimagetextpairs{} outperforms those trained on the two datasets individually and that how the datasets are combined is important. 
+
+To demonstrate this, we train a small model with an NFNet-F0 vision encoder, BERT-mini language encoder and batch size 2048 for 1 million gradient-calculation steps on ALIGN, \shortimagetextpairs{} and a mixture of the two. The results are presented in Table~\ref{tab:contrastive_dataset_ablation}. It shows the results of training models on the combined datasets using three different merging regimes:
+
+
+\begin{itemize}
+    \item Data merged: Batches are constructed by merging examples from each dataset into one batch.
+    \item Round-robin: We alternate batches of each dataset, updating the parameters on each batch.
+    \item Accumulation: We compute a gradient on a batch from each dataset. These gradients are then weighted and summed and use to update the parameters.
+\end{itemize}
+
+Across all evaluation metrics, we find that the Accumulation method outperforms other methods of combining the datasets.
+Although the \shortimagetextpairs{} dataset is 5 $\times$ smaller than the ALIGN dataset, this ablation study suggests that the quality of the training data can be more important than its abundance.
+
+
+
+
+\section{Qualitative results}
+
+\label{app:qual_res}
+
+In addition to the samples in Figure~\maintoappref{fig:teaser},
+in this section we provide selected samples covering different interaction modalities in Figures~\ref{fig:single_samples},~\ref{fig:dialogue_samples}, and~\ref{fig:videoexamples}. Unlike the quantitative benchmark results which use beam search with a beam width of 3 for decoding, all qualitative results presented in this section use greedy decoding for faster sampling.
+
+Figure~\ref{fig:single_samples} shows the simplest form of interaction where a single image is provided followed by a text prompt either in the form of a question or the start of a caption. 
+Even though the model is not trained specifically for the question and answer format, the capabilities of the pretrained language model allows this adaptation. 
+In many of these examples, \largem{} can do at least one step of implicit inference. Some of the objects are not named in the prompt but their properties are queried directly. Based on its visual input, the model manages to recall the knowledge relevant to the referred object and thus produces the correct answer.
+Vision networks trained contrastively have been shown to learn character recognition capabilities \cite{clip}. We observe that \largem{} preserves this capability in the full model, in some cases for text that is rather small with respect to the size of the image.
+
+Since our model can accept inputs in the form of arbitrary sequences of visuals and language, we test its abilities to hold an extended dialogue with interleaved images and text. Figure~\ref{fig:dialogue_samples} shows some samples which are generated by prompting the model with a brief dialogue (Appendix~\ref{app:dialogue_prompt}) followed by user interaction including image insertions. Even after several rounds of interaction \largem{} can still successfully attend to the image and reply to questions that can not be guessed by language alone. We observe that multiple images can be separately attended: simple comparisons and inferences are handled properly.
+
+Lastly, we investigated similar capabilities with video inputs as they present some extra challenges compared to images. Figure~\ref{fig:videoexamples} shows some selected samples. As seen in the figure, in some cases \largem{} can successfully integrate information from multiple frames (e.g., videos scanning through a scene or text) and answer questions involving temporal understanding (e.g., in the last example, with the word ``after'').
+
+\input{tables/qualitative_examples}
+

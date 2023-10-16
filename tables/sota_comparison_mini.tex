@@ -1,0 +1,38 @@
+\newcommand{\uln}[1]{\underline{#1}}
+\newcommand{\bo}[1]{\bf{\underline{#1}}}
+\newcommand{\ofa}{\footnotesize{[\citenum{wang2022unifying}]}}
+\newcommand{\simvlm}{\footnotesize{[\citenum{wang2021simvlm}]}}
+\newcommand{\florence}{\footnotesize{[\citenum{yuan2021florence}]}}
+\newcommand{\alice}{\footnotesize{[\citenum{yan2021achieving}]}}
+\newcommand{\vatex}{\footnotesize{[\citenum{zhu2019vatex}]}}
+\newcommand{\vizwiz}{\footnotesize{[\citenum{liu2021vizwiz}]}}
+\newcommand{\allinon}{\footnotesize{[\citenum{wang2022allinone}]}}
+\newcommand{\visdial}{\footnotesize{[\citenum{murahari2020large}]}}
+\newcommand{\vdbert}{\footnotesize{[\citenum{wang2020vdbert}]}}
+\newcommand{\youcook}{\footnotesize{[\citenum{xu2021vlm}]}}
+\newcommand{\tap}{\footnotesize{[\citenum{yang2021tap}]}}
+\newcommand{\teammia}{\footnotesize{[\citenum{qiao2021winner}]}}
+\newcommand{\flava}{\footnotesize{[\citenum{singh2021flava}]}}
+\newcommand{\hateful}{\footnotesize{[\citenum{lippe2020multimodal}]}}
+\newcommand{\zhu}{\footnotesize{[\citenum{zhu2020enhance}]}}
+\newcommand{\sota}{SotA}
+
+\begin{table*}[t]
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{rccccccccccccc}
+\hline
+Method            & \multicolumn{2}{c|}{VQAV2} & \multicolumn{1}{c|}{COCO} & \multicolumn{1}{c|}{VATEX} & \multicolumn{2}{c|}{VizWiz} & \multicolumn{1}{c|}{MSRVTTQA} & \multicolumn{2}{c|}{VisDial} & \multicolumn{1}{c|}{YouCook2} & \multicolumn{2}{c|}{TextVQA} & \multicolumn1{c}{HatefulMemes} \\
+                  & test-dev       & \multicolumn{1}{c|}{test-std}       & \multicolumn{1}{c|}{test}                           & \multicolumn{1}{c|}{test}                            & test-dev        & \multicolumn{1}{c|}{test-std}       & \multicolumn{1}{c|}{test}                               & \multicolumn{1}{c|}{valid}                              & \multicolumn{1}{c|}{test-std}                              & \multicolumn{1}{c|}{valid}        & \multicolumn{1}{c|}{valid}        & \multicolumn{1}{c|}{test-std}         & \multicolumn{1}{c}{test seen}                                   \\ \hline
+\flamingoemoji{} 32 shots&67.6     &  -      & 113.8    & 65.1    & 49.8     & -       &   31.0  & 56.8  &  -  & 86.8    & 36.0     &  -  & 70.0   \\
+\flamingoemoji{} Fine-tuned &\bo{82.0}&\bo{82.1}&  138.1   &\bo{84.2}&\bo{65.7}&\bf{65.4}&\bf{47.4}& 61.8 & 59.7 &  118.6  &\bf{57.1}&54.1      &\bo{86.6}\\
+\hline
+                                     &   81.3$^\dagger$ & 81.3$^\dagger$    &\bf{149.6}$^\dagger$&  81.4$^\dagger$  &  57.2$^\dagger$    &   60.6$^\dagger$  &    46.8   & \bf{75.2}   &   \bf{75.4}$^\dagger$    &   \bf{138.7}   &   54.7   &   \bf{73.7}    & 84.6$^\dagger$\\
+\multirow{-2}{*}{\sota}             &\alice   &\alice   &   \ofa   & \vatex  &     \vizwiz     & \vizwiz&   \allinon  &    \visdial  & \vdbert &    \youcook &   \tap   &  \teammia     & \zhu \\
+\hline
+\end{tabular}%
+}
+\caption{
+\capfontsize{} \label{tab:ft-sota-table-compressed} \textbf{Comparison to SotA when fine-tuning \largem{}.}
+We fine-tune~\largem{} on all nine tasks where \largem{} does not achieve SotA with few-shot learning.
+\largem{} sets a new SotA on five of them, outperfoming methods (marked with $\dagger$) that use tricks such as model ensembling or domain-specific metric optimisation (e.g., CIDEr optimisation).}
+\end{table*}

@@ -1,0 +1,90 @@
+
+
+We provide an overview of the Appendix below.
+
+\noindent
+\textbf{Method (Appendix~\ref{app:all_method_details}).}
+We first provide additional details about our model in Appendix~\ref{app:experiment_and_model_details}:
+\begin{itemize}
+    \item An illustration and pseudo-code for the Perceiver Resampler (described in Section~\maintoappref{sec:transformer_resampler}) is provided in Appendix~\ref{app:transformer_resampler} and Figure~\ref{fig:transformer_resampler}.
+    \item A similar illustration is provided for the \textsc{gated xattn-dense} layer of Section~\maintoappref{sec:xattn_dense} in Appendix~\ref{app:xattn_dense} and Figure~\ref{fig:xattn_dense}.
+    \item Details on our implementation of the multi-image/video attention mechanism (Section~\maintoappref{sec:multi_im_att}) are given in Appendix~\ref{app:multi-visual-details}.
+    \item Hyperparameters for all model architectures are given in Appendix~\ref{app:transformer_details}.
+\end{itemize}
+
+We then explain how we evaluate our models using in-context few-shot learning in Appendix~\ref{app:in_context_eval_details}. This includes details on how we build the few-shot prompt, how we get predictions for open- and close-ended tasks, how we obtain the zero-shot numbers, and how we leverage retrieval and ensembling to take advantage of more annotated examples.
+
+Finally, in Appendix~\ref{app:datasets}, we provide more details on our training datasets:
+\begin{itemize}
+    \item Collection of M3W in Appendix~\ref{app:collection-m3w},
+    \item How we process M3W samples during training in Appendix~\ref{app:m3w_processing},
+    \item Collection of \shortimagetextpairs{} and \shortvideotextpairs{} in Appendix~\ref{app:vtp_and_itp},
+    \item Deduplication strategy we employ to ensure that there is no leakage between our training and evaluation datasets in Appendix~\ref{app:dataset_dedup}.
+\end{itemize}
+
+\noindent
+\textbf{Experiments (Appendix~\ref{app:extra_experiments_results}).}
+We first provide additional training and evaluation details in Appendix~\ref{sec:exp_setting}, including:
+\begin{itemize}
+    \item Details on \base, \medium{} and \largem{} in Appendix~\ref{sec:models_details},
+    \item The training hyperparameters in Appendix~\ref{app:large_scale_training},
+    \item More details on the Contrastive model pretraining in Appendix~\ref{app:contrastive_details},
+    \item Details on our evaluation benchmarks and splits in Appendix~\ref{sec:eval_benchmarks},
+    \item A discussion on the few-shot learning hyperparameters in Appendix~\ref{app:fewshot-eval-hyper},
+    \item The dialogue prompt used in the qualitative dialogue examples shown in Figure~\maintoappref{fig:teaser} and Figure~\ref{fig:dialogue_samples} in Appendix~\ref{app:dialogue_prompt}.
+\end{itemize}
+
+Next, we give additional results obtained by our models in Appendix~\ref{app:more_performance} including the performance of the Flamingo models on classification tasks in Appendix~\ref{app:classif_tasks}, detailed fine-tuning results in Appendix~\ref{app:finetuning}, and zero-shot results from our contrastive models (Appendix~\ref{app:exp-contrastive}).
+
+Finally, we provide more ablation studies in Appendix~\ref{app:all_ablation_studies} for both the Flamingo models (Appendix~\ref{app:full_ablations}) and our contrastive pretrained Visual Encoders (Appendix~\ref{app:contrastive_ablation}).
+
+\noindent
+\textbf{Qualitative results (Appendix~\ref{app:qual_res}).} More qualitative results are given in Appendix~\ref{app:qual_res}: Figure~\ref{fig:single_samples} (single image sample), Figure~\ref{fig:dialogue_samples} (dialogue examples), and Figure~\ref{fig:videoexamples} (video examples).
+
+\noindent
+\textbf{Discussion (Appendix~\ref{app:full_discussion}).}
+We provide a more complete discussion on our work, including limitations, failure cases, broader impacts and societal impacts of our work in Appendix~\ref{app:full_discussion}.
+
+
+\noindent
+\textbf{Model card (Appendix~\ref{app:flamingo_model_card}).}
+The \largem{} model card is provided in Appendix~\ref{app:flamingo_model_card}.
+
+\noindent
+\textbf{Datasheets (Appendix~\ref{datasheets}).}
+Datasheets for M3W, \shortimagetextpairs~and \shortvideotextpairs~are respectively given in Appendix~\ref{datasheet-m3w-break}, Appendix~\ref{app:itp_datasheet} and Appendix~\ref{app:vtp_datasheet}.
+
+\noindent
+\textbf{Credit for visual content (Appendix~\ref{app:visual_content_credit})}. 
+We provide attribution for all visual illustrations used in the paper in Appendix~\ref{app:visual_content_credit}.
+
+
+
+
+ 
+
+
+
+
+
+
+
+\input{appendix_sections/A_method}
+
+
+\input{appendix_sections/B_experiments}
+
+
+\input{appendix_sections/C_discussion}
+
+
+
+\input{appendix_sections/D_model_card}
+
+
+\input{appendix_sections/E_datasheet}
+
+\input{appendix_sections/F_visual_content_credit}
+
+
+
