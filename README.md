@@ -13,13 +13,15 @@ cvpr2022综述中文latex翻译
 ## 开发规范
 1. dev分支下自己切分支开发，平时merge到dev上；
   1. 使用时，
+```
      git clone ->
      git checkout dev ->
      git branch "新分支名称" ->
      进行开发 ->
      开发完毕 ->
      git add . ->
-     git commit -m "type(scope):subject #issuenum" 
+     git commit -m "type(scope):subject #issuenum"
+```
   3. 当不小心覆盖了main的commit 如在main 分支下pull dev分支时 ，请使用回退，撤销commit、暂存区 回退前一版本代码：`git reset HEAD~1`
 2. Git commit 遵循 angular 规范
 type: (scope)subject #issueNum请注意type:后面有一个空格
