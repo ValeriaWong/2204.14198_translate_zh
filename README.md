@@ -39,6 +39,7 @@ type见
 
 ## todo: latex使用技巧
 这里可以共创，记录使用心得
+
 1.进入左上角菜单（Menu）界面
 选择编译器格式（Compiler）为XeLatex
 
