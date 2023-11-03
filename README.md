@@ -42,6 +42,34 @@ type见
 ]
 ```
 
+### 保姆级流程
+
+git clone 
+![image](https://github.com/ValeriaWong/2204.19148_translate_zh/assets/63283616/2fb3ee12-b42b-4aaf-9904-37f1b91578c1)
+1. 点击code
+2. 在https/ssh中选一个，新手建议https 点击复制 
+3. windows 使用cmd+r开启命令行 ， mac 开启终端terminal
+4. 在cmd / 终端 填入 `git clone + 「你复制的地址」`
+- 注意，如果没有git ,请参照安装git一节
+
+
+
+#### 安装Git
+
+Git开源书籍描述了[如何安装git](https://git-scm.com/book/en/v2)。
+这通常通过Ubuntu Linux上的`apt install git`，
+在MacOS上安装Xcode开发人员工具或使用gihub的
+[桌面客户端](https://desktop.github.com)来实现。
+如果你没有GitHub帐户，则需要注册一个帐户。
+
+#### fork仓库
+你可以在任意github代码存储库点击fork，复制一份（分叉）到你的用户名。
+单击 右上角红色框中的`Fork`按钮，以复制本书的存储库。
+这将是你的副本，你可以随心所欲地更改它。
+
+### 其他未尽事项可参照[地址](https://github.com/d2l-ai/d2l-zh/blob/master/chapter_appendix-tools-for-deep-learning/contributing.md)
+
+
 ## overleaf  latex使用技巧
 
 1.进入左上角菜单（Menu）界面
