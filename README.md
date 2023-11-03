@@ -100,7 +100,7 @@ Git开源书籍描述了[如何安装git](https://git-scm.com/book/en/v2)。
 单击 右上角红色框中的`Fork`按钮，以复制本书的存储库。
 这将是你的副本，你可以随心所欲地更改它。
 
-## 其他未尽事项可参照[地址](https://github.com/d2l-ai/d2l-zh/blob/master/chapter_appendix-tools-for-deep-learning/contributing.md)
+## 其他未尽事项可参照[地址0](https://juejin.cn/post/7121986744316067848) 、 [地址1](https://github.com/d2l-ai/d2l-zh/blob/master/chapter_appendix-tools-for-deep-learning/contributing.md) 、[地址2](https://cloud.tencent.com/developer/article/1885681 ) 
 
 ## ⚠️如果遇到困难或bug无法解决请提issue
 ![image](https://github.com/ValeriaWong/2204.19148_translate_zh/assets/63283616/b0ee5df2-2442-4fd9-9cc2-9306074978ea)
