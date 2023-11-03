@@ -1,9 +1,11 @@
 # 2204.19148_translate_zh
 cvpr2022综述中文latex翻译
 
-## 论文文件名命名规范
+#### 论文文件名命名规范
 日期-文件标题-版本号-作者
+
 如`20231130-商标驳回复审预测结果模型with_tfidf_and_xgboost-v1.0-valeria`
+
 请注意，文件名不能有空格，空格请用下划线 `_`代替。
 
 ## 本仓库用于零基础人员实践学习latex项目结构及git基本操作
@@ -99,6 +101,9 @@ Git开源书籍描述了[如何安装git](https://git-scm.com/book/en/v2)。
 这将是你的副本，你可以随心所欲地更改它。
 
 ## 其他未尽事项可参照[地址](https://github.com/d2l-ai/d2l-zh/blob/master/chapter_appendix-tools-for-deep-learning/contributing.md)
+
+## ⚠️如果遇到困难或bug无法解决请提issue
+![image](https://github.com/ValeriaWong/2204.19148_translate_zh/assets/63283616/b0ee5df2-2442-4fd9-9cc2-9306074978ea)
 
 
 ## overleaf  latex使用技巧
