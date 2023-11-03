@@ -41,37 +41,60 @@ type见
 这里可以共创，记录使用心得
 
 1.进入左上角菜单（Menu）界面
+
 选择编译器格式（Compiler）为XeLatex
 
 2.基础名称与格式
+
 \title {输入标题名称}
+
 \abstract{里面输入摘要}
+
 \key word{里面输入关键词}
+
 \section{里面输入一级标题}
+
 \subsection{里面输入二级标题}
+
 \subsubsection{里面输入三级标题}
+
 标题与正文间需要空一行
+
 段与段间需要空一行
+
 图片、表格，公式与正文需要空一行
 
 3.如何插入公式：
+
 在latex代码界面输入：
+
 \begin(equation)
+
 将公式转换的代码输入在该行
+
 \end(equation)
 
 如何的到公式转换的代码：
+
 将所需公式转为图片，然后再复制进图片公式转换网址中
+
 图片转公式网址（1）：https://simpletex.cn/
+
 图片转公式网址（2）：http://img2latex.com/
 
 4.如何输入表格
+
 将所需表格转换为代码
+
 表格转代码网址：https://tablesgenerator.com/
 
 5.如何插入图片
+
 在latex界面，重新编译（Recompile）左边第二个键（三个点），
+
 点击并选择当中的insert figure
+
 然后选择Upload from computer
+
 选择所需要插入的图片，注必须为png格式
 
