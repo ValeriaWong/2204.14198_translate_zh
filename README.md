@@ -149,8 +149,11 @@ Git开源书籍描述了[如何安装git](https://git-scm.com/book/en/v2)。
 1. 点击红色框，扩展，下载latex workshop
 <img width="840" alt="image" src="https://github.com/ValeriaWong/2204.19148_translate_zh/assets/63283616/cd044916-32a5-489d-8256-5aa7189f1479">
 2. 成功安装后，可以看到蓝色框TeX，点击后可以看到
+
 ![image](https://github.com/ValeriaWong/2204.19148_translate_zh/assets/63283616/a2ce5f6f-dd64-4a2b-a066-2e3998f2302c)
-3. 上图中绿色框是编译latex，蓝色框点击后可以选择view in vscode从而可以内嵌观看pdf
+
+4. 上图中绿色框是编译latex，蓝色框点击后可以选择view in vscode从而可以内嵌观看pdf
+
 ![image](https://github.com/ValeriaWong/2204.19148_translate_zh/assets/63283616/203b2a09-c9f4-4bc6-b32d-f867d3ea0721)
 
    
