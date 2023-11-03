@@ -44,13 +44,44 @@ type见
 
 ### 保姆级流程
 
-git clone 
+#### git clone 
 ![image](https://github.com/ValeriaWong/2204.19148_translate_zh/assets/63283616/2fb3ee12-b42b-4aaf-9904-37f1b91578c1)
 1. 点击code
 2. 在https/ssh中选一个，新手建议https 点击复制 
 3. windows 使用cmd+r开启命令行 ， mac 开启终端terminal
 4. 在cmd / 终端 填入 `git clone + 「你复制的地址」`
 - 注意，如果没有git ,请参照安装git一节
+
+#### 进入目录切换分支
+![image](https://github.com/ValeriaWong/2204.19148_translate_zh/assets/63283616/c801a604-e3fe-46f1-89f9-d7e3b6cf46ee)
+如上图所示，本地clone后进入目录
+1. 你可以在命令行中使用 `ls`显示当前目录下的文件；
+2. 使用`cd + 「你要进入的目录」`进入目录
+比如此时我们要进入本存储库，则应使用
+`cd 2204.19148_translate_zh`
+3. 切换分支 `git checkout dev`
+4. 新建分支  `git branch + 「新分支名称」` ，如`git branch dev` 
+5. 使用本地IDE进行开发，高阶用户可使用vim等
+- 注意：如果不知道怎样用IDE开发，请见后 latex 本地环境搭建及使用 一节
+- 小技巧：有的windows可以在命令行输入`./code`在当前目录打开vscode/其他IDE
+
+#### 进行开发中...
+
+main.tex文件是很多latex仓库的入口文件
+
+有一些latex排版，会在main.tex文件中使用`\input{}`或者`\section*{}`引入外部tex文件，括号中是其他tex文件的文件名。
+
+我们现在翻译到了content.tex文件
+![image](https://github.com/ValeriaWong/2204.19148_translate_zh/assets/63283616/a84b6d58-290d-4080-9ec7-a87451046f0a)
+请注意在翻译的时候将命令保留，命令就是那些高亮的比如`\textbf{}`等等
+
+#### 开发完成提交
+1. 添加到工作区 `git add .` 请不要忘记那个 `.` 这是所有的意思。如果不是所有，这里可以写你要添加的文件名（要有文件类型的后缀才可以）
+2. 填写提交信息 `git commit -m "你要填写的提交信息，请遵循上文的开发规范填写此处"`
+3. 从远程仓库拉取最新代码 `git pull `
+4. 如果有冲突需要手动解决冲突，我们这个场景一般很少出现冲突。
+5. 上传到远程存储库 `git push + 「你的仓库简称，一般是origin」`
+
 
 
 
@@ -112,6 +143,16 @@ Git开源书籍描述了[如何安装git](https://git-scm.com/book/en/v2)。
 选择所需要插入的图片，注必须为png格式
 
 ## latex 本地环境搭建及使用
+请自行下载latex环境
+以vscode 为例
+![image](https://github.com/ValeriaWong/2204.19148_translate_zh/assets/63283616/75c232f8-2ea5-404c-a4c2-6f86643b5678)
+1. 点击红色框，扩展，下载latex workshop
+<img width="840" alt="image" src="https://github.com/ValeriaWong/2204.19148_translate_zh/assets/63283616/cd044916-32a5-489d-8256-5aa7189f1479">
+2. 成功安装后，可以看到蓝色框TeX，点击后可以看到
+![image](https://github.com/ValeriaWong/2204.19148_translate_zh/assets/63283616/a2ce5f6f-dd64-4a2b-a066-2e3998f2302c)
+3. 上图中绿色框是编译latex，蓝色框点击后可以选择view in vscode从而可以内嵌观看pdf
+![image](https://github.com/ValeriaWong/2204.19148_translate_zh/assets/63283616/203b2a09-c9f4-4bc6-b32d-f867d3ea0721)
 
+   
 ## markdown
 
