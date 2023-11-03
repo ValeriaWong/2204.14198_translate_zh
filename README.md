@@ -42,9 +42,9 @@ type见
 ]
 ```
 
-### 保姆级流程
+## 保姆级流程
 
-#### git clone 
+### git clone 
 ![image](https://github.com/ValeriaWong/2204.19148_translate_zh/assets/63283616/2fb3ee12-b42b-4aaf-9904-37f1b91578c1)
 1. 点击code
 2. 在https/ssh中选一个，新手建议https 点击复制 
@@ -52,7 +52,7 @@ type见
 4. 在cmd / 终端 填入 `git clone + 「你复制的地址」`
 - 注意，如果没有git ,请参照安装git一节
 
-#### 进入目录切换分支
+### 进入目录切换分支
 ![image](https://github.com/ValeriaWong/2204.19148_translate_zh/assets/63283616/c801a604-e3fe-46f1-89f9-d7e3b6cf46ee)
 如上图所示，本地clone后进入目录
 1. 你可以在命令行中使用 `ls`显示当前目录下的文件；
@@ -65,7 +65,7 @@ type见
 - 注意：如果不知道怎样用IDE开发，请见后 latex 本地环境搭建及使用 一节
 - 小技巧：有的windows可以在命令行输入`./code`在当前目录打开vscode/其他IDE
 
-#### 进行开发中...
+### 进行开发中...
 
 main.tex文件是很多latex仓库的入口文件
 
@@ -75,7 +75,7 @@ main.tex文件是很多latex仓库的入口文件
 ![image](https://github.com/ValeriaWong/2204.19148_translate_zh/assets/63283616/a84b6d58-290d-4080-9ec7-a87451046f0a)
 请注意在翻译的时候将命令保留，命令就是那些高亮的比如`\textbf{}`等等
 
-#### 开发完成提交
+### 开发完成提交
 1. 添加到工作区 `git add .` 请不要忘记那个 `.` 这是所有的意思。如果不是所有，这里可以写你要添加的文件名（要有文件类型的后缀才可以）
 2. 填写提交信息 `git commit -m "你要填写的提交信息，请遵循上文的开发规范填写此处"`
 3. 从远程仓库拉取最新代码 `git pull `
@@ -85,7 +85,7 @@ main.tex文件是很多latex仓库的入口文件
 
 
 
-#### 安装Git
+### 安装Git
 
 Git开源书籍描述了[如何安装git](https://git-scm.com/book/en/v2)。
 这通常通过Ubuntu Linux上的`apt install git`，
@@ -93,12 +93,12 @@ Git开源书籍描述了[如何安装git](https://git-scm.com/book/en/v2)。
 [桌面客户端](https://desktop.github.com)来实现。
 如果你没有GitHub帐户，则需要注册一个帐户。
 
-#### fork仓库
+### fork仓库
 你可以在任意github代码存储库点击fork，复制一份（分叉）到你的用户名。
 单击 右上角红色框中的`Fork`按钮，以复制本书的存储库。
 这将是你的副本，你可以随心所欲地更改它。
 
-### 其他未尽事项可参照[地址](https://github.com/d2l-ai/d2l-zh/blob/master/chapter_appendix-tools-for-deep-learning/contributing.md)
+## 其他未尽事项可参照[地址](https://github.com/d2l-ai/d2l-zh/blob/master/chapter_appendix-tools-for-deep-learning/contributing.md)
 
 
 ## overleaf  latex使用技巧
