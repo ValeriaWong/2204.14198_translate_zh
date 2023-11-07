@@ -1,4 +1,4 @@
-# 2204.19148_translate_zh
+# 2204.14198_translate_zh
 cvpr2022综述中文latex翻译
 
 ## 本仓库用于零基础人员实践学习latex项目结构及git基本操作
