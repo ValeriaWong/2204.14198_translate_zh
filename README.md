@@ -52,7 +52,29 @@ type见
 
 # 完成任务的保姆级流程
 
-### git clone 
+如果你还没有git，请安装，如果有，请直接进行第二步
+### 1. 安装Git
+
+Git开源书籍描述了[如何安装git](https://git-scm.com/book/en/v2)。
+
+这通常通过Ubuntu Linux上的`apt install git`，
+
+在MacOS上安装Xcode开发人员工具或使用gihub的[桌面客户端](https://desktop.github.com)来实现
+
+如果你没有GitHub帐户，则需要注册一个帐户。
+
+### 2. fork仓库
+你可以在任意github代码存储库点击fork，复制一份（分叉）到你的用户名。
+
+单击 右上角红色框中的`Fork`按钮，以复制本书的存储库。
+
+这将是你的副本，你可以随心所欲地更改它。
+
+### 3. git clone 
+如果你已经fork了仓库，请在你已经fork的仓库执行
+
+你是本仓库的成员，新建了分支，请在本仓库执行
+
 ![image](https://github.com/ValeriaWong/2204.19148_translate_zh/assets/63283616/2fb3ee12-b42b-4aaf-9904-37f1b91578c1)
 1. 点击code
 2. 在https/ssh中选一个，新手建议https 点击复制 
@@ -60,7 +82,9 @@ type见
 4. 在cmd / 终端 填入 `git clone + 「你复制的地址」`
 - 注意，如果没有git ,请参照安装git一节
 
-### 进入目录切换分支
+### 4. 进入目录切换分支
+请在本地pc 的cmd / 终端 执行：
+
 ![image](https://github.com/ValeriaWong/2204.19148_translate_zh/assets/63283616/c801a604-e3fe-46f1-89f9-d7e3b6cf46ee)
 如上图所示，本地clone后进入目录
 1. 你可以在命令行中使用 `ls`显示当前目录下的文件；
@@ -73,7 +97,8 @@ type见
 - 注意：如果不知道怎样用IDE开发，请见后 latex 本地环境搭建及使用 一节
 - 小技巧：有的windows可以在命令行输入`./code`在当前目录打开vscode/其他IDE
 
-### 进行开发中...
+### 5. 进行开发中...
+建议使用vscode作为开发IDE,下文的示例也是截图自vscode。
 
 main.tex文件是很多latex仓库的入口文件
 
@@ -97,8 +122,9 @@ main.tex文件是很多latex仓库的入口文件
 
 翻译一小段然后就可以执行👇下面的步骤了
 
-### 开发完成提交
-还剩这最后一步了哦！马上成功啦！
+### 5. 开发完成提交
+还剩这最后一步了哦！成功在望啦！冲鸭！
+
 1. 添加到工作区 `git add .` 请不要忘记那个 `.` 这是所有的意思。
    - 如果不是添加所有文件，这里可以写你要添加的文件名（要有文件类型的后缀才可以）
 3. 填写提交信息 `git commit -m "你要填写的提交信息，请遵循上文的开发规范填写此处"`
@@ -108,18 +134,6 @@ main.tex文件是很多latex仓库的入口文件
 
 成功撒花🎉🎉🎉🎉🎉🎉🎉🎉🎉
 
-### 安装Git
-
-Git开源书籍描述了[如何安装git](https://git-scm.com/book/en/v2)。
-这通常通过Ubuntu Linux上的`apt install git`，
-在MacOS上安装Xcode开发人员工具或使用gihub的
-[桌面客户端](https://desktop.github.com)来实现。
-如果你没有GitHub帐户，则需要注册一个帐户。
-
-### fork仓库
-你可以在任意github代码存储库点击fork，复制一份（分叉）到你的用户名。
-单击 右上角红色框中的`Fork`按钮，以复制本书的存储库。
-这将是你的副本，你可以随心所欲地更改它。
 
 ### 其他未尽事项可参照[地址0](https://juejin.cn/post/7121986744316067848) 、 [地址1](https://github.com/d2l-ai/d2l-zh/blob/master/chapter_appendix-tools-for-deep-learning/contributing.md) 、[地址2](https://cloud.tencent.com/developer/article/1885681 ) 
 
