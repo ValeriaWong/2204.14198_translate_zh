@@ -37,7 +37,7 @@ latex 是一种基于 tex 的排版系统，利用这种格式系统的处理，
 2. Git commit 遵循 angular 规范
 这里如果不清楚，可以看 [示例issue](https://github.com/ValeriaWong/2204.14198_translate_zh/issues/5)
 
-type: (scope)subject #issueNum请注意type:后面有一个空格
+`type(scope): subject #issueNum` 注意`:`后面有一个空格不要忘记
 
 type见
 ```
