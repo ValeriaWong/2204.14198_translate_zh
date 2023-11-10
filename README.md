@@ -35,6 +35,7 @@ latex 是一种基于 tex 的排版系统，利用这种格式系统的处理，
 - 回退前一版本代码：`git reset HEAD~1`
   
 2. Git commit 遵循 angular 规范
+这里如果不清楚，可以看 [示例issue](https://github.com/ValeriaWong/2204.14198_translate_zh/issues/5)
 
 type: (scope)subject #issueNum请注意type:后面有一个空格
 
@@ -71,6 +72,7 @@ Git开源书籍描述了[如何安装git](https://git-scm.com/book/en/v2)。
 这将是你的副本，你可以随心所欲地更改它。
 
 ### 3. 提一个issue
+
 请在本仓库提一个issue ，获得issue number （后续commit信息时需要用到这个issue number）
 ![image](https://github.com/ValeriaWong/2204.19148_translate_zh/assets/63283616/b0ee5df2-2442-4fd9-9cc2-9306074978ea)
 
@@ -82,6 +84,7 @@ issue是提前和开发者沟通你要完成的事项，问开发者是否考虑
 
 理解其中的数据流动是关键点，有可能你还会因此成就感满满～
 
+这里如果不清楚，可以看 [示例issue](https://github.com/ValeriaWong/2204.14198_translate_zh/issues/5)
 
 ### 3. git clone 
 如果你已经fork了仓库，请在你已经fork的仓库执行
