@@ -357,6 +357,11 @@ Moreover, removing our paired video-text dataset negatively affects performance 
 We ablate replacing our image-text pairs (ITP) by the publicly available LAION-400M dataset~\cite{schuhmann2021laion}, which leads to a slight degradation in performance.
 We show in row \textbf{(ii)} the importance of our gradient accumulation strategy compared to using round-robin updates~\citep{cho2021unifying}.
 
+ \textbf{Importance of the training data mixture.}
+ 如\textbf{(i)}行所示，获取正确的训练数据起着至关重要的作用。 事实上，去除交错的图像-文本数据集\mmmw{}会导致\emph{下降超过$17\%$}，而去除传统的配对图像-文本数据对也会降低性能(by $9.8\%$)，这表明需要不同类型的数据集。
+ 此外，去除我们的配对视频-文本数据集会对所有视频任务的性能产生负面影响。 
+ 我们进行了替换公开可用的LAION-400M数据集~\cite{schuhmann2021laion}来代替我们的图像-文本配对（ITP）的实验，结果发现性能略有下降。 我们在\textbf{(ii)}行展示了我们的梯度累积策略与使用轮询更新~\citep{cho2021unifying}的重要性。
+
 \noindent   
 \textbf{Visual conditioning of the frozen LM.}
 We ablate the use of the 0-initialized tanh gating when merging the cross-attention output to the frozen LM output in row \textbf{(iii)}.
@@ -399,6 +404,10 @@ In this work, we build on the 70B Chinchilla language model~\citep{chinchilla} a
 Numerous works have explored techniques to adapt language models to novel tasks using a few examples.
 These include adding small adapter modules~\citep{houlsby2019parameter}, fine-tuning a small part of the LM~\citep{zaken_bitfit_2022}, showing in-context examples in the prompt~\citep{gpt3}, or optimizing the prompt~\citep{li2021prefix,lester2021power} through gradient descent.
 In this paper, we take inspiration from the in-context~\citep{gpt3} few-shot learning technique instead of more involved few-shot learning approaches based on metric learning~\citep{doersch2020crosstransformers,vinyals2016matching,snell2017prototypical,tian2020rethinking} or meta-learning~\citep{finn2017model,bertinetto2018meta,zintgraf2019fast,requeima2019fast,gordon2018meta,bertinetto2016learning}.
+
+最近，基于Transformer的语言模型在语言建模方面取得了实质性的进展~\citep{vaswani2017attention}。 先在大量数据上进行预训练，然后再在下游任务上进行微调的模式已经成为标准~\citep{mikolov2010recurrent,graves2013generating,jozefowicz2016exploring,howard2018universal,bert,t5,sutskever2011generating,gpt3}。 我们的研究基于70B Chinchilla语言模型~\citep{chinchilla}作为\largem{}的基本语言模型。 
+许多研究探索了使用少量示例来将语言模型适应到新任务的技术。 这些技术包括添加小型适配器模块~\citep{houlsby2019parameter}，微调语言模型的一小部分~\citep{zaken_bitfit_2022}，在提示中展示上下文示例~\citep{gpt3}，或通过梯度下降来优化提示~\citep{li2021prefix,lester2021power}。 在本文中，我们受到了基于上下文的少样本学习技术~\citep{gpt3}的启发，
+而不是基于度量学习~\citep{doersch2020crosstransformers,vinyals2016matching,snell2017prototypical,tian2020rethinking}或元学习~\citep{finn2017model,bertinetto2018meta,zintgraf2019fast,requeima2019fast,gordon2018meta,bertinetto2016learning}等更复杂的少样本学习方法。
 
 \textbf{When language meets vision.}
 These LM breakthroughs have been influential for vision-language modelling.
