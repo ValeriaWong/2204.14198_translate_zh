@@ -331,6 +331,12 @@ This demonstrates the flexibility of the \method{} architecture for processing a
 简而言之，我们通过在较短的时间内以较小的学习率对模型进行微调，另外解冻视觉骨干网以适应更高的输入分辨率（详情见附录~in Appendix~\maintoappref{app:finetuning}）。
 我们发现，与之前介绍的在上下文中进行少量学习的结果相比，我们可以改进结果，在另外五项任务中创造了新的技术水平： VQAv2、VATEX、VizWiz、MSRVTTQA 和 HatefulMemes。
 
+虽然这并不是我们工作的重点，但我们验证了当给定更多数据时，\method{}模型可以通过微调权重来适应任务。
+在表~\ref{tab:ft-sota-table-compressed}中，我们探索了在注释预算不受限制的情况下，针对给定任务微调我们最大的模型\largem{}）。
+简而言之，我们通过在较短的时间内以较小的学习率对模型进行微调，另外解冻视觉骨干网以适应更高的输入分辨率（详情见附录~in Appendix~\maintoappref{app:finetuning}）。
+我们发现，与之前介绍的在上下文中进行少量学习的结果相比，我们可以改进结果，在另外五项任务中创造了新的技术水平： VQAv2、VATEX、VizWiz、MSRVTTQA 和 HatefulMemes。
+（小惠试验新复制）
+
 \input{tables/sota_comparison_mini}
 
 \subsection{Ablation studies}
