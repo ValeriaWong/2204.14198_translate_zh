@@ -430,12 +430,8 @@ We emphasize few-shot learning and vision tasks while CM3~\citep{aghajanyan2022c
 \label{sec:discussion}
 
 \noindent
-\textbf{Limitations.} First, our models build on pretrained LMs, and as a side effect, directly inherit their weaknesses.
-For example, LM priors are generally helpful, but may play a role in occasional hallucinations and ungrounded guesses.
-Furthermore, LMs generalise poorly to sequences longer than the training ones.
-They also suffer from poor sample efficiency during training.
-Addressing these issues can accelerate progress in the field and enhance the abilities of VLMs like Flamingo.
-
+\textbf{Limitations.}首先，我们的模型建立在预训练 LM 的基础上，因此直接继承了 LM 的弱点。 例如，LM 先验通常是有帮助的，但偶尔也会产生幻觉和无根据的猜测。 此外，LM 对于比训练序列更长的序列的泛化能力也很差。 在训练过程中，它们的样本效率也很低。 解决这些问题可以加快该领域的进展，并增强 Flamingo 等 VLM 的能力。
+First, our models build on pretrained LMs, and as a side effect, directly inherit their weaknesses.For example, LM priors are generally helpful, but may play a role in occasional hallucinations and ungrounded guesses.Furthermore, LMs generalise poorly to sequences longer than the training ones.They also suffer from poor sample efficiency during training.Addressing these issues can accelerate progress in the field and enhance the abilities of VLMs like Flamingo.
 Second, the classification performance of \method{} lags behind that of state-of-the-art contrastive models~\citep{clip,pham2021combined}.
 These models directly optimize for text-image retrieval, of which classification is a special case.
 In contrast, our models handle a wider range of tasks, such as open-ended ones.
