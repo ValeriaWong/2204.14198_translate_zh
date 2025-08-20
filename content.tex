@@ -365,6 +365,12 @@ Next, we ablate different conditioning architectures in row \textbf{(iv)}.
 \textsc{vanilla xattn}, refers to the vanilla cross-attention from the original Transformer decoder~\citep{vaswani2017attention}.
 In the \textsc{grafting} approach from~\cite{luo2022vc}, the frozen LM is used as is with no additional layers inserted, and a stack of interleaved self-attention and cross-attention layers that take the frozen LM output are learnt from scratch.
 Overall, we show that our \textsc{gated xattn-dense} conditioning approach works best.
+冷冻语言模型的视觉条件化。
+在第 (iii) 行，我们消除了在将交叉注意力输出合并到冷冻语言模型输出时使用的 0 初始化的 tanh 门控。
+如果没有它，我们的总体得分会下降 4.2%。此外，我们还注意到禁用 0 初始化的 tanh 门控会导致训练不稳定。
+接下来，我们在第 (iv) 行消除了不同的条件化架构。\textsc{vanilla xattn} 指的是原始 Transformer 解码器中[引文：vaswani2017attention] 的普通交叉注意力。
+在来自[引文：luo2022vc] 的 \textsc{grafting} 方法中，冷冻语言模型被原样使用，没有插入额外的层，并且一个由自注意力和交叉注意力层组成的堆栈被从头开始学习，该堆栈以冷冻语言模型输出作为输入。
+总的来说，我们展示了我们的 \textsc{gated xattn-dense} 条件化方法效果最好。
 
 \noindent
 \textbf{Compute/Memory vs. performance trade-offs.}
