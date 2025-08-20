@@ -404,6 +404,16 @@ In this work, we build on the 70B Chinchilla language model~\citep{chinchilla} a
 Numerous works have explored techniques to adapt language models to novel tasks using a few examples.
 These include adding small adapter modules~\citep{houlsby2019parameter}, fine-tuning a small part of the LM~\citep{zaken_bitfit_2022}, showing in-context examples in the prompt~\citep{gpt3}, or optimizing the prompt~\citep{li2021prefix,lester2021power} through gradient descent.
 In this paper, we take inspiration from the in-context~\citep{gpt3} few-shot learning technique instead of more involved few-shot learning approaches based on metric learning~\citep{doersch2020crosstransformers,vinyals2016matching,snell2017prototypical,tian2020rethinking} or meta-learning~\citep{finn2017model,bertinetto2018meta,zintgraf2019fast,requeima2019fast,gordon2018meta,bertinetto2016learning}.
+近年来，随着 Transformer 模型 [引文：vaswani2017attention] 的引入，语言建模取得了显著进展。
+
+首先在海量数据上进行预训练，然后在下游任务上进行微调的范式已成为标准 [引文：mikolov2010recurrent,graves2013generating,jozefowicz2016exploring,howard2018universal,bert,t5,sutskever2011generating,gpt3]。
+
+在这项工作中，我们以 70B Chinchilla 语言模型 [引文：chinchilla] 作为 \largem{} 的基础语言模型。
+
+许多工作探索了使用少量示例使语言模型适应新任务的技术。这些技术包括添加小型适配器模块 [引文：houlsby2019parameter]、微调语言模型的一小部分 [引文：zaken_bitfit_2022]、在提示中展示上下文示例 [引文：gpt3] 或通过梯度下降优化提示 [引文：li2021prefix,lester2021power]。
+
+本文借鉴了上下文 [引文：gpt3] 的小样本学习技术，而非基于度量学习 [引文：doersch2020crosstransformers,vinyals2016matching,snell2017prototypical,tian2020rethinking] 或元学习 [引文：finn2017model,bertinetto2018meta,zintgraf2019fast,requeima2019fast,gordon2018meta,bertinetto2016learning] 的更复杂的小样本学习方法。
+
 
 最近，基于Transformer的语言模型在语言建模方面取得了实质性的进展~\citep{vaswani2017attention}。 先在大量数据上进行预训练，然后再在下游任务上进行微调的模式已经成为标准~\citep{mikolov2010recurrent,graves2013generating,jozefowicz2016exploring,howard2018universal,bert,t5,sutskever2011generating,gpt3}。 我们的研究基于70B Chinchilla语言模型~\citep{chinchilla}作为\largem{}的基本语言模型。 
 许多研究探索了使用少量示例来将语言模型适应到新任务的技术。 这些技术包括添加小型适配器模块~\citep{houlsby2019parameter}，微调语言模型的一小部分~\citep{zaken_bitfit_2022}，在提示中展示上下文示例~\citep{gpt3}，或通过梯度下降来优化提示~\citep{li2021prefix,lester2021power}。 在本文中，我们受到了基于上下文的少样本学习技术~\citep{gpt3}的启发，
